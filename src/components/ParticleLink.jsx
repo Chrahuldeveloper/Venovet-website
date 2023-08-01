@@ -4,13 +4,11 @@ import { loadSlim } from "tsparticles-slim";
 
 const ParticleLink = () => {
   const particlesInit = useCallback(async (engine) => {
-    // console.log(engine);
-    //await loadFull(engine);
     await loadSlim(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
+  const particlesLoaded = useCallback((container) => {
+    console.log(container);
   }, []);
   return (
     // <div>

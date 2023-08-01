@@ -2,7 +2,6 @@ import React from "react";
 import {
   About,
   Navbar,
-  Slider,
   Testimonials,
   Features,
   Services,
@@ -17,9 +16,9 @@ export default function Home() {
       <Slider />
       <About />
       <Services />
+      <Testimonials />
       <Features />
       <Blogs />
-      <Testimonials />
     </>
   );
 }

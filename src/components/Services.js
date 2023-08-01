@@ -10,7 +10,7 @@ export default function Services() {
         What We Do
       </h2>
       {/* Rendering the Card data */}
-      <div className="grid grid-cols-1 md:grid-cols-4 place-items-center justify-center gap-5 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 place-items-center justify-center gap-5 mt-10">
         {Data.map((item, i) => {
           return (
             <React.Fragment key={i}>

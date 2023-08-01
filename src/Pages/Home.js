@@ -1,5 +1,5 @@
 import React from "react";
-import { About, Navbar, Slider, Testimonials } from "../components";
+import { About, Navbar, Slider, Testimonials, FAQ } from "../components";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <Slider />
       <About />
       <Testimonials />
+      <FAQ />
     </>
   );
 }

@@ -1,6 +1,5 @@
-import Navbar from './Navbar'
-import Slider from './Slider'
+import Navbar from "./Navbar";
+import Slider from "./Slider";
+import About from "./About";
 
-
-
-export { Navbar , Slider }
+export { Navbar, Slider, About };

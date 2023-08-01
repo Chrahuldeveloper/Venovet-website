@@ -1,5 +1,14 @@
 import React from "react";
-import { About, Blogs, Features, Navbar, Services, Slider } from "../components";
+import {
+  About,
+  Navbar,
+  Slider,
+  Testimonials,
+  Features,
+  Services,
+  Slider,
+  Blogs,
+} from "../components";
 
 export default function Home() {
   return (
@@ -8,8 +17,9 @@ export default function Home() {
       <Slider />
       <About />
       <Services />
-      <Features/>
-      <Blogs/>
+      <Features />
+      <Blogs />
+      <Testimonials />
     </>
   );
 }

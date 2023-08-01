@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AiOutlineTwitter,
   AiFillLinkedin,
@@ -10,6 +10,7 @@ import {
   AiOutlineArrowRight,
 } from "react-icons/ai";
 export default function Navbar() {
+  const [service, setservice] = useState(false);
   return (
     <nav>
       {/*Social icons for Mobile */}
@@ -75,7 +76,23 @@ export default function Navbar() {
           <ul className="flex items-center space-x-12 text-white">
             <li className="cursor-pointer">HOME</li>
             <li className="cursor-pointer">ABOUT US</li>
-            <li className="cursor-pointer">SERVICES</li>
+            <div>
+              <li
+                onClick={() => {
+                  setservice(!service);
+                }}
+                className="cursor-pointer"
+              >
+                SERVICES
+              </li>
+              <div className={`${service ? "block" : "hidden"} mt-2 absolute`}>
+                <ul className="text-sm text-[#676767]">
+                  <li className="bg-white border px-3 w-[14vw]">What we do</li>
+                  <li className="bg-white border px-3">Who we serve</li>
+                </ul>
+              </div>
+            </div>
+
             <li className="cursor-pointer">BLOG</li>
             <li className="cursor-pointer">SHOP</li>
             <li className="cursor-pointer">CAREERS</li>

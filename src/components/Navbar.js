@@ -35,7 +35,7 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <div className="my-3.5 flex items-center justify-between mx-14">
+      <div className="my-3.5 flex items-center justify-between mx-5 md:mx-20">
         <div>
           <img src="https://venovet.com/assets/images/logo.png" alt="pic" />
         </div>
@@ -70,7 +70,7 @@ export default function Navbar() {
       </div>
 
       {/* Menu Bar with drop down only for Big screens */}
-      <div className="flex justify-center my-10">
+      <div className="md:flex justify-center mt-1 translate-y-6 hidden">
         <div className="flex items-center bg-[#121a37] p-4">
           <ul className="flex items-center space-x-12 text-white">
             <li className="cursor-pointer">HOME</li>
@@ -83,7 +83,7 @@ export default function Navbar() {
           </ul>
         </div>
         <button className="bg-orange-500 text-white p-3.5 flex items-center space-x-1.5 font-semibold">
-          <AiOutlineWechat size={30} color="white" />
+          <AiOutlineWechat size={30} color="white"  />
           <h1>Request a Call Back</h1>
           <AiOutlineArrowRight size={30} color="white" />
         </button>

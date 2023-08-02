@@ -87,8 +87,8 @@ export default function Navbar() {
               </li>
               <div className={`${service ? "block" : "hidden"} mt-2 absolute`}>
                 <ul className="text-sm text-[#676767]">
-                  <li className="bg-white border px-3 w-[14vw]">What we do</li>
-                  <li className="bg-white border px-3">Who we serve</li>
+                  <li className="bg-white border py-1 px-3 w-[14vw]">What we do</li>
+                  <li className="bg-white border py-1 px-3">Who we serve</li>
                 </ul>
               </div>
             </div>

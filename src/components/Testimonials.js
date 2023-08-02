@@ -14,9 +14,13 @@ const Testimonials = () => {
         <div className="flex space-x-20 pt-10">
           {Data.map((_, index) => {
             return (
-              <div className="flex max-w-lg space-x-4 px-8">
+              <div className="flex  max-w-lg space-x-4 px-8">
                 <div className="flex items-center p-3 rounded-md border-[#ccc] border-[1px]">
-                  <img className="w-[28rem]" src={_.image} alt="img.png" />
+                  <img
+                    className="w-[20rem] md:w-[28rem]"
+                    src={_.image}
+                    alt="img.png"
+                  />
                 </div>
                 <div>
                   <h1 className="text-white text-2xl font-semibold">

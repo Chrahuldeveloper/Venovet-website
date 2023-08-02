@@ -16,7 +16,7 @@ const ParticleLink = () => {
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
-      className="h-[30rem]"
+      className="h-[35rem]"
       options={{
         fullScreen: {
           enable: false,

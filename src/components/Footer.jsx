@@ -21,7 +21,7 @@ const Footer = () => {
         id="particle"
         init={particlesInit}
         loaded={particlesLoaded}
-        className="h-[58rem] lg:h-[26rem]"
+        className="h-[60rem] md:h-[50rem] lg:h-[26rem]"
         options={{
           fullScreen: {
             enable: false,

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="p-4 space-y-10 md:flex items-start justify-center md:space-y-0 md:space-x-16 my-28">
+    <div className="p-4 space-y-10 lg:flex items-start justify-center md:space-y-0 md:px-10 lg:space-x-16 my-28">
       <div>
         <img
           src="https://www.venovet.com/assets/images/title-shp1.png"

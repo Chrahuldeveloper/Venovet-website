@@ -3,7 +3,7 @@ import ParticleLink from "./ParticleLink";
 import Data from "../Data/TestimonialData";
 const Testimonials = () => {
   return (
-    <div className="my-8 relative">
+    <div className=" relative">
       <ParticleLink />
 
       <div className="absolute top-0 w-[100%] h-[100%] flex  flex-col  items-center">

@@ -35,14 +35,14 @@ const Faqs = ({ Q, children }) => {
 
 const FAQ = () => {
   return (
-    <div className="m-6 py-4">
-      <h1 className="text-[#ff4747] text-lg font-semibold">OUR FAQ</h1>
-      <div>
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#222] pt-4">
+    <div className="m-6 py-4 text-center">
+      <h1 className="text-[#ff4747] text-lg font-semibold ">OUR FAQ</h1>
+      <div className="">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#222] pt-4 ">
           Frequently Asked Questions?
         </h1>
 
-        <div className=" flex  justify-around">
+        <div className=" flex  justify-around text-left">
           <div className="pt-16">
             {Data.map((_, index) => {
               return (

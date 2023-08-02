@@ -71,7 +71,7 @@ export default function Navbar() {
       </div>
 
       {/* Menu Bar with drop down only for Big screens */}
-      <div className="md:flex justify-center mt-1 translate-y-6 hidden">
+      <div className="lg:flex justify-center mt-1 translate-y-6 hidden">
         <div className="flex items-center bg-[#121a37] p-4">
           <ul className="flex items-center space-x-12 text-white">
             <li className="cursor-pointer">HOME</li>

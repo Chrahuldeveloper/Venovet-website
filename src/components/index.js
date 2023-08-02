@@ -6,6 +6,15 @@ import Features from "./Features";
 import Blogs from "./Blogs";
 import Testimonials from "./Testimonials";
 import FAQ from "./FAQ";
-export { Navbar, Slider, About, Testimonials, FAQ };
-
-export { Services, Features, Blogs };
+import Bridge from "./Bridge";
+export {
+  Navbar,
+  Slider,
+  About,
+  Testimonials,
+  FAQ,
+  Bridge,
+  Services,
+  Features,
+  Blogs,
+};

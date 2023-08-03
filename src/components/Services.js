@@ -1,40 +1,33 @@
 import React from "react";
 import Data from "../Data/Services";
-export default function Services() {
+function Services() {
   return (
-    <div className="bg-[#dae2ed] p-20">
-      <h1 className="text-orange-500 font-semibold text-lg lg:text-xl text-center">
-        OUR SERVICES
-      </h1>
-      <h2 className="text-xl font-bold mt-2 md:text-2xl text-center lg:text-3xl">
-        What We Do
-      </h2>
-      {/* Rendering the Card data */}
-      <div className="grid grid-cols-1 md:grid-cols-3 place-items-center justify-center gap-5 mt-10">
-        {Data.map((item, i) => {
+    <div className="px-10 py-16 pt-24 bg-[#dae2ed] space-y-14">
+      <div className="space-y-4">
+        <h1 className="text-[#ff5e15] font-semibold">OUR SERVICES</h1>
+        <h1 className="font-bold text-3xl md:text-4xl ">What We Do</h1>
+      </div>
+      <div className="space-y-20 md:space-y-0 grid md:grid-cols-2 lg:grid-cols-4 md:gap-14 lg:gap-7  place-items-center">
+        {Data.map((card, index) => {
           return (
-            <React.Fragment key={i}>
-              <div className="relative cursor-pointer">
-                <div class="absolute inset-0 z-10 bg-orange-500 text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-60 duration-500">
-                  <h1 className="text-white text-lg font-bold">
-                    {item.Tittle}
-                  </h1>
-                </div>
-                <div className="relative">
-                  <div className=" flex flex-wrap content-center">
-                    <img src={item.image} class="mx-auto " alt={item.image} />
-                  </div>
-                </div>
+            <div key={index} className="relative lg:pb-6">
+              <img className="rounded-lg " src={card.image} alt="" />
+              <div className="absolute shadow-lg bg-white rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-72 lg:w-60 space-x-4 hover:bg-[#ff5e15] transition ease-in-out duration-500">
+                <img
+                  className="w-14"
+                  src="https://www.venovet.com/assets/images/logo-br-grey.png"
+                  alt=""
+                />
+                <p className="max-w-0 font-semibold text-lg leading-5">
+                  {card.Tittle}
+                </p>
               </div>
-            </React.Fragment>
+            </div>
           );
         })}
-      </div>
-      <div className="flex justify-center mt-10">
-        <button className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5">
-          View all Services
-        </button>
       </div>
     </div>
   );
 }
+
+export default Services;

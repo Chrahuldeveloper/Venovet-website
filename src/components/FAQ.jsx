@@ -8,14 +8,11 @@ const Faqs = ({ Q, children }) => {
   };
   return (
     <div className=" w-[20rem] md:w-[30rem] lg:w-[42rem] py-2.5 space-y-4 rounded-2xl">
-      <div
-        className="flex items-center justify-between cursor-pointer"
-        onClick={toggle}
-      >
+      <div className="flex justify-between cursor-pointer" onClick={toggle}>
         <h1
           className={`${
             !open ? "text-black" : "text-[#ff4747]"
-          } md:text-xl lg:text-[1.35rem]  `}
+          }  lg:text-2xl font-semibold md:text-xl`}
         >
           {Q}
         </h1>
@@ -35,29 +32,29 @@ const Faqs = ({ Q, children }) => {
 
 const FAQ = () => {
   return (
-    <div className="m-6 py-4 text-center">
-      <h1 className="text-[#ff4747] text-lg font-semibold ">OUR FAQ</h1>
-      <div className="">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#222] pt-4 ">
-          Frequently Asked Questions?
-        </h1>
+    <div className="m-6 py-4 ">
+      <h1 className="text-[#ff4747] text-lg font-semibold lg:ml-28">OUR FAQ</h1>
+      <h1 className="lg:ml-28 text-2xl font-bold md:text-3xl lg:text-4xl text-[#222] pt-4">
+        Frequently Asked Questions?
+      </h1>
 
-        <div className=" flex  justify-around text-left">
+      <div>
+        <div className=" flex justify-around items-start text-left">
           <div className="pt-16">
             {Data.map((_, index) => {
               return (
                 <div key={index}>
                   <Faqs Q={_.q}>
-                    <p>{_.a}</p>
+                    <p className="">{_.a}</p>
                   </Faqs>
                 </div>
               );
             })}
           </div>
-          <div className="w-[20rem] h-autos hidden lg:flex">
+          <div className="w-[25rem] h-auto hidden lg:flex">
             <img
               src="https://www.venovet.com/assets/images/resources/faq-mockup.png"
-              alt=""
+              alt="https://www.venovet.com/assets/images/resources/faq-mockup.png"
             />
           </div>
         </div>

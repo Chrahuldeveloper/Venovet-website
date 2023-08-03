@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AiOutlineTwitter,
   AiFillLinkedin,
@@ -11,8 +11,78 @@ import {
 } from "react-icons/ai";
 export default function Navbar() {
   const [service, setservice] = useState(false);
+  const [ScrollY, setScrollY] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setScrollY(true);
+    } else if (window.scrollY === 0) {
+      setScrollY(false);
+    }
+  };
+
+  useEffect(() => {
+    // Add event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <nav>
+      {/* Show Navbar only on Scroll */}
+      <div
+        className={` ${
+          ScrollY
+            ? "md:fixed top-0 left-0 right-0 z-50 bg-white shadow-md ease-in-out duration-500"
+            : "hidden"
+        } w-screen `}
+      >
+        <div className=" px-6 py-3.5 flex justify-between items-center shadow-md  ">
+          <div>
+            <img
+              src="https://venovet.com/assets/images/logo.png"
+              alt="https://venovet.com/assets/images/logo.png"
+              className=""
+            />
+          </div>
+          <div>
+            <ul className="flex items-center space-x-8 text-black">
+              <li className="cursor-pointer">HOME</li>
+              <li className="cursor-pointer">ABOUT US</li>
+              <div>
+                <li
+                  onClick={() => {
+                    setservice(!service);
+                  }}
+                  className="cursor-pointer"
+                >
+                  SERVICES
+                </li>
+                <div
+                  className={`${service ? "block" : "hidden"} mt-2 absolute`}
+                >
+                  <ul className="text-sm text-[#676767]">
+                    <li className="bg-white border py-1 px-3 w-[14vw]">
+                      What we do
+                    </li>
+                    <li className="bg-white border py-1 px-3">Who we serve</li>
+                  </ul>
+                </div>
+              </div>
+
+              <li className="cursor-pointer">BLOG</li>
+              <li className="cursor-pointer">SHOP</li>
+              <li className="cursor-pointer">CAREERS</li>
+              <li className="cursor-pointer">CONTACT US</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       {/*Social icons for Mobile */}
       <div className="md:hidden bg-[#252a2c] w-screen p-2.5 flex items-center space-x-3">
         <AiOutlineTwitter size={25} color="white" />
@@ -36,7 +106,7 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <div className="my-3.5 flex items-center justify-between mx-5 md:mx-20">
+      <div className="my-3.5 flex items-center justify-between mx-5 md:mx-28">
         <div>
           <img src="https://venovet.com/assets/images/logo.png" alt="pic" />
         </div>
@@ -73,7 +143,7 @@ export default function Navbar() {
       {/* Menu Bar with drop down only for Big screens */}
       <div className="lg:flex justify-center mt-1 translate-y-6 hidden">
         <div className="flex items-center bg-[#121a37] p-4">
-          <ul className="flex items-center space-x-12 text-white">
+          <ul className="flex items-center space-x-14 text-white">
             <li className="cursor-pointer">HOME</li>
             <li className="cursor-pointer">ABOUT US</li>
             <div>
@@ -87,7 +157,9 @@ export default function Navbar() {
               </li>
               <div className={`${service ? "block" : "hidden"} mt-2 absolute`}>
                 <ul className="text-sm text-[#676767]">
-                  <li className="bg-white border py-1 px-3 w-[14vw]">What we do</li>
+                  <li className="bg-white border py-1 px-3 w-[14vw]">
+                    What we do
+                  </li>
                   <li className="bg-white border py-1 px-3">Who we serve</li>
                 </ul>
               </div>
@@ -100,7 +172,7 @@ export default function Navbar() {
           </ul>
         </div>
         <button className="bg-orange-500 text-white p-3.5 flex items-center space-x-1.5 font-semibold">
-          <AiOutlineWechat size={30} color="white"  />
+          <AiOutlineWechat size={30} color="white" />
           <h1>Request a Call Back</h1>
           <AiOutlineArrowRight size={30} color="white" />
         </button>

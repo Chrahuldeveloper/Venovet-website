@@ -7,6 +7,7 @@ import Blogs from "./Blogs";
 import Testimonials from "./Testimonials";
 import FAQ from "./FAQ";
 import Bridge from "./Bridge";
+import NewsLetter from "./NewsLetter";
 import Footer from "./Footer";
 export {
   Navbar,
@@ -18,5 +19,6 @@ export {
   Services,
   Features,
   Blogs,
-  Footer
+  NewsLetter,
+  Footer,
 };

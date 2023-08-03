@@ -22,7 +22,7 @@ export default function Slider() {
     <div className="w-screen">
       <div
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${Data[index].image})`,
+          backgroundImage: `linear-gradient(rgba(0, 0.2, 0.1, 0.7), rgba(0, 0, 0, 0.4)),url(${Data[index].image})`,
           backgroundPosition: "center center",
           backgroundSize: "cover",
           height: "90vh",
@@ -32,7 +32,7 @@ export default function Slider() {
           <AiOutlineArrowLeft
             onClick={prev}
             size={30}
-            className="md:hover:bg-orange-500 w-14 h-14 md:w-11 md:h-11 rounded-full"
+            className="w-14 h-14 md:w-11 md:h-11 "
             color="white"
             cursor={"pointer"}
           />
@@ -52,7 +52,7 @@ export default function Slider() {
           <AiOutlineArrowRight
             onClick={forward}
             size={30}
-            className="md:hover:bg-orange-500 md:w-11 md:h-11 w-14 h-14 rounded-full"
+            className=" md:w-11 md:h-11 w-14 h-14 "
             color="white"
             cursor={"pointer"}
           />

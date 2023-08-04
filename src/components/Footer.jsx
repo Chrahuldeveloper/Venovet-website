@@ -89,8 +89,6 @@ const Footer = () => {
         }}
       />
 
-      <div className="absolute top-0 bottom-0  w-[100%] text-[#d5d5d5]">
-        <div className="lg:flex lg:justify-center px-24 pt-20 space-y-14 lg:space-y-0 ">
       <div className="absolute  justify-between top-0 w-[100%] text-[#d5d5d5]">
         <div className="lg:flex px-10  pt-20 space-y-14 lg:space-y-0 ">
           {/* //first section */}
@@ -114,8 +112,6 @@ const Footer = () => {
             </div>
           </div>
           {/* second section  */}
-          <div className="flex justify-between  items-center space-x-20">
-
           <div className="md:flex md:justify-between space-y-8 md:space-y-0 md:space-x-20">
             <div className="space-y-4">
               <h1 className="text-white text-lg font-semibold">ABOUT US</h1>
@@ -146,7 +142,6 @@ const Footer = () => {
             </div>
           </div>
           {/* third section  */}
-          <div className="px-10  space-y-10">
           <div className="lg:px-10  space-y-10">
             <div>
               <p className="text-white">Call Us</p>

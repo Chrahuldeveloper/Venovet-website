@@ -45,7 +45,7 @@ const FAQ = () => {
               return (
                 <div key={index}>
                   <Faqs Q={_.q}>
-                    <p className="">{_.a}</p>
+                    <p>{_.a}</p>
                   </Faqs>
                 </div>
               );

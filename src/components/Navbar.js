@@ -9,7 +9,8 @@ import {
   AiOutlineWechat,
   AiOutlineArrowRight,
 } from "react-icons/ai";
-export default function Navbar() {
+import { Link } from "react-router-dom";
+export default function Navbar({ Page }) {
   const [service, setservice] = useState(false);
   const [ScrollY, setScrollY] = useState(false);
 
@@ -52,7 +53,9 @@ export default function Navbar() {
           <div>
             <ul className="flex items-center space-x-8 text-black">
               <li className="cursor-pointer">HOME</li>
-              <li className="cursor-pointer">ABOUT US</li>
+              <Link to={"/about"}>
+                <li className={`cursor-pointer `}>ABOUT US</li>
+              </Link>
               <div>
                 <li
                   onClick={() => {
@@ -145,7 +148,15 @@ export default function Navbar() {
         <div className="flex items-center bg-[#121a37] p-4">
           <ul className="flex items-center space-x-14 text-white">
             <li className="cursor-pointer">HOME</li>
-            <li className="cursor-pointer">ABOUT US</li>
+            <Link to={"/about"}>
+              <li
+                className={`cursor-pointer ${
+                  Page === "About" ? "text-orange-500" : null
+                } `}
+              >
+                ABOUT US
+              </li>
+            </Link>
             <div>
               <li
                 onClick={() => {
@@ -166,8 +177,20 @@ export default function Navbar() {
             </div>
 
             <li className="cursor-pointer">BLOG</li>
-            <li className="cursor-pointer">SHOP</li>
-            <li className="cursor-pointer">CAREERS</li>
+            <Link to={"/shop"}>
+            <li  className={`cursor-pointer ${
+                  Page === "Shop" ? "text-orange-500" : null
+                } `}>SHOP</li>
+            </Link>
+            <Link to={"/career"}>
+              <li
+                className={`cursor-pointer ${
+                  Page === "career" ? "text-orange-500" : null
+                } `}
+              >
+                CAREERS
+              </li>
+            </Link>
             <li className="cursor-pointer">CONTACT US</li>
           </ul>
         </div>

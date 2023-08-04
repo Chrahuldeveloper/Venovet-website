@@ -37,7 +37,7 @@ export default function Slider() {
             cursor={"pointer"}
           />
 
-          <div className="text-center md:text-left space-y-3 lg:space-y-4 ">
+          <div className="text-center md:text-left space-y-3 lg:space-y-4 lg:-ml-36">
             <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold">
               {Data[index].Tittle}
             </h1>
@@ -47,6 +47,9 @@ export default function Slider() {
             <p className="text-white font-semibold max-w-3xl md:text-lg leading-7">
               {Data[index].Para}
             </p>
+            <button className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5">
+              Learn More
+            </button>
           </div>
 
           <AiOutlineArrowRight

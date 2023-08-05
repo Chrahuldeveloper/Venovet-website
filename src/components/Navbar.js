@@ -23,14 +23,19 @@ export default function Navbar({ Page }) {
   };
 
   useEffect(() => {
-    // Add event listener when the component mounts
     window.addEventListener("scroll", handleScroll);
 
-    // Remove event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Pass the data to the Service Page onclick
+  // category :  {
+  //     image : ""
+  //     Tittle : "",
+  //     Para : ""
+  // }
 
   return (
     <nav>
@@ -168,19 +173,35 @@ export default function Navbar({ Page }) {
               </li>
               <div className={`${service ? "block" : "hidden"} mt-2 absolute`}>
                 <ul className="text-sm text-[#676767]">
-                  <li className="bg-white border py-1 px-3 w-[14vw]">
-                    What we do
+                  <Link to={"/whatwedo"}>
+                    <li
+                      className={`cursor-pointer ${
+                        Page === "whatwedo" ? "text-orange-500" : null
+                      }  bg-white border py-1 px-3 `}
+                    >
+                      What we do
+                    </li>
+                  </Link>
+                  <li
+                    className={`cursor-pointer ${
+                      Page === "whatweserve" ? "text-orange-500" : null
+                    }  bg-white border py-1 px-3 `}
+                  >
+                    Who we serve
                   </li>
-                  <li className="bg-white border py-1 px-3">Who we serve</li>
                 </ul>
               </div>
             </div>
-
+            {/* services */}
             <li className="cursor-pointer">BLOG</li>
             <Link to={"/shop"}>
-            <li  className={`cursor-pointer ${
+              <li
+                className={`cursor-pointer ${
                   Page === "Shop" ? "text-orange-500" : null
-                } `}>SHOP</li>
+                } `}
+              >
+                SHOP
+              </li>
             </Link>
             <Link to={"/career"}>
               <li

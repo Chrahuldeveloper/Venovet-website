@@ -12,7 +12,9 @@ export default function AboutUsHeroSection() {
         }}
         className="space-y-5 pl-20 md:pl-36 pt-24"
       >
-        <h1 className="text-orange-500 font-bold md:text-xl text-lg">About Venovet</h1>
+        <h1 className="text-orange-500 font-bold md:text-xl text-lg">
+          About Venovet
+        </h1>
         <p className="text-white font-bold md:text-2xl text-xl ">
           FOR ALL YOUR <br /> CARGO NEEDS
         </p>

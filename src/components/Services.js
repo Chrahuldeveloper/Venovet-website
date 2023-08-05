@@ -18,21 +18,21 @@ function Services() {
             >
               <img className="rounded-lg " src={card.image} alt="" />
               <div className="absolute shadow-lg bg-white rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-72 lg:w-60 space-x-4 hover:bg-[#ff5e15] hover:text-white transition ease-in-out duration-500">
-              <div
-                className={`${
-                  hover === index ? "bg-[#ff5e15]" : "bg-white"
-                } absolute shadow-lg bg-white rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-72 lg:w-60 space-x-4  transition ease-in-out duration-500`}
-              >
-                <img
-                  className="w-14"
-                  src="https://www.venovet.com/assets/images/logo-br-grey.png"
-                  alt=""
-                />
-                <p className="max-w-0 font-semibold text-lg leading-5">
-                  {card.Tittle}
-                </p>
+                <div
+                  className={`${
+                    hover === index ? "bg-[#ff5e15]" : "bg-white"
+                  } absolute shadow-lg bg-white rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-72 lg:w-60 space-x-4  transition ease-in-out duration-500`}
+                >
+                  <img
+                    className="w-14"
+                    src="https://www.venovet.com/assets/images/logo-br-grey.png"
+                    alt=""
+                  />
+                  <p className="max-w-0 font-semibold text-lg leading-5">
+                    {card.Tittle}
+                  </p>
+                </div>
               </div>
-            </div>
             </div>
           );
         })}

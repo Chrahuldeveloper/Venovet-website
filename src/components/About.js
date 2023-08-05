@@ -36,7 +36,7 @@ export default function About() {
             <h1>DOWNLOAD BROCHURE</h1>
             <FaRegFilePdf size={20} color="white" />
           </button>
-          <button className="text-sm  flex items-center space-x-3 bg-black text-white font-semibold px-8 py-2 rounded-lg shadow-2xl shadow-black">
+          <button className="text-sm  flex items-center space-x-3 bg-[#121a37] text-white font-semibold px-8 py-2 rounded-lg shadow-2xl shadow-black">
             <h1>WATCH OUR SHORT VIDEO</h1>
             <BsFillPlayFill size={20} color="white" />
           </button>

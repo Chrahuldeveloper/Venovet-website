@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Data from "../Data/Services";
 function Services() {
+  const [hover, sethover] = useState(null);
   return (
     <div className="px-10 py-16 pt-24 bg-[#dae2ed] space-y-14">
       <div className="space-y-4">
@@ -10,9 +11,18 @@ function Services() {
       <div className="space-y-20 md:space-y-0 grid md:grid-cols-2 lg:grid-cols-4 md:gap-14 lg:gap-7  place-items-center">
         {Data.map((card, index) => {
           return (
-            <div key={index} className="relative lg:pb-6">
+            <div
+              key={index}
+              onMouseEnter={() => sethover(index)}
+              className="relative lg:pb-6"
+            >
               <img className="rounded-lg " src={card.image} alt="" />
               <div className="absolute shadow-lg bg-white rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-72 lg:w-60 space-x-4 hover:bg-[#ff5e15] hover:text-white transition ease-in-out duration-500">
+              <div
+                className={`${
+                  hover === index ? "bg-[#ff5e15]" : "bg-white"
+                } absolute shadow-lg bg-white rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-72 lg:w-60 space-x-4  transition ease-in-out duration-500`}
+              >
                 <img
                   className="w-14"
                   src="https://www.venovet.com/assets/images/logo-br-grey.png"
@@ -22,6 +32,7 @@ function Services() {
                   {card.Tittle}
                 </p>
               </div>
+            </div>
             </div>
           );
         })}

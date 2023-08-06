@@ -16,12 +16,9 @@ import CareerHeroSection from "./CareerHeroSection";
 import Form from "./Form";
 import ShopHeroSection from "./ShopHeroSection";
 import ServiceHeroSection from "./ServiceHeroSection";
-<<<<<<< HEAD
 import Icons from "./Icons";
-=======
 import ShopCate from "./ShopCate";
 import Enquire from "./Enquire";
->>>>>>> 9d249b1511a6d0a25758bcf91b7b3abf0a088d0a
 export {
   Navbar,
   Slider,
@@ -41,10 +38,7 @@ export {
   Form,
   ShopHeroSection,
   ServiceHeroSection,
-<<<<<<< HEAD
-  Icons
-=======
+  Icons,
   ShopCate,
   Enquire,
->>>>>>> 9d249b1511a6d0a25758bcf91b7b3abf0a088d0a
 };

@@ -27,7 +27,7 @@ function Enquire() {
   };
   return (
     <div className="bg-[#dae2ed]">
-      <div className="flex px-8 py-24">
+      <div className=" lg:flex px-8 py-24">
         <div className="rounded-l-md">
           <img
             className="rounded-l-md"
@@ -35,11 +35,11 @@ function Enquire() {
             alt=""
           />
         </div>
-        <div className="bg-white rounded-r-md flex flex-col items-center pt-10 w-[50%]">
+        <div className="bg-white rounded-r-md flex flex-col items-center pt-10 py-10 lg:pb-0 lg:w-[50%]">
           <h1 className="text-[#fe8704] lg:text-4xl font-bold">Enquire Now</h1>
           <form onSubmit={handleSubmit}>
             <div className="">
-              <div className="grid grid-cols-2 gap-4  pt-8 text-[#333]">
+              <div className="grid md:grid-cols-2 gap-4  pt-8 text-[#333]">
                 <input
                   className="border w-60 rounded-3xl px-4 py-1.5 focus:outline-[#ced4da] focus:border-none"
                   type="text"
@@ -79,7 +79,7 @@ function Enquire() {
                 <input
                   className="border w-60 rounded-3xl px-4 py-2 focus:outline-[#ced4da] focus:border-none"
                   type="text"
-                  placeholder="company"
+                  placeholder="Company"
                   value={form.Company}
                   onChange={(e) => {
                     setForm({
@@ -95,7 +95,7 @@ function Enquire() {
                   onChange={(e) => {
                     setForm({ ...form, Enquiry: e.target.value });
                   }}
-                  className="w-[100%] focus:outline-[#ced4da] rounded-3xl px-4 py-2 text-[#676767 focus:border-[#ced4da] border"
+                  className="md:w-[100%] w-60 focus:outline-[#ced4da] rounded-3xl px-4 py-2 text-[#676767 focus:border-[#ced4da] border"
                 >
                   <option>Nature of Enquiry</option>
                   <option>Type 1</option>
@@ -106,8 +106,7 @@ function Enquire() {
               <div className="py-2">
                 <textarea
                   rows="5"
-                  cols="65"
-                  className="focus:outline-[#ced4da] focus:border-none border py-2 px-2 rounded-3xl"
+                  className="focus:outline-[#ced4da] w-60 md:w-full focus:border-none border py-2 px-2 rounded-3xl"
                   placeholder="Message"
                   value={form.Message}
                   onChange={(e) => {

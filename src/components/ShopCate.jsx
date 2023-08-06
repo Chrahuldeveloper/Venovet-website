@@ -4,7 +4,7 @@ import Shop from "../Data/Shops";
 function ShopCate() {
   const [point, setPoint] = useState(0);
   return (
-    <div className="px-10 py-20 flex">
+    <div className="px-10 py-20 flex flex-col md:flex-row items-center space-y-4">
       {/* category  */}
       <div className="w-72">
         <button className="bg-[#b8daff] pl-6 py-3  transition duration-300 ease-in-out  font-bold border w-72 text-left">

@@ -11,6 +11,7 @@ import {
   Blogs,
   Bridge,
   NewsLetter,
+  Enquire,
 } from "../components";
 
 export default function Home() {
@@ -20,10 +21,11 @@ export default function Home() {
       <Slider />
       <About />
       <Services />
+      <Features />
+      <Enquire />
       <Testimonials />
       <FAQ />
       <Bridge />
-      <Features />
       <Blogs />
       <NewsLetter />
       <Footer />

@@ -16,6 +16,8 @@ import CareerHeroSection from "./CareerHeroSection";
 import Form from "./Form";
 import ShopHeroSection from "./ShopHeroSection";
 import ServiceHeroSection from "./ServiceHeroSection";
+import ShopCate from "./ShopCate";
+import Enquire from "./Enquire";
 export {
   Navbar,
   Slider,
@@ -34,5 +36,7 @@ export {
   CareerHeroSection,
   Form,
   ShopHeroSection,
-  ServiceHeroSection
+  ServiceHeroSection,
+  ShopCate,
+  Enquire,
 };

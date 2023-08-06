@@ -66,7 +66,9 @@ export default function Navbar({ Page }) {
           </div>
           <div>
             <ul className="flex items-center space-x-14 text-black">
-              <li className="cursor-pointer">HOME</li>
+              <Link to={"/"}>
+                <li className="cursor-pointer">HOME</li>
+              </Link>
               <Link to={"/about"}>
                 <li className={`cursor-pointer `}>ABOUT US</li>
               </Link>
@@ -164,7 +166,9 @@ export default function Navbar({ Page }) {
                   SHOP
                 </li>
               </Link>
-              <li className="cursor-pointer">CAREERS</li>
+              <Link to={"/career"}>
+                <li className="cursor-pointer">CAREERS</li>
+              </Link>
               <li className="cursor-pointer">CONTACT US</li>
             </ul>
           </div>
@@ -239,7 +243,9 @@ export default function Navbar({ Page }) {
       <div className="lg:flex justify-center mt-1 translate-y-6 hidden">
         <div className="flex items-center bg-[#121a37] p-4">
           <ul className="flex items-center space-x-14 text-white">
-            <li className="cursor-pointer">HOME</li>
+            <Link to={"/"}>
+              <li className="cursor-pointer">HOME</li>
+            </Link>
             <Link to={"/about"}>
               <li
                 className={`cursor-pointer ${

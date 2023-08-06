@@ -7,6 +7,8 @@ import {
   // LogisticsProjects,
   // RealEstate,
   SCM,
+  RealEstate,
+  // SCM,
   // Security,
   // Transpotation,
   // ValueAddService,
@@ -19,6 +21,8 @@ export default function ServiceContent() {
       {/* <WareHouseManagement /> */}
       {/* <Inventory /> */}
       <SCM/>
+      {/* <Security /> */}
+      <RealEstate />
     </div>
   );
 }

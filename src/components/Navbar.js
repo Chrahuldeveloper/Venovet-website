@@ -12,10 +12,12 @@ import {
 import { Link } from "react-router-dom";
 export default function Navbar({ Page }) {
   const [service, setservice] = useState(false);
+  const [what, setWhat] = useState(false);
+  const [who, setWho] = useState(false);
   const [ScrollY, setScrollY] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 0) {
+    if (window.scrollY > 50) {
       setScrollY(true);
     } else if (window.scrollY === 0) {
       setScrollY(false);
@@ -43,27 +45,36 @@ export default function Navbar({ Page }) {
       <div
         className={` ${
           ScrollY
-            ? "md:fixed top-0 left-0 right-0 z-50 bg-white shadow-md ease-in-out duration-500"
+            ? "md:fixed top-0 left-0 right-0 z-50  bg-white shadow-md ease-in-out duration-500"
             : "hidden"
         } w-screen `}
       >
-        <div className=" px-6 py-3.5 flex justify-between items-center shadow-md  ">
+        <div className=" px-10 py-3.5 flex justify-between items-center shadow-md  ">
           <div>
-            <img
-              src="https://venovet.com/assets/images/logo.png"
-              alt="https://venovet.com/assets/images/logo.png"
-              className=""
-            />
+            <Link
+              to={"/"}
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+            >
+              <img
+                src="https://venovet.com/assets/images/logo.png"
+                alt="https://venovet.com/assets/images/logo.png"
+                className=""
+              />
+            </Link>
           </div>
           <div>
-            <ul className="flex items-center space-x-8 text-black">
-              <li className="cursor-pointer">HOME</li>
+            <ul className="flex items-center space-x-14 text-black">
+              <Link to={"/"}>
+                <li className="cursor-pointer">HOME</li>
+              </Link>
               <Link to={"/about"}>
                 <li className={`cursor-pointer `}>ABOUT US</li>
               </Link>
               <div>
                 <li
-                  onClick={() => {
+                  onMouseEnter={() => {
                     setservice(!service);
                   }}
                   className="cursor-pointer"
@@ -71,20 +82,93 @@ export default function Navbar({ Page }) {
                   SERVICES
                 </li>
                 <div
-                  className={`${service ? "block" : "hidden"} mt-2 absolute`}
+                  onMouseEnter={() => setservice(true)}
+                  onMouseLeave={() => setservice(false)}
+                  className={`${
+                    service ? "flex" : "hidden"
+                  } mt-2 absolute cursor-pointer `}
                 >
-                  <ul className="text-sm text-[#676767]">
-                    <li className="bg-white border py-1 px-3 w-[14vw]">
+                  <ul className="text-sm text-[#676767] w-[16vw] font-semibold">
+                    <li
+                      onMouseEnter={() => {
+                        setWhat(true);
+                      }}
+                      onMouseLeave={() => {
+                        setWhat(false);
+                      }}
+                      className="bg-white border py-1.5 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300"
+                    >
                       What we do
                     </li>
-                    <li className="bg-white border py-1 px-3">Who we serve</li>
+
+                    <li className="bg-white border py-1.5 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300">
+                      Who we serve
+                    </li>
                   </ul>
+
+                  <div
+                    onMouseEnter={() => {
+                      setWhat(true);
+                    }}
+                    onMouseLeave={() => {
+                      setWhat(false);
+                    }}
+                    className={`${
+                      what ? "flex" : "hidden"
+                    } bg-white py-2 text-sm text-[#676767] w-[18vw]`}
+                  >
+                    <ul>
+                      <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                        Warehouse Management (2PL & 3PL)
+                      </li>
+                      <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                        Transportation/Fleet
+                      </li>
+                      <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                        Value Added Services
+                      </li>
+                      <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                        SCM Automation
+                      </li>
+                      <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                        Inventory Audits & Analytics
+                      </li>
+                      <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                        Logistics Projects Designing
+                      </li>
+                      <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                        Internet Supply Chain
+                      </li>
+                      <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                        ERP Solutions
+                      </li>
+                      <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                        Industrial Real States
+                      </li>
+                      <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                        Facility Management
+                      </li>
+                      <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                        Industrial Security Services
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
               <li className="cursor-pointer">BLOG</li>
-              <li className="cursor-pointer">SHOP</li>
-              <li className="cursor-pointer">CAREERS</li>
+              <Link to={"/shop"}>
+                <li
+                  className={`cursor-pointer ${
+                    Page === "Shop" ? "text-orange-500" : null
+                  } `}
+                >
+                  SHOP
+                </li>
+              </Link>
+              <Link to={"/career"}>
+                <li className="cursor-pointer">CAREERS</li>
+              </Link>
               <li className="cursor-pointer">CONTACT US</li>
             </ul>
           </div>
@@ -116,7 +200,14 @@ export default function Navbar({ Page }) {
       {/* Main Navbar */}
       <div className="my-3.5 flex items-center justify-between mx-5 md:mx-28">
         <div>
-          <img src="https://venovet.com/assets/images/logo.png" alt="pic" />
+          <Link
+            to={"/"}
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
+            <img src="https://venovet.com/assets/images/logo.png" alt="pic" />
+          </Link>
         </div>
         <div>
           <AiOutlineMenu
@@ -152,7 +243,9 @@ export default function Navbar({ Page }) {
       <div className="lg:flex justify-center mt-1 translate-y-6 hidden">
         <div className="flex items-center bg-[#121a37] p-4">
           <ul className="flex items-center space-x-14 text-white">
-            <li className="cursor-pointer">HOME</li>
+            <Link to={"/"}>
+              <li className="cursor-pointer">HOME</li>
+            </Link>
             <Link to={"/about"}>
               <li
                 className={`cursor-pointer ${
@@ -164,20 +257,30 @@ export default function Navbar({ Page }) {
             </Link>
             <div>
               <li
-                onClick={() => {
+                onMouseEnter={() => {
                   setservice(!service);
                 }}
                 className="cursor-pointer"
               >
                 SERVICES
               </li>
-              <div className={`${service ? "block" : "hidden"} mt-2 absolute`}>
-                <ul className="text-sm text-[#676767]">
+              <div
+                onMouseEnter={() => setservice(true)}
+                onMouseLeave={() => setservice(false)}
+                className={`${service ? "flex" : "hidden"} mt-2 absolute`}
+              >
+                <ul className="text-sm text-[#676767] w-[15vw] cursor-pointer">
                   <Link to={"/whatwedo"}>
                     <li
+                      onMouseEnter={() => {
+                        setWhat(true);
+                      }}
+                      onMouseLeave={() => {
+                        setWhat(false);
+                      }}
                       className={`cursor-pointer ${
                         Page === "whatwedo" ? "text-orange-500" : null
-                      }  bg-white border py-1 px-3 `}
+                      }  bg-white border py-1 px-3   hover:text-[#ff5e15] transition ease-in-out duration-300`}
                     >
                       What we do
                     </li>
@@ -185,11 +288,58 @@ export default function Navbar({ Page }) {
                   <li
                     className={`cursor-pointer ${
                       Page === "whatweserve" ? "text-orange-500" : null
-                    }  bg-white border py-1 px-3 `}
+                    }  bg-white border py-1 px-3   hover:text-[#ff5e15] transition ease-in-out duration-300`}
                   >
                     Who we serve
                   </li>
                 </ul>
+                <div
+                  onMouseEnter={() => {
+                    setWhat(true);
+                  }}
+                  onMouseLeave={() => {
+                    setWhat(false);
+                  }}
+                  className={`${
+                    what ? "flex" : "hidden"
+                  } bg-white py-2 text-sm text-[#676767] w-[18vw]`}
+                >
+                  <ul className="cursor-pointer">
+                    <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                      Warehouse Management (2PL & 3PL)
+                    </li>
+                    <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                      Transportation/Fleet
+                    </li>
+                    <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                      Value Added Services
+                    </li>
+                    <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                      SCM Automation
+                    </li>
+                    <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                      Inventory Audits & Analytics
+                    </li>
+                    <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                      Logistics Projects Designing
+                    </li>
+                    <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                      Internet Supply Chain
+                    </li>
+                    <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                      ERP Solutions
+                    </li>
+                    <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                      Industrial Real States
+                    </li>
+                    <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                      Facility Management
+                    </li>
+                    <li className="hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b ">
+                      Industrial Security Services
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
             {/* services */}

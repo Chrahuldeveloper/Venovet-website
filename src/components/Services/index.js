@@ -12,6 +12,7 @@ import WareHouseManagement from "./WareHouseManagement";
 import Help from "./Help";
 import Brochure from "./Brochure";
 import ServiceContent from "./ServiceContent";
+import Card from "./Card";
 
 export {
   EPRSolutions,
@@ -28,4 +29,5 @@ export {
   Brochure,
   Help,
   ServiceContent,
+  Card
 };

@@ -12,7 +12,7 @@ export default function WhatWeDo() {
     <main>
       <Navbar Page={"whatwedo"} />
       <ServiceHeroSection image={""} Tittle={""} Para={""} />
-      <div className="flex flex-col md:flex-row md:justify-around md:items-start max-w-6xl mx-auto p-5">
+      <div className="flex flex-col p-5 mx-auto max-w-7xl gap-x-10 md:flex-row md:justify-around md:items-start">
         <div className="space-y-8">
           <Help />
           <Brochure />
@@ -22,7 +22,7 @@ export default function WhatWeDo() {
         </div>
       </div>
       <NewsLetter />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

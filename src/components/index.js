@@ -16,6 +16,7 @@ import CareerHeroSection from "./CareerHeroSection";
 import Form from "./Form";
 import ShopHeroSection from "./ShopHeroSection";
 import ServiceHeroSection from "./ServiceHeroSection";
+import Icons from "./Icons";
 export {
   Navbar,
   Slider,
@@ -34,5 +35,6 @@ export {
   CareerHeroSection,
   Form,
   ShopHeroSection,
-  ServiceHeroSection
+  ServiceHeroSection,
+  Icons
 };

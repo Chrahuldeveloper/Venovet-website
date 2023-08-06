@@ -3,9 +3,9 @@ import {
   // EPRSolutions,
   // Facility,
   // InternetSupply,
-  Inventory,
+  // Inventory,
   // LogisticsProjects,
-  // RealEstate,
+  RealEstate,
   // SCM,
   // Security,
   // Transpotation,
@@ -17,7 +17,8 @@ export default function ServiceContent() {
     <div className="max-w-4xl p-10 mt-10 md:mt-0">
       {/* The Ui content will change accordingly */}
       {/* <WareHouseManagement /> */}
-      <Inventory />
+      {/* <Security /> */}
+      <RealEstate />
     </div>
   );
 }

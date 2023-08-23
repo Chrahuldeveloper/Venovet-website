@@ -13,6 +13,7 @@ import Help from "./Help";
 import Brochure from "./Brochure";
 import ServiceContent from "./ServiceContent";
 import Card from "./Card";
+import WhoWeServeContent from "./WhoWeServeContent";
 
 export {
   EPRSolutions,
@@ -29,5 +30,6 @@ export {
   Brochure,
   Help,
   ServiceContent,
-  Card
+  Card,
+  WhoWeServeContent,
 };

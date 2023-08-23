@@ -11,7 +11,7 @@ export default function Career() {
   return (
     <>
       <Navbar Page={"career"} />
-      <CareerHeroSection />
+      <CareerHeroSection Tittle={"Start Your Career with Venovet"} Para={"Careers"}/>
       <Form />
       <NewsLetter />
       <Footer />

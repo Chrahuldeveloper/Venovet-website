@@ -1,35 +1,34 @@
-const Data  = [
-    {
-        image : "https://images.pexels.com/photos/4144179/pexels-photo-4144179.jpeg?auto=compress&cs=tinysrgb&w=600",
-        Tittle : "Project ManageMent",
-        Para : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum sunt alias molestias minus rerum quae, ea optio at"
-    },
-    {
-        image : "https://images.pexels.com/photos/4144179/pexels-photo-4144179.jpeg?auto=compress&cs=tinysrgb&w=600",
-        Tittle : "EPR soloutions",
-        Para : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum sunt alias molestias minus rerum quae, ea optio at"
-    },
-    {
-        image : "https://images.pexels.com/photos/4144179/pexels-photo-4144179.jpeg?auto=compress&cs=tinysrgb&w=600",
-        Tittle : "Industrial Solutions",
-        Para : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum sunt alias molestias minus rerum quae, ea optio at"
-    },
-    {
-        image : "https://images.pexels.com/photos/4144179/pexels-photo-4144179.jpeg?auto=compress&cs=tinysrgb&w=600",
-        Tittle : "Project ManageMent",
-        Para : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum sunt alias molestias minus rerum quae, ea optio at"
-    },
-    {
-        image : "https://images.pexels.com/photos/4144179/pexels-photo-4144179.jpeg?auto=compress&cs=tinysrgb&w=600",
-        Tittle : "EPR soloutions",
-        Para : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum sunt alias molestias minus rerum quae, ea optio at"
-    },
-    {
-        image : "https://images.pexels.com/photos/4144179/pexels-photo-4144179.jpeg?auto=compress&cs=tinysrgb&w=600",
-        Tittle : "Industrial Solutions",
-        Para : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum sunt alias molestias minus rerum quae, ea optio at"
-    },
-]
+const Data = [
+  {
+    image: "https://www.venovet.com/assets/images/resources/post-img1-2.jpg",
+    Tittle: "Project ManageMent",
+    Para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum sunt",
+  },
+  {
+    image: "https://www.venovet.com/assets/images/resources/post-img1-3.jpg",
+    Tittle: "EPR soloutions",
+    Para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum sunt",
+  },
+  {
+    image: "https://www.venovet.com/assets/images/resources/post-img1-4.jpg",
+    Tittle: "Industrial Solutions",
+    Para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum sunt",
+  },
+  {
+    image: "https://www.venovet.com/assets/images/resources/post-img1-1.jpg",
+    Tittle: "Project ManageMent",
+    Para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum sunt",
+  },
+  {
+    image: "https://www.venovet.com/assets/images/resources/post-img1-2.jpg",
+    Tittle: "EPR soloutions",
+    Para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum sunt",
+  },
+  {
+    image: "https://www.venovet.com/assets/images/resources/post-img1-3.jpg",
+    Tittle: "Industrial Solutions",
+    Para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illum sunt",
+  },
+];
 
-
-export default Data
+export default Data;

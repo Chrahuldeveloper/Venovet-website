@@ -16,9 +16,17 @@ import CareerHeroSection from "./CareerHeroSection";
 import Form from "./Form";
 import ShopHeroSection from "./ShopHeroSection";
 import ServiceHeroSection from "./ServiceHeroSection";
+import BlogPageHeroSection from "./BlogPageHeroSection";
 import Icons from "./Icons";
 import ShopCate from "./ShopCate";
 import Enquire from "./Enquire";
+import DropDown from "./DropDown";
+import ContactForm from "./ContactForm";
+import ExpertFrom from "./ExpertFrom";
+import KeyBenifits from "./KeyBenifits";
+import AllBlogs from "./AllBlogs";
+import FilterCategory from "./FilterCategory";
+import BlogContent from "./BlogContent";
 export {
   Navbar,
   Slider,
@@ -41,4 +49,12 @@ export {
   Icons,
   ShopCate,
   Enquire,
+  DropDown,
+  ContactForm,
+  ExpertFrom,
+  KeyBenifits,
+  BlogPageHeroSection,
+  AllBlogs,
+  FilterCategory,
+  BlogContent
 };

@@ -34,10 +34,6 @@ const Footer = () => {
           fpsLimit: 120,
           interactivity: {
             events: {
-              onClick: {
-                enable: true,
-                mode: "push",
-              },
               onHover: {
                 enable: true,
                 mode: "repulse",
@@ -90,7 +86,7 @@ const Footer = () => {
       />
 
       <div className="absolute  justify-between top-0 w-[100%] text-[#d5d5d5]">
-        <div className="lg:flex px-10  pt-20 space-y-14 lg:space-y-0 ">
+        <div className="px-10 pt-20 lg:flex space-y-14 lg:space-y-0 ">
           {/* //first section */}
           <div className="space-y-4">
             <img
@@ -104,7 +100,7 @@ const Footer = () => {
             </p>
 
             {/* social icons  */}
-            <div className="flex space-x-4 pt-4">
+            <div className="flex pt-4 space-x-4">
               <AiFillFacebook size={30} />
               <AiOutlineTwitter size={30} />
               <AiOutlineInstagram size={30} />
@@ -112,9 +108,9 @@ const Footer = () => {
             </div>
           </div>
           {/* second section  */}
-          <div className="md:flex md:justify-between space-y-8 md:space-y-0 md:space-x-20">
+          <div className="space-y-8 md:flex md:justify-between md:space-y-0 md:space-x-20 md:pl-20">
             <div className="space-y-4">
-              <h1 className="text-white text-lg font-semibold">ABOUT US</h1>
+              <h1 className="text-lg font-semibold text-white">ABOUT US</h1>
               <ul className="space-y-4 text-[17px] cursor-pointer">
                 <li>About Us</li>
                 <li>What we do</li>
@@ -123,7 +119,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="space-y-4">
-              <h1 className="text-white text-lg font-semibold">SUPPORT</h1>
+              <h1 className="text-lg font-semibold text-white">SUPPORT</h1>
               <ul className="space-y-4 text-[17px] cursor-pointer">
                 <li>Request a Quote</li>
                 <li>Contac Us</li>
@@ -132,7 +128,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="space-y-4">
-              <h1 className="text-white text-lg font-semibold">LINKS</h1>
+              <h1 className="text-lg font-semibold text-white">LINKS</h1>
               <ul className="space-y-4 text-[17px] cursor-pointer">
                 <li>Shop</li>
                 <li>News</li>
@@ -142,7 +138,7 @@ const Footer = () => {
             </div>
           </div>
           {/* third section  */}
-          <div className="lg:px-10  space-y-10">
+          <div className="space-y-10 lg:px-10">
             <div>
               <p className="text-white">Call Us</p>
               <p className="text-[#ff5e15] text-2xl font-bold cursor-pointer">

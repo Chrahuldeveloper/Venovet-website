@@ -3,13 +3,13 @@ import Data from "../Data/Features";
 export default function Features() {
   return (
     <section className=" bg-[#fafafa]">
-      <div className="ml-6 lg:ml-28 space-y-5 pt-10">
-        <h1 className="text-slate-500  text-2xl font-bold">OUR GOODNESS</h1>
-        <h2 className="text-orange-500 font-bold text-xl md:text-3xl">
+      <div className="pt-10 space-y-1 text-center">
+        <h1 className="text-lg font-bold text-slate-500">OUR GOODNESS</h1>
+        <h2 className="text-xl font-bold text-orange-500 md:text-3xl">
           What Makes Us Special
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-7 my-14 px-5 md:px-0">
+      <div className="grid grid-cols-1 px-5 md:grid-cols-2 place-items-center gap-7 my-14 md:px-20">
         {Data.map((item, i) => {
           return (
             <React.Fragment key={i}>
@@ -27,7 +27,7 @@ export default function Features() {
         })}
       </div>
       <div className="flex justify-center my-10">
-        <button className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5">
+        <button className="bg-orange-500 tex-white font-semibold rounded-full shadow-2xl shadow-black text-white px-8 py-1.5">
           Talk to our experts
         </button>
       </div>

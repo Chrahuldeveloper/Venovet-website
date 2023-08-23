@@ -50,9 +50,6 @@ export default function Form() {
         } else {
           alert("upload resume");
         }
-
-        // await addDoc(collection(db, "RESUMES"), resume);
-        // alert("success");
       } catch (error) {
         console.log(error);
       }
@@ -61,13 +58,13 @@ export default function Form() {
   return (
     <div className="bg-[#e3f3fb] p-6 my-24 rounded-lg max-w-3xl mx-auto shadow-md">
       <div className="text-center space-y-3.5">
-        <h1 className="text-orange-500 font-semibold text-lg md:text-2xl">
+        <h1 className="text-lg font-semibold text-orange-500 md:text-2xl">
           CAREER WITH VENOVET
         </h1>
-        <p className="md:text-xl font-bold text-xl ">Submit Your Resume</p>
+        <p className="text-xl font-bold md:text-xl ">Submit Your Resume</p>
       </div>
-      <form onSubmit={handleSubmit} className="bg-white rounded-2xl mt-6 p-10">
-        <div className=" md:grid md:grid-cols-2 place-items-center justify-center gap-8">
+      <form onSubmit={handleSubmit} className="p-10 mt-6 bg-white rounded-2xl">
+        <div className="justify-center gap-8 md:grid md:grid-cols-2 place-items-center">
           <div className="flex flex-col gap-4">
             <label htmlFor="name" className="text-[#787878]">
               Full Name
@@ -129,7 +126,7 @@ export default function Form() {
               className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw] outline-none"
             />
           </div>
-          <div className="flex flex-col md:col-span-2 gap-4">
+          <div className="flex flex-col gap-4 md:col-span-2">
             <label htmlFor="Expertise Areas" className="text-[#787878]">
               Expertise Areas / Skills :
             </label>
@@ -149,7 +146,7 @@ export default function Form() {
             />
           </div>
         </div>
-        <div className="flex justify-center items-center mt-6">
+        <div className="flex items-center justify-center mt-6">
           <button
             type="submit"
             className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5"

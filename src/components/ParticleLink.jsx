@@ -11,7 +11,7 @@ const ParticleLink = () => {
     console.log(container);
   }, []);
   return (
-    // <div>
+    <div>
     <Particles
       id="tsparticles"
       init={particlesInit}
@@ -29,10 +29,6 @@ const ParticleLink = () => {
         fpsLimit: 120,
         interactivity: {
           events: {
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
             onHover: {
               enable: true,
               mode: "repulse",
@@ -90,7 +86,7 @@ const ParticleLink = () => {
         detectRetina: true,
       }}
     />
-    // </div>
+    </div>
   );
 };
 

@@ -1,31 +1,62 @@
-import React from "react";
+import React, { useRef } from "react";
 import Data from "../Data/Blogs";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 export default function Blogs() {
+  const blogs = useRef(null);
+  const navigate = useNavigate();
+
+  const scrollRight = () => {
+    blogs.current.scrollLeft += 500;
+  };
+
+  const scrollLeft = () => {
+    blogs.current.scrollLeft -= 500;
+  };
+
   return (
     <>
       <section>
-        <div>
-          <div className=" space-y-1.5 pt-10 ml-6">
-            <h1 className="lg:ml-24  text-slate-500 md:text-xl font-bold">
+        <div className="flex items-center justify-between px-6 lg:px-20">
+          <div className=" space-y-1.5 pt-10 ">
+            <h1 className="font-bold lg:ml-24 text-slate-500 md:text-xl">
               Our Blogs
             </h1>
-            <h2 className="lg:ml-24 text-orange-500 font-bold text-2xl md:text-3xl">
+            <h2 className="text-2xl font-bold text-orange-500 lg:ml-24 md:text-3xl">
               Recent Articles
             </h2>
           </div>
+
+          <div className="flex items-center gap-1 space-x-4">
+            <AiOutlineArrowLeft
+              onClick={scrollLeft}
+              color="orange"
+              className="p-3 rounded-full shadow-md w-14 h-14"
+            />
+            <AiOutlineArrowRight
+              onClick={scrollRight}
+              className="p-3 rounded-full shadow-md w-14 h-14"
+              color="orange"
+            />
+          </div>
         </div>
-        <div className="max-w-5xl md:max-w-7xl mx-auto overflow-x-scroll">
-          <div className="flex  flex-row  gap-9 my-10 px-8">
+        <div
+          className="max-w-5xl mx-auto overflow-x-scroll md:max-w-7xl scroll-smooth"
+          ref={blogs}
+        >
+          <div className="flex flex-row px-8 my-10 gap-9" onClick={scrollRight}>
             {Data.map((item, i) => {
               return (
                 <React.Fragment key={i}>
-                  <div className="text-center space-y-4 ">
+                  <div
+                    className="space-y-4 text-center"
+                    onClick={() => {
+                      navigate(`/ReadFull/${item.Tittle}`);
+                    }}
+                  >
                     <img
                       src={item.image}
-                      className="max-w-sm"
+                      className="max-w-sm duration-500 ease-in-out cursor-pointer hover:brightness-75"
                       alt={item.image + "xyz"}
                     />
                     <div className="space-y-2.5">

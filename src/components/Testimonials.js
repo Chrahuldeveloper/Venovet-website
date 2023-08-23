@@ -1,15 +1,15 @@
 import ParticleLink from "./ParticleLink";
-import Data from "../Data/TestimonialData";
+// import Data from "../Data/TestimonialData";
 import React from "react";
 const Testimonials = () => {
   return (
-    <div className=" relative">
+    <div className="relative ">
       <ParticleLink />
       <div className="absolute top-0 w-[100%] h-[100%] flex flex-col items-center">
         <h1 className="text-[#fff] py-14 text-3xl md:text-4xl lg:text-5xl font-semibold">
           WHAT CLIENTS SAY?
         </h1>
-        {/* <div className="max-w-5xl md:max-w-9xl overflow-x-scroll flex justify-start gap-10">
+        {/* <div className="flex justify-start max-w-5xl gap-10 overflow-x-scroll md:max-w-9xl">
           {Data.map((_, index) => {
             return (
               <React.Fragment key={index}>
@@ -20,7 +20,7 @@ const Testimonials = () => {
                     alt="img.png"
                   />
                   <div>
-                    <h1 className="text-white text-xl  font-semibold">
+                    <h1 className="text-xl font-semibold text-white">
                       {_.Name}
                     </h1>
                     <p className="text-[#d0d0d0] leading-8 py-4">{_.p}</p>
@@ -34,7 +34,7 @@ const Testimonials = () => {
             );
           })}
         </div> */}
-        {/* <div className="max-w-5xl md:max-w-9xl overflow-x-scroll flex justify-start gap-10">
+        {/* <div className="flex justify-start max-w-5xl gap-10 overflow-x-scroll md:max-w-9xl">
           {Data.map((_, index) => (
             <React.Fragment key={index}>
               <div className="max-w-md">

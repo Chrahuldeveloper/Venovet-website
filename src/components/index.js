@@ -27,7 +27,9 @@ import KeyBenifits from "./KeyBenifits";
 import AllBlogs from "./AllBlogs";
 import FilterCategory from "./FilterCategory";
 import BlogContent from "./BlogContent";
+import MobileNavbar from "./MobileNavbar";
 export {
+  MobileNavbar,
   Navbar,
   Slider,
   About,
@@ -56,5 +58,5 @@ export {
   BlogPageHeroSection,
   AllBlogs,
   FilterCategory,
-  BlogContent
+  BlogContent,
 };

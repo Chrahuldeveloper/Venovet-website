@@ -8,11 +8,14 @@ import {
   ServiceHeroSection,
 } from "../components";
 import { Help, Brochure, ServiceContent } from "../components/Services/index";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 export default function WhatWeDo() {
   // From Params take the categeory and chamge the whole ui
   const { category } = useParams();
+
+  const data = useLocation();
+  const { image, Tittle, Para } = data.state;
 
   const Categories = [
     "Warehouse Management (2PL & 3PL)",
@@ -31,7 +34,7 @@ export default function WhatWeDo() {
   return (
     <main>
       <Navbar Page={"whatwedo"} />
-      <ServiceHeroSection image={""} Tittle={""} Para={""} />
+      <ServiceHeroSection image={image} Tittle={Tittle} Para={Para} />
       <div className="flex flex-col max-w-5xl gap-16 p-5 mx-auto lg:max-w-7xl md:flex-row md:justify-around md:items-start">
         <div className="space-y-8">
           <FilterCategory Tittle={"Category"} Categories={Categories} />

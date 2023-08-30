@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { db } from "../Firebase";
 import { collection, addDoc } from "firebase/firestore";
-
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
 function Enquire() {
   const [form, setForm] = useState({
     Name: "",
@@ -25,9 +26,10 @@ function Enquire() {
       }
     }
   };
+
   return (
     <div className="bg-[#dae2ed]">
-      <div className=" lg:flex px-8 py-24">
+      <div className=" lg:flex px-5 md:px-7 lg:px-8 py-24">
         <div className="rounded-l-md">
           <img
             className="rounded-l-md"
@@ -35,7 +37,7 @@ function Enquire() {
             alt=""
           />
         </div>
-        <div className="bg-white rounded-r-md flex flex-col items-center pt-10 py-10 lg:pb-0 lg:w-[50%]">
+        <div className="bg-white rounded-r-md flex flex-col items-center pt-10 py-10 lg:pb-0  lg:w-[50%]">
           <h1 className="text-[#fe8704] lg:text-4xl font-bold">Enquire Now</h1>
           <form onSubmit={handleSubmit}>
             <div className="">
@@ -64,17 +66,15 @@ function Enquire() {
                     });
                   }}
                 />
-                <input
-                  className="border w-60 rounded-3xl px-4 py-2 focus:outline-[#ced4da] focus:border-none"
-                  type="number"
-                  placeholder="Mobile number"
+                <PhoneInput
                   value={form.Mobile}
-                  onChange={(e) => {
+                  onChange={(e)=>{
                     setForm({
                       ...form,
-                      Mobile: e.target.value,
+                      Mobile: e
                     });
                   }}
+                  className="border w-60 rounded-3xl px-4 py-2 outline-none  focus:border-none"
                 />
                 <input
                   className="border w-60 rounded-3xl px-4 py-2 focus:outline-[#ced4da] focus:border-none"

@@ -12,31 +12,40 @@ import {
   ValueAddService,
   WareHouseManagement,
 } from "./index";
+import { useCollectionData } from "react-firebase-hooks/firestore";
+import { db } from "../../Firebase";
+import { collection } from "firebase/firestore";
 export default function ServiceContent({ category }) {
+  // Fetching the services content
+  const docref = collection(db, `WHATWEDO/${category}`);
+  const [docs, loading, error] = useCollectionData(docref);
+  console.log(error ? error.message : docs);
   return (
     <>
-      {category  === "Warehouse Management (2PL & 3PL)" ? (
-        <WareHouseManagement />
+      {loading ? (
+        "loading"
+      ) : category === "Warehouse Management (2PL & 3PL)" ? (
+        <WareHouseManagement data={docs} />
       ) : category === "Inventory Audits & Analytics" ? (
-        <Inventory />
+        <Inventory data={docs} />
       ) : category === "Transportation/Fleet" ? (
         <Transpotation />
       ) : category === "Logistics Projects Designing" ? (
-        <LogisticsProjects />
+        <LogisticsProjects data={docs} />
       ) : category === "Ware ERP Solutions" ? (
-        <EPRSolutions />
+        <EPRSolutions data={docs} />
       ) : category === "Industrial Security Services" ? (
-        <Security />
+        <Security data={docs} />
       ) : category === "SCM Automation" ? (
-        <SCM />
+        <SCM data={docs} />
       ) : category === "Value Added Services" ? (
-        <ValueAddService />
+        <ValueAddService data={docs} />
       ) : category === "Internet Supply Chain" ? (
-        <InternetSupply />
+        <InternetSupply data={docs} />
       ) : category === "Industrial Real States" ? (
-        <RealEstate />
+        <RealEstate data={docs} />
       ) : category === "Facility Management" ? (
-        <Facility />
+        <Facility data={docs} />
       ) : null}
     </>
   );

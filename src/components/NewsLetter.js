@@ -15,14 +15,14 @@ export default function NewsLetter() {
           insights.
         </p>
       </div>
-      <div className="flex  items-center">
+      <div className="flex items-center">
         <input
           type="text"
           placeholder="Your Email Address"
-          className="p-3.5 border-[1px] md:w-[40vw] outline-none"
+          className="p-2 md:p-3.5 border-[1px]  outline-none"
         />
-        <button className="bg-orange-500 text-white p-3.5 font-semibold">
-          <h1>Request a Call Back</h1>
+        <button className="bg-orange-500 text-white p-2 md:p-3.5 text-xs font-semibold">
+          <h1>Request  Call Back</h1>
         </button>{" "}
       </div>
       <div className="flex items-center space-x-2.5">

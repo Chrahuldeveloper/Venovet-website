@@ -42,7 +42,7 @@ const FAQ = () => {
       </h1>
       <div className="divide-y-2">
         <div className="flex items-start justify-around text-left ">
-          <div className="pt-16">
+          <div className="pt-10">
             {Data.map((_, index) => {
               return (
                 <div key={index}>

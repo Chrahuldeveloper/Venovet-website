@@ -2,7 +2,7 @@ import React from "react";
 import { Card } from "./index";
 import { Icons } from "./../index";
 
-export default function WareHouseManagement() {
+export default function WareHouseManagement({ data }) {
   return (
     <section classNamw="mt-5 md:mt-0">
       <div className="space-y-6">

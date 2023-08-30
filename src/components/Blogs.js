@@ -17,7 +17,7 @@ export default function Blogs() {
   return (
     <>
       <section>
-        <div className="flex items-center justify-between px-6 lg:px-20">
+        <div className="flex items-center justify-between px-5 lg:px-20">
           <div className=" space-y-1.5 pt-10 ">
             <h1 className="font-bold lg:ml-24 text-slate-500 md:text-xl">
               Our Blogs
@@ -27,15 +27,15 @@ export default function Blogs() {
             </h2>
           </div>
 
-          <div className="flex items-center gap-1 space-x-4">
+          <div className="flex items-center gap-0.5 space-x-4">
             <AiOutlineArrowLeft
               onClick={scrollLeft}
               color="orange"
-              className="p-3 rounded-full shadow-md w-14 h-14"
+              className="p-2 rounded-full shadow-md w-9 h-9 md:p-3 md:w-14 md:h-14"
             />
             <AiOutlineArrowRight
               onClick={scrollRight}
-              className="p-3 rounded-full shadow-md w-14 h-14"
+              className="p-2 rounded-full shadow-md w-9 h-9  md:p-3 md:w-14 md:h-14"
               color="orange"
             />
           </div>
@@ -56,11 +56,11 @@ export default function Blogs() {
                   >
                     <img
                       src={item.image}
-                      className="max-w-sm duration-500 ease-in-out cursor-pointer hover:brightness-75"
+                      className="max-w-xs duration-500 ease-in-out cursor-pointer hover:brightness-75"
                       alt={item.image + "xyz"}
                     />
                     <div className="space-y-2.5">
-                      <h1 className="font-bold text-xl text-[#757575]">
+                      <h1 className="font-bold text-sm md:text-xl text-[#757575]">
                         {item.Tittle}
                       </h1>
                       <p className="text-slate-400">{item.Para}</p>

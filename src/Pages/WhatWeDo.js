@@ -13,41 +13,28 @@ import { useLocation, useParams } from "react-router-dom";
 export default function WhatWeDo() {
   // From Params take the categeory and chamge the whole ui
   const { category } = useParams();
-
   const data = useLocation();
   const { image, Tittle, Para } = data.state;
 
-  const Categories = [
-    "Warehouse Management (2PL & 3PL)",
-    "Transportation Fleet",
-    "Value Added Services",
-    "SCM Automation",
-    "Inventory Audits & Analytics",
-    "Logistics Projects Designing",
-    "Internet Supply Chain",
-    "Ware ERP Solutions",
-    "Industrial Real States",
-    "Facility Management",
-    "Industrial Security Services",
-  ];
-
   return (
-    <main>
-      <Navbar Page={"whatwedo"} />
-      <ServiceHeroSection image={image} Tittle={Tittle} Para={Para} />
-      <div className="flex flex-col max-w-5xl gap-16 p-5 mx-auto lg:max-w-7xl md:flex-row md:justify-around md:items-start">
-        <div className="space-y-8">
-          <FilterCategory Tittle={"Category"} Categories={Categories} />
-          <Help />
-          <Brochure />
-          <ExpertFrom />
+    <body className="overflow-x-clip">
+      <main>
+        <Navbar Page={"whatwedo"} />
+        <ServiceHeroSection image={image} Tittle={Tittle} Para={Para} />
+        <div className="flex flex-col max-w-5xl gap-16 p-5 mx-auto lg:max-w-7xl md:flex-row md:justify-around md:items-start">
+          <div className="space-y-8">
+            <FilterCategory Tittle={"Category"} />
+            <Help />
+            <Brochure />
+            <ExpertFrom />
+          </div>
+          <div>
+            <ServiceContent category={category} />
+          </div>
         </div>
-        <div>
-          <ServiceContent category={category} />
-        </div>
-      </div>
-      <NewsLetter />
-      <Footer />
-    </main>
+        <NewsLetter />
+        <Footer />
+      </main>
+    </body>
   );
 }

@@ -9,12 +9,12 @@ import {
 
 export default function About() {
   return (
-    <>
+    <body className="overflow-x-clip">
       <Navbar Page={"About"} />
       <AboutUsHeroSection />
       <AboutUsSection />
       <NewsLetter />
       <Footer />
-    </>
+    </body>
   );
 }

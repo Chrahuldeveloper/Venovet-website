@@ -12,14 +12,16 @@ import {
   ValueAddService,
   WareHouseManagement,
 } from "./index";
-import { useCollectionData } from "react-firebase-hooks/firestore";
-import { db } from "../../Firebase";
-import { collection } from "firebase/firestore";
+// import { useCollectionData } from "react-firebase-hooks/firestore";
+// import { db } from "../../Firebase";
+// import { collection } from "firebase/firestore";
 export default function ServiceContent({ category }) {
   // Fetching the services content
-  const docref = collection(db, `WHATWEDO/${category}`);
-  const [docs, loading, error] = useCollectionData(docref);
-  console.log(error ? error.message : docs);
+  // const docref = collection(db, `WHATWEDO/${category}`);
+  // const [docs, loading, error] = useCollectionData(docref);
+  // console.log(error ? error.message : docs);
+  const docs = ""
+  const loading = false
   return (
     <>
       {loading ? (

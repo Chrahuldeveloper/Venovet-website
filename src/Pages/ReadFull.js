@@ -11,7 +11,7 @@ import { Help } from "../components/Services/index";
 
 export default function ReadFull() {
   return (
-    <>
+    <body className="overflow-x-clip">
       <main>
         <Navbar Page={"whatwedo"} />
         <ServiceHeroSection image={""} Tittle={""} Para={""} />
@@ -27,6 +27,6 @@ export default function ReadFull() {
         <NewsLetter />
         <Footer />
       </main>
-    </>
+    </body>
   );
 }

@@ -16,7 +16,7 @@ import {
 
 export default function Home() {
   return (
-    <>
+    <body className="overflow-x-clip">
       <Navbar />
       <Slider />
       <About />
@@ -29,6 +29,6 @@ export default function Home() {
       <Blogs />
       <NewsLetter />
       <Footer />
-    </>
+    </body>
   );
 }

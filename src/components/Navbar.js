@@ -120,7 +120,7 @@ export default function Navbar({ Page }) {
                         what ? "flex" : "hidden"
                       } bg-white py-2 text-sm text-[#676767] w-[18vw]`}
                     >
-                      <DropDown />
+                      <DropDown ismobile={false} type={"Whatwedo"} />
                     </div>
                   </div>
                 </div>
@@ -284,7 +284,7 @@ export default function Navbar({ Page }) {
                       what ? "flex" : "hidden"
                     } bg-white py-2 text-sm text-[#676767] w-[18vw]`}
                   >
-                    <DropDown />
+                    <DropDown ismobile={false} type={"Whatwedo"} />
                   </div>
                 </div>
               </div>

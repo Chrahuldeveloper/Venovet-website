@@ -18,14 +18,11 @@ export default function Form() {
       alert("Please Fill the form");
     } else {
       try {
-        // upload file
-        const fileInput = document.getElementById("Upload Resume ");
+        const fileInput = document.getElementById("Upload Resume");
         const file = fileInput?.files[0];
-
         if (file) {
           const storageRef = ref(storage, `resumes/${file.name}`);
           const uploadTask = uploadBytesResumable(storageRef, file);
-
           uploadTask.on(
             "state_changed",
             null,
@@ -33,17 +30,12 @@ export default function Form() {
               console.error(error);
             },
             async () => {
-              // download url for upload file
               const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-
-              //  Save form data and file URL to Firestore
               const resumeData = {
                 ...resume,
                 FileUrl: downloadURL,
               };
-
               await addDoc(collection(db, "RESUMES"), resumeData);
-
               alert("success");
             }
           );

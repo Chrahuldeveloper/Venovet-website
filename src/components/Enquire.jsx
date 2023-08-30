@@ -29,7 +29,7 @@ function Enquire() {
 
   return (
     <div className="bg-[#dae2ed]">
-      <div className=" lg:flex px-5 md:px-7 lg:px-8 py-24">
+      <div className="px-5 py-24  lg:flex md:px-7 lg:px-8">
         <div className="rounded-l-md">
           <img
             className="rounded-l-md"
@@ -68,13 +68,13 @@ function Enquire() {
                 />
                 <PhoneInput
                   value={form.Mobile}
-                  onChange={(e)=>{
+                  onChange={(e) => {
                     setForm({
                       ...form,
-                      Mobile: e
+                      Mobile: e,
                     });
                   }}
-                  className="border w-60 rounded-3xl px-4 py-2 outline-none  focus:border-none"
+                  className="px-4 py-2 border outline-none w-60 rounded-3xl focus:border-none"
                 />
                 <input
                   className="border w-60 rounded-3xl px-4 py-2 focus:outline-[#ced4da] focus:border-none"

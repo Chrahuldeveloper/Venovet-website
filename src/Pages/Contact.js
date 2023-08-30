@@ -8,7 +8,7 @@ import {
 } from "../components/index";
 export default function Contact() {
   return (
-    <>
+    <body className="overflow-x-clip">
       <Navbar />
       <CareerHeroSection
         Tittle={"Get in Touch with Venovet"}
@@ -17,6 +17,6 @@ export default function Contact() {
       <ContactForm />
       <NewsLetter />
       <Footer />
-    </>
+    </body>
   );
 }

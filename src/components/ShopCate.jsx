@@ -4,7 +4,7 @@ import Shop from "../Data/Shops";
 function ShopCate() {
   const [point, setPoint] = useState(0);
   return (
-    <div className="p-10 flex flex-col md:flex-row items-center justify-center gap-10 space-y-4">
+    <div className="flex flex-col items-center justify-center gap-10 p-10 space-y-4 md:flex-row">
       {/* category  */}
       <div className="">
         <button className="bg-[#b8daff] pl-6 py-3  transition duration-300 ease-in-out  font-bold border w-72 text-left">
@@ -32,11 +32,11 @@ function ShopCate() {
           return (
             <div
               key={index}
-              className="px-4 py-6 shadow-lg space-y-6 rounded-lg"
+              className="px-4 py-6 space-y-6 rounded-lg shadow-lg"
             >
-              <img className="max-w-[15rem]" src={item.img} alt="" />
-              <p className="font-semibold text-sm text-center">
-                {item.name.toUpperCase()}
+              <img className="max-w-[15rem]" src={item.img} alt={item.img} />
+              <p className="text-sm font-semibold text-center">
+                {item.name.toUpperCase() === "" ? <p className="text-lg font-semibold text-red-600">No Products Found</p> : item.name.toUpperCase() }
               </p>
             </div>
           );

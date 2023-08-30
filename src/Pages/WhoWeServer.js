@@ -23,9 +23,8 @@ export default function WhoWeServer() {
     "Pharma",
     "Lens And Frames",
   ];
-
   return (
-    <>
+    <body className="overflow-x-clip">
       <main>
         <Navbar Page={"whatwedo"} />
         <ServiceHeroSection
@@ -42,6 +41,6 @@ export default function WhoWeServer() {
         <NewsLetter />
         <Footer />
       </main>
-    </>
+    </body>
   );
 }

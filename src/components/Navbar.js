@@ -326,6 +326,9 @@ export default function Navbar({ Page }) {
               <Link to={"/contact"}>
                 <li className="cursor-pointer">CONTACT US</li>
               </Link>
+              <Link to={"/signin"}>
+                <li className="cursor-pointer">SIGN IN</li>
+              </Link>
             </ul>
           </div>
           <Link to="/contact">

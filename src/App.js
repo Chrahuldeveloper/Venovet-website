@@ -10,6 +10,7 @@ import {
   BlogPage,
   ReadFull,
   CartItem,
+  Signin,
 } from "./Pages/index";
 import { Routes, Route } from "react-router-dom";
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
       <Route path="/BlogPage" element={<BlogPage />} />
       <Route path="/ReadFull/:tittle" element={<ReadFull />} />
       <Route path="/mycart" element={<CartItem />} />
+      <Route path="/signin" element={<Signin />} />
     </Routes>
   );
 }

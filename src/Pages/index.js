@@ -8,6 +8,7 @@ import Contact from "./Contact";
 import BlogPage from "./BlogPage";
 import ReadFull from "./ReadFull";
 import CartItem from "./CartItem";
+import Signin from "./Signin";
 
 export {
   Home,
@@ -19,5 +20,6 @@ export {
   WhoWeServer,
   BlogPage,
   ReadFull,
-  CartItem
+  CartItem,
+  Signin
 };

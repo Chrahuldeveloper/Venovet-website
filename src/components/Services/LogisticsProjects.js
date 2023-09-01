@@ -1,21 +1,17 @@
 import React from "react";
 
-export default function LogisticsProjects() {
+export default function LogisticsProjects({ data }) {
   return (
     <section className="space-y-10">
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg "
-          src="https://venovet.com/assets/images/s22.jpg"
+          src={data.SubCat1.image}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">Real Estate Planning</h1>
-          <p className="text-[#7a7a7a]">
-            Before a project is initiated, we perform various assessments and
-            analysis to ensure we are setting the project up for success. This
-            includes:
-          </p>
+          <h1 className="text-xl font-semibold">{data.SubCat1.Tittle}</h1>
+          <p className="text-[#7a7a7a]">{data.SubCat1.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -47,18 +43,12 @@ export default function LogisticsProjects() {
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg md:order-2"
-          src="https://venovet.com/assets/images/s22.jpg"
+          src={data.SubCat2.image}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">
-            Pre-Construction and Facility Design Management
-          </h1>
-          <p className="text-[#7a7a7a]">
-            Whether a brownfield or greenfield site, before any construction
-            takes place, our team thoroughly reviews the site and building
-            design. Once finalized, they:
-          </p>
+          <h1 className="text-xl font-semibold">{data.SubCat2.Tittle}</h1>
+          <p className="text-[#7a7a7a]">{data.SubCat2.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Manage permits and entitlements
@@ -88,20 +78,12 @@ export default function LogisticsProjects() {
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg "
-          src="https://venovet.com/assets/images/s22.jpg"
+          src={data.SubCat3.image}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">
-            Program and Specification Development
-          </h1>
-          <p className="text-[#7a7a7a]">
-            Bastian Solutions and JLL team members work with you from project
-            start through to completion. To ensure real estate and development
-            projects meet the needed milestones, we create sustainable
-            development goals for design, permitting, construction and final
-            site opening. This includes:
-          </p>
+          <h1 className="text-xl font-semibold">{data.SubCat3.Tittle}</h1>
+          <p className="text-[#7a7a7a]">{data.SubCat3.Para}</p>
           <ul className="pl-4 text-[#7a7a7a]">
             <li className="text-sm leading-7 list-disc ">
               Outline specifications
@@ -128,16 +110,12 @@ export default function LogisticsProjects() {
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg md:order-2"
-          src="https://venovet.com/assets/images/s22.jpg"
+          src={data.SubCat4.image}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">Real Estate Planning</h1>
-          <p className="text-[#7a7a7a]">
-            Before a project is initiated, we perform various assessments and
-            analysis to ensure we are setting the project up for success. This
-            includes:
-          </p>
+          <h1 className="text-xl font-semibold"> {data.SubCat4.Tittle}</h1>
+          <p className="text-[#7a7a7a]">{data.SubCat4.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -169,16 +147,12 @@ export default function LogisticsProjects() {
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg "
-          src="https://venovet.com/assets/images/s22.jpg"
+          src={data.SubCat5.image}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">Real Estate Planning</h1>
-          <p className="text-[#7a7a7a]">
-            Before a project is initiated, we perform various assessments and
-            analysis to ensure we are setting the project up for success. This
-            includes:
-          </p>
+          <h1 className="text-xl font-semibold">{data.SubCat5.Tittle}</h1>
+          <p className="text-[#7a7a7a]">{data.SubCat4.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -210,16 +184,12 @@ export default function LogisticsProjects() {
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg md:order-2"
-          src="https://venovet.com/assets/images/s22.jpg"
+          src={data.SubCat6.image}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">Real Estate Planning</h1>
-          <p className="text-[#7a7a7a]">
-            Before a project is initiated, we perform various assessments and
-            analysis to ensure we are setting the project up for success. This
-            includes:
-          </p>
+          <h1 className="text-xl font-semibold">{data.SubCat6.Tittle}</h1>
+          <p className="text-[#7a7a7a]">{data.SubCat6.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -251,16 +221,12 @@ export default function LogisticsProjects() {
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg "
-          src="https://venovet.com/assets/images/s22.jpg"
+          src={data.SubCat7.image}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">Real Estate Planning</h1>
-          <p className="text-[#7a7a7a]">
-            Before a project is initiated, we perform various assessments and
-            analysis to ensure we are setting the project up for success. This
-            includes:
-          </p>
+          <h1 className="text-xl font-semibold">{data.SubCat7.Tittle}</h1>
+          <p className="text-[#7a7a7a]">{data.SubCat7.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis

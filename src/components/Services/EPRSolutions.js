@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function EPRSolutions() {
+export default function EPRSolutions({ data }) {
   const ERPSolutions = [
     {
       icons: "EVERY BUSINESS SIZE",
-      Tittle: "EVERY BUSINESS SIZE        ",
+      Tittle: "EVERY BUSINESS SIZE",
       Para: "A one-size-files-all solution for every business of all sizes and stripes.",
     },
     {
@@ -70,27 +70,19 @@ export default function EPRSolutions() {
   return (
     <>
       <div className="space-y-4 text-[#7a7a7a] flex justify-center items-center flex-col">
-        <h1 className="text-lg md:text-xl lg:text-2xl font-bold text-black">
-          Custom ERP Solutions
+        <h1 className="text-lg font-bold text-black md:text-xl lg:text-2xl">
+          {data.Tittle1}
         </h1>
-        <p>
-          Our ERP experts develop custom solutions that provide flexibility and
-          mobility to scale up system requirements and enable on-the-go access.
-          We Develop Custom ERP Solutions For Every Type of Business.
-        </p>
-        <p>
-          Venovet’s Custom ERP Software Development Solution Works For Every
-          Business.
-        </p>
+        <p>{data.Para1}</p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center place-items-center mt-5">
+      <div className="grid justify-center grid-cols-1 gap-5 mt-5 md:grid-cols-2 lg:grid-cols-3 place-items-center">
         {ERPSolutions.map((item, index) => {
           return (
             <React.Fragment key={index}>
-              <div className="shadow-lg shadow-slate-300 p-5 text-center max-w-xs">
+              <div className="max-w-xs p-5 text-center shadow-lg shadow-slate-300">
                 {/* <Icons/> */}
                 <div className="space-y-2">
-                  <h1 className=" font-semibold text-orange-500">
+                  <h1 className="font-semibold text-orange-500 ">
                     {item.Tittle}
                   </h1>
                   <p className="text-[#7a7a7a]">{item.Para}</p>
@@ -102,22 +94,9 @@ export default function EPRSolutions() {
       </div>
 
       <div className="mt-7 text-[#7a7a7a] space-y-4">
-        <h1 className="text-lg font-bold">
-          Benefits of ERP Built for Services Industry
-        </h1>
-        <p>
-          Venovet’s SRP software is designed ground up specifically for the
-          Services industry. The Services Resource Planning system streamlines
-          end-to-end business offerings for Warehouse management, Inventory
-          Management, Vendor Management, Retail Stores, Logistics Management,
-          professional services & BPO / KPO companies, covering revenue models
-          such as ‘Contact to Contract’, ‘Execution to Billing’, ‘Quote to
-          Cash’, or ‘Requisition to Release’ on a single platform. We have the
-          industry leading Financial Suite, Multi-country compliance driven HCM
-          & Payroll processing in a unified platform, accentuated with
-          Intelligent Analytics integrated with SRP.
-        </p>
-        <ul className="space-y-1 ml-4 ">
+        <h1 className="text-lg font-bold">{data.Tittle2}</h1>
+        <p>{data.Para2}</p>
+        <ul className="ml-4 space-y-1 ">
           <li className="list-disc">Power of One</li>
           <li className="list-disc">Flexible Contract Management</li>
           <li className="list-disc">Skill Anywhere’ Workforce Management</li>
@@ -135,14 +114,14 @@ export default function EPRSolutions() {
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center  mt-7">
+      <div className="grid justify-center grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 mt-7">
         {modules.map((item, index) => {
           return (
             <React.Fragment key={index}>
-              <div className="shadow-md shadow-slate-300 p-5 text-center max-w-xs space-y-2">
+              <div className="max-w-xs p-5 space-y-2 text-center shadow-md shadow-slate-300">
                 <img src={item.image} alt="" className="mx-auto" />
                 <div className="space-y-2">
-                  <h1 className=" font-semibold text-orange-500">
+                  <h1 className="font-semibold text-orange-500 ">
                     {item.Tittle}
                   </h1>
                   <p className="text-[#7a7a7a]">{item.Para}</p>

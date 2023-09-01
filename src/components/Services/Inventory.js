@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Inventory() {
+export default function Inventory({ data }) {
   const AuditServices = [
     {
       Tittle: "Step 1: Detailed Discussion",

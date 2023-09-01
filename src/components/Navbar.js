@@ -11,11 +11,13 @@ import {
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { DropDown, MobileNavbar } from "./index";
+import { useSelector } from "react-redux";
 export default function Navbar({ Page }) {
   const [service, setservice] = useState(false);
   const [what, setWhat] = useState(false);
   const [ScrollY, setScrollY] = useState(false);
   const [toogle, settoogle] = useState(false);
+  const cart = useSelector((state) => state.cart);
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -102,7 +104,15 @@ export default function Navbar({ Page }) {
                       >
                         What we do
                       </li>
-                      <Link to="/whoweserver">
+                      <Link
+                        to="/whoweserver"
+                        onMouseEnter={() => {
+                          setWhat(true);
+                        }}
+                        onMouseLeave={() => {
+                          setWhat(false);
+                        }}
+                      >
                         <li className="bg-white border py-1.5 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300">
                           Who we serve
                         </li>
@@ -170,7 +180,6 @@ export default function Navbar({ Page }) {
             </div>
           </div>
         </div>
-
         {/* Main Navbar */}
         <div className="my-3.5 flex items-center justify-between mx-5 md:mx-28">
           <div>
@@ -203,17 +212,21 @@ export default function Navbar({ Page }) {
                   className="w-10 h-10"
                 />
                 <h1 className="text-lg font-semibold">+91 9912 742 555</h1>
-                <div className="flex items-center ml-10 space-x-2">
-                  <AiOutlineShoppingCart
-                    size={39}
-                    color="white"
-                    className="p-2 bg-orange-500 rounded-full"
-                  />
-                  <div className="font-semibold">
-                    <h1>MyCart</h1>
-                    <p className="text-slate-400 ">item : 0</p>
+                <Link to="/mycart">
+                  <div className="flex items-center ml-10 space-x-2">
+                    <AiOutlineShoppingCart
+                      size={39}
+                      color="white"
+                      className="p-2 bg-orange-500 rounded-full"
+                    />
+                    <div className="font-semibold">
+                      <h1>MyCart</h1>
+                      <p className="text-slate-400 ">
+                        item : {cart.cartItems.length}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -259,7 +272,7 @@ export default function Navbar({ Page }) {
                       }}
                       className={`cursor-pointer ${
                         Page === "whatwedo" ? "text-orange-500" : null
-                      }  bg-white border py-1 px-3   hover:text-[#ff5e15] transition ease-in-out duration-300`}
+                      }  bg-white border py-1 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300`}
                     >
                       What we do
                     </li>
@@ -267,7 +280,7 @@ export default function Navbar({ Page }) {
                       <li
                         className={`cursor-pointer ${
                           Page === "whatweserve" ? "text-orange-500" : null
-                        }  bg-white border py-1 px-3   hover:text-[#ff5e15] transition ease-in-out duration-300`}
+                        }  bg-white border py-1 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300`}
                       >
                         Who we serve
                       </li>

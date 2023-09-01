@@ -9,6 +9,7 @@ import {
   WhoWeServer,
   BlogPage,
   ReadFull,
+  CartItem,
 } from "./Pages/index";
 import { Routes, Route } from "react-router-dom";
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/BlogPage" element={<BlogPage />} />
       <Route path="/ReadFull/:tittle" element={<ReadFull />} />
+      <Route path="/mycart" element={<CartItem />} />
     </Routes>
   );
 }

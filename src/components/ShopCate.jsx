@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import Shop from "../Data/Shops";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { addTocart } from "../features/ProductSlice";
+import { useNavigate } from "react-router-dom";
 
 function ShopCate() {
   const [point, setPoint] = useState(0);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col items-center justify-center gap-10 p-10 space-y-4 md:flex-row">
-      {/* category  */}
       <div className="">
         <button className="bg-[#b8daff] pl-6 py-3  transition duration-300 ease-in-out  font-bold border w-72 text-left">
           Category
         </button>
-
         {Shop.map((item, index) => {
           return (
             <div key={index}>
@@ -25,8 +29,6 @@ function ShopCate() {
           );
         })}
       </div>
-
-      {/* products */}
       <div className="px-5">
         {Shop[point].Products.map((item, index) => {
           return (
@@ -36,8 +38,28 @@ function ShopCate() {
             >
               <img className="max-w-[15rem]" src={item.img} alt={item.img} />
               <p className="text-sm font-semibold text-center">
-                {item.name.toUpperCase() === "" ? <p className="text-lg font-semibold text-red-600">No Products Found</p> : item.name.toUpperCase() }
+                {item.name.toUpperCase() === "" ? (
+                  <p className="text-lg font-semibold text-red-600">
+                    No Products Found
+                  </p>
+                ) : (
+                  item.name.toUpperCase()
+                )}
               </p>
+              <button
+                onClick={() => {
+                  if (item.name.toUpperCase() !== "") {
+                    dispatch(addTocart(item));
+                    navigate("/mycart");
+                  } else {
+                    alert("No item Found");
+                  }
+                }}
+                className="flex items-center gap-5 px-6 py-1 mx-auto font-semibold text-white duration-500 ease-in-out bg-black rounded-md hover:bg-orange-500"
+              >
+                <h1>Add to Cart</h1>
+                <AiOutlineShoppingCart size={24} color="white" />
+              </button>
             </div>
           );
         })}

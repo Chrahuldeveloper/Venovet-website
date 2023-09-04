@@ -3,42 +3,42 @@ import React from "react";
 export default function Inventory({ data }) {
   const AuditServices = [
     {
-      Tittle: "Step 1: Detailed Discussion",
-      Para: "This involves detailed discussion with our Patron expert to understand your your business, frequency of stock-audit, scope of stock audit,, location, man-days. This step will help us to understand your requirement and set the processes accordingly",
+      Tittle: `${data.SubCat3.Tittle}`,
+      Para: `${data.SubCat3.Para}`,
     },
     {
-      Tittle: "Step 2: Detailed Scoping and Quotation",
-      Para: "After having the detailed discussion, our Patron expert will have brainstorm internally to design a proper process keeping in mind the your requirements. Patron expert will share the scope and quotation with you for approval. This will help to bridge any communication gap.",
+      Tittle: `${data.SubCat4.Tittle}`,
+      Para: `${data.SubCat4.Para}`,
     },
     {
-      Tittle: "Step 3: Stock Audit Plan",
-      Para: "Once scope and quotation is agreed; all information will be collected like bank statement, invoices in order start the accounting, set-up software Like tally, Zoho , GST login credentials. . Patron expert will analyse the information and communicate with you expected day for next communication.",
+      Tittle: `${data.SubCat5.Tittle}`,
+      Para: `${data.SubCat5.Para}`,
     },
     {
-      Tittle: "Step 4: Execution",
-      Para: "Patron field staff will execute the stock audit as per planat different locations.",
+      Tittle: `${data.SubCat6.Tittle}`,
+      Para: `${data.SubCat6.Para}`,
     },
     {
-      Tittle: "Step 5: Report the findings",
-      Para: "All observations will be presented in the required format to the client.",
+      Tittle: `${data.SubCat7.Tittle}`,
+      Para: `${data.SubCat7.Para}`,
     },
   ];
   const Benefits = [
     {
-      Tittle: "Prevents Fraud & Pilferage",
-      Para: "Stock audit services will disclose any failure due to lack of security which results in loss, theft, or misappropriation. It is also crucial to any sort of inventory losses resulting from wastages, pilferage, dormant and obsolete stock. It also helps in finding out any discrepancies in the packaging and warehouse procedures.",
+      Tittle: `${data.SubCat8.Tittle}`,
+      Para: `${data.SubCat8.Para}`,
     },
     {
-      Tittle: "Comparative Profitability",
-      Para: "Stock audit enables the true picture of the financial position of the company as the stock that requires replacement or repairment can be worked on efficiently thereby saving the company from any kind of financial loss.",
+      Tittle: `${data.SubCat9.Tittle}`,
+      Para: `${data.SubCat9.Para}`,
     },
     {
-      Tittle: "Independent Third Party Opinion",
-      Para: "An accurate valuation of the inventory and gap identification in the current inventory management process can be done with the help of professional firm: Stock Audit helps in cross verifications of the stock of the company having multiple business locations.",
+      Tittle: `${data.SubCat10.Tittle}`,
+      Para: `${data.SubCat10.Para}`,
     },
     {
-      Tittle: "Identification of Slow-moving & Deadstock",
-      Para: "Stock audit is necessary to reduce unnecessary investments on stocks and to ensure that you have a proper line balancing in the process. It helps to keep a track of the inventory to avoid any shortage and overstocking of the material. Also, the process of inventory management becomes easier in case the company is dealing with various vendors.",
+      Tittle: `${data.SubCat11.Tittle}`,
+      Para: `${data.SubCat11.Para}`,
     },
   ];
 
@@ -46,34 +46,12 @@ export default function Inventory({ data }) {
     <section>
       {/* What is Stock Audit Services*/}
       <div className="flex flex-col gap-5 lg:flex-row">
-        <img
-          src="https://venovet.com/assets/images/s20.jpg"
-          className="rounded-lg"
-          alt=""
-        />
+        <img src={data.SubCat1.image} className="rounded-lg" alt="" />
         <div className="space-y-4 ">
           <h1 className="text-lg font-semibold lg:text-2xl">
-            What is Stock Audit Services
+            {data.SubCat1.Tittle}
           </h1>
-          <p className="text-[#777777]">
-            Stock Audit is an imperative auditing term referring to the physical
-            verification of the inventory with computed stock maintained by the
-            company. The major purpose to conduct this activity is to rule out
-            the discrepancies in the book stock and physical stock by passing
-            adjustment entries.
-          </p>
-          <p className="text-[#777777]">
-            Even though this statutory process needs to be performed at least
-            once in a financial year by the business institutions, stock audit
-            also known as inventory audit has become a particularly important
-            practice especially for expanding businesses where being on
-            multi-locations, dealing through vendors and dealers is a general
-            pattern. To run the business swimmingly and have an uncanny
-            presence, one needs to keep an unerring track for inventory, being
-            tangible or intangible. And, it is always important to keep into
-            consideration the purpose for which audit is being conducted because
-            of different approaches being used in discrete audit procedures.
-          </p>
+          <p className="text-[#777777]">{data.SubCat1.Para}</p>
         </div>
       </div>
       {/* What is Stock Audit Services*/}
@@ -81,23 +59,13 @@ export default function Inventory({ data }) {
       <div className="flex flex-col items-start gap-6 mt-8 lg:flex-row">
         <div className="space-y-3">
           <h1 className="text-lg font-semibold lg:text-2xl">
-            Eligibility For Stock Audit Services
+            {data.SubCat2.Tittle}
           </h1>
           <ul className="space-y-3 text-[#777777]">
-            <li className="list-disc">
-              Any business house or individual can get its stock
-              audit/verfication for taking better decision making
-            </li>
-            <li className="list-disc">
-              Stock audit can be done under statutory requirement of banks etc.
-            </li>
+            <p className="text-[#777777]">{data.SubCat2.Para}</p>
           </ul>
         </div>
-        <img
-          className="max-w-sm rounded-lg"
-          src="https://venovet.com/assets/images/s21.jpg"
-          alt=""
-        />
+        <img className="max-w-sm rounded-lg" src={data.SubCat2.image} alt="" />
       </div>
       {/*Eligibility For Stock Audit Services */}
 

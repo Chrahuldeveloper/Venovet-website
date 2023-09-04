@@ -1,26 +1,21 @@
 import React from "react";
 
-export default function GUESTHOUSEMANAGEMENT() {
+export default function GUESTHOUSEMANAGEMENT({ data }) {
   return (
     <>
-      <div className="flex justify-start flex-col md:flex-row gap-4 mt-5">
+      <div className="flex flex-col justify-start gap-4 mt-5 md:flex-row">
         <div>
           <img
-            src="https://venovet.com/assets/images/s54.jpg"
-            alt="https://venovet.com/assets/images/s54.jpg"
+            src={data.SubCat3.image}
+            alt={data.SubCat3.image}
             className="lg:max-w-sm"
           />
         </div>
         <div className="text-[#7a7a7a] space-y-5">
-          <h1 className="text-black text-lg md:text-xl font-bold">
-            Guest House Management
+          <h1 className="text-lg font-bold text-black md:text-xl">
+            {data.SubCat3.Tittle}
           </h1>
-          <p className="leading-8">
-            We manage the care taking of company Guest Houses or Transit Houses
-            Round “O” clock with well-trained professional in-house cook and
-            house keeping personnel with quality food and house keeping services
-            with VIP standard.
-          </p>
+          <p className="leading-8">{data.SubCat3.Para}</p>
           <ul className="ml-5 space-y-3">
             <li className="list-disc">Front office service</li>
             <li className="list-disc">Food and beverages services</li>

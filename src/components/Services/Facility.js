@@ -7,7 +7,9 @@ import {
   StationeryPrinting,
   TECHNICALSERVICES,
 } from "./FacilityManagement/index";
-function Facility() {
+function Facility({ data }) {
+  const [filterSubcategory, setfilterSubcategory] = useState();
+
   const FacilitySubCatogery = [
     "FACILITY SERVICES",
     "HOUSE KEEPING",
@@ -17,21 +19,13 @@ function Facility() {
     "TECHNICAL SERVICES",
   ];
 
-  const [filterSubcategory, setfilterSubcategory] = useState();
-
   return (
     <div>
-      <div className="flex flex-col justify-center space-y-5 items-center">
-        <h1 className="text-lg md:text-xl lg:text-2xl font-bold">
-          Facility - Management
+      <div className="flex flex-col items-center justify-center space-y-5">
+        <h1 className="text-lg font-bold md:text-xl lg:text-2xl">
+          {data.Tittle1}
         </h1>
-        <p className="text-[#7a7a7a] ">
-          Facilities management can be defined as the tools and services that
-          support the functionality, safety, and sustainability of buildings,
-          grounds, infrastructure, and real estate. Facilities management
-          includes: Lease management, including lease administration and
-          accounting. Emergency management and business continuity.
-        </p>
+        <p className="text-[#7a7a7a] ">{data.Para1}</p>
       </div>
       <div className="border-[1px] border-gray-200 p-6 mt-7">
         <div className="grid grid-cols-3 gap-5 lg:flex lg:items-center lg:gap-5">
@@ -51,18 +45,20 @@ function Facility() {
           })}
         </div>
         {filterSubcategory === "FACILITY SERVICES" ? (
-          <FacilityServices />
+          <FacilityServices data={data} />
         ) : filterSubcategory === "HOUSE KEEPING" ? (
-          <HouseKeeping />
+          <HouseKeeping data={data} />
         ) : filterSubcategory === "STATIONERY & PRINTING" ? (
-          <StationeryPrinting />
+          <StationeryPrinting data={data} />
         ) : filterSubcategory === "PEST CONTROL" ? (
-          <PestControl />
+          <PestControl data={data} />
         ) : filterSubcategory === "GUEST HOUSE MANAGEMENT" ? (
-          <GUESTHOUSEMANAGEMENT />
+          <GUESTHOUSEMANAGEMENT data={data} />
         ) : filterSubcategory === "TECHNICAL SERVICES" ? (
-          <TECHNICALSERVICES />
-        ) : <FacilityServices/>}
+          <TECHNICALSERVICES data={data} />
+        ) : (
+          <FacilityServices data={data} />
+        )}
       </div>
     </div>
   );

@@ -1,30 +1,22 @@
 import React from "react";
 
-export default function StationeryPrinting() {
+export default function StationeryPrinting({ data }) {
   return (
     <>
-      <div className="flex justify-start flex-col md:flex-row gap-4 mt-5">
+      <div className="flex flex-col justify-start gap-4 mt-5 md:flex-row">
         <div>
           <img
-            src="https://venovet.com/assets/images/s52.jpg"
-            alt="https://venovet.com/assets/images/s52.jpg"
+            src={data.SubCat2.image}
+            alt={data.SubCat2.image}
             className="lg:max-w-sm"
           />
         </div>
         <div className="text-[#7a7a7a] space-y-5">
-          <h1 className="text-black text-lg md:text-xl font-bold">
-            Stationery & Printing Services
+          <h1 className="text-lg font-bold text-black md:text-xl">
+            {data.SubCat2.Tittle}
           </h1>
-          <p className="leading-8">
-            We provide wide range of stationery items for Home, School, Office
-            and Institutes. We Offers unique personalized stationery for your
-            business.
-          </p>
-          <p className="leading-8">
-            We Provide offset, Digital and other document printing services.We
-            deliver everything from business cards, ID cards, Banners and
-            promotional products.
-          </p>
+          <p className="leading-8">{data.SubCat2.Para1}</p>
+          <p className="leading-8">{data.SubCat2.Para2}</p>
         </div>
       </div>
     </>

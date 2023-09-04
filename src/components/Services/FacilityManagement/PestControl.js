@@ -1,30 +1,21 @@
 import React from "react";
 
-export default function PestControl() {
+export default function PestControl({ data }) {
   return (
     <>
-      <div className="flex justify-start flex-col md:flex-row gap-4 mt-5">
+      <div className="flex flex-col justify-start gap-4 mt-5 md:flex-row">
         <div>
           <img
-            src="https://venovet.com/assets/images/s53.jpg"
-            alt="https://venovet.com/assets/images/s53.jpg"
+            src={data.SubCat4.image}
+            alt={data.SubCat4.image}
             className="lg:max-w-sm"
           />
         </div>
         <div className="text-[#7a7a7a] space-y-5">
-          <h1 className="text-black text-lg md:text-xl font-bold">
-            Pest Control Services
+          <h1 className="text-lg font-bold text-black md:text-xl">
+            {data.SubCat4.Tittle}
           </h1>
-          <p className="leading-8">
-            We provide you all types of pest control services like chemical oil
-            base, water base, herbal and gel for your offices, hotels,
-            residence, etc
-          </p>
-          <p className="leading-8">
-            We Provide offset, Digital and other document printing services.We
-            deliver everything from business cards, ID cards, Banners and
-            promotional products.
-          </p>
+          <p className="leading-8">{data.SubCat4.Para}</p>
         </div>
       </div>
       <ul className="ml-5 text-[#7a7a7a] space-y-2  mt-3">

@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function HouseKeeping() {
+export default function HouseKeeping({ data }) {
   return (
     <>
       <section className="mt-7">
-        <div className="flex justify-start flex-col md:flex-row gap-4">
+        <div className="flex flex-col justify-start gap-4 md:flex-row">
           <div>
             <img
               src="https://venovet.com/assets/images/s51.jpg"
@@ -13,7 +13,7 @@ export default function HouseKeeping() {
             />
           </div>
           <div className="text-[#7a7a7a] space-y-5">
-            <h1 className="text-black text-lg md:text-xl font-bold">
+            <h1 className="text-lg font-bold text-black md:text-xl">
               Housekeeping Services
             </h1>
             <p className="leading-8">
@@ -34,10 +34,10 @@ export default function HouseKeeping() {
           </div>
         </div>
         <div className="text-[#7a7a7a]  mt-3.5">
-          <h1 className="text-black text-lg md:text-xl font-bold">
+          <h1 className="text-lg font-bold text-black md:text-xl">
             Our Housekeeping cleaning are as follows:
           </h1>
-          <ul className="space-y-3 mt-4 ml-4">
+          <ul className="mt-4 ml-4 space-y-3">
             <li className="list-disc">
               Lobby, Offices, Boardrooms & Showrooms
             </li>

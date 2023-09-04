@@ -15,6 +15,7 @@ import { useSelector } from "react-redux";
 export default function Navbar({ Page }) {
   const [service, setservice] = useState(false);
   const [what, setWhat] = useState(false);
+  const [who, setWho] = useState(false);
   const [ScrollY, setScrollY] = useState(false);
   const [toogle, settoogle] = useState(false);
   const cart = useSelector((state) => state.cart);
@@ -104,21 +105,19 @@ export default function Navbar({ Page }) {
                       >
                         What we do
                       </li>
-                      <Link
-                        to="/whoweserver"
+                      <li
                         onMouseEnter={() => {
-                          setWhat(true);
+                          setWho(true);
                         }}
                         onMouseLeave={() => {
-                          setWhat(false);
+                          setWho(false);
                         }}
                       >
-                        <li className="bg-white border py-1.5 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300">
+                        <li  className="bg-white border py-1.5 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300">
                           Who we serve
-                        </li>
-                      </Link>
+                        </li>   
+                      </li>
                     </ul>
-
                     <div
                       onMouseEnter={() => {
                         setWhat(true);
@@ -131,6 +130,19 @@ export default function Navbar({ Page }) {
                       } bg-white py-2 text-sm text-[#676767] w-[18vw]`}
                     >
                       <DropDown ismobile={false} type={"Whatwedo"} />
+                    </div>
+                    <div
+                      onMouseEnter={() => {
+                        setWho(true);
+                      }}
+                      onMouseLeave={() => {
+                        setWho(false);
+                      }}
+                      className={`${
+                        who ? "flex" : "hidden"
+                      } bg-white py-2 text-sm text-[#676767] w-[18vw]`}
+                    >
+                      <DropDown ismobile={false} type={"WhoweServe"} />
                     </div>
                   </div>
                 </div>
@@ -279,15 +291,21 @@ export default function Navbar({ Page }) {
                     >
                       What we do
                     </li>
-                    <Link to="/whoweserve">
+                    <div>
                       <li
+                       onMouseEnter={() => {
+                        setWho(true);
+                      }}
+                      onMouseLeave={() => {
+                        setWhat(false);
+                      }}
                         className={`cursor-pointer ${
-                          Page === "whatweserve" ? "text-orange-500" : null
+                          Page === "whoweserve" ? "text-orange-500" : null
                         }  bg-white border py-1 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300`}
                       >
                         Who we serve
                       </li>
-                    </Link>
+                    </div>
                   </ul>
                   <div
                     onMouseEnter={() => {
@@ -301,6 +319,19 @@ export default function Navbar({ Page }) {
                     } bg-white py-2 text-sm text-[#676767] w-[18vw]`}
                   >
                     <DropDown ismobile={false} type={"Whatwedo"} />
+                  </div>
+                  <div
+                    onMouseEnter={() => {
+                      setWho(true);
+                    }}
+                    onMouseLeave={() => {
+                      setWho(false);
+                    }}
+                    className={`${
+                      who ? "flex" : "hidden"
+                    } bg-white py-2 text-sm text-[#676767] w-[18vw]`}
+                  >
+                    <DropDown ismobile={false} type={"WhoweServe"} />
                   </div>
                 </div>
               </div>

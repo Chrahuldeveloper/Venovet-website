@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function EPRSolutions({ data }) {
+export default function EPRSolutions() {
   const ERPSolutions = [
     {
       icons: "EVERY BUSINESS SIZE",
@@ -71,9 +71,13 @@ export default function EPRSolutions({ data }) {
     <>
       <div className="space-y-4 text-[#7a7a7a] flex justify-center items-center flex-col">
         <h1 className="text-lg font-bold text-black md:text-xl lg:text-2xl">
-          {data.Tittle1}
+          Custom ERP Solutions
         </h1>
-        <p>{data.Para1}</p>
+        <p>
+          Our ERP experts develop custom solutions that provide flexibility and
+          mobility to scale up system requirements and enable on-the-go access.
+          We Develop Custom ERP Solutions For Every Type of Business.
+        </p>
       </div>
       <div className="grid justify-center grid-cols-1 gap-5 mt-5 md:grid-cols-2 lg:grid-cols-3 place-items-center">
         {ERPSolutions.map((item, index) => {
@@ -94,8 +98,21 @@ export default function EPRSolutions({ data }) {
       </div>
 
       <div className="mt-7 text-[#7a7a7a] space-y-4">
-        <h1 className="text-lg font-bold">{data.Tittle2}</h1>
-        <p>{data.Para2}</p>
+        <h1 className="text-lg font-bold">
+          Benefits of ERP Built for Services Industry
+        </h1>
+        <p>
+          Venovet’s SRP software is designed ground up specifically for the
+          Services industry. The Services Resource Planning system streamlines
+          end-to-end business offerings for Warehouse management, Inventory
+          Management, Vendor Management, Retail Stores, Logistics Management,
+          professional services & BPO / KPO companies, covering revenue models
+          such as ‘Contact to Contract’, ‘Execution to Billing’, ‘Quote to
+          Cash’, or ‘Requisition to Release’ on a single platform. We have the
+          industry leading Financial Suite, Multi-country compliance driven HCM
+          & Payroll processing in a unified platform, accentuated with
+          Intelligent Analytics integrated with SRP.
+        </p>
         <ul className="ml-4 space-y-1 ">
           <li className="list-disc">Power of One</li>
           <li className="list-disc">Flexible Contract Management</li>

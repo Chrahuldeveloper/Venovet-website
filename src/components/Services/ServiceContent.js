@@ -19,10 +19,11 @@ export default function ServiceContent({ category }) {
   const docref = collection(db, `WHATWEDO/${category}`);
   const [docs, loading, error] = useCollectionData(docref);
   console.log(error ? error.message : docs);
+  
   return (
     <>
       {loading ? (
-        "loading"
+        <h1>loading....</h1>
       ) : category === "Warehouse Management (2PL & 3PL)" ? (
         <WareHouseManagement data={docs} />
       ) : category === "Inventory Audits & Analytics" ? (

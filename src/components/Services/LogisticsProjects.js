@@ -6,12 +6,12 @@ export default function LogisticsProjects({ data }) {
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg "
-          src={data.SubCat1.image}
+          src={"https://venovet.com/assets/images/s22.jpg"}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">{data.SubCat1.Tittle}</h1>
-          <p className="text-[#7a7a7a]">{data.SubCat1.Para}</p>
+          <h1 className="text-xl font-semibold">Real Estate Planning</h1>
+          <p className="text-[#7a7a7a]">Before a project is initiated, we perform various assessments and analysis to ensure we are setting the project up for success. This includes:</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -43,12 +43,12 @@ export default function LogisticsProjects({ data }) {
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg md:order-2"
-          src={data.SubCat2.image}
+          src={"https://venovet.com/assets/images/s33.jpg"}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">{data.SubCat2.Tittle}</h1>
-          <p className="text-[#7a7a7a]">{data.SubCat2.Para}</p>
+          <h1 className="text-xl font-semibold">Pre-Construction and Facility Design Management</h1>
+          <p className="text-[#7a7a7a]">Whether a brownfield or greenfield site, before any construction takes place, our team thoroughly reviews the site and building design. Once finalized, they:</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Manage permits and entitlements
@@ -78,12 +78,12 @@ export default function LogisticsProjects({ data }) {
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg "
-          src={data.SubCat3.image}
+          src={"https://venovet.com/assets/images/s24.jpg"}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">{data.SubCat3.Tittle}</h1>
-          <p className="text-[#7a7a7a]">{data.SubCat3.Para}</p>
+          <h1 className="text-xl font-semibold">Program and Specification Development</h1>
+          <p className="text-[#7a7a7a]">Bastian Solutions and JLL team members work with you from project start through to completion. To ensure real estate and development projects meet the needed milestones, we create sustainable development goals for design, permitting, construction and final site opening. This includes:</p>
           <ul className="pl-4 text-[#7a7a7a]">
             <li className="text-sm leading-7 list-disc ">
               Outline specifications
@@ -110,12 +110,12 @@ export default function LogisticsProjects({ data }) {
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg md:order-2"
-          src={data.SubCat4.image}
+          src={"https://venovet.com/assets/images/s25.jpg"}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold"> {data.SubCat4.Tittle}</h1>
-          <p className="text-[#7a7a7a]">{data.SubCat4.Para}</p>
+          <h1 className="text-xl font-semibold">Project Management</h1>
+          <p className="text-[#7a7a7a]">Once a project is underway, we use standard project management tools for tracking milestones and budget, punch lists, regular status updates, and decision-making needs. This includes:</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -147,12 +147,12 @@ export default function LogisticsProjects({ data }) {
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg "
-          src={data.SubCat5.image}
+          src={"https://venovet.com/assets/images/s26.jpg"}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">{data.SubCat5.Tittle}</h1>
-          <p className="text-[#7a7a7a]">{data.SubCat4.Para}</p>
+          <h1 className="text-xl font-semibold">Projects Delivered on Time</h1>
+          <p className="text-[#7a7a7a]">To ensure your facility can start shipping products on time, all project elements must work together. Manufacturing, delivery, installation, and other project tasks can have complex dependencies, and a delay in any component can result in project delays and potentially costly downtime for a distribution center.</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -184,12 +184,12 @@ export default function LogisticsProjects({ data }) {
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg md:order-2"
-          src={data.SubCat6.image}
+          src={"https://venovet.com/assets/images/s27.jpg"}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">{data.SubCat6.Tittle}</h1>
-          <p className="text-[#7a7a7a]">{data.SubCat6.Para}</p>
+          <h1 className="text-xl font-semibold">Projects Delivered on Budget</h1>
+          <p className="text-[#7a7a7a]">Because Storage Solutions takes an integrated supply and service approach with every warehouse project we contract, your Storage Solutions project manager has tighter control over ensuring you meet your budget.From logistics to permitting, all the way through installation and support, our project managers provide oversight for each component of your project. By executing entire projects as one team, Storage Solutions can offer efficiencies that generate better prices, with fewer change orders and fewer surprises along the way.</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -221,12 +221,12 @@ export default function LogisticsProjects({ data }) {
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
           className="max-w-xs rounded-lg "
-          src={data.SubCat7.image}
+          src={"https://venovet.com/assets/images/s28.jpg"}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">{data.SubCat7.Tittle}</h1>
-          <p className="text-[#7a7a7a]">{data.SubCat7.Para}</p>
+          <h1 className="text-xl font-semibold">We Assume the Unexpected</h1>
+          <p className="text-[#7a7a7a]">Every project will face challenges; it is inevitable. Our project managers have the experience and will know how to tackle them for you to keep everything on track. Get an expert on your side to make sure you get the correct result.</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis

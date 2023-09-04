@@ -21,7 +21,7 @@ export default function App() {
       <Route path="/career" element={<Career />} />
       <Route path="/shop" element={<Shop />} />
       <Route path="/whatwedo/:category" element={<WhatWeDo />} />
-      <Route path="/whoweserve" element={<WhoWeServer />} />
+      <Route path="/whoweserve/:categoryid" element={<WhoWeServer />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/BlogPage" element={<BlogPage />} />
       <Route path="/ReadFull/:tittle" element={<ReadFull />} />

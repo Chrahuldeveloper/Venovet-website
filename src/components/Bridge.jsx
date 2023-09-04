@@ -2,6 +2,7 @@ import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { Link }  from 'react-router-dom'
 const Bridge = () => {
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
@@ -89,10 +90,12 @@ const Bridge = () => {
           Warehouse, Inwarding the Goods, Quality Check, Storage, Dispatch,
           Reporting and End Customer Delivery Transportation.
         </p>
+        <Link to="/contact">
         <button className="bg-white text-[#ff5e15] font-semibold text-sm py-3 px-6 rounded-xl flex items-center space-x-2 hover:brightness-95 ease-in-out duration-200">
           <h1>CONTACT US</h1>
           <AiOutlineArrowRight size="23" color="#ff5e15" />
         </button>
+        </Link>
       </div>
     </div>
   );

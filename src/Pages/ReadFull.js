@@ -9,7 +9,7 @@ import {
 import { Brochure } from "../components/Services/index";
 import { Help } from "../components/Services/index";
 
-export default function ReadFull() {
+export default function ReadFull({category}) {
   return (
     <body className="overflow-x-clip">
       <main>
@@ -21,7 +21,7 @@ export default function ReadFull() {
             <Brochure />
           </div>
           <div>
-            <BlogContent />
+            <BlogContent category={category}/>
           </div>
         </div>
         <NewsLetter />

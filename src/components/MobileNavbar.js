@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { DropDown } from "./index";
+import { Link } from "react-router-dom";
 export default function MobileNavbar({ settoogle }) {
   const [dropdown, setdropdown] = useState(false);
   const [Whatwedo, setWhatwedo] = useState(false);
@@ -20,18 +21,22 @@ export default function MobileNavbar({ settoogle }) {
               cursor={"pointer"}
             />
           </div>
-          <ul className="px-10 pt-20 space-y-6">
-            <li className="duration-300 ease-in-out cursor-pointer hover:text-orange-500">
-              HOME
-            </li>
-            <li className="duration-300 ease-in-out cursor-pointer hover:text-orange-500">
-              ABOUT US
-            </li>
+          <ul className="px-10 pt-20 ">
+            <Link to="/">
+              <li className="my-6 duration-300 ease-in-out cursor-pointer hover:text-orange-500">
+                HOME
+              </li>
+            </Link>
+            <Link to="/about">
+              <li className="my-6 duration-300 ease-in-out cursor-pointer hover:text-orange-500">
+                ABOUT US
+              </li>
+            </Link>
             <li
               onClick={() => {
                 setdropdown(!dropdown);
               }}
-              className="duration-300 ease-in-out cursor-pointer hover:text-orange-500"
+              className="my-6 duration-300 ease-in-out cursor-pointer hover:text-orange-500"
             >
               SERVICES
             </li>
@@ -41,38 +46,46 @@ export default function MobileNavbar({ settoogle }) {
                   onClick={() => {
                     setWhatwedo(!Whatwedo);
                   }}
-                  className="duration-300 ease-in-out cursor-pointer hover:text-orange-500"
+                  className="my-6 duration-300 ease-in-out cursor-pointer hover:text-orange-500"
                 >
                   What we do
                 </li>
                 <ul className={`${Whatwedo ? "block" : "hidden"}`}>
-                  <DropDown ismobile={true} />
+                  <DropDown ismobile={true} type={"Whatwedo"} />
                 </ul>
                 <li
                   onClick={() => {
                     setWhoweServe(!WhoweServe);
                   }}
-                  className="duration-300 ease-in-out cursor-pointer hover:text-orange-500"
+                  className="my-6 duration-300 ease-in-out cursor-pointer hover:text-orange-500"
                 >
                   Who we Serve
                 </li>
                 <ul className={`${WhoweServe ? "block" : "hidden"}`}>
-                  <DropDown ismobile={true} />
+                  <DropDown ismobile={true} type={"WhoweServe"} />
                 </ul>
               </div>
             ) : null}
-            <li className="duration-300 ease-in-out cursor-pointer hover:text-orange-500">
-              BLOG
-            </li>
-            <li className="duration-300 ease-in-out cursor-pointer hover:text-orange-500">
-              SHOP
-            </li>
-            <li className="duration-300 ease-in-out cursor-pointer hover:text-orange-500">
-              CAREERS
-            </li>
-            <li className="duration-300 ease-in-out cursor-pointer hover:text-orange-500">
-              CONTACT US
-            </li>
+            <Link to="/BlogPage">
+              <li className="my-6 duration-300 ease-in-out cursor-pointer hover:text-orange-500">
+                BLOG
+              </li>
+            </Link>
+            <Link to="/shop">
+              <li className="my-6 duration-300 ease-in-out cursor-pointer hover:text-orange-500">
+                SHOP
+              </li>
+            </Link>
+            <Link to="/career">
+              <li className="my-6 duration-300 ease-in-out cursor-pointer hover:text-orange-500">
+                CAREERS
+              </li>
+            </Link>
+            <Link to="/contact">
+              <li className="my-6 duration-300 ease-in-out cursor-pointer hover:text-orange-500">
+                CONTACT US
+              </li>
+            </Link>
           </ul>
         </nav>
       </aside>

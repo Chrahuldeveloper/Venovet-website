@@ -363,7 +363,7 @@ export default function Navbar({ Page }) {
             </ul>
           </div>
           <Link to="/contact">
-            <button className="bg-orange-500 text-white p-3.5 flex items-center space-x-1.5 font-semibold rounded-r-md">
+            <button className="bg-orange-500 text-white p-3.5 flex cursor-pointer items-center space-x-1.5 font-semibold rounded-r-md hover:brightness-75 ease-in-out duration-300">
               <AiOutlineWechat size={30} color="white" />
               <h1>Request a Call Back</h1>
               <AiOutlineArrowRight size={30} color="white" />

@@ -23,9 +23,9 @@ function Facility({ data }) {
     <div>
       <div className="flex flex-col items-center justify-center space-y-5">
         <h1 className="text-lg font-bold md:text-xl lg:text-2xl">
-          {data.Tittle1}
+          {data?.Tittle1}
         </h1>
-        <p className="text-[#7a7a7a] ">{data.Para1}</p>
+        <p className="text-[#7a7a7a] ">{data?.Para1}</p>
       </div>
       <div className="border-[1px] border-gray-200 p-6 mt-7">
         <div className="grid grid-cols-3 gap-5 lg:flex lg:items-center lg:gap-5">

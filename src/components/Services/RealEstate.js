@@ -4,88 +4,88 @@ function RealEstate({ data }) {
   const card = [
     {
       png: "https://venovet.com/assets/images/sicon18.png",
-      Title: `${data.SubCat2.Tittle}`,
-      p: `${data.SubCat2.Para}`,
+      Title: `${data?.SubCat2?.Tittle}`,
+      p: `${data?.SubCat2?.Para}`,
     },
     {
       png: "https://venovet.com/assets/images/sicon19.png",
-      Title: `${data.SubCat3.Tittle}`,
-      p: `${data.SubCat3.Para}`,
+      Title: `${data?.SubCat3?.Tittle}`,
+      p: `${data?.SubCat3?.Para}`,
     },
     {
       png: "https://venovet.com/assets/images/sicon20.png",
-      Title: `${data.SubCat4.Tittle}`,
-      p: `${data.SubCat4.Para}`,
+      Title: `${data?.SubCat4?.Tittle}`,
+      p: `${data?.SubCat4?.Para}`,
     },
     {
       png: "https://venovet.com/assets/images/sicon21.png",
-      Title: `${data.SubCat5.Tittle}`,
-      p: `${data.SubCat5.Para}`,
+      Title: `${data?.SubCat5?.Tittle}`,
+      p: `${data?.SubCat5?.Para}`,
     },
   ];
 
   const classification = [
     {
       img: "https://venovet.com/assets/images/sicon22.png",
-      Title: `${data.SubCat6.Tittle}`,
-      p: `${data.SubCat6.Para}`,
+      Title: `${data?.SubCat6?.Tittle}`,
+      p: `${data?.SubCat6?.Para}`,
     },
     {
       img: "https://venovet.com/assets/images/sicon23.png",
-      Title: `${data.SubCat7.Tittle}`,
-      p: `${data.SubCat7.Para}`,
+      Title: `${data?.SubCat7?.Tittle}`,
+      p: `${data?.SubCat7?.Para}`,
     },
     {
       img: "https://venovet.com/assets/images/sicon24.png",
-      Title: `${data.SubCat8.Tittle}`,
-      p: `${data.SubCat8.Para}`,
+      Title: `${data?.SubCat8?.Tittle}`,
+      p: `${data?.SubCat8?.Para}`,
     },
   ];
 
   const Everyone = [
     {
       img: "https://venovet.com/assets/images/sicon25.png",
-      T: `${data.SubCat9.Tittle}`,
-      p: `${data.SubCat9.Para}`,
+      T: `${data?.SubCat9?.Tittle}`,
+      p: `${data?.SubCat9?.Para}`,
     },
     {
       img: "https://venovet.com/assets/images/sicon26.png",
-      T: `${data.SubCat10.Tittle}`,
-      p: `${data.SubCat10.Para}`,
+      T: `${data?.SubCat10?.Tittle}`,
+      p: `${data?.SubCat10?.Para}`,
     },
     {
       img: "https://venovet.com/assets/images/sicon27.png",
-      T: `${data.SubCat11.Tittle}`,
-      p: `${data.SubCat11.Para}`,
+      T: `${data?.SubCat11?.Tittle}`,
+      p: `${data?.SubCat11?.Para}`,
     },
     {
       img: "https://venovet.com/assets/images/sicon28.png",
-      T: `${data.SubCat12.Tittle}`,
-      p: `${data.SubCat12.Para}`,
+      T: `${data?.SubCat12?.Tittle}`,
+      p: `${data?.SubCat12?.Para}`,
     },
   ];
 
   return (
     <div>
       <div>
-        <h1 className="pb-8 text-xl font-bold">{data.SubCat1.Tittle}</h1>
+        <h1 className="pb-8 text-xl font-bold">{data?.SubCat1?.Tittle}</h1>
         <div className="space-x-4 lg:flex">
           <img
             className="max-w-xs rounded-md"
-            src={data.SubCat1.image}
+            src={data?.SubCat1?.image}
             alt=""
           />
           <div className="space-y-6 max-w-md text-[#777777] ">
-            {data.SubCat1.Para}
+            {data?.SubCat1?.Para}
           </div>
         </div>
       </div>
 
       {/* second section ... */}
       <div className="py-10">
-        <h1 className="py-8 text-xl font-bold">{data.Tittle1}</h1>
+        <h1 className="py-8 text-xl font-bold">{data?.Tittle1}</h1>
         <div className="space-x-8 lg:flex">
-          <img className="h-[45rem] rounded-md" src={data.image1} alt="" />
+          <img className="h-[45rem] rounded-md" src={data?.image1} alt="" />
           <div className="">
             {card.map((item, index) => {
               return (

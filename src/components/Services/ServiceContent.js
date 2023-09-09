@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   EPRSolutions,
   Facility,
@@ -12,40 +12,48 @@ import {
   ValueAddService,
   WareHouseManagement,
 } from "./index";
-import { useCollectionData } from "react-firebase-hooks/firestore";
 import { db } from "../../Firebase";
-import { collection } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 export default function ServiceContent({ category }) {
-  const docref = collection(db, `WHATWEDO/${category}`);
-  const [docs, loading, error] = useCollectionData(docref);
-  console.log(error ? error.message : docs);
+  const [data, setdata] = useState();
+  console.log(category);
+  const fetchData = async () => {
+    const documentRef = doc(db, "WHATWEDO", category);
+    const documentSnapshot = await getDoc(documentRef);
+    setdata(documentSnapshot);
+  };
+  useEffect(() => {
+    fetchData();
+    window.scrollTo(0, 0);
+  }, []);
+  const loading = false;
 
   return (
     <>
       {loading ? (
         <h1>loading....</h1>
       ) : category === "Warehouse Management (2PL & 3PL)" ? (
-        <WareHouseManagement data={docs} />
+        <WareHouseManagement data={data} />
       ) : category === "Inventory Audits & Analytics" ? (
-        <Inventory data={docs} />
-      ) : category === "Transportation/Fleet" ? (
+        <Inventory data={data} />
+      ) : category === "Transportation" ? (
         <Transpotation />
       ) : category === "Logistics Projects Designing" ? (
-        <LogisticsProjects data={docs} />
+        <LogisticsProjects data={data} />
       ) : category === "Ware ERP Solutions" ? (
-        <EPRSolutions data={docs} />
+        <EPRSolutions data={data} />
       ) : category === "Industrial Security Services" ? (
-        <Security data={docs} />
+        <Security data={data} />
       ) : category === "SCM Automation" ? (
-        <SCM data={docs} />
+        <SCM data={data} />
       ) : category === "Value Added Services" ? (
-        <ValueAddService data={docs} />
+        <ValueAddService data={data} />
       ) : category === "Internet Supply Chain" ? (
-        <InternetSupply data={docs} />
+        <InternetSupply data={data} />
       ) : category === "Industrial Real States" ? (
-        <RealEstate data={docs} />
+        <RealEstate data={data} />
       ) : category === "Facility Management" ? (
-        <Facility data={docs} />
+        <Facility data={data} />
       ) : null}
     </>
   );

@@ -6,7 +6,7 @@ const DropdownData = [
     Para: "Give an efficiency boost to your inventory management",
   },
   {
-    catgeory: "Transportation Fleet",
+    catgeory: "Transportation",
     Tittle: "Venovet's Transportation/Fleet",
     image: "https://venovet.com/assets/images/bgs8.jpg",
     Para: "Relaxes our clients to get the goods delivered at their demanded place",

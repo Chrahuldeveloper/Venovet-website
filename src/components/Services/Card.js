@@ -1,29 +1,28 @@
 import React from "react";
 
-export default function Card() {
+export default function Card({ data }) {
   const CardData = [
     {
       image: "https://venovet.com/assets/images/icon4.png",
-      Tittle : "Quality & Compliance",
-      Para:"Our warehouses are compliant with CLU & government regulations and adhere to the 5S methodology. We have implemented TQM with centralised monitoring and conduct periodic audits.      ",
+      Tittle: `${data?.SubCat5?.Tittle}`,
+      Para: `${data?.SubCat5?.Tittle}`,
     },
     {
       image: "https://venovet.com/assets/images/icon2.png",
-      Tittle:"Safety & Security",
-      Para:"We aim to provide a safe & ergonomic working environment to maximise ‘Accident-free days’. All our facilities have 24*7 security surveillance across all areas."
+      Tittle: `${data?.SubCat6?.Tittle}`,
+      Para: `${data?.SubCat6?.Tittle}`,
     },
     {
       image: "https://venovet.com/assets/images/icon3.png",
-      Tittle:"Robust Technology",
-      Para:"A dedicated and robust Warehouse Management System (WMS) and Transport Management System (TMS) helps us ensure greater operational efficiency."
+      Tittle: `${data?.SubCat7?.Tittle}`,
+      Para: `${data?.SubCat7?.Tittle}`,
     },
     {
       image: "https://venovet.com/assets/images/icon1.png",
-      Tittle:"World Class Infrastructure",
-      Para:"Our warehouses are equipped with state-of-the-art Material Handling Equipment (MHE), coding machines, racking systems and a host of other best-in-class facilities."
+      Tittle: `${data?.SubCat8?.Tittle}`,
+      Para: `${data?.SubCat8?.Tittle}`,
     },
   ];
-
   return (
     <div className="grid justify-center grid-cols-1 gap-5 mt-7 lg:gap-8 lg:grid-cols-2">
       {CardData.map((_, index) => {

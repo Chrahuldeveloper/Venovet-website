@@ -8,19 +8,19 @@ export default function Icons() {
     },
     {
       icon: "https://7oroof.com/tfdemos/optime/wp-content/uploads/2019/03/015-search.png",
-      Tittle: "Real-Time Tracking            ",
+      Tittle: "Real-Time Tracking",
     },
     {
       icon: "https://7oroof.com/tfdemos/optime/wp-content/uploads/2019/03/Trolley-Icon.png",
-      Tittle: "Warehouse Storage            ",
+      Tittle: "Warehouse Storage",
     },
     {
       icon: "https://7oroof.com/tfdemos/optime/wp-content/uploads/2019/03/Security-Icon.png",
-      Tittle: "Security For Cargo            ",
+      Tittle: "Security For Cargo ",
     },
     {
       icon: "https://7oroof.com/tfdemos/optime/wp-content/uploads/2019/03/Payments-Icon.png",
-      Tittle: "Easy Payment Methods            ",
+      Tittle: "Easy Payment Methods ",
     },
     {
       icon: "https://7oroof.com/tfdemos/optime/wp-content/uploads/2019/03/Call-Center-Icon.png",

@@ -1,65 +1,60 @@
 import React from "react";
 
 import ScrollContainer from "react-indiana-drag-scroll";
-export default function InternetSupply() {
+export default function InternetSupply({ data }) {
   const UncontendedData = [
     {
       image: "https://venovet.com/assets/images/sicon1.png",
-      Titttle: "Bespoke Deployment Model",
-      Para: "Detailed per-deployment study and extensive site survey to access the site’s unique needs",
+      Titttle: `${data?.SubCat3?.Tittle}`,
+      Para: `${data?.SubCat3?.Tittle}`,
     },
     {
       image: "https://venovet.com/assets/images/sicon2.png",
-      Titttle: "Low TCO",
-      Para: "Saves the operating expense & complexity of deploying and managing the network.",
+      Titttle: `${data?.SubCat4?.Tittle}`,
+      Para: `${data?.SubCat4?.Tittle}`,
     },
     {
       image: "https://venovet.com/assets/images/sicon4.png",
-      Titttle: "Network Operation Support",
-      Para: "Monitored and managed 247 by our Network Operations Center.",
+      Titttle: `${data?.SubCat5?.Tittle}`,
+      Para: `${data?.SubCat5?.Tittle}`,
     },
     {
       image: "https://venovet.com/assets/images/sicon6.png",
-      Titttle: "Increased Agility",
-      Para: "Scale easily as your throughput needs or head count increases.",
+      Titttle: `${data?.SubCat6?.Tittle}`,
+      Para: `${data?.SubCat6?.Tittle}`,
     },
     {
       image: "https://venovet.com/assets/images/sicon3.png",
-      Titttle: "Complete Monitoring",
-      Para: "Get end-to-end monitoring, outage notification, circuit trouble isolation from a single point of contact.",
-    },
-    {
-      image: "https://venovet.com/assets/images/sicon5.png",
-      Titttle: "Improved Operational Efficiency",
-      Para: "Effective project management and troubleshooting by providing a one-stop-shop solution for your network and broadband requirement.",
+      Titttle: `${data?.SubCat7?.Tittle}`,
+      Para: `${data?.SubCat7?.Tittle}`,
     },
   ];
 
   const OnboardData = [
     {
       icon: "https://venovet.com/assets/images/sicon13.png",
-      Tittle: "Lorem ipsum dolor sit amet.",
-      Para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora alias excepturi distinctio quia soluta aliquam! Molestias, perspiciatis! Dolorem repudiandae quas dolor quae! Ullam laboriosam consequuntur magnam quo voluptatem ex incidunt, odit, reiciendis, accusantium molestias nisi exercitationem et dicta culpa. Cum delectus iure ea magni possimus voluptatem odio culpa repudiandae a.",
+      Titttle: `${data?.SubCat9?.Tittle}`,
+      Para: `${data?.SubCat9?.Tittle}`,
     },
     {
       icon: "https://venovet.com/assets/images/sicon14.png",
-      Tittle: "Lorem ipsum dolor sit amet.",
-      Para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora alias excepturi distinctio quia soluta aliquam! Molestias, perspiciatis! Dolorem repudiandae quas dolor quae! Ullam laboriosam consequuntur magnam quo voluptatem ex incidunt, odit, reiciendis, accusantium molestias nisi exercitationem et dicta culpa. Cum delectus iure ea magni possimus voluptatem odio culpa repudiandae a.",
+      Titttle: `${data?.SubCat10?.Tittle}`,
+      Para: `${data?.SubCat10?.Tittle}`,
     },
     {
       icon: "https://venovet.com/assets/images/sicon15.png",
-      Tittle: "Lorem ipsum dolor sit amet.",
-      Para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora alias excepturi distinctio quia soluta aliquam! Molestias, perspiciatis! Dolorem repudiandae quas dolor quae! Ullam laboriosam consequuntur magnam quo voluptatem ex incidunt, odit, reiciendis, accusantium molestias nisi exercitationem et dicta culpa. Cum delectus iure ea magni possimus voluptatem odio culpa repudiandae a.",
+      Titttle: `${data?.SubCat11?.Tittle}`,
+      Para: `${data?.SubCat11?.Tittle}`,
     },
     {
       icon: "https://venovet.com/assets/images/sicon16.png",
-      Tittle: "Lorem ipsum dolor sit amet.",
-      Para: "  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora alias excepturi distinctio quia soluta aliquam! Molestias, perspiciatis! Dolorem repudiandae quas dolor quae! Ullam laboriosam consequuntur magnam quo voluptatem ex incidunt, odit, reiciendis, accusantium molestias nisi exercitationem et dicta culpa. Cum delectus iure ea magni possimus voluptatem odio culpa repudiandae a.",
+      Titttle: `${data?.SubCat12?.Tittle}`,
+      Para: `${data?.SubCat12?.Tittle}`,
     },
     {
       icon: "https://venovet.com/assets/images/sicon17.png",
-      Tittle: "Lorem ipsum dolor sit amet.",
-      Para: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora alias excepturi distinctio quia soluta aliquam! Molestias, perspiciatis! Dolorem repudiandae quas dolor quae! Ullam laboriosam consequuntur magnam quo voluptatem ex incidunt, odit, reiciendis, accusantium molestias nisi exercitationem et dicta culpa. Cum delectus iure ea magni possimus voluptatem odio culpa repudiandae a.",
+      Titttle: `${data?.SubCat13?.Tittle}`,
+      Para: `${data?.SubCat13?.Tittle}`,
     },
   ];
 
@@ -98,20 +93,11 @@ export default function InternetSupply() {
           <div className="flex flex-col items-start lg:flex-row mt-7 gap-7">
             <img
               className="max-w-sm rounded-lg lg:order-2"
-              src="https://venovet.com/assets/images/s47.jpeg"
+              src={data?.SubCat1?.image}
               alt="imge"
             />
             <p className="text-[#7a7a7a] text-sm leading-6">
-              In recent years, the increased adoption of cloud, big data and
-              other bandwidth-heavy applications like high-definition video, web
-              hosting services, etc. has led to accelerated growth in internet
-              traffic. You now need faster and scalable connectivity to succeed
-              in this fast-moving market. Our internet leased line connection is
-              a dedicated service that offers the consistent and
-              high-performance connectivity you need to run these demanding
-              applications. With dedicated internet access, you can reap the
-              benefits of seamless connectivity and improved business
-              performance.
+              {data?.SubCat1?.Para}
             </p>
           </div>
         </div>
@@ -121,20 +107,11 @@ export default function InternetSupply() {
         <div className="flex flex-col items-start lg:flex-row mt-7 gap-7">
           <img
             className="max-w-sm rounded-lg "
-            src="https://venovet.com/assets/images/s48.jpg"
-            alt="imge "
+            src={data?.SubCat1?.image}
+            alt="imge"
           />
           <p className="text-[#7a7a7a] text-sm leading-6">
-            VENOVET delivers enterprise-grade, high-speed leased line network
-            services to help you maintain consistent performance, security and
-            reliability across your sites. The solution uses cost-effective,
-            reliable, direct internet connections to help you seamlessly access
-            the high-bandwidth applications and deliver contention-free network
-            experience in every corner of India. All this is backed by our
-            decades of experience, state-of-the-art network operation centre
-            (NOC) and round-the-clock support. With Airtel internet leased line
-            connection, you can experience enterprise-grade connectivity,
-            end-to-end SLA commitment and improved productivity.
+            {data?.SubCat1?.Para}
           </p>
         </div>
       </div>
@@ -162,42 +139,31 @@ export default function InternetSupply() {
       </div>
 
       <div className="mt-10">
-        <h1 className="font-semibold lg:text-lg">
-          A leased line network that is dedicated solely to your business needs
-        </h1>
+        <h1 className="font-semibold lg:text-lg">{data?.SubCat8?.image}</h1>
         <div className="flex flex-col items-start lg:flex-row mt-7 gap-7">
           <img
             className="max-w-sm rounded-lg "
-            src="https://venovet.com/assets/images/s48.jpg"
+            src={data?.SubCat8?.Tittle}
             alt="imge "
           />
-          <p className="text-[#7a7a7a]  leading-6">
-            VENOVET delivers enterprise-grade, high-speed leased line network
-            services to help you maintain consistent performance, security and
-            reliability across your sites. The solution uses cost-effective,
-            reliable, direct internet connections to help you seamlessly access
-            the high-bandwidth applications and deliver contention-free network
-            experience in every corner of India. All this is backed by our
-            decades of experience, state-of-the-art network operation centre
-            (NOC) and round-the-clock support. With Airtel internet leased line
-            connection, you can experience enterprise-grade connectivity,
-            end-to-end SLA commitment and improved productivity.
-          </p>
+          <p className="text-[#7a7a7a]  leading-6">{data?.SubCat8?.Para}</p>
         </div>
       </div>
 
       {/* Scroll OnboardData  */}
-      <ScrollContainer className="flex mt-8 border-2 w-[40vw] gap-10">
+      <ScrollContainer className="flex flex-col justify-center max-w-3xl mx-auto mt-8 border-2">
         {OnboardData.map((item, index) => {
           return (
-            <React.Fragment key={index} className="w-[70vw]">
-              <div className="flex gap-5 p-4 shadow-sm ">
+            <React.Fragment key={index}>
+              <div className="flex gap-5 p-4 shadow-sm">
                 <img className="w-8 h-8" src={item.icon} alt={item.icon} />
                 <div>
-                  <h1 className="text-lg font-semibold md:text-xl lg:text-2xl">
-                    {item.Tittle}
+                  <h1 className="max-w-md text-sm font-semibold md:text-xl lg:text-2xl">
+                    {item.Titttle}
                   </h1>
-                  <p className="text-[#7a7a7a]">{item.Para}</p>
+                  <p className="text-[#7a7a7a] max-w-xl text-xs md:text-base">
+                    {item.Para}
+                  </p>
                 </div>
               </div>
             </React.Fragment>
@@ -207,13 +173,9 @@ export default function InternetSupply() {
 
       <div className="mt-8 space-y-5">
         <h1 className="text-lg font-semibold md:text-xl lg:text-2xl">
-          Business Advantages
+          {data?.SubCat14?.Tittle}
         </h1>
-        <p className="text-[#7a7a7a]">
-          Powered with a connection that has a dedicated bandwidth, symmetric
-          upload-download speeds and much more, your business will run miles
-          ahead of the competition.
-        </p>
+        <p className="text-[#7a7a7a]">{data?.SubCat14?.Para}</p>
       </div>
 
       <div className="grid grid-cols-1 gap-5 mt-8 md:grid-cols-3">
@@ -231,24 +193,9 @@ export default function InternetSupply() {
 
       <div className="mt-8 space-y-5">
         <h1 className="text-lg font-semibold md:text-xl lg:text-2xl">
-          Why our ILL Services?
+          {data?.SubCat15?.Tittle}
         </h1>
-        <ul className="text-[#7a7a7a]">
-          <li className="list-disc">
-            We have amongst the largest internet connectivity in India, leading
-            to minimal congestion and better configuration for enhanced
-            performance.
-          </li>
-          <li className="list-disc">
-            With the world's most extensive global telecommunication network, we
-            can deliver a robust IP backbone assurance.
-          </li>
-          <li className="list-disc">We provide 24x7 service and support.</li>
-          <li className="list-disc">
-            Our service standards are second to none.
-          </li>
-          <li className="list-disc">We value relationships.</li>
-        </ul>
+        <p className="text-[#7a7a7a]">{data?.SubCat15?.Para}</p>
       </div>
 
       <div className="mt-8 space-y-5">

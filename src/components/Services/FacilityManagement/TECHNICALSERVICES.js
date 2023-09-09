@@ -6,36 +6,36 @@ export default function TECHNICALSERVICES({ data }) {
       <div className="flex flex-col justify-start gap-4 mt-5 md:flex-row">
         <div>
           <img
-            src={data.SubCat5.Tittle1}
-            alt={data.SubCat5.Tittle1}
+            src={data?.SubCat5?.Tittle1}
+            alt={data?.SubCat5?.Tittle1}
             className="lg:max-w-sm"
           />
         </div>
         <div className="text-[#7a7a7a] space-y-5">
           <h1 className="text-lg font-bold text-black md:text-xl">
-            {data.SubCat5.Tittle1}
+            {data?.SubCat5?.Tittle1}
           </h1>
-          <p className="leading-8">{data.SubCat5.Para1}</p>
+          <p className="leading-8">{data?.SubCat5?.Para1}</p>
         </div>
       </div>
       <div className="space-y-4">
         <div className="text-[#7a7a7a] space-y-2">
           <h1 className="font-bold text-black lg:text-lg">
-            {data.SubCat5.Tittle2}
+            {data?.SubCat5?.Tittle2}
           </h1>
-          <p>{data.SubCat5.Para2}</p>
+          <p>{data?.SubCat5?.Para2}</p>
         </div>
         <div className="text-[#7a7a7a] space-y-2">
           <h1 className="font-bold text-black lg:text-lg">
-            {data.SubCat5.Tittle3}
+            {data?.SubCat5?.Tittle3}
           </h1>
-          <p>{data.SubCat5.Para3}</p>
+          <p>{data?.SubCat5?.Para3}</p>
         </div>
         <div className="text-[#7a7a7a] space-y-2">
           <h1 className="font-bold text-black lg:text-lg">
-            {data.SubCat5.Tittle4}
+            {data?.SubCat5?.Tittle4}
           </h1>
-          <p>{data.SubCat5.Para4}</p>
+          <p>{data?.SubCat5?.Para4}</p>
           <ul className="ml-3 space-y-2.5">
             <li className="list-disc">
               Deluge, water spray and sprinkler systems
@@ -72,16 +72,16 @@ export default function TECHNICALSERVICES({ data }) {
         </div>
         <div className="text-[#7a7a7a] space-y-2">
           <h1 className="font-bold text-black lg:text-lg">
-            {data.SubCat5.Tittle5}
+            {data?.Tittle5}
           </h1>
-          <p>{data.SubCat5.Para5}</p>
+          <p>{data?.SubCat5?.Para5}</p>
         </div>
 
         <div className="text-[#7a7a7a] space-y-2">
           <h1 className="font-bold text-black lg:text-lg">
-            {data.SubCat5.Tittle6}
+            {data?.SubCat5?.Tittle6}
           </h1>
-          <p>{data.SubCat5.Para6}</p>
+          <p>{data?.SubCat5?.Para6}</p>
         </div>
 
         <div className="text-[#7a7a7a] space-y-2">

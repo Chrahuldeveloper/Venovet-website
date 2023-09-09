@@ -3,42 +3,42 @@ import React from "react";
 export default function Inventory({ data }) {
   const AuditServices = [
     {
-      Tittle: `${data.SubCat3.Tittle}`,
-      Para: `${data.SubCat3.Para}`,
+      Tittle: `${data?.SubCat3?.Tittle}`,
+      Para: `${data?.SubCat3?.Para}`,
     },
     {
-      Tittle: `${data.SubCat4.Tittle}`,
-      Para: `${data.SubCat4.Para}`,
+      Tittle: `${data?.SubCat4?.Tittle}`,
+      Para: `${data?.SubCat4?.Para}`,
     },
     {
-      Tittle: `${data.SubCat5.Tittle}`,
-      Para: `${data.SubCat5.Para}`,
+      Tittle: `${data?.SubCat5?.Tittle}`,
+      Para: `${data?.SubCat5?.Para}`,
     },
     {
-      Tittle: `${data.SubCat6.Tittle}`,
-      Para: `${data.SubCat6.Para}`,
+      Tittle: `${data?.SubCat6?.Tittle}`,
+      Para: `${data?.SubCat6?.Para}`,
     },
     {
-      Tittle: `${data.SubCat7.Tittle}`,
-      Para: `${data.SubCat7.Para}`,
+      Tittle: `${data?.SubCat7?.Tittle}`,
+      Para: `${data?.SubCat7?.Para}`,
     },
   ];
   const Benefits = [
     {
-      Tittle: `${data.SubCat8.Tittle}`,
-      Para: `${data.SubCat8.Para}`,
+      Tittle: `${data?.SubCat8?.Tittle}`,
+      Para: `${data?.SubCat8?.Para}`,
     },
     {
-      Tittle: `${data.SubCat9.Tittle}`,
-      Para: `${data.SubCat9.Para}`,
+      Tittle: `${data?.SubCat9?.Tittle}`,
+      Para: `${data?.SubCat9?.Para}`,
     },
     {
-      Tittle: `${data.SubCat10.Tittle}`,
-      Para: `${data.SubCat10.Para}`,
+      Tittle: `${data?.SubCat10?.Tittle}`,
+      Para: `${data?.SubCat10?.Para}`,
     },
     {
-      Tittle: `${data.SubCat11.Tittle}`,
-      Para: `${data.SubCat11.Para}`,
+      Tittle: `${data?.SubCat11?.Tittle}`,
+      Para: `${data?.SubCat11?.Para}`,
     },
   ];
 
@@ -46,12 +46,12 @@ export default function Inventory({ data }) {
     <section>
       {/* What is Stock Audit Services*/}
       <div className="flex flex-col gap-5 lg:flex-row">
-        <img src={data.SubCat1.image} className="rounded-lg" alt="" />
+        <img src={data?.SubCat1?.image} className="rounded-lg" alt="" />
         <div className="space-y-4 ">
           <h1 className="text-lg font-semibold lg:text-2xl">
-            {data.SubCat1.Tittle}
+            {data?.SubCat1?.Tittle}
           </h1>
-          <p className="text-[#777777]">{data.SubCat1.Para}</p>
+          <p className="text-[#777777]">{data?.SubCat1?.Para}</p>
         </div>
       </div>
       {/* What is Stock Audit Services*/}
@@ -59,13 +59,13 @@ export default function Inventory({ data }) {
       <div className="flex flex-col items-start gap-6 mt-8 lg:flex-row">
         <div className="space-y-3">
           <h1 className="text-lg font-semibold lg:text-2xl">
-            {data.SubCat2.Tittle}
+            {data?.SubCat2?.Tittle}
           </h1>
           <ul className="space-y-3 text-[#777777]">
-            <p className="text-[#777777]">{data.SubCat2.Para}</p>
+            <p className="text-[#777777]">{data?.SubCat2?.Para}</p>
           </ul>
         </div>
-        <img className="max-w-sm rounded-lg" src={data.SubCat2.image} alt="" />
+        <img className="max-w-sm rounded-lg" src={data?.SubCat2?.image} alt="" />
       </div>
       {/*Eligibility For Stock Audit Services */}
 

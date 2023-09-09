@@ -2,7 +2,7 @@ import React from "react";
 import { venovetChart } from "../../images/index";
 import { KeyBenifits } from "../../components/index";
 
-export default function WhoWeServeContent() {
+export default function WhoWeServeContent({data}) {
   const WhyUsData = [
     {
       image: "https://venovet.com/assets/images/icon.png",
@@ -58,9 +58,7 @@ export default function WhoWeServeContent() {
         <h1 className="font-bold text-black md:text-lg lg:text-2xl">
           {DynamicContent.Tittle1}
         </h1>
-        <p className="leading-8">{DynamicContent.Para1}</p>
-        <p className="leading-8">{DynamicContent.Para2}</p>
-        <p className="leading-8">{DynamicContent.Para3}</p>
+        <p>{data?.Overview}</p>
       </div>
 
       <div className="mt-7">
@@ -69,9 +67,7 @@ export default function WhoWeServeContent() {
         </h1>
         <div className="flex flex-col items-start gap-5 mt-5 md:flex-row">
           <div className="space-y-4 text-[#7a7a7a]">
-            <p>{DynamicContent.ChartsPara1}</p>
-            <p>{DynamicContent.ChartsPara2}</p>
-            <p>{DynamicContent.ChartsPara3}</p>
+            <p>{data?.Stats}</p>
           </div>
           <div>
             <img src={venovetChart} alt={venovetChart} className="max-w-md" />
@@ -84,17 +80,17 @@ export default function WhoWeServeContent() {
           {DynamicContent.Tittle3}
         </h1>
         <p className="text-[#7a7a7a] leading-8">
-          {DynamicContent.HowItWorksPara}
+        <p>{data?.How}</p>
         </p>
         <img
-          src="https://venovet.com/assets/images/1643377320_service-consumer-goods-1.jpg"
+          src={data?.Image}
           alt=""
         />
       </div>
 
       <div className="space-y-4 mt-7">
         <h1 className="font-bold text-black md:text-lg lg:text-2xl">Why Us!</h1>
-        <p className="text-[#7a7a7a] leading-8">{DynamicContent.whyusPara}</p>
+        <p className="text-[#7a7a7a] leading-8">{data?.Why}</p>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {WhyUsData.map((item, index) => {
             return (

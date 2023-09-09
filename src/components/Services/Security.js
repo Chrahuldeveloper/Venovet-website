@@ -1,50 +1,90 @@
 import React from "react";
 
-function Security() {
-  const data = [
+function Security({ data }) {
+  const picdata = [
     {
-      Title: "Security Guards Services",
-      p: "At Venovet, our security personnel understand the specialized needs of customer environment.",
+      Title: `${data?.SubCat1?.Tittle}`,
+      p: `${data?.SubCat1?.Para}`,
       png: "https://venovet.com/assets/images/service-01.png",
     },
     {
-      Title: "Gun Man Security Services",
-      p: "At Venovet, our security personnel understand the specialized needs of customer environment.",
+      Title: `${data?.SubCat2?.Tittle}`,
+      p: `${data?.SubCat2?.Para}`,
+      png: "https://venovet.com/assets/images/service-02.png",
+    },
+    {
+      Title: `${data?.SubCat3?.Tittle}`,
+      p: `${data?.SubCat3?.Para}`,
+      png: "https://venovet.com/assets/images/service-02.png",
+    },
+    {
+      Title: `${data?.SubCat4?.Tittle}`,
+      p: `${data?.SubCat4?.Para}`,
+      png: "https://venovet.com/assets/images/service-02.png",
+    },
+    {
+      Title: `${data?.SubCat5?.Tittle}`,
+      p: `${data?.SubCat5?.Para}`,
+      png: "https://venovet.com/assets/images/service-02.png",
+    },
+    {
+      Title: `${data?.SubCat6?.Tittle}`,
+      p: `${data?.SubCat6?.Para}`,
+      png: "https://venovet.com/assets/images/service-02.png",
+    },
+    {
+      Title: `${data?.SubCat7?.Tittle}`,
+      p: `${data?.SubCat7?.Para}`,
+      png: "https://venovet.com/assets/images/service-02.png",
+    },
+    {
+      Title: `${data?.SubCat8?.Tittle}`,
+      p: `${data?.SubCat8?.Para}`,
+      png: "https://venovet.com/assets/images/service-02.png",
+    },
+    {
+      Title: `${data?.SubCat9?.Tittle}`,
+      p: `${data?.SubCat9?.Para}`,
+      png: "https://venovet.com/assets/images/service-02.png",
+    },
+    {
+      Title: `${data?.SubCat10?.Tittle}`,
+      p: `${data?.SubCat10?.Para}`,
       png: "https://venovet.com/assets/images/service-02.png",
     },
   ];
 
   const card = [
     {
-      img: "https://venovet.com/assets/images/adventure-1.jpg",
-      Title: "24/7 CONSTANT SUPPORT",
-      p: "At Venovet, our security personnel understand the specialized needs of customer environment.",
+      img: `${data?.SubCat11?.Tittle}`,
+      Title: `${data?.SubCat11?.Tittle}`,
+      p: `${data?.SubCat11?.Tittle}`,
     },
     {
-      img: "https://venovet.com/assets/images/adventure-2.jpg",
-      Title: "24/7 CONSTANT SUPPORT",
-      p: "At Venovet, our security personnel understand the specialized needs of customer environment.",
+      img: `${data?.SubCat12?.Tittle}`,
+      Title: `${data?.SubCat12?.Tittle}`,
+      p: `${data?.SubCat12?.Tittle}`,
     },
     {
-      img: "https://venovet.com/assets/images/adventure-3.jpg",
-      Title: "24/7 CONSTANT SUPPORT",
-      p: "At Venovet, our security personnel understand the specialized needs of customer environment.",
+      img: `${data?.SubCat13?.Tittle}`,
+      Title: `${data?.SubCat13?.Tittle}`,
+      p: `${data?.SubCat13?.Tittle}`,
     },
   ];
 
   return (
     <div>
       <div className="py-10 space-y-3">
-        <h1 className="text-2xl font-bold">{data.Tittle1}</h1>
-        <p className="text-[#777777] text-sm md:text-lg">{data.Para1}</p>
+        <h1 className="text-2xl font-bold">{data?.Tittle1}</h1>
+        <p className="text-[#777777] text-sm md:text-lg">{data?.Para1}</p>
       </div>
       {/* Services ...... */}
       <div className="flex flex-col items-center space-y-3">
-        <h1 className="text-2xl font-bold">{data.Tittle2}</h1>
-        <p>{data.Para2}</p>
+        <h1 className="text-2xl font-bold">{data?.Tittle2}</h1>
+        <p>{data?.Para2}</p>
         <div className="items-center justify-around pt-4 lg:flex lg:space-x-6">
           <div className="space-y-5">
-            {data.map((item, index) => {
+            {picdata.map((item, index) => {
               return (
                 <div
                   key={index}
@@ -61,29 +101,13 @@ function Security() {
               );
             })}
           </div>
-          <div className="space-y-5">
-            {data.map((item, index) => {
-              return (
-                <div key={index} className="flex space-x-3">
-                  <div className="flex h-12 p-2 border-2 border-orange-500">
-                    <img src={item.png} alt="" />
-                  </div>
-                  <div className="flex flex-col max-w-xs space-y-4 text-left">
-                    <p className="font-bold">{item.Title}</p>
-                    <p className="text-[#777777]">{item.p}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </div>
-
       {/* OUR ADVANTAGES .....  */}
       <div className="py-20">
         <div className="flex flex-col items-center space-y-3">
-          <h1 className="text-3xl font-bold">{data.Tittle3}</h1>
-          <p>{data.Tittle3}</p>
+          <h1 className="text-3xl font-bold">{data?.Tittle3}</h1>
+          <p>{data?.Tittle3}</p>
         </div>
         <div className="grid pt-10 md:grid-cols-2 lg:grid-cols-3">
           {card.map((item, index) => {

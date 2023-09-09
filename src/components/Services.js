@@ -36,7 +36,7 @@ function Services() {
                     src="https://www.venovet.com/assets/images/logo-br-grey.png"
                     alt=""
                   />
-                  <p className="text-lg font-semibold leading-5 max-w-0">
+                  <p className="text-lg text-[#2a2a2a] leading-5 ">
                     {card.Tittle}
                   </p>
                 </div>

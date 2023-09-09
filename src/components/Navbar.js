@@ -18,8 +18,11 @@ export default function Navbar({ Page }) {
   const [who, setWho] = useState(false);
   const [ScrollY, setScrollY] = useState(false);
   const [toogle, settoogle] = useState(false);
-  const cart = useSelector((state) => state.cart);
+  const [mobilewhat,setmobilewhat] = useState(false);
+  const [mobilewho,setmobilewho] = useState(false);
+  const [mobileservice,setmobileservice] = useState(false);
 
+  const cart = useSelector((state) => state.cart);
   const handleScroll = () => {
     if (window.scrollY > 50) {
       setScrollY(true);
@@ -36,12 +39,6 @@ export default function Navbar({ Page }) {
     };
   }, []);
 
-  // Pass the data to the Service Page onclick
-  // category :  {
-  //     image : ""
-  //     Tittle : "",
-  //     Para : ""
-  // }
 
   return (
     <>
@@ -80,26 +77,26 @@ export default function Navbar({ Page }) {
                 <div>
                   <li
                     onMouseEnter={() => {
-                      setservice(!service);
+                      setmobileservice(!mobileservice);
                     }}
                     className="cursor-pointer"
                   >
                     SERVICES
                   </li>
                   <div
-                    onMouseEnter={() => setservice(true)}
-                    onMouseLeave={() => setservice(false)}
+                    onMouseEnter={() => setmobileservice(true)}
+                    onMouseLeave={() => setmobileservice(false)}
                     className={`${
-                      service ? "flex" : "hidden"
+                      mobileservice ? "flex" : "hidden"
                     } mt-2 absolute cursor-pointer `}
                   >
                     <ul className="text-sm text-[#676767] w-[16vw] font-semibold">
                       <li
                         onMouseEnter={() => {
-                          setWhat(true);
+                          setmobilewhat(true);
                         }}
                         onMouseLeave={() => {
-                          setWhat(false);
+                          setmobilewhat(false);
                         }}
                         className="bg-white border py-1.5 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300"
                       >
@@ -107,10 +104,10 @@ export default function Navbar({ Page }) {
                       </li>
                       <li
                         onMouseEnter={() => {
-                          setWho(true);
+                          setmobilewho(true);
                         }}
                         onMouseLeave={() => {
-                          setWho(false);
+                          setmobilewho(false);
                         }}
                       >
                         <li  className="bg-white border py-1.5 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300">
@@ -126,7 +123,7 @@ export default function Navbar({ Page }) {
                         setWhat(false);
                       }}
                       className={`${
-                        what ? "flex" : "hidden"
+                        mobilewhat ? "flex" : "hidden"
                       } bg-white py-2 text-sm text-[#676767] w-[18vw]`}
                     >
                       <DropDown ismobile={false} type={"Whatwedo"} />
@@ -139,7 +136,7 @@ export default function Navbar({ Page }) {
                         setWho(false);
                       }}
                       className={`${
-                        who ? "flex" : "hidden"
+                        mobilewho ? "flex" : "hidden"
                       } bg-white py-2 text-sm text-[#676767] w-[18vw]`}
                     >
                       <DropDown ismobile={false} type={"WhoweServe"} />

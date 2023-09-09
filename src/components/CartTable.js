@@ -1,8 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { deleteitem } from "../features/ProductSlice";
 
 export default function CartTable() {
   const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -32,7 +35,12 @@ export default function CartTable() {
                     <td className="py-8 pl-10 cursor-pointer text-[#7e7e7e]">
                       1
                     </td>
-                    <td className="py-8 pl-10 cursor-pointer text-[#7e7e7e]">
+                    <td
+                      onClick={() => {
+                        dispatch(deleteitem(i));
+                      }}
+                      className="py-8 pl-10 cursor-pointer text-[#7e7e7e]"
+                    >
                       Delete
                     </td>
                   </tr>

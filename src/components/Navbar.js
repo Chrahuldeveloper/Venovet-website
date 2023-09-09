@@ -177,7 +177,7 @@ export default function Navbar({ Page }) {
         </div>
 
         {/* Show case bar for Big screens */}
-        <div className="hidden md:block text-white bg-[#121a37] w-screen p-3.5">
+        <div className="hidden md:block text-white bg-[#121a37] w-screen  p-3.5">
           <div className="flex items-center justify-around mx-10">
             <div className="flex items-center space-x-1.5">
               <AiOutlineMail size={25} color="#ff5e15" />
@@ -245,8 +245,8 @@ export default function Navbar({ Page }) {
         </div>
 
         {/* Menu Bar with drop down only for Big screens */}
-        <div className="justify-center hidden mt-1 translate-y-6 lg:flex">
-          <div className="flex items-center bg-[#121a37] p-4">
+        <div className="justify-center hidden mt-1 translate-y-6 lg:flex ">
+          <div className="flex items-center bg-[#121a37] p-4 rounded-l-md">
             <ul className="flex items-center text-white space-x-14">
               <Link to={"/"}>
                 <li className="cursor-pointer">HOME</li>
@@ -363,7 +363,7 @@ export default function Navbar({ Page }) {
             </ul>
           </div>
           <Link to="/contact">
-            <button className="bg-orange-500 text-white p-3.5 flex items-center space-x-1.5 font-semibold">
+            <button className="bg-orange-500 text-white p-3.5 flex items-center space-x-1.5 font-semibold rounded-r-md">
               <AiOutlineWechat size={30} color="white" />
               <h1>Request a Call Back</h1>
               <AiOutlineArrowRight size={30} color="white" />

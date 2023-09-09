@@ -85,7 +85,7 @@ const Footer = () => {
         }}
       />
 
-      <div className="absolute  justify-between top-0 w-[100%] text-[#d5d5d5]">
+      <div className="absolute  justify-between top-0 w-[100%] text-[#d5d5d5] lg:ml-20">
         <div className="px-10 pt-20 lg:flex space-y-14 lg:space-y-0 ">
           {/* //first section */}
           <div className="space-y-4">
@@ -100,12 +100,12 @@ const Footer = () => {
             </p>
 
             {/* social icons  */}
-            <div className="flex pt-4 space-x-4">
+            {/* <div className="flex pt-4 space-x-4">
               <AiFillFacebook size={30} />
               <AiOutlineTwitter size={30} />
               <AiOutlineInstagram size={30} />
               <AiFillLinkedin size={30} />
-            </div>
+            </div> */}
           </div>
           {/* second section  */}
           <div className="space-y-8 md:flex md:justify-between md:space-y-0 md:space-x-20 md:pl-20">

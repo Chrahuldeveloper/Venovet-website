@@ -158,9 +158,6 @@ export default function Navbar({ Page }) {
                 <Link to={"/career"}>
                   <li className="cursor-pointer">CAREERS</li>
                 </Link>
-                <Link to={"/signin"}>
-                  <li className="cursor-pointer">SIGN IN</li>
-                </Link>
                 <Link to={"/contact"}>
                   <li className="cursor-pointer">CONTACT US</li>
                 </Link>
@@ -357,13 +354,10 @@ export default function Navbar({ Page }) {
               <Link to={"/contact"}>
                 <li className="cursor-pointer">CONTACT US</li>
               </Link>
-              <Link to={"/signin"}>
-                <li className="cursor-pointer">SIGN IN</li>
-              </Link>
             </ul>
           </div>
           <Link to="/contact">
-            <button className="bg-orange-500 text-white p-3.5 flex cursor-pointer items-center space-x-1.5 font-semibold rounded-r-md hover:brightness-75 ease-in-out duration-300">
+            <button className="bg-orange-500 text-white p-3.5 flex cursor-pointer items-center space-x-1.5 font-semibold rounded-r-md hover:brightness-90 ease-in-out duration-300">
               <AiOutlineWechat size={30} color="white" />
               <h1>Request a Call Back</h1>
               <AiOutlineArrowRight size={30} color="white" />

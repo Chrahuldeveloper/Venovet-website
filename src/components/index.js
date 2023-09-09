@@ -29,6 +29,7 @@ import FilterCategory from "./FilterCategory";
 import BlogContent from "./BlogContent";
 import MobileNavbar from "./MobileNavbar";
 import CartTable from "./CartTable";
+import DragTop from "./DragTop";
 export {
   MobileNavbar,
   Navbar,
@@ -61,4 +62,5 @@ export {
   FilterCategory,
   BlogContent,
   CartTable,
+  DragTop
 };

@@ -19,10 +19,10 @@ export default function NewsLetter() {
         <input
           type="text"
           placeholder="Your Email Address"
-          className="p-2 md:p-3.5 border-[1px]  outline-none"
+          className="md:px-10 py-2 border-[1px]  outline-none"
         />
-        <button className="bg-orange-500 text-white p-2 md:p-3.5 text-xs font-semibold">
-          <h1>Request  Call Back</h1>
+        <button className="bg-orange-500 duration-300 ease-in-out hover:brightness-90 text-white py-3 px-2 text-xs font-semibold">
+          <h1>Request Call Back</h1>
         </button>{" "}
       </div>
       <div className="flex items-center space-x-2.5">

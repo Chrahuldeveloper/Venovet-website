@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Data from "../Data/Blogs";
+import Blog from "../Data/BlogData";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 export default function Blogs() {
@@ -45,7 +45,7 @@ export default function Blogs() {
           ref={blogs}
         >
           <div className="flex flex-row px-8 my-10 gap-9" onClick={scrollRight}>
-            {Data.map((item, i) => {
+            {Blog.map((item, i) => {
               return (
                 <React.Fragment key={i}>
                   <div

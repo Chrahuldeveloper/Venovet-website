@@ -1,7 +1,18 @@
 import ParticleLink from "./ParticleLink";
 import Data from "../Data/TestimonialData";
-import React from "react";
+import React, { useRef } from "react";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 const Testimonials = () => {
+  const scrollref = useRef(null);
+
+  const scrollRight = () => {
+    scrollref.current.scrollLeft += 500;
+  };
+
+  const scrollLeft = () => {
+    scrollref.current.scrollLeft -= 500;
+  };
+
   return (
     <div className="relative ">
       <ParticleLink />
@@ -9,7 +20,10 @@ const Testimonials = () => {
         <h1 className="text-[#fff] py-14 text-3xl md:text-4xl lg:text-5xl font-semibold">
           WHAT CLIENTS SAY?
         </h1>
-        <div className="flex flex-col justify-start gap-10 p-3 overflow-x-scroll max-w-7xl md:gap-72 md:flex-row ">
+        <div
+          className="flex flex-col justify-start gap-10 p-3 overflow-x-scroll max-w-7xl md:gap-72 md:flex-row "
+          ref={scrollref}
+        >
           {Data.map((_, index) => {
             return (
               <React.Fragment key={index}>
@@ -36,19 +50,18 @@ const Testimonials = () => {
             );
           })}
         </div>
-        {/* <div className="flex justify-start max-w-5xl gap-10 overflow-x-scroll md:max-w-9xl">
-          {Data.map((_, index) => (
-            <React.Fragment key={index}>
-              <div className="max-w-md">
-                <img src={_.image} alt="" className="" />
-                <div className="text-white">
-                  <h1 className="text-sm">{_.Name}</h1>
-                  <p className="text-xs">{_.p}</p>
-                </div>
-              </div>
-            </React.Fragment>
-          ))}
-        </div> */}
+        <div className="hidden md:flex items-center justify-between gap-0.5 space-x-4  ">
+          <AiOutlineArrowLeft
+            onClick={scrollRight}
+            color="white"
+            className="p-2 rounded-full shadow-md w-9 h-9 cursor-pointer md:p-3 md:w-14 md:h-14"
+          />
+          <AiOutlineArrowRight
+            onClick={scrollLeft}
+            className="p-2 rounded-full shadow-md w-9 h-9  md:p-3 md:w-14 md:h-14 cursor-pointer"
+            color="white"
+          />
+        </div>
       </div>
     </div>
   );

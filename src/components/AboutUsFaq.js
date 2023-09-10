@@ -1,11 +1,7 @@
 import Data from "../Data/FaqData";
 import { useState } from "react";
 
-const AboutUsFaq = ({ Q, children }) => {
-  const [open, setOpen] = useState(false);
-  const toggle = () => {
-    setOpen(!open);
-  };
+const AboutUsFaq = ({ Q, children, open, toggle }) => {
   return (
     <div className="space-y-4 rounded-2xl px-10 md:px-0">
       <div className=" cursor-pointer" onClick={toggle}>
@@ -31,22 +27,32 @@ const AboutUsFaq = ({ Q, children }) => {
 };
 
 const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState(-1);
+
+  const toggleFaq = (index) => {
+    setOpenIndex(index === openIndex ? -1 : index);
+  };
+
   return (
     <>
-      <div className="mx-auto mt-7 ">
+      <div className="mx-auto mt-7">
         <div className="flex md:justify-evenly items-start">
           <div className="space-y-5">
-            {Data.map((_, index) => {
+            {Data.map((item, index) => {
               return (
                 <div key={index} className="lg:max-w-xl">
-                  <AboutUsFaq Q={_.q}>
-                    <p>{_.a}</p>
+                  <AboutUsFaq
+                    Q={item.q}
+                    open={index === openIndex}
+                    toggle={() => toggleFaq(index)}
+                  >
+                    <p>{item.a}</p>
                   </AboutUsFaq>
                 </div>
               );
             })}
           </div>
-          <div className=" h-auto hidden lg:flex">
+          <div className="h-auto hidden lg:flex">
             <img
               src="https://www.venovet.com/assets/images/cargo.jpg"
               className="max-w-md"

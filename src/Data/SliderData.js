@@ -3,7 +3,7 @@ const Data = [
     Tittle: "WareHouse",
     HighLight: "Mangement",
     Para: "Give an efficiency boost your inventory mangement with our experts. we are consistent, reliable and efficient",
-    image: "https://venovet.com/assets/images/bgs8.jpg",
+    image: "https://www.venovet.com/assets/images/resources/slide1-1.jpg",
     catgeory: "Warehouse Management (2PL & 3PL)",
     Para1: "Give an efficiency boost to your inventory management",
   },

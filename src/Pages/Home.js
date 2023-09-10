@@ -11,7 +11,7 @@ import {
   Bridge,
   NewsLetter,
   Enquire,
-  DragTop
+  DragTop,
 } from "../components";
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
       <Bridge />
       <Blogs />
       <NewsLetter />
-      <DragTop/>
+      <DragTop />
       <Footer />
     </body>
   );

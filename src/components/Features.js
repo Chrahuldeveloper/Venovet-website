@@ -1,5 +1,6 @@
 import React from "react";
 import Data from "../Data/Features";
+import { Link } from "react-router-dom";
 export default function Features() {
   return (
     <section className=" bg-[#fafafa]">
@@ -27,9 +28,11 @@ export default function Features() {
         })}
       </div>
       <div className="flex justify-center my-10">
-        <button className="bg-orange-500 tex-white font-semibold rounded-full shadow-2xl shadow-black text-white px-8 py-1.5">
-          Talk to our experts
-        </button>
+        <Link to="/contact">
+          <button className="bg-orange-500 tex-white font-semibold rounded-full shadow-2xl shadow-black text-white px-8 py-1.5 hover:brightness-90 ease-in-out duration-300">
+            Talk to our experts
+          </button>
+        </Link>
       </div>
     </section>
   );

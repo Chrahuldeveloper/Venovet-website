@@ -3,7 +3,7 @@ import { AiOutlineArrowUp } from "react-icons/ai";
 export default function DragTop() {
   return (
     <div
-      className="fixed right-10 bottom-10 bg-orange-500 p-3 rounded-md cursor-pointer z-50"
+      className="fixed right-10 bottom-10 bg-orange-500 hover:brightness-90 ease-in-out duration-300  p-3 rounded-md cursor-pointer z-50"
       onClick={() => {
         window.scroll(0, 0);
       }}

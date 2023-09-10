@@ -116,7 +116,7 @@ function Enquire() {
               </div>
               <div className="flex items-center justify-center">
                 <button
-                  className="text-white bg-[#fe8704] text-sm font-bold rounded-full px-6 py-2"
+                  className="text-white bg-[#fe8704] text-sm font-bold rounded-full px-6 py-2 hover:brightness-90 ease-in-out duration-300"
                   type="submit"
                 >
                   SUBMIT NOW

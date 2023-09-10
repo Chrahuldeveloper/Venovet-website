@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import Data from "../Data/SliderData";
+import { Link } from "react-router-dom";
 export default function Slider() {
   const [index, setindex] = useState(0);
 
@@ -37,19 +38,28 @@ export default function Slider() {
             cursor={"pointer"}
           />
 
-          <div className="text-center md:text-left space-y-3 lg:space-y-4 lg:-ml-36">
+          <div className="text-center md:text-left  lg:space-y-4 lg:-ml-36">
             <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold">
               {Data[index].Tittle}
             </h1>
-            <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-orange-500">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl my-4 font-bold text-orange-500">
               {Data[index].HighLight}
             </h2>
-            <p className="text-white font-semibold max-w-3xl md:text-lg lg:text-xl leading-7">
+            <p className="text-white font-semibold max-w-3xl md:text-lg lg:text-xl leading-7 my-4">
               {Data[index].Para}
             </p>
-            <button className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5">
-              Learn More
-            </button>
+            <Link
+              to={`/whatwedo/${Data[index].catgeory}`}
+              state={{
+                image: Data[index].image,
+                Tittle: Data[index].Tittle,
+                Para: Data[index].Para1,
+              }}
+            >
+              <button className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5 my-4">
+                Learn More
+              </button>
+            </Link>
           </div>
 
           <AiOutlineArrowRight

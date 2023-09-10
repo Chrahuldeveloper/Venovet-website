@@ -18,9 +18,9 @@ export default function Navbar({ Page }) {
   const [who, setWho] = useState(false);
   const [ScrollY, setScrollY] = useState(false);
   const [toogle, settoogle] = useState(false);
-  const [mobilewhat,setmobilewhat] = useState(false);
-  const [mobilewho,setmobilewho] = useState(false);
-  const [mobileservice,setmobileservice] = useState(false);
+  const [mobilewhat, setmobilewhat] = useState(false);
+  const [mobilewho, setmobilewho] = useState(false);
+  const [mobileservice, setmobileservice] = useState(false);
 
   const cart = useSelector((state) => state.cart);
   const handleScroll = () => {
@@ -38,7 +38,6 @@ export default function Navbar({ Page }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   return (
     <>
@@ -94,9 +93,7 @@ export default function Navbar({ Page }) {
                       <li
                         onMouseEnter={() => {
                           setmobilewhat(true);
-                        }}
-                        onMouseLeave={() => {
-                          setmobilewhat(false);
+                          setmobilewho(false);
                         }}
                         className="bg-white border py-1.5 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300"
                       >
@@ -105,14 +102,12 @@ export default function Navbar({ Page }) {
                       <li
                         onMouseEnter={() => {
                           setmobilewho(true);
-                        }}
-                        onMouseLeave={() => {
-                          setmobilewho(false);
+                          setmobilewhat(false);
                         }}
                       >
-                        <li  className="bg-white border py-1.5 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300">
+                        <li className="bg-white border py-1.5 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300">
                           Who we serve
-                        </li>   
+                        </li>
                       </li>
                     </ul>
                     <div
@@ -287,12 +282,12 @@ export default function Navbar({ Page }) {
                     </li>
                     <div>
                       <li
-                       onMouseEnter={() => {
-                        setWho(true);
-                      }}
-                      onMouseLeave={() => {
-                        setWhat(false);
-                      }}
+                        onMouseEnter={() => {
+                          setWho(true);
+                        }}
+                        onMouseLeave={() => {
+                          setWhat(false);
+                        }}
                         className={`cursor-pointer ${
                           Page === "whoweserve" ? "text-orange-500" : null
                         }  bg-white border py-1 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300`}

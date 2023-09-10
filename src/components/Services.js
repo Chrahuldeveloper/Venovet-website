@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import Data from "../Data/Services";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import DropdownData from "../Data/WhatweDoCategories";
+import { Link } from "react-router-dom";
 function Services() {
   const [hover, sethover] = useState(null);
   return (
@@ -44,6 +47,21 @@ function Services() {
             </div>
           );
         })}
+      </div>
+      <div className="flex justify-center my-10">
+        <Link
+          to={`/whatwedo/${DropdownData[0].catgeory}`}
+          state={{
+            image: DropdownData[0].image,
+            Tittle: DropdownData[0].Tittle,
+            Para: DropdownData[0].Para,
+          }}
+        >
+          <button className="bg-orange-500 tex-white hover:brightness-90 ease-in-out duration-300 font-semibold rounded-md shadow-2xl shadow-black text-white px-7 py-2.5 flex items-center space-x-3.5">
+            <h1>View Services</h1>
+            <AiOutlineArrowRight size={25} />
+          </button>
+        </Link>
       </div>
     </div>
   );

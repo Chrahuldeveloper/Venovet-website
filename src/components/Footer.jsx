@@ -1,12 +1,6 @@
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
-import {
-  AiOutlineTwitter,
-  AiFillLinkedin,
-  AiFillFacebook,
-  AiOutlineInstagram,
-} from "react-icons/ai";
 const Footer = () => {
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);

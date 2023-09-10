@@ -2,15 +2,20 @@ import React from "react";
 import { AiOutlineFilePdf } from "react-icons/ai";
 
 export default function Brochure() {
-  const DownloadPdf = () => {
+  const DownloadPdf = async () => {
     const pdflink =
-      "https://www.iitianacademy.com/assets/Syllabus/SYLLABUS%20for%20JEE%20(Main)-2021%20%20Syllabus%20for%20Paper-1.pdf";
-    const aTag = document.createElement("a");
-    aTag.href = pdflink;
-    aTag.download = "venovet";
-    document.body.append(aTag);
-    aTag.click();
-    aTag.remove();
+      "https://firebasestorage.googleapis.com/v0/b/venovet-78743.appspot.com/o/pdf%2Fassets_Forenoon%20Session%20Schedule.pdf?alt=media&token=2a3138ce-951c-4726-af70-f081def045db";
+    try {
+      const aTag = document.createElement("a");
+      aTag.href = pdflink;
+      aTag.download = "venovet.pdf";
+      aTag.target = "_blank";
+      document.body.append(aTag);
+      aTag.click();
+      aTag.remove();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

@@ -1,6 +1,7 @@
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
+import { Link } from "react-router-dom";
 const Footer = () => {
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
@@ -92,33 +93,55 @@ const Footer = () => {
               Goods, Quality Check, Storage, Dispatch, Reporting and End
               Customer Delivery Transportation.
             </p>
-
-            {/* social icons  */}
-            {/* <div className="flex pt-4 space-x-4">
-              <AiFillFacebook size={30} />
-              <AiOutlineTwitter size={30} />
-              <AiOutlineInstagram size={30} />
-              <AiFillLinkedin size={30} />
-            </div> */}
           </div>
           {/* second section  */}
           <div className="space-y-8 md:flex md:justify-between md:space-y-0 md:space-x-20 md:pl-20">
             <div className="space-y-4">
               <h1 className="text-lg font-semibold text-white">ABOUT US</h1>
-              <ul className="space-y-4 text-[17px] cursor-pointer">
-                <li>About Us</li>
-                <li>What we do</li>
-                <li>Who we serve</li>
-                <li>Our Blog</li>
+              <ul className="text-[17px] cursor-pointer">
+                <Link to="/about">
+                  <li className="my-4">About Us</li>
+                </Link>
+                <Link
+                  to="/whatwedo/Warehouse Management (2PL & 3PL)"
+                  state={{
+                    image: "https://venovet.com/assets/images/bgs8.jpg",
+                    Tittle: "Venovet's Warehouse Management",
+                    Para: "Give an efficiency boost to your inventory management",
+                  }}
+                >
+                  <li className="my-4">What we do</li>
+                </Link>
+                <Link
+                  to="/whoweserve/"
+                  state={{
+                    image: "https://venovet.com/assets/images/bgs8.jpg",
+                    Tittle: "Fast Moving Consumer Goods (FMCG)",
+                    Para: "Relaxes our clients to get the goods delivered at their demanded place",
+                  }}
+                >
+                  <li className="my-4">Who we serve</li>
+                </Link>
+                <Link to="/BlogPage">
+                  <li className="my-4">Our Blog</li>
+                </Link>
               </ul>
             </div>
             <div className="space-y-4">
               <h1 className="text-lg font-semibold text-white">SUPPORT</h1>
               <ul className="space-y-4 text-[17px] cursor-pointer">
-                <li>Request a Quote</li>
-                <li>Contac Us</li>
-                <li>FAQ's</li>
-                <li>Careers</li>
+                <Link to="/contact">
+                  <li className="my-4">Request a Quote</li>
+                </Link>
+                <Link to="/contact">
+                  <li className="my-4">Contact Us</li>
+                </Link>
+                <Link to="/about">
+                  <li className="my-4">FAQ's</li>
+                </Link>
+                <Link to="/career">
+                  <li className="my-4">Careers</li>
+                </Link>
               </ul>
             </div>
             <div className="space-y-4">

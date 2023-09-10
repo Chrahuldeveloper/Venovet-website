@@ -1,7 +1,7 @@
 import React from "react";
-import { useCollectionData } from "react-firebase-hooks/firestore";
-import { db } from "../Firebase";
-import { collection } from "firebase/firestore";
+// import { useCollectionData } from "react-firebase-hooks/firestore";
+// import { db } from "../Firebase";
+// import { collection } from "firebase/firestore";
 export default function BlogContent({ category }) {
   // const docref = collection(db, `BLOGS/${category}`);
   // const [data, loading, error] = useCollectionData(docref);

@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { db } from "../Firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, getDocs } from "firebase/firestore";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
+import {
+  getAuth,
+  RecaptchaVerifier,
+  signInWithPhoneNumber,
+} from "firebase/auth";
 function Enquire() {
+  const auth = getAuth();
   const [form, setForm] = useState({
     Name: "",
     Email: "",
@@ -13,20 +19,80 @@ function Enquire() {
     Message: "",
   });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (Object.values(form).every((i) => i === "")) {
-      alert("Please Fill the form");
-    } else {
-      try {
-        await addDoc(collection(db, "ENQUIRY"), form);
-        alert("success");
-      } catch (error) {
-        console.log(error);
-      }
-    }
+  const [otp, setotp] = useState("");
+  const [data, setData] = useState([]);
+
+  const configureCaptcha = () => {
+    window.recaptchaVerifier = new RecaptchaVerifier(auth, "sign-in-button", {
+      size: "invisible",
+      callback: (response) => {
+        // reCAPTCHA solved, allow signInWithPhoneNumber.
+        onNumSubmit();
+      },
+    });
   };
 
+  const onNumSubmit = (e) => {
+    e.preventDefault();
+    configureCaptcha();
+
+    const phoneNumber = form.Mobile;
+    console.log(phoneNumber);
+    const appVerifier = window.recaptchaVerifier;
+
+    signInWithPhoneNumber(auth, phoneNumber, appVerifier)
+      .then((confirmationResult) => {
+        window.confirmationResult = confirmationResult;
+        alert("OTP has bee sent");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const code = otp; // Use the OTP entered by the user
+    window.confirmationResult
+      .confirm(code)
+      .then(async (result) => {
+        // User signed in successfully.
+        // const user = result.user;
+        // console.log(JSON.stringify(user));
+        alert("Number is verified!");
+
+        // Save form data to Firebase after OTP verification
+        try {
+          await addDoc(collection(db, "ENQUIRY"), form);
+          alert("Form data has been saved to Firebase.");
+          window.location.reload();
+        } catch (error) {
+          console.error(error);
+        }
+      })
+      .catch((error) => {
+        // Handle OTP verification errors.
+        console.error(error);
+        alert("OTP verification failed. Please try again.");
+        window.location.reload();
+      });
+  };
+
+  useEffect(() => {
+    fetchData();
+    window.scrollTo(0, 0);
+  }, []);
+
+  const fetchData = async () => {
+    const querySnapshot = await getDocs(collection(db, "NATURE-OF-ENQUIRY"));
+    const enquiryData = querySnapshot.docs.map((doc) => {
+      return {
+        id: doc.id,
+        ...doc.data(),
+      };
+    });
+    setData(enquiryData);
+  };
   return (
     <div className="bg-[#dae2ed]">
       <div className="px-5 py-24  lg:flex md:px-7 lg:px-8">
@@ -76,6 +142,22 @@ function Enquire() {
                   }}
                   className="px-4 py-2 border outline-none w-60 rounded-3xl focus:border-none"
                 />
+
+                <button
+                  className="text-white w-32 bg-[#fe8704] text-sm font-bold rounded-full px-4 py-1 hover:brightness-90 ease-in-out duration-300"
+                  onClick={onNumSubmit}
+                >
+                  SEND OTP
+                </button>
+                <input
+                  className="border w-60 rounded-3xl px-4 py-2 focus:outline-[#ced4da] focus:border-none"
+                  type="text"
+                  placeholder="Enter OTP"
+                  value={otp}
+                  onChange={(e) => {
+                    setotp(e.target.value);
+                  }}
+                />
                 <input
                   className="border w-60 rounded-3xl px-4 py-2 focus:outline-[#ced4da] focus:border-none"
                   type="text"
@@ -98,9 +180,14 @@ function Enquire() {
                   className="md:w-[100%] w-60 focus:outline-[#ced4da] rounded-3xl px-4 py-2 text-[#676767 focus:border-[#ced4da] border"
                 >
                   <option>Nature of Enquiry</option>
-                  <option>Type 1</option>
-                  <option>Type 2</option>
-                  <option>Type 3</option>
+
+                  {data.map((item, index) => {
+                    return (
+                      <React.Fragment>
+                        <option>{item.Title}</option>
+                      </React.Fragment>
+                    );
+                  })}
                 </select>
               </div>
               <div className="py-2">
@@ -114,7 +201,7 @@ function Enquire() {
                   }}
                 ></textarea>
               </div>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center py-4">
                 <button
                   className="text-white bg-[#fe8704] text-sm font-bold rounded-full px-6 py-2 hover:brightness-90 ease-in-out duration-300"
                   type="submit"
@@ -123,6 +210,7 @@ function Enquire() {
                 </button>
               </div>
             </div>
+            <div id="sign-in-button"></div>
           </form>
         </div>
       </div>

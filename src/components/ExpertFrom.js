@@ -1,6 +1,24 @@
-import React from "react";
+import { collection, getDocs } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import { db } from "../Firebase";
 
 export default function ExpertFrom() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetchData();
+    window.scrollTo(0, 0);
+  }, []);
+
+  const fetchData = async () => {
+    const querySnapshot = await getDocs(collection(db, "NATURE-OF-ENQUIRY"));
+    const enquiryData = querySnapshot.docs.map((doc) => {
+      return {
+        id: doc.id,
+        ...doc.data(),
+      };
+    });
+    setData(enquiryData);
+  };
   return (
     <div className="bg-[#d6d6d6] max-w-sm md:max-w-md p-5">
       <h1 className="font-bold text-center md:text-lg lg:text-xl">
@@ -44,8 +62,14 @@ export default function ExpertFrom() {
             name="nature of enquire"
             className="px-20 py-2 rounded-lg outline-none"
           >
-            <option value="Product Realted">Product Realted</option>
-            <option value="Sales">Sales</option>
+            <option value="Product Realted">Nature of Enquiry</option>
+            {data.map((item, index) => {
+              return (
+                <React.Fragment>
+                  <option>{item.Title}</option>
+                </React.Fragment>
+              );
+            })}
           </select>
         </div>
         <div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Data from "../Data/FaqData";
+import Data from "../../Data/WareHouseData";
 
 const Faqs = ({ Q, children, index, openIndex, setOpenIndex }) => {
   const isOpen = index === openIndex;
@@ -34,17 +34,16 @@ const Faqs = ({ Q, children, index, openIndex, setOpenIndex }) => {
     </div>
   );
 };
-const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(-1);
 
+const KeyBeniftsWareHouse = () => {
+  const [openIndex, setOpenIndex] = useState(-1);
   return (
-    <div className="py-4 m-6 ">
-      <h1 className="text-[#ff4747] text-lg font-semibold lg:ml-28">OUR FAQ</h1>
-      <h1 className="lg:ml-28 text-2xl font-bold md:text-3xl lg:text-4xl text-[#222] pt-4">
-        Frequently Asked Questions?
+    <div className="py-4 ">
+      <h1 className="text-[#ff4747] text-lg font-semibold  lg:text-3xl">
+        Key Benifts
       </h1>
       <div className="divide-y-2">
-        <div className="flex items-start justify-around text-left ">
+        <div className="">
           <div className="pt-10">
             {Data.map((_, index) => {
               return (
@@ -61,16 +60,10 @@ const FAQ = () => {
               );
             })}
           </div>
-          <div className="w-[25rem] h-auto hidden lg:flex">
-            <img
-              src="https://www.venovet.com/assets/images/resources/faq-mockup.png"
-              alt="https://www.venovet.com/assets/images/resources/faq-mockup.png"
-            />
-          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default FAQ;
+export default KeyBeniftsWareHouse;

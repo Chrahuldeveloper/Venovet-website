@@ -5,7 +5,7 @@ import KeyBeniftsWareHouse from "./KeyBeniftsWareHouse";
 
 export default function WareHouseManagement({ data }) {
   return (
-    <section classNamw="mt-5 md:mt-0">
+    <section className="mt-5 md:mt-0">
       <div className="space-y-6">
         <h1 className="max-w-sm font-semibold md:max-w-full md:text-2xl lg:text-4xl">
           {data?.Tittle1}

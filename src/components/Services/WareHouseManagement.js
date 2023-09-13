@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "./index";
 import { Icons } from "./../index";
+import KeyBeniftsWareHouse from "./KeyBeniftsWareHouse";
 
 export default function WareHouseManagement({ data }) {
   return (
@@ -128,6 +129,8 @@ export default function WareHouseManagement({ data }) {
         </div>
       </div>
       {/* why us section */}
+      {/* key benifits section */}
+      <KeyBeniftsWareHouse />
     </section>
   );
 }

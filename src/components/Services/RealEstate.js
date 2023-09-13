@@ -85,7 +85,11 @@ function RealEstate({ data }) {
       <div className="py-10">
         <h1 className="py-8 text-xl font-bold">{data?.Tittle1}</h1>
         <div className="space-x-8 lg:flex">
-          <img className="h-[45rem] rounded-md" src={data?.image1} alt="" />
+          <img
+            className="h-[45rem] rounded-md"
+            src={"https://venovet.com/assets/images/s32.jpg"}
+            alt=""
+          />
           <div className="">
             {card.map((item, index) => {
               return (

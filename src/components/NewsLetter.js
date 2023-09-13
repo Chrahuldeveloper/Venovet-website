@@ -1,5 +1,5 @@
-import { addDoc, collection } from "firebase/firestore";
-import React, { useState } from "react";
+import { addDoc, collection, doc, getDoc } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
 import {
   AiFillFacebook,
   AiFillLinkedin,
@@ -7,12 +7,33 @@ import {
 } from "react-icons/ai";
 import { db } from "../Firebase";
 import { ColorRing } from "react-loader-spinner";
+import { Link } from "react-router-dom";
 
 export default function NewsLetter() {
   const [data, setData] = useState({
     mail: "",
   });
   const [isSubmitting, setIsSubmiting] = useState(false);
+  const [links, setlinks] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const documentRef = doc(db, "SOCIAL-MEDIA-URL", "LINKS");
+        const documentSnapshot = await getDoc(documentRef);
+        if (documentSnapshot.exists()) {
+          setlinks(documentSnapshot.data());
+        } else {
+          setlinks(null); // Handle the case where the document doesn't exist
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,7 +58,7 @@ export default function NewsLetter() {
   return (
     <div className="flex flex-col justify-center items-center space-y-5 md:space-y-0 md:flex-row md:justify-around bg-[#f9f9f9] p-4 py-8 mt-3.5">
       {isSubmitting && ( // Render loader only when isSubmitting is true
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-opacity-75 bg-gray-100">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-100 bg-opacity-75">
           <ColorRing
             visible={true}
             height="80"
@@ -78,9 +99,15 @@ export default function NewsLetter() {
         </button>{" "}
       </div>
       <div className="flex items-center space-x-2.5">
-        <AiOutlineTwitter size={28} color="black" cursor={"pointer"} />
-        <AiFillLinkedin size={28} color="black" cursor={"pointer"} />
-        <AiFillFacebook size={28} color="black" cursor={"pointer"} />
+        <Link to={links?.Twitter}>
+          <AiOutlineTwitter size={28} color="black" cursor={"pointer"} />
+        </Link>
+        <Link to={links?.Linkedin}>
+          <AiFillLinkedin size={28} color="black" cursor={"pointer"} />
+        </Link>
+        <Link to={links?.Facebook}>
+          <AiFillFacebook size={28} color="black" cursor={"pointer"} />
+        </Link>
       </div>
     </div>
   );

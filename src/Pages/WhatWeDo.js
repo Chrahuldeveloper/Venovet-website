@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  DragTop,
   ExpertFrom,
   FilterCategory,
   Footer,
@@ -33,6 +34,7 @@ export default function WhatWeDo() {
           </div>
         </div>
         <NewsLetter />
+        <DragTop/>
         <Footer />
       </main>
     </body>

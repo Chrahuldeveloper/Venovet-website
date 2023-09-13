@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Blog from "../Data/BlogData";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 export default function Blogs() {
   const blogs = useRef(null);
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ export default function Blogs() {
             />
             <AiOutlineArrowRight
               onClick={scrollRight}
-              className="p-2 rounded-full shadow-md w-9 h-9  md:p-3 md:w-14 md:h-14"
+              className="p-2 rounded-full shadow-md w-9 h-9 md:p-3 md:w-14 md:h-14"
               color="orange"
             />
           </div>
@@ -77,9 +77,11 @@ export default function Blogs() {
           </div>
         </div>
         <div className="flex justify-center mt-6">
-          <button className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5">
-            View all Blogs
-          </button>
+          <Link to="/BlogPage">
+            <button className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5">
+              View all Articles
+            </button>
+          </Link>
         </div>
       </section>
     </>

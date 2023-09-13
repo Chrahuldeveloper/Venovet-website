@@ -278,7 +278,6 @@ export default function Navbar({ Page }) {
                         setnonmobilewhat(true);
                         setnonmobilewho(false);
                       }}
-
                       className={`cursor-pointer ${
                         Page === "whatwedo" ? "text-orange-500" : null
                       }  bg-white border py-1 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300`}
@@ -293,7 +292,6 @@ export default function Navbar({ Page }) {
                         }}
                         onMouseLeave={() => {
                           setnonmobilewhat(false);
-                          
                         }}
                         className={`cursor-pointer ${
                           Page === "whoweserve" ? "text-orange-500" : null

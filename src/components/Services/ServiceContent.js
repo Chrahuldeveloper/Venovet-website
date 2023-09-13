@@ -37,9 +37,9 @@ export default function ServiceContent({ category }) {
     window.scrollTo(0, 0);
   }, [category]);
 
-  if (data === null) {
-    return <h1>Loading...</h1>;
-  }
+  // if (data === null) {
+  //   return <h1>Loading...</h1>;
+  // }
 
   return (
     <>

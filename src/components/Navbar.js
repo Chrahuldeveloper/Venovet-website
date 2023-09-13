@@ -22,6 +22,9 @@ export default function Navbar({ Page }) {
   const [mobilewho, setmobilewho] = useState(false);
   const [mobileservice, setmobileservice] = useState(false);
 
+  const [nonmobilewhat, setnonmobilewhat] = useState(false);
+  const [nonmobilewho, setnonmobilewho] = useState(false);
+
   const cart = useSelector((state) => state.cart);
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -173,7 +176,7 @@ export default function Navbar({ Page }) {
 
         {/* Show case bar for Big screens */}
         <div className="hidden md:block text-white bg-[#121a37] w-screen  p-3.5">
-          <div className="flex items-center justify-around mx-10">
+          <div className="flex items-center justify-around mx-10 gap-x-28">
             <div className="flex items-center space-x-1.5">
               <AiOutlineMail size={25} color="#ff5e15" />
               <h1>Email:sales@venovet.com</h1>
@@ -272,11 +275,10 @@ export default function Navbar({ Page }) {
                   <ul className="text-sm text-[#676767] w-[15vw] cursor-pointer">
                     <li
                       onMouseEnter={() => {
-                        setWhat(true);
+                        setnonmobilewhat(true);
+                        setnonmobilewho(false);
                       }}
-                      onMouseLeave={() => {
-                        setWhat(false);
-                      }}
+
                       className={`cursor-pointer ${
                         Page === "whatwedo" ? "text-orange-500" : null
                       }  bg-white border py-1 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300`}
@@ -286,10 +288,12 @@ export default function Navbar({ Page }) {
                     <div>
                       <li
                         onMouseEnter={() => {
-                          setWho(true);
+                          setnonmobilewho(true);
+                          setnonmobilewhat(false);
                         }}
                         onMouseLeave={() => {
-                          setWhat(false);
+                          setnonmobilewhat(false);
+                          
                         }}
                         className={`cursor-pointer ${
                           Page === "whoweserve" ? "text-orange-500" : null
@@ -301,26 +305,27 @@ export default function Navbar({ Page }) {
                   </ul>
                   <div
                     onMouseEnter={() => {
-                      setWhat(true);
+                      setnonmobilewhat(true);
+                      setnonmobilewho(false);
                     }}
                     onMouseLeave={() => {
-                      setWhat(false);
+                      setnonmobilewhat(false);
                     }}
                     className={`${
-                      what ? "flex" : "hidden"
+                      nonmobilewhat ? "flex" : "hidden"
                     } bg-white py-2 text-sm text-[#676767] w-[18vw]`}
                   >
                     <DropDown ismobile={false} type={"Whatwedo"} />
                   </div>
                   <div
                     onMouseEnter={() => {
-                      setWho(true);
+                      setnonmobilewho(true);
                     }}
                     onMouseLeave={() => {
-                      setWho(false);
+                      setnonmobilewho(false);
                     }}
                     className={`${
-                      who ? "flex" : "hidden"
+                      nonmobilewho ? "flex" : "hidden"
                     } bg-white py-2 text-sm text-[#676767] w-[18vw]`}
                   >
                     <DropDown ismobile={false} type={"WhoweServe"} />

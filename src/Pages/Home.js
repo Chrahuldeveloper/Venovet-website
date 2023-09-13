@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   About,
   Navbar,
@@ -13,8 +14,14 @@ import {
   Enquire,
   DragTop,
 } from "../components";
+import { useLocation } from "react-router-dom";
 
 export default function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <body className="overflow-x-clip">
       <Navbar />

@@ -5,22 +5,22 @@ export default function Card({ data }) {
     {
       image: "https://venovet.com/assets/images/icon4.png",
       Tittle: `${data?.SubCat5?.Tittle}`,
-      Para: `${data?.SubCat5?.Tittle}`,
+      Para: `${data?.SubCat5?.Para}`,
     },
     {
       image: "https://venovet.com/assets/images/icon2.png",
       Tittle: `${data?.SubCat6?.Tittle}`,
-      Para: `${data?.SubCat6?.Tittle}`,
+      Para: `${data?.SubCat6?.Para}`,
     },
     {
       image: "https://venovet.com/assets/images/icon3.png",
       Tittle: `${data?.SubCat7?.Tittle}`,
-      Para: `${data?.SubCat7?.Tittle}`,
+      Para: `${data?.SubCat7?.Para}`,
     },
     {
       image: "https://venovet.com/assets/images/icon1.png",
       Tittle: `${data?.SubCat8?.Tittle}`,
-      Para: `${data?.SubCat8?.Tittle}`,
+      Para: `${data?.SubCat8?.Para}`,
     },
   ];
   return (

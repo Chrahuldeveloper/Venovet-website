@@ -5,7 +5,7 @@ export default function LogisticsProjects({ data }) {
     <section className="space-y-10">
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
-          className="max-w-xs rounded-lg "
+          className="w-64 rounded-lg "
           src={data?.SubCat1?.image}
           alt="imge"
         />
@@ -42,17 +42,13 @@ export default function LogisticsProjects({ data }) {
 
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
-          className="max-w-xs rounded-lg md:order-2"
+          className="w-64 rounded-lg md:order-2"
           src={data?.SubCat2?.image}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">
-          {data?.SubCat2?.Tittle}
-          </h1>
-          <p className="text-[#7a7a7a]">
-          {data?.SubCat2?.Para}
-          </p>
+          <h1 className="text-xl font-semibold">{data?.SubCat2?.Tittle}</h1>
+          <p className="text-[#7a7a7a]">{data?.SubCat2?.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Manage permits and entitlements
@@ -81,17 +77,13 @@ export default function LogisticsProjects({ data }) {
 
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
-          className="max-w-xs rounded-lg "
+          className="w-64 rounded-lg "
           src={data?.SubCat3?.image}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">
-          {data?.SubCat3?.Tittle}
-          </h1>
-          <p className="text-[#7a7a7a]">
-          {data?.SubCat3?.Para}
-          </p>
+          <h1 className="text-xl font-semibold">{data?.SubCat3?.Tittle}</h1>
+          <p className="text-[#7a7a7a]">{data?.SubCat3?.Para}</p>
           <ul className="pl-4 text-[#7a7a7a]">
             <li className="text-sm leading-7 list-disc ">
               Outline specifications
@@ -117,15 +109,13 @@ export default function LogisticsProjects({ data }) {
 
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
-          className="max-w-xs rounded-lg md:order-2"
+          className="w-64 rounded-lg md:order-2"
           src={data?.SubCat4?.image}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">  {data?.SubCat4?.Tittle}</h1>
-          <p className="text-[#7a7a7a]">
-          {data?.SubCat4?.Para}
-          </p>
+          <h1 className="text-xl font-semibold"> {data?.SubCat4?.Tittle}</h1>
+          <p className="text-[#7a7a7a]">{data?.SubCat4?.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -156,15 +146,13 @@ export default function LogisticsProjects({ data }) {
 
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
-          className="max-w-xs rounded-lg "
+          className="w-64 rounded-lg "
           src={data?.SubCat5?.image}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
           <h1 className="text-xl font-semibold">{data?.SubCat5?.Tittle}</h1>
-          <p className="text-[#7a7a7a]">
-          {data?.SubCat5?.Para}
-          </p>
+          <p className="text-[#7a7a7a]">{data?.SubCat5?.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -195,17 +183,13 @@ export default function LogisticsProjects({ data }) {
 
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
-          className="max-w-xs rounded-lg md:order-2"
+          className="w-64 rounded-lg md:order-2"
           src={data?.SubCat6?.image}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">
-          {data?.SubCat6?.Tittle}
-          </h1>
-          <p className="text-[#7a7a7a]">
-          {data?.SubCat6?.Para}
-          </p>
+          <h1 className="text-xl font-semibold">{data?.SubCat6?.Tittle}</h1>
+          <p className="text-[#7a7a7a]">{data?.SubCat6?.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -236,15 +220,13 @@ export default function LogisticsProjects({ data }) {
 
       <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
         <img
-          className="max-w-xs rounded-lg "
+          className="w-64 rounded-lg "
           src={data?.SubCat7?.image}
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
           <h1 className="text-xl font-semibold">{data?.SubCat7?.Tittle}</h1>
-          <p className="text-[#7a7a7a]">
-          {data?.SubCat7?.Para}
-          </p>
+          <p className="text-[#7a7a7a]">{data?.SubCat7?.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis

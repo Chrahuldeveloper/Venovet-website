@@ -35,7 +35,7 @@ export default function WhoWeServer() {
         <Navbar Page={"whatwedo"} />
         <ServiceHeroSection image={image} Tittle={Tittle} Para={Para} />
         <div className="flex flex-col items-start justify-center gap-10 mt-4 lg:flex-row">
-          <FilterCategory Tittle={"WhoWeServer"} Page={"whoweserve"} />
+          <FilterCategory Tittle={"Who We Serve"} Page={"whoweserve"} />
           <WhoWeServeContent data={servedata} />
         </div>
         <NewsLetter />

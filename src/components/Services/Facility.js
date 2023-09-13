@@ -33,10 +33,15 @@ function Facility({ data }) {
             return (
               <>
                 <div
+                  key={_}
                   onClick={() => {
                     setfilterSubcategory(_);
                   }}
-                  className="p-4 text-sm cursor-pointer font-semibold rounded-lg bg-[#f3f3f3] hover:bg-orange-500 hover:text-white"
+                  className={`p-4 text-sm cursor-pointer font-semibold rounded-lg    ${
+                    filterSubcategory === _
+                      ? "bg-orange-500 text-white"
+                      : "bg-[#f3f3f3] transition duration-500 ease-in-out hover:bg-orange-500 hover:text-white"
+                  } `}
                 >
                   <h1>{_}</h1>
                 </div>

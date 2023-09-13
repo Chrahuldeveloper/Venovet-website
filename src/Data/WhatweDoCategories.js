@@ -6,7 +6,7 @@ const DropdownData = [
     Para: "Give an efficiency boost to your inventory management",
   },
   {
-    catgeory: "Transportation",
+    catgeory: "Transportation Fleet",
     Tittle: "Venovet's Transportation/Fleet",
     image: "https://venovet.com/assets/images/bgs8.jpg",
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
@@ -42,7 +42,7 @@ const DropdownData = [
     Para: "Improve Efficiencies,Create Flexibility And makes your supply chain more agile",
   },
   {
-    catgeory: "Ware ERP Solutions",
+    catgeory: "ERP Solutions",
     Tittle: "Venovet's Value Added Services (VAS)",
     image: "https://venovet.com/assets/images/bgs8.jpg",
     Para: "Improve Efficiencies,Create Flexibility And makes your supply chain more agile",

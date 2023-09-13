@@ -28,7 +28,7 @@ export default function WareHouseManagement({ data }) {
               {data?.SubCat1?.Tittle}
             </h1>
             <p className="text-[#7a7a7a] text-sm leading-6">
-              {data?.SubCat2?.Para}
+              {data?.SubCat1?.Para}
             </p>
           </div>
         </div>
@@ -45,7 +45,7 @@ export default function WareHouseManagement({ data }) {
             {data?.SubCat2?.Tittle}
           </h1>
           <p className="text-[#7a7a7a] text-sm leading-6">
-            {data?.SubCat2?.Tittle}
+            {data?.SubCat2?.Para}
           </p>
         </div>
       </div>
@@ -113,7 +113,7 @@ export default function WareHouseManagement({ data }) {
         <img
           className="max-w-sm rounded-lg"
           src={data?.Subcat9?.image}
-          alt=""
+          alt="img.png"
         />
       </div>
       {/* Experience Flexible Warehousing section */}

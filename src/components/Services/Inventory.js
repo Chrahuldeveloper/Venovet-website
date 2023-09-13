@@ -46,7 +46,7 @@ export default function Inventory({ data }) {
     <section>
       {/* What is Stock Audit Services*/}
       <div className="flex flex-col gap-5 lg:flex-row">
-        <img src={data?.SubCat1?.image} className="rounded-lg" alt="" />
+        <img src={data?.SubCat1?.image} className="rounded-lg w-72" alt="" />
         <div className="space-y-4 ">
           <h1 className="text-lg font-semibold lg:text-2xl">
             {data?.SubCat1?.Tittle}
@@ -65,7 +65,11 @@ export default function Inventory({ data }) {
             <p className="text-[#777777]">{data?.SubCat2?.Para}</p>
           </ul>
         </div>
-        <img className="max-w-sm rounded-lg" src={data?.SubCat2?.image} alt="" />
+        <img
+          className="max-w-sm rounded-lg"
+          src={data?.SubCat2?.image}
+          alt=""
+        />
       </div>
       {/*Eligibility For Stock Audit Services */}
 

@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Blog from "../Data/BlogData";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 export default function Blogs() {
   const blogs = useRef(null);
   const navigate = useNavigate();
@@ -14,6 +14,11 @@ export default function Blogs() {
     blogs.current.scrollLeft -= 500;
   };
 
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <>
       <section>

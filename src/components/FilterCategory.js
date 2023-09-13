@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import DropdownData from "../Data/WhatweDoCategories";
 import Data from "../Data/WhoweserveCategories";
 
 export default function FilterCategory({ Tittle, Page }) {
+  const location = useLocation();
   return (
     <>
       <div className="bg-[#f8f8f9] p-5 space-y-3 rounded-lg shadow-lg">
@@ -11,17 +12,25 @@ export default function FilterCategory({ Tittle, Page }) {
         <ul>
           {Page === "whatwedo"
             ? DropdownData.map((item, key) => {
+                const encodedTittle = encodeURIComponent(item.catgeory);
+                const isActive =
+                  location.pathname === `/whatwedo/${encodedTittle}`;
+
                 return (
                   <React.Fragment key={key}>
                     <Link
-                      to={`/whatwedo/${item.catgeory}`}
+                      to={`/whatwedo/${encodedTittle}`}
                       state={{
                         image: item.image,
                         Tittle: item.Tittle,
                         Para: item.Para,
                       }}
                     >
-                      <li className="cursor-pointer bg-[#eeeeee] text-[#777777] p-3 hover:bg-blue-500 hover:text-white font-semibold my-2.5">
+                      <li
+                        className={` ${
+                          isActive ? "bg-blue-500 text-white" : "bg-[#eeeeee]"
+                        }  cursor-pointer rounded-lg bg-[#eeeeee] text-[#777777] p-3 hover:bg-blue-500 hover:text-white text-sm font-semibold my-2.5`}
+                      >
                         {item.catgeory}
                       </li>
                     </Link>
@@ -30,6 +39,9 @@ export default function FilterCategory({ Tittle, Page }) {
               })
             : Page === "whoweserve"
             ? Data.map((item, key) => {
+                const encodedTittle = encodeURIComponent(item.catgeory);
+                const isActive =
+                  location.pathname === `/whoweserve/${encodedTittle}`;
                 return (
                   <React.Fragment key={key}>
                     <Link
@@ -40,7 +52,11 @@ export default function FilterCategory({ Tittle, Page }) {
                         Para: item.Para,
                       }}
                     >
-                      <li className="cursor-pointer bg-[#eeeeee] text-[#777777] p-3 hover:bg-blue-500 hover:text-white font-semibold my-2.5">
+                      <li
+                        className={` ${
+                          isActive ? "bg-blue-500 text-white" : "bg-[#eeeeee]"
+                        }  cursor-pointer rounded-lg bg-[#eeeeee] text-[#777777] p-3 hover:bg-blue-500 hover:text-white text-sm font-semibold my-2.5`}
+                      >
                         {item.catgeory}
                       </li>
                     </Link>

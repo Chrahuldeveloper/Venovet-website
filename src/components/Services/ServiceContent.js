@@ -14,49 +14,50 @@ import {
 } from "./index";
 import { db } from "../../Firebase";
 import { doc, getDoc } from "firebase/firestore";
+
 export default function ServiceContent({ category }) {
-  const [data, setdata] = useState();
+  const [data, setData] = useState(null); // Initialize data as null
 
   useEffect(() => {
     const fetchData = async () => {
-      const documentRef = doc(db, "WHATWEDO", category);
-      const documentSnapshot = await getDoc(documentRef);
-      setdata(documentSnapshot.data());
-      console.log(documentSnapshot.data());
+      try {
+        const documentRef = doc(db, "WHATWEDO", category);
+        const documentSnapshot = await getDoc(documentRef);
+        if (documentSnapshot.exists()) {
+          setData(documentSnapshot.data());
+        } else {
+          setData(null); // Handle the case where the document doesn't exist
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
+
     fetchData();
     window.scrollTo(0, 0);
   }, [category]);
 
-  const loading = false;
+  if (data === null) {
+    return <h1>Loading...</h1>;
+  }
 
   return (
     <>
-      {loading ? (
-        <h1>loading....</h1>
-      ) : category === "Warehouse Management (2PL & 3PL)" ? (
+      {category === "Warehouse Management (2PL & 3PL)" && (
         <WareHouseManagement data={data} />
-      ) : category === "Inventory Audits & Analytics" ? (
-        <Inventory data={data} />
-      ) : category === "Transportation" ? (
-        <Transpotation />
-      ) : category === "Logistics Projects Designing" ? (
+      )}
+      {category === "Inventory Audits & Analytics" && <Inventory data={data} />}
+      {category === "Transportation Fleet" && <Transpotation data={data} />}
+      {category === "Logistics Projects Designing" && (
         <LogisticsProjects data={data} />
-      ) : category === "Ware ERP Solutions" ? (
-        <EPRSolutions data={data} />
-      ) : category === "Industrial Security Services" ? (
-        <Security data={data} />
-      ) : category === "SCM Automation" ? (
-        <SCM data={data} />
-      ) : category === "Value Added Services" ? (
-        <ValueAddService data={data} />
-      ) : category === "Internet Supply Chain" ? (
-        <InternetSupply data={data} />
-      ) : category === "Industrial Real States" ? (
-        <RealEstate data={data} />
-      ) : category === "Facility Management" ? (
-        <Facility data={data} />
-      ) : null}
+      )}
+      {category === "ERP Solutions" && <EPRSolutions data={data} />}
+      {category === "Industrial Security Services" && <Security data={data} />}
+      {category === "SCM Automation" && <SCM data={data} />}
+      {category === "Value Added Services" && <ValueAddService data={data} />}
+      {category === "Internet Supply Chain" && <InternetSupply data={data} />}
+      {category === "Industrial Real States" && <RealEstate data={data} />}
+      {category === "Facility Management" && <Facility data={data} />}
     </>
   );
 }

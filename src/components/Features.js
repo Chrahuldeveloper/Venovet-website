@@ -10,17 +10,17 @@ export default function Features() {
           What Makes Us Special
         </h2>
       </div>
-      <div className="grid grid-cols-1 px-5 md:grid-cols-2 place-items-center gap-14 my-14 md:px-20">
+      <div className="grid grid-cols-1 px-5 md:grid-cols-2 place-items-center gap-14 my-14 md:px-14">
         {Data.map((item, i) => {
           return (
             <React.Fragment key={i}>
-              <div className="flex items-center max-w-lg gap-10 md:gap-6">
-                <div className="bg-white rounded-full">{item.icons}</div>
+              <div className="flex items-center max-w-xl gap-10 md:gap-6">
+                <div className="bg-white p-4 rounded-full">{item.icons}</div>
                 <div className="space-y-3.5">
-                  <h1 className="font-bold text-xl lg:text-2xl text-[#757575]">
+                  <h1 className="font-bold text-lg lg:text-[1.150rem] text-[#757575]">
                     {item.Tittle}
                   </h1>
-                  <p className="text-slate-400">{item.Para}</p>
+                  <p className="text-slate-400 ">{item.Para}</p>
                 </div>
               </div>
             </React.Fragment>

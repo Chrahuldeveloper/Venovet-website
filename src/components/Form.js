@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { db, storage } from "../Firebase";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { collection, addDoc } from "firebase/firestore";
+import { ColorRing } from "react-loader-spinner";
 
 export default function Form() {
   const [resume, setResume] = useState({
@@ -12,43 +13,54 @@ export default function Form() {
     FileUrl: "",
   });
 
+  const [isSubmitting, setIsSubmiting] = useState(false);
+  const fileChange = (event) => {
+    const imageFile = event.target.files[0];
+    setResume((prevForm) => ({
+      ...prevForm,
+      FileUrl: imageFile,
+    }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmiting(true);
     if (Object.values(resume).every((i) => i === "")) {
       alert("Please Fill the form");
     } else {
       try {
-        const fileInput = document.getElementById("Upload Resume");
-        const file = fileInput?.files[0];
-        if (file) {
-          const storageRef = ref(storage, `resumes/${file.name}`);
-          const uploadTask = uploadBytesResumable(storageRef, file);
-          uploadTask.on(
-            "state_changed",
-            null,
-            (error) => {
-              console.error(error);
-            },
-            async () => {
-              const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-              const resumeData = {
-                ...resume,
-                FileUrl: downloadURL,
-              };
-              await addDoc(collection(db, "RESUMES"), resumeData);
-              alert("success");
-            }
-          );
-        } else {
-          alert("upload resume");
-        }
+        const imageRef = ref(storage, `Resumes/${resume.FileUrl.name}`);
+        await uploadBytesResumable(imageRef, resume.FileUrl);
+        const url = await getDownloadURL(imageRef);
+        const resumeData = {
+          ...resume,
+          FileUrl: url,
+        };
+        await addDoc(collection(db, "RESUMES"), resumeData);
+        setIsSubmiting(false);
+        window.location.reload();
+        alert("success");
       } catch (error) {
+        setIsSubmiting(false);
         console.log(error);
       }
     }
   };
   return (
     <div className="bg-[#e3f3fb] p-6 my-24 rounded-lg max-w-3xl mx-auto shadow-md">
+      {isSubmitting && ( // Render loader only when isSubmitting is true
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-opacity-75 bg-gray-100">
+          <ColorRing
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="blocks-loading"
+            wrapperStyle={{}}
+            wrapperClass="blocks-wrapper"
+            colors={["#ff5e15"]}
+          />
+        </div>
+      )}
       <div className="text-center space-y-3.5">
         <h1 className="text-lg font-semibold text-orange-500 md:text-2xl">
           CAREER WITH VENOVET
@@ -109,12 +121,12 @@ export default function Form() {
             />
           </div>
           <div className="flex flex-col gap-4">
-            <label htmlFor="Upload Resume " className="text-[#787878]">
+            <label htmlFor="UploadResume" className="text-[#787878]">
               Upload Resume{" "}
             </label>
             <input
               type="file"
-              id="Upload Resume "
+              onChange={fileChange}
               className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw] outline-none"
             />
           </div>

@@ -1,12 +1,13 @@
 import React from "react";
 
 export default function ValueAddService({ data }) {
+  console.log(data);
   return (
     <section>
       <div>
         <img src="https://venovet.com/assets/images/s4.jpg" alt="" />
         <div className=" text-white bg-[#1165cd] p-8 rounded-lg -translate-y-10  md:max-w-3xl mx-auto text-sm md:text-base">
-          {data.Para}
+          {data?.Para}
         </div>
       </div>
 
@@ -19,13 +20,13 @@ export default function ValueAddService({ data }) {
         <div className="flex flex-col items-start gap-6 lg:flex-row mt-7">
           <img
             className="max-w-xs rounded-lg "
-            src={data.SubCat1.image}
+            src={data?.SubCat1?.image}
             alt="imge"
           />
           <div className="max-w-lg space-y-3.5">
-            <h1 className="text-xl font-semibold">{data.SubCat1.Tittle}</h1>
+            <h1 className="text-xl font-semibold">{data?.SubCat1?.Tittle}</h1>
             <p className="text-[#7a7a7a] text-sm leading-7">
-              {data.SubCat1.Para}
+              {data?.SubCat1?.Para}
             </p>
           </div>
         </div>
@@ -33,13 +34,13 @@ export default function ValueAddService({ data }) {
         <div className="flex flex-col items-start gap-6 lg:flex-row mt-7">
           <img
             className="max-w-xs rounded-lg "
-            src={data.SubCat2.image}
+            src={data?.SubCat2?.image}
             alt="imge"
           />
           <div className="max-w-lg space-y-3.5">
-            <h1 className="text-xl font-semibold">{data.SubCat2.Tittle}</h1>
+            <h1 className="text-xl font-semibold">{data?.SubCat2?.Tittle}</h1>
             <p className="text-[#7a7a7a] text-sm leading-7">
-              {data.SubCat2.Para}
+              {data?.SubCat2?.Para}
             </p>
           </div>
         </div>
@@ -47,13 +48,13 @@ export default function ValueAddService({ data }) {
         <div className="flex flex-col items-start gap-6 lg:flex-row mt-7">
           <img
             className="max-w-xs rounded-lg "
-            src={data.SubCat3.image}
+            src={data?.SubCat3?.image}
             alt="imge"
           />
           <div className="max-w-lg space-y-3.5">
-            <h1 className="text-xl font-semibold">{data.SubCat3.Tittle}</h1>
+            <h1 className="text-xl font-semibold">{data?.SubCat3?.Tittle}</h1>
             <p className="text-[#7a7a7a] text-sm leading-7">
-              {data.SubCat3.Para}
+              {data?.SubCat3?.Para}
             </p>
           </div>
         </div>
@@ -61,13 +62,13 @@ export default function ValueAddService({ data }) {
         <div className="flex flex-col items-start gap-6 lg:flex-row mt-7">
           <img
             className="max-w-xs rounded-lg "
-            src={data.SubCat4.image}
+            src={data?.SubCat4?.image}
             alt="imge"
           />
           <div className="max-w-lg space-y-3.5">
-            <h1 className="text-xl font-semibold">{data.SubCat4.Tittle}</h1>
+            <h1 className="text-xl font-semibold">{data?.SubCat4?.Tittle}</h1>
             <p className="text-[#7a7a7a] text-sm leading-7">
-              {data.SubCat4.Para}
+              {data?.SubCat4?.Para}
             </p>
           </div>
         </div>
@@ -75,13 +76,13 @@ export default function ValueAddService({ data }) {
         <div className="flex flex-col items-start gap-6 lg:flex-row mt-7">
           <img
             className="max-w-xs rounded-lg "
-            src={data.SubCat5.image}
+            src={data?.SubCat5?.image}
             alt="imge"
           />
           <div className="max-w-lg space-y-3.5">
-            <h1 className="text-xl font-semibold">{data.SubCat5.Tittle}</h1>
+            <h1 className="text-xl font-semibold">{data?.SubCat5?.Tittle}</h1>
             <p className="text-[#7a7a7a] text-sm leading-7">
-              {data.SubCat5.Para}
+              {data?.SubCat5?.Para}
             </p>
           </div>
         </div>
@@ -89,13 +90,13 @@ export default function ValueAddService({ data }) {
         <div className="flex flex-col items-start gap-6 lg:flex-row mt-7">
           <img
             className="max-w-xs rounded-lg "
-            src={data.SubCat6.image}
+            src={data?.SubCat6?.image}
             alt="imge"
           />
           <div className="max-w-lg space-y-3.5">
-            <h1 className="text-xl font-semibold">{data.SubCat6.Tittle}</h1>
+            <h1 className="text-xl font-semibold">{data?.SubCat6?.Tittle}</h1>
             <p className="text-[#7a7a7a] text-sm leading-7">
-              {data.SubCat6.Para}
+              {data?.SubCat6?.Para}
             </p>
           </div>
         </div>
@@ -103,13 +104,13 @@ export default function ValueAddService({ data }) {
         <div className="flex flex-col items-start gap-6 lg:flex-row mt-7">
           <img
             className="max-w-xs rounded-lg "
-            src={data.SubCat7.image}
+            src={data?.SubCat7?.image}
             alt="imge"
           />
           <div className="max-w-lg space-y-3.5">
-            <h1 className="text-xl font-semibold">{data.SubCat7.Tittle}</h1>
+            <h1 className="text-xl font-semibold">{data?.SubCat7?.Tittle}</h1>
             <p className="text-[#7a7a7a] text-sm leading-7">
-              {data.SubCat7.Para}
+              {data?.SubCat7?.Para}
             </p>
           </div>
         </div>
@@ -117,13 +118,13 @@ export default function ValueAddService({ data }) {
         <div className="flex flex-col items-start gap-6 lg:flex-row mt-7">
           <img
             className="max-w-xs rounded-lg "
-            src={data.SubCat8.image}
+            src={data?.SubCat8?.image}
             alt="imge"
           />
           <div className="max-w-lg space-y-3.5">
-            <h1 className="text-xl font-semibold">{data.SubCat8.Tittle}</h1>
+            <h1 className="text-xl font-semibold">{data?.SubCat8?.Tittle}</h1>
             <p className="text-[#7a7a7a] text-sm leading-7">
-              {data.SubCat8.Para}
+              {data?.SubCat8?.Para}
             </p>
           </div>
         </div>

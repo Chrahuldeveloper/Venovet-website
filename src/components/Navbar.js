@@ -145,7 +145,7 @@ export default function Navbar({ Page }) {
                   </div>
                 </div>
                 <Link to="/BlogPage">
-                  <li className="cursor-pointer">BLOG</li>
+                  <li className="cursor-pointer hover:bg-orange-600">BLOG</li>
                 </Link>
                 <Link to={"/shop"}>
                   <li
@@ -157,10 +157,14 @@ export default function Navbar({ Page }) {
                   </li>
                 </Link>
                 <Link to={"/career"}>
-                  <li className="cursor-pointer">CAREERS</li>
+                  <li className="cursor-pointer hover:bg-orange-600">
+                    CAREERS
+                  </li>
                 </Link>
                 <Link to={"/contact"}>
-                  <li className="cursor-pointer">CONTACT US</li>
+                  <li className="cursor-pointer hover:bg-orange-600">
+                    CONTACT US
+                  </li>
                 </Link>
               </ul>
             </div>
@@ -212,7 +216,7 @@ export default function Navbar({ Page }) {
               className="md:hidden cursor-pointer bg-[#121a37] p-1.5 hover:bg-orange-600 ease-in-out duration-300"
             />
             <div className="hidden md:block">
-              <p className="text-[#8d8d8d] ml-5 font-semibold text-sm">
+              <p className="text-[#8d8d8d] ml-5 mt-2 font-semibold text-sm">
                 24/7 Services
               </p>
               <div className="flex items-center">
@@ -337,7 +341,7 @@ export default function Navbar({ Page }) {
               <Link to={"/shop"}>
                 <li
                   className={`cursor-pointer ${
-                    Page === "Shop" ? "text-orange-500" : null
+                    Page === "Shop" ? "text-orange-500 " : null
                   } `}
                 >
                   SHOP
@@ -358,7 +362,7 @@ export default function Navbar({ Page }) {
             </ul>
           </div>
           <Link to="/contact">
-            <button className="bg-orange-500 text-white p-3.5 flex cursor-pointer items-center space-x-1.5 font-semibold rounded-r-md hover:brightness-90 ease-in-out duration-300">
+            <button className="bg-orange-500 text-white p-3.5 flex hover:bg-orange-600 cursor-pointer items-center space-x-1.5 font-semibold rounded-r-md hover:brightness-90 ease-in-out duration-300">
               <AiOutlineWechat size={30} color="white" />
               <h1>Request a Call Back</h1>
               <AiOutlineArrowRight size={30} color="white" />

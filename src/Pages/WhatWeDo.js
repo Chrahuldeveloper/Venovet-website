@@ -34,7 +34,7 @@ export default function WhatWeDo() {
           </div>
         </div>
         <NewsLetter />
-        <DragTop/>
+        <DragTop />
         <Footer />
       </main>
     </body>

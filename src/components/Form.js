@@ -3,6 +3,12 @@ import { db, storage } from "../Firebase";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { collection, addDoc } from "firebase/firestore";
 import { ColorRing } from "react-loader-spinner";
+import {
+  RecaptchaVerifier,
+  getAuth,
+  signInWithPhoneNumber,
+} from "firebase/auth";
+import PhoneInput from "react-phone-number-input";
 
 export default function Form() {
   const [resume, setResume] = useState({
@@ -12,6 +18,35 @@ export default function Form() {
     Skills: "",
     FileUrl: "",
   });
+  const [otp, setotp] = useState("");
+
+  const auth = getAuth();
+  const configureCaptcha = () => {
+    window.recaptchaVerifier = new RecaptchaVerifier(auth, "sign-in-button", {
+      size: "invisible",
+      callback: (response) => {
+        // reCAPTCHA solved, allow signInWithPhoneNumber.
+        onNumSubmit();
+      },
+    });
+  };
+
+  const onNumSubmit = (e) => {
+    e.preventDefault();
+    configureCaptcha();
+
+    const phoneNumber = resume.Phone;
+    console.log(phoneNumber);
+    const appVerifier = window.recaptchaVerifier;
+    signInWithPhoneNumber(auth, phoneNumber, appVerifier)
+      .then((confirmationResult) => {
+        window.confirmationResult = confirmationResult;
+        alert("OTP has bee sent");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   const [isSubmitting, setIsSubmiting] = useState(false);
   const fileChange = (event) => {
@@ -28,22 +63,39 @@ export default function Form() {
     if (Object.values(resume).every((i) => i === "")) {
       alert("Please Fill the form");
     } else {
-      try {
-        const imageRef = ref(storage, `Resumes/${resume.FileUrl.name}`);
-        await uploadBytesResumable(imageRef, resume.FileUrl);
-        const url = await getDownloadURL(imageRef);
-        const resumeData = {
-          ...resume,
-          FileUrl: url,
-        };
-        await addDoc(collection(db, "RESUMES"), resumeData);
-        setIsSubmiting(false);
-        window.location.reload();
-        alert("success");
-      } catch (error) {
-        setIsSubmiting(false);
-        console.log(error);
-      }
+      const code = otp; // Use the OTP entered by the user
+      window.confirmationResult
+        .confirm(code)
+        .then(async (result) => {
+          // User signed in successfully.
+          // const user = result.user;
+          // console.log(JSON.stringify(user));
+          alert("Number is verified!");
+
+          // Save form data to Firebase after OTP verification
+          try {
+            const imageRef = ref(storage, `Resumes/${resume.FileUrl.name}`);
+            await uploadBytesResumable(imageRef, resume.FileUrl);
+            const url = await getDownloadURL(imageRef);
+            const resumeData = {
+              ...resume,
+              FileUrl: url,
+            };
+            await addDoc(collection(db, "RESUMES"), resumeData);
+            setIsSubmiting(false);
+            window.location.reload();
+            alert("success");
+          } catch (error) {
+            setIsSubmiting(false);
+            console.log(error);
+          }
+        })
+        .catch((error) => {
+          // Handle OTP verification errors.
+          console.error(error);
+          alert("OTP verification failed. Please try again.");
+          window.location.reload();
+        });
     }
   };
   return (
@@ -107,17 +159,37 @@ export default function Form() {
             <label htmlFor="Phone " className="text-[#787878]">
               Phone
             </label>
+            <div>
+              <PhoneInput
+                value={resume.Phone}
+                onChange={(e) => {
+                  setResume({
+                    ...resume,
+                    Phone: e,
+                  });
+                }}
+                className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw]  outline-none"
+              />
+            </div>
+          </div>
+          <div className="flex items-center justify-center mt-6">
+            <button
+              onClick={onNumSubmit}
+              className="bg-[#ff5e15]  font-semibold rounded-lg shadow  shadow-black text-white px-20 py-2"
+            >
+              Get OTP
+            </button>{" "}
+          </div>
+          <div className="flex flex-col gap-4">
+            <label htmlFor="OTP" className="text-[#787878]">
+              Enter OTP{" "}
+            </label>
             <input
-              type="text"
-              id="Phone "
-              value={resume.Phone}
+              type="number"
               onChange={(e) => {
-                setResume({
-                  ...resume,
-                  Phone: e.target.value,
-                });
+                setotp(e.target.value);
               }}
-              className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw]  outline-none"
+              className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw] outline-none"
             />
           </div>
           <div className="flex flex-col gap-4">
@@ -158,6 +230,7 @@ export default function Form() {
             Submit
           </button>{" "}
         </div>
+        <div id="sign-in-button"></div>
       </form>
       <div>
         <img src="https://venovet.com/assets/images/career-logo.png" alt="" />

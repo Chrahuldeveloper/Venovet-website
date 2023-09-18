@@ -148,16 +148,16 @@ const Footer = () => {
               <h1 className="text-lg font-semibold text-white">LINKS</h1>
               <ul className="space-y-4 text-[17px] cursor-pointer">
                 <Link to="/shop">
-                  <li>Shop</li>
+                  <li className="my-4">Shop</li>
                 </Link>
                 <Link to="/BlogPage">
-                  <li>News</li>
+                  <li className="my-4">News</li>
                 </Link>
                 <Link to="/BlogPage">
-                  <li>Gallery</li>
+                  <li className="my-4">Gallery</li>
                 </Link>
                 <Link to="/BlogPage">
-                  <li>Case Studies</li>
+                  <li className="my-4">Case Studies</li>
                 </Link>
               </ul>
             </div>

@@ -145,24 +145,24 @@ export default function Navbar({ Page }) {
                   </div>
                 </div>
                 <Link to="/BlogPage">
-                  <li className="cursor-pointer hover:bg-orange-600">BLOG</li>
+                  <li className="cursor-pointer hover:text-[#ff5e15]">BLOG</li>
                 </Link>
                 <Link to={"/shop"}>
                   <li
                     className={`cursor-pointer ${
-                      Page === "Shop" ? "text-orange-500" : null
+                      Page === "Shop" ? "text-[#ff5e15]" : null
                     } `}
                   >
                     SHOP
                   </li>
                 </Link>
                 <Link to={"/career"}>
-                  <li className="cursor-pointer hover:bg-orange-600">
+                  <li className="cursor-pointer hover:text-[#ff5e15]">
                     CAREERS
                   </li>
                 </Link>
                 <Link to={"/contact"}>
-                  <li className="cursor-pointer hover:bg-orange-600">
+                  <li className="cursor-pointer hover:text-[#ff5e15]">
                     CONTACT US
                   </li>
                 </Link>
@@ -181,6 +181,8 @@ export default function Navbar({ Page }) {
         {/* Show case bar for Big screens */}
         <div className="hidden md:block text-white bg-[#121a37] w-screen z-50  p-3.5">
           <div className="flex items-center justify-around mx-10 gap-x-28">
+        <div className="hidden md:block text-white bg-[#121a37] w-screen  p-3.5">
+          <div className="flex items-center justify-between mx-10 gap-x-28">
             <div className="flex items-center space-x-1.5">
               <AiOutlineMail size={25} color="#ff5e15" />
               <h1>Email:sales@venovet.com</h1>
@@ -216,7 +218,7 @@ export default function Navbar({ Page }) {
               className="md:hidden cursor-pointer bg-[#121a37] p-1.5 hover:bg-orange-600 ease-in-out duration-300"
             />
             <div className="hidden md:block">
-              <p className="text-[#8d8d8d] ml-5 mt-2 font-semibold text-sm">
+              <p className="text-[#8d8d8d] pl-11 mb-[-0.75rem] font-semibold text-sm">
                 24/7 Services
               </p>
               <div className="flex items-center">
@@ -370,8 +372,7 @@ export default function Navbar({ Page }) {
           </Link>
         </div>
       </nav>
-      {/* Mobile Navbar */}
       {toogle ? <MobileNavbar settoogle={settoogle} /> : null}
     </>
-  );
-}
+    )
+    }

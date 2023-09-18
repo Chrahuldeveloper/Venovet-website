@@ -179,7 +179,7 @@ export default function Navbar({ Page }) {
         </div>
 
         {/* Show case bar for Big screens */}
-        <div className="hidden md:block text-white bg-[#121a37] w-screen  p-3.5">
+        <div className="hidden md:block text-white bg-[#121a37] w-screen z-50  p-3.5">
           <div className="flex items-center justify-around mx-10 gap-x-28">
             <div className="flex items-center space-x-1.5">
               <AiOutlineMail size={25} color="#ff5e15" />
@@ -247,7 +247,7 @@ export default function Navbar({ Page }) {
         </div>
 
         {/* Menu Bar with drop down only for Big screens */}
-        <div className="justify-center hidden mt-1 translate-y-6 lg:flex ">
+        <div className="justify-center hidden mt-1 translate-y-6 lg:flex z-50">
           <div className="flex items-center bg-[#121a37] p-4 rounded-l-md">
             <ul className="flex items-center text-white space-x-14">
               <Link to={"/"}>

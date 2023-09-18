@@ -13,6 +13,12 @@ import {
   Signin,
 } from "./Pages/index";
 import { Routes, Route } from "react-router-dom";
+import "animate.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
+
 export default function App() {
   return (
     <Routes>

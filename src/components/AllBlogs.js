@@ -15,6 +15,10 @@ export default function AllBlogs() {
                 navigate(`/ReadFull/${_.Tittle}`);
               }}
               className="flex flex-col justify-start gap-5 p-6 shadow-md lg:max-w-4xl lg:flex-row md:items-center"
+              data-aos="fade-up"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
             >
               <div>
                 <img

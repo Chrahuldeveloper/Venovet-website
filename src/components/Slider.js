@@ -20,8 +20,10 @@ export default function Slider() {
   };
 
   return (
-    <div className="w-screen">
+    <div className="w-screen -z-50">
       <div
+        key={index}
+        // className=""
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0.2, 0.1, 0.7), rgba(0, 0, 0, 0.4)),url(${Data[index].image})`,
           backgroundPosition: "center center",
@@ -29,7 +31,7 @@ export default function Slider() {
           height: "90vh",
         }}
       >
-        <div className="flex justify-between h-screen items-center px-3 md:px-10 gap-7">
+        <div className="flex justify-between h-screen items-center px-3 md:px-10 gap-7 ">
           <AiOutlineArrowLeft
             onClick={prev}
             size={30}
@@ -39,13 +41,13 @@ export default function Slider() {
           />
 
           <div className="text-center md:text-left  lg:space-y-4 lg:-ml-36">
-            <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold">
+            <h1 className="text-white text-5xl md:text-4xl lg:text-6xl font-bold">
               {Data[index].Tittle}
             </h1>
-            <h2 className="text-3xl md:text-4xl lg:text-6xl my-4 font-bold text-orange-500">
+            <h2 className="text-5xl md:text-4xl lg:text-6xl my-4 font-bold text-orange-500">
               {Data[index].HighLight}
             </h2>
-            <p className="text-white font-semibold max-w-3xl md:text-lg lg:text-xl leading-7 my-4">
+            <p className="text-white font-semibold max-w-3xl text-lg lg:text-xl leading-7 my-4">
               {Data[index].Para}
             </p>
             <Link

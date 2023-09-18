@@ -14,14 +14,14 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="relative ">
+    <div className="relative">
       <ParticleLink />
       <div className="absolute top-0 w-[100%] h-[100%] flex flex-col items-center">
         <h1 className="text-[#fff] py-14 text-3xl md:text-4xl lg:text-5xl font-semibold">
           WHAT CLIENTS SAY?
         </h1>
         <div
-          className="flex flex-col justify-start gap-10 p-3 overflow-x-scroll max-w-7xl md:gap-72 md:flex-row "
+          className="flex flex-col justify-start gap-14 p-3 overflow-x-scroll max-w-7xl md:gap-72 md:flex-row "
           ref={scrollref}
         >
           {Data.map((_, index) => {
@@ -52,12 +52,12 @@ const Testimonials = () => {
         </div>
         <div className="hidden md:flex items-center justify-between gap-0.5 space-x-4  ">
           <AiOutlineArrowLeft
-            onClick={scrollRight}
+            onClick={scrollLeft}
             color="white"
             className="p-2 rounded-full shadow-md w-9 h-9 cursor-pointer md:p-3 md:w-14 md:h-14"
           />
           <AiOutlineArrowRight
-            onClick={scrollLeft}
+            onClick={scrollRight}
             className="p-2 rounded-full shadow-md w-9 h-9  md:p-3 md:w-14 md:h-14 cursor-pointer"
             color="white"
           />

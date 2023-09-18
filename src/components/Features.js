@@ -3,7 +3,13 @@ import Data from "../Data/Features";
 import { Link } from "react-router-dom";
 export default function Features() {
   return (
-    <section className=" bg-[#fafafa]">
+    <section
+      className=" bg-[#fafafa]"
+      data-aos="slide-left"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <div className="pt-10 space-y-1 text-center">
         <h1 className="text-lg font-bold text-slate-500">OUR GOODNESS</h1>
         <h2 className="text-xl font-bold text-orange-500 md:text-3x lg:text-4xl">

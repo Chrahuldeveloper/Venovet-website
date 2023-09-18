@@ -23,7 +23,7 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, [location]);
   return (
-    <body className="overflow-x-clip">
+    <body className="overflow-x-clip animate__animated animate__fadeIn animate__delay-0.3s">
       <Navbar />
       <Slider />
       <About />

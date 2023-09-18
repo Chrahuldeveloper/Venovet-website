@@ -38,20 +38,19 @@ export default function NewsLetter() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // setIsSubmiting(true);
-    if (data === "") {
-      alert("Please Enter your Email!");
-      // setIsSubmiting(false);
-    } else {
-      try {
+    try {
+      if (data.mail !== "") {
         setIsSubmiting(true);
         await addDoc(collection(db, "NEWS-LETTER"), data);
         window.location.reload();
         setIsSubmiting(false);
         alert("success");
-      } catch (error) {
-        setIsSubmiting(false);
-        console.log(error);
+      } else {
+        alert("Please enter your email");
       }
+    } catch (error) {
+      setIsSubmiting(false);
+      console.log(error);
     }
   };
   console.log(data);

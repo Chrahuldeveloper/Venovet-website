@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaRegFilePdf } from "react-icons/fa";
 import { BsFillPlayFill } from "react-icons/bs";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../Firebase";
 export default function About() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const documentRef = doc(db, "WHATWEDO");
+        const documentSnapshot = await getDoc(documentRef);
+        if (documentSnapshot.exists()) {
+          setData(documentSnapshot.data());
+        } else {
+          setData(null); // Handle the case where the document doesn't exist
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+    window.scrollTo(0, 0);
+  }, []);
+
+  console.log(data);
+
   const DownloadPdf = async () => {
     const pdflink =
       "https://firebasestorage.googleapis.com/v0/b/venovet-78743.appspot.com/o/pdf%2Fassets_Forenoon%20Session%20Schedule.pdf?alt=media&token=2a3138ce-951c-4726-af70-f081def045db";
@@ -19,7 +44,13 @@ export default function About() {
   };
 
   return (
-    <div className="p-4 space-y-10 lg:flex items-start justify-center md:space-y-0 md:px-10 lg:space-x-16 my-28">
+    <div
+      className="p-4 space-y-10 lg:flex items-start justify-center md:space-y-0 md:px-10 lg:space-x-16 my-28"
+      data-aos="fade-up"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <div>
         <img
           src="https://www.venovet.com/assets/images/title-shp1.png"

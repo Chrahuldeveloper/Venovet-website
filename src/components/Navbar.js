@@ -177,10 +177,8 @@ export default function Navbar({ Page }) {
           <AiFillLinkedin size={25} color="white" />
           <AiFillFacebook size={25} color="white" />
         </div>
+
         {/* Show case bar for Big screens */}
-        <div className="hidden md:block text-white bg-[#121a37] w-screen z-50  p-3.5">
-          <div className="flex items-center justify-around mx-10 gap-x-28">
-          
         <div className="hidden md:block text-white bg-[#121a37] w-screen  p-3.5">
           <div className="flex items-center justify-between mx-10 gap-x-28">
             <div className="flex items-center space-x-1.5">
@@ -193,10 +191,8 @@ export default function Navbar({ Page }) {
                 className="w-28"
                 alt=""
               />
+            </div>
           </div>
-        </div>
-        </div>
-         
         </div>
         {/* Main Navbar */}
         <div className="my-3.5 flex items-center justify-between mx-5 md:mx-28">
@@ -251,7 +247,7 @@ export default function Navbar({ Page }) {
         </div>
 
         {/* Menu Bar with drop down only for Big screens */}
-        <div className="justify-center hidden mt-1 translate-y-6 lg:flex z-50">
+        <div className="justify-center hidden mt-1 translate-y-6 lg:flex ">
           <div className="flex items-center bg-[#121a37] p-4 rounded-l-md">
             <ul className="flex items-center text-white space-x-14">
               <Link to={"/"}>
@@ -372,7 +368,6 @@ export default function Navbar({ Page }) {
               <AiOutlineArrowRight size={30} color="white" />
             </button>
           </Link>
-        </div>
         </div>
       </nav>
       {/* Mobile Navbar */}

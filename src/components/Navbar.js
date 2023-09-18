@@ -44,7 +44,6 @@ export default function Navbar({ Page }) {
 
   return (
     <>
-      <nav>
         {/* Show Navbar only on Scroll */}
         <div
           className={` ${
@@ -371,8 +370,6 @@ export default function Navbar({ Page }) {
             </button>
           </Link>
         </div>
-      </nav>
-      {toogle ? <MobileNavbar settoogle={settoogle} /> : null}
-    </>
-    )
-    }
+        </div>
+      {toogle ? <MobileNavbar settoogle={settoogle} /> : null}     
+      </div> </>)}

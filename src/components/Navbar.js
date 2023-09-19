@@ -107,9 +107,6 @@ export default function Navbar({ Page }) {
                           setmobilewho(true);
                           setmobilewhat(false);
                         }}
-                        onMouseLeave={() => {
-                          setmobilewho(false);
-                        }}
                       >
                         <li className="bg-white border py-1.5 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300">
                           Who we serve

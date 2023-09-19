@@ -11,9 +11,9 @@ function ShopCate() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-10 p-10 space-y-4 md:flex-row">
+      <div className="flex flex-col items-center  gap-10 p-10 space-y-4 md:flex-row">
         <div className="">
-          <button className="bg-[#b8daff] pl-6 py-3  transition duration-300 ease-in-out  font-bold border w-72 text-left">
+          <button className="bg-[#b8daff] pl-6 py-3 rounded-t transition duration-300 ease-in-out  font-bold border w-72 text-left">
             Category
           </button>
           {Shop.map((item, index) => {

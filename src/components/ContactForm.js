@@ -1,6 +1,12 @@
 import { addDoc, collection } from "firebase/firestore";
 import React, { useState } from "react";
 import { db } from "../Firebase";
+import {
+  RecaptchaVerifier,
+  getAuth,
+  signInWithPhoneNumber,
+} from "firebase/auth";
+import { ColorRing } from "react-loader-spinner";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -11,23 +17,85 @@ export default function ContactForm() {
     Message: "",
   });
 
+  const [otp, setotp] = useState("");
+  const auth = getAuth();
+  const configureCaptcha = () => {
+    window.recaptchaVerifier = new RecaptchaVerifier(auth, "sign-in-button", {
+      size: "invisible",
+      callback: (response) => {
+        // reCAPTCHA solved, allow signInWithPhoneNumber.
+        onNumSubmit();
+      },
+    });
+  };
+  const [isSubmitting, setIsSubmiting] = useState(false);
+
+  const onNumSubmit = (e) => {
+    e.preventDefault();
+    configureCaptcha();
+
+    const phoneNumber = form.Phone;
+    console.log(phoneNumber);
+    const appVerifier = window.recaptchaVerifier;
+    signInWithPhoneNumber(auth, phoneNumber, appVerifier)
+      .then((confirmationResult) => {
+        window.confirmationResult = confirmationResult;
+        alert("OTP has bee sent");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmiting(true);
     if (Object.values(form).every((i) => i === "")) {
       alert("Please Fill the form");
     } else {
-      try {
-        await addDoc(collection(db, "CONTACTFORM"), form);
-        alert("success");
-        console.log(form)
-      } catch (error) {
-        console.log(error);
-      }
+      const code = otp; // Use the OTP entered by the user
+      window.confirmationResult
+        .confirm(code)
+        .then(async (result) => {
+          // User signed in successfully.
+          // const user = result.user;
+          // console.log(JSON.stringify(user));
+          alert("Number is verified!");
+
+          // Save form data to Firebase after OTP verification
+          try {
+            await addDoc(collection(db, "CONTACTFORM"), form);
+            setIsSubmiting(false);
+            window.location.reload();
+            alert("success");
+          } catch (error) {
+            setIsSubmiting(false);
+            console.log(error);
+          }
+        })
+        .catch((error) => {
+          // Handle OTP verification errors.
+          console.error(error);
+          alert("OTP verification failed. Please try again.");
+          window.location.reload();
+        });
     }
   };
 
   return (
     <div className="max-w-3xl p-6 mx-auto my-24 rounded-lg shadow-xl shadow-slate-200 ">
+      {isSubmitting && ( // Render loader only when isSubmitting is true
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-100 bg-opacity-75">
+          <ColorRing
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="blocks-loading"
+            wrapperStyle={{}}
+            wrapperClass="blocks-wrapper"
+            colors={["#ff5e15"]}
+          />
+        </div>
+      )}
       <img
         src="https://venovet.com/assets/images/rocket_contact.jpg"
         className="w-16 h-16 mx-auto rounded-full shadow-md"
@@ -79,6 +147,26 @@ export default function ContactForm() {
             className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw] outline-none"
           />
         </div>
+        <div className="flex items-center justify-center mt-6">
+          <button
+            onClick={onNumSubmit}
+            className="bg-[#ff5e15]  font-semibold rounded-lg shadow  shadow-black text-white px-20 py-2"
+          >
+            Get OTP
+          </button>{" "}
+        </div>
+        <div className="flex flex-col gap-4">
+          <label htmlFor="OTP" className="text-[#787878]">
+            Enter OTP{" "}
+          </label>
+          <input
+            type="number"
+            onChange={(e) => {
+              setotp(e.target.value);
+            }}
+            className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw] outline-none"
+          />
+        </div>
         <div className="flex flex-col gap-4">
           <label htmlFor="Nature Of Enquiry" className="text-[#787878]">
             Nature Of Enquiry{" "}
@@ -113,6 +201,7 @@ export default function ContactForm() {
             className="border-[1px] md:p-6 rounded-md border-slate-300 p-2.5  outline-none"
           />
         </div>
+        <div id="sign-in-button"></div>
       </form>
       <div className="flex items-center justify-center mt-6">
         <button

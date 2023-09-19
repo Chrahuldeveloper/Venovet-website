@@ -23,7 +23,7 @@ const ParticleLink = () => {
         },
         background: {
           color: {
-            value: "#00000b",
+            value: "#05051b",
           },
         },
         fpsLimit: 120,

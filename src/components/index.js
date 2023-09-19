@@ -30,8 +30,12 @@ import BlogContent from "./BlogContent";
 import MobileNavbar from "./MobileNavbar";
 import CartTable from "./CartTable";
 import DragTop from "./DragTop";
+import CheckOutModel from "./CheckOutModel";
+import CheckOutForm from "./CheckOutForm";
 
 export {
+  CheckOutForm,
+  CheckOutModel,
   MobileNavbar,
   Navbar,
   Slider,

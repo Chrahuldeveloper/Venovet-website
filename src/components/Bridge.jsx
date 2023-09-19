@@ -82,10 +82,10 @@ const Bridge = () => {
       />
 
       <div className="absolute top-0 flex text-white space-y-8 flex-col items-center  w-[100%] h-[100%]">
-        <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl  max-w-3xl  md:leading-[4rem] text-center pt-8 ">
+        <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl  max-w-3xl  md:leading-[4rem] text-center pt-8 ">
           Bridging gap between Business and Technology
         </h1>
-        <p className="max-w-md text-lg leading-8 text-center md:max-w-2xl">
+        <p className="max-w-md leading-8 text-center md:text-2xl md:max-w-2xl">
           For our clients from Transporting the Goods from Source to our
           Warehouse, Inwarding the Goods, Quality Check, Storage, Dispatch,
           Reporting and End Customer Delivery Transportation.

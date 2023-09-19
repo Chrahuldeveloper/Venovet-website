@@ -22,8 +22,7 @@ export default function ContactForm() {
   const configureCaptcha = () => {
     window.recaptchaVerifier = new RecaptchaVerifier(auth, "sign-in-button", {
       size: "invisible",
-      callback: (response) => {
-        // reCAPTCHA solved, allow signInWithPhoneNumber.
+      callback: () => {
         onNumSubmit();
       },
     });
@@ -33,7 +32,6 @@ export default function ContactForm() {
   const onNumSubmit = (e) => {
     e.preventDefault();
     configureCaptcha();
-
     const phoneNumber = form.Phone;
     console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
@@ -60,7 +58,6 @@ export default function ContactForm() {
           // const user = result.user;
           // console.log(JSON.stringify(user));
           alert("Number is verified!");
-
           // Save form data to Firebase after OTP verification
           try {
             await addDoc(collection(db, "CONTACTFORM"), form);

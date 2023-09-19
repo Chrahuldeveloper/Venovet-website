@@ -5,12 +5,19 @@ import { deleteitem } from "../features/ProductSlice";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BiMinus } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { CheckOutModel } from "./index";
 
 export default function CartTable() {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   const [quantity, setquantity] = useState(1);
+  const [checkout, setcheckout] = useState(false);
+
+  const [items, setitems] = useState({
+    item: "",
+    vol: "",
+  });
 
   return (
     <>
@@ -18,8 +25,8 @@ export default function CartTable() {
         <table className="mx-auto text-left w-[90vw] ">
           <thead className="border border-[#EEEEEE]">
             <tr>
-              <th className="py-2 md:pl-5 border">S.No</th>
-              <th className="py-2 pl-5 md:pl-10 border">PRODUCT</th>
+              <th className="py-2 border md:pl-5">S.No</th>
+              <th className="py-2 pl-5 border md:pl-10">PRODUCT</th>
               <th className="py-2 pl-10 border">ITEM NAME</th>
               <th className="py-2 pl-10 border">QUANTITY</th>
               <th className="py-2 pl-10 border">REMOVE</th>
@@ -30,7 +37,7 @@ export default function CartTable() {
               <React.Fragment key={i}>
                 <tbody className="border border-[#EEEEEE]">
                   <tr>
-                    <td className="py-8 pl-4 md:pl-9 border ">{i + 1}</td>
+                    <td className="py-8 pl-4 border md:pl-9 ">{i + 1}</td>
                     <td className="py-8 pl-10 border">
                       <img src={item.img} className="w-20" alt="img.png" />
                     </td>
@@ -85,6 +92,16 @@ export default function CartTable() {
           </div>
           <div className="flex items-center justify-center mt-6">
             <button
+              onClick={() => {
+                setcheckout(true);
+                setitems({
+                  ...items,
+                  item: cart.cartItems.map((item) => {
+                    return item.img;
+                  }),
+                  vol: quantity,
+                });
+              }}
               type="submit"
               className="bg-[#121a37] hover:bg-[#ff5e15] transition duration-300 ease-in-out  font-medium text-sm rounded-lg shadow-2xl shadow-black text-white px-10 py-2.5"
             >
@@ -93,6 +110,9 @@ export default function CartTable() {
           </div>
         </div>
       </div>
+      {checkout ? (
+        <CheckOutModel item={items.item} quantity={items.vol} />
+      ) : null}
     </>
   );
 }

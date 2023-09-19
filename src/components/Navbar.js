@@ -69,12 +69,18 @@ export default function Navbar({ Page }) {
               </Link>
             </div>
             <div>
-              <ul className="flex items-center text-black space-x-14">
+              <ul className="flex items-center text-[0.95rem] text-[#121a37] font-[500] space-x-14">
                 <Link to={"/"}>
-                  <li className="cursor-pointer">HOME</li>
+                  <li className="cursor-pointer hover:text-[#ff5e15] transition duration-300 ease-in-out">
+                    HOME
+                  </li>
                 </Link>
                 <Link to={"/about"}>
-                  <li className={`cursor-pointer `}>ABOUT US</li>
+                  <li
+                    className={`cursor-pointer hover:text-[#ff5e15] transition duration-300 ease-in-out `}
+                  >
+                    ABOUT US
+                  </li>
                 </Link>
                 <div>
                   <li
@@ -142,11 +148,13 @@ export default function Navbar({ Page }) {
                   </div>
                 </div>
                 <Link to="/BlogPage">
-                  <li className="cursor-pointer hover:text-[#ff5e15]">BLOG</li>
+                  <li className="cursor-pointer hover:text-[#ff5e15]  transition duration-300 ease-in-out">
+                    BLOG
+                  </li>
                 </Link>
                 <Link to={"/shop"}>
                   <li
-                    className={`cursor-pointer ${
+                    className={`hover:text-[#ff5e15] transition duration-300 ease-in-out cursor-pointer ${
                       Page === "Shop" ? "text-[#ff5e15]" : null
                     } `}
                   >
@@ -154,12 +162,12 @@ export default function Navbar({ Page }) {
                   </li>
                 </Link>
                 <Link to={"/career"}>
-                  <li className="cursor-pointer hover:text-[#ff5e15]">
+                  <li className="cursor-pointer hover:text-[#ff5e15]  transition duration-300 ease-in-out">
                     CAREERS
                   </li>
                 </Link>
                 <Link to={"/contact"}>
-                  <li className="cursor-pointer hover:text-[#ff5e15]">
+                  <li className="cursor-pointer hover:text-[#ff5e15]  transition duration-300 ease-in-out">
                     CONTACT US
                   </li>
                 </Link>
@@ -192,7 +200,7 @@ export default function Navbar({ Page }) {
           </div>
         </div>
         {/* Main Navbar */}
-        <div className="my-3.5 flex items-center justify-between mx-5 md:mx-28">
+        <div className="my-3.5 flex items-center justify-between mx-5 md:mx-28 ">
           <div>
             <Link
               to={"/"}
@@ -245,14 +253,16 @@ export default function Navbar({ Page }) {
 
         {/* Menu Bar with drop down only for Big screens */}
         <div className="justify-center hidden mt-1 translate-y-6 lg:flex ">
-          <div className="flex items-center bg-[#121a37] p-4 rounded-l-md">
-            <ul className="flex items-center text-white space-x-14">
+          <div className="flex items-center bg-[#121a37] p-4 rounded-l-md pr-40">
+            <ul className="flex items-center text-white space-x-12">
               <Link to={"/"}>
-                <li className="cursor-pointer">HOME</li>
+                <li className="cursor-pointer  hover:text-[#ff5e15] transition duration-300 ease-in-out">
+                  HOME
+                </li>
               </Link>
               <Link to={"/about"}>
                 <li
-                  className={`cursor-pointer ${
+                  className={`cursor-pointer  hover:text-[#ff5e15] transition duration-300 ease-in-out ${
                     Page === "About" ? "text-orange-500" : null
                   } `}
                 >
@@ -264,7 +274,7 @@ export default function Navbar({ Page }) {
                   onMouseEnter={() => {
                     setservice(!service);
                   }}
-                  className="cursor-pointer"
+                  className="cursor-pointer  hover:text-[#ff5e15] transition duration-300 ease-in-out"
                 >
                   SERVICES
                 </li>
@@ -333,11 +343,13 @@ export default function Navbar({ Page }) {
               </div>
               {/* services */}
               <Link to="/BlogPage">
-                <li className="cursor-pointer">BLOG</li>
+                <li className="cursor-pointer  hover:text-[#ff5e15] transition duration-300 ease-in-out">
+                  BLOG
+                </li>
               </Link>
               <Link to={"/shop"}>
                 <li
-                  className={`cursor-pointer ${
+                  className={`cursor-pointer  hover:text-[#ff5e15] transition duration-300 ease-in-out ${
                     Page === "Shop" ? "text-orange-500 " : null
                   } `}
                 >
@@ -346,7 +358,7 @@ export default function Navbar({ Page }) {
               </Link>
               <Link to={"/career"}>
                 <li
-                  className={`cursor-pointer ${
+                  className={`cursor-pointer  hover:text-[#ff5e15] transition duration-300 ease-in-out ${
                     Page === "career" ? "text-orange-500" : null
                   } `}
                 >
@@ -354,12 +366,14 @@ export default function Navbar({ Page }) {
                 </li>
               </Link>
               <Link to={"/contact"}>
-                <li className="cursor-pointer">CONTACT US</li>
+                <li className="cursor-pointer  hover:text-[#ff5e15] transition duration-300 ease-in-out">
+                  CONTACT US
+                </li>
               </Link>
             </ul>
           </div>
           <Link to="/contact">
-            <button className="bg-orange-500 text-white p-3.5 flex hover:bg-orange-600 cursor-pointer items-center space-x-1.5 font-semibold rounded-r-md hover:brightness-90 ease-in-out duration-300">
+            <button className="bg-[#ff5e15] text-white p-3.5 flex hover:bg-orange-600 cursor-pointer items-center space-x-1.5 font-semibold rounded-r-md hover:brightness-90 ease-in-out duration-300">
               <AiOutlineWechat size={30} color="white" />
               <h1>Request a Call Back</h1>
               <AiOutlineArrowRight size={30} color="white" />

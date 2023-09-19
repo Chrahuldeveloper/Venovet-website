@@ -22,7 +22,7 @@ export default function Transpotation({ data }) {
 
   const section3 = [
     {
-      image: `${data?.image5.image}`,
+      image: `${data?.image5?.image}`,
       Para: `${data?.Para5}`,
     },
   ];

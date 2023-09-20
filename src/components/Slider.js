@@ -12,6 +12,7 @@ export default function Slider() {
       setindex(index + 1);
     }
   };
+
   const prev = () => {
     if (index === 0) {
       return;
@@ -20,10 +21,10 @@ export default function Slider() {
   };
 
   return (
-    <div className="w-screen -z-50">
+    <div className="w-screen ">
       <div
         key={index}
-        // className=""
+        // className="z-40 animate__animated animate__fadeIn"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0.2, 0.1, 0.7), rgba(0, 0, 0, 0.4)),url(${Data[index].image})`,
           backgroundPosition: "center center",
@@ -34,20 +35,19 @@ export default function Slider() {
         <div className="flex items-center justify-between h-screen px-3 md:px-10 gap-7 ">
           <AiOutlineArrowLeft
             onClick={prev}
-            size={30}
+            size={45}
             className="w-14 h-14 md:w-11 md:h-11 "
             color="white"
             cursor={"pointer"}
           />
-
-          <div className="text-center md:text-left lg:space-y-4 lg:-ml-36">
-            <h1 className="text-5xl font-bold text-white md:text-4xl lg:text-6xl">
+          <div className="text-center md:text-left lg:space-y-4 lg:-ml-36 animate__animated animate__fadeIn">
+            <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-6xl">
               {Data[index].Tittle}
             </h1>
-            <h2 className="my-4 text-5xl font-bold text-orange-500 md:text-4xl lg:text-6xl">
+            <h2 className="my-4 text-2xl font-bold text-orange-500 md:text-4xl lg:text-6xl">
               {Data[index].HighLight}
             </h2>
-            <p className="max-w-3xl my-4 text-lg font-semibold leading-7 text-white lg:text-xl">
+            <p className="max-w-3xl my-4 text-sm leading-7 text-white sm:text-lg font- lg:text-xl">
               {Data[index].Para}
             </p>
             <Link
@@ -66,7 +66,7 @@ export default function Slider() {
 
           <AiOutlineArrowRight
             onClick={forward}
-            size={30}
+            size={45}
             className=" md:w-11 md:h-11 w-14 h-14"
             color="white"
             cursor={"pointer"}

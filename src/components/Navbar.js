@@ -21,7 +21,6 @@ export default function Navbar({ Page }) {
   const [mobilewhat, setmobilewhat] = useState(false);
   const [mobilewho, setmobilewho] = useState(false);
   const [mobileservice, setmobileservice] = useState(false);
-
   const [nonmobilewhat, setnonmobilewhat] = useState(false);
   const [nonmobilewho, setnonmobilewho] = useState(false);
 
@@ -44,7 +43,7 @@ export default function Navbar({ Page }) {
 
   return (
     <>
-      <nav>
+      <nav className="z-50">
         {/* Show Navbar only on Scroll */}
         <div
           className={` ${
@@ -184,7 +183,7 @@ export default function Navbar({ Page }) {
         </div>
 
         {/* Show case bar for Big screens */}
-        <div className="hidden md:block text-white bg-[#121a37] w-screen  p-3.5">
+        <div className="hidden md:block text-white bg-[#121a37] w-screen z-50 p-3.5">
           <div className="flex items-center justify-between mx-10 gap-x-28">
             <div className="flex items-center space-x-1.5">
               <AiOutlineMail size={25} color="#ff5e15" />
@@ -252,9 +251,9 @@ export default function Navbar({ Page }) {
         </div>
 
         {/* Menu Bar with drop down only for Big screens */}
-        <div className="justify-center hidden mt-1 translate-y-6 lg:flex ">
+        <div className="z-50 justify-center hidden mt-1 translate-y-6 lg:flex">
           <div className="flex items-center bg-[#121a37] p-4 rounded-l-md pr-40">
-            <ul className="flex items-center text-white space-x-12">
+            <ul className="flex items-center space-x-12 text-white">
               <Link to={"/"}>
                 <li className="cursor-pointer  hover:text-[#ff5e15] transition duration-300 ease-in-out">
                   HOME

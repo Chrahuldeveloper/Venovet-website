@@ -20,7 +20,7 @@ export default function WareHouseManagement({ data }) {
         <h1 className="text-lg md:text-xl lg:text-3xl">Our Offerings</h1>
         <div className="flex flex-col mt-5 space-y-4 md:items-start lg:space-x-10 lg:flex-row lg:space-y-0">
           <img
-            className="max-w-sm rounded-lg"
+            className="max-w-xs rounded-lg"
             src={data?.SubCat1?.image}
             alt="imge"
           />
@@ -37,7 +37,7 @@ export default function WareHouseManagement({ data }) {
 
       <div className="flex flex-col items-start space-y-4 lg:flex-row mt-7 lg:space-y-0">
         <img
-          className="max-w-sm rounded-lg lg:order-2"
+          className="max-w-xs rounded-lg lg:order-2"
           src={data?.SubCat2?.image}
           alt="imge"
         />
@@ -53,7 +53,7 @@ export default function WareHouseManagement({ data }) {
 
       <div className="flex flex-col items-start space-y-4 lg:space-x-10 lg:flex-row mt-7 lg:space-y-0">
         <img
-          className="max-w-sm rounded-lg"
+          className="max-w-xs rounded-lg"
           src={data?.SubCat3?.image}
           alt="imge"
         />
@@ -69,7 +69,7 @@ export default function WareHouseManagement({ data }) {
 
       <div className="flex flex-col items-start space-y-4 lg:flex-row mt-7 lg:space-y-0">
         <img
-          className="max-w-sm rounded-lg lg:order-2"
+          className="max-w-xs rounded-lg lg:order-2"
           src={data?.SubCat4?.image}
           alt="imge"
         />

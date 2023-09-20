@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Data from "../Data/AboutFaqs";
 import { useState } from "react";
 
@@ -35,7 +36,7 @@ const FAQ = () => {
 
   return (
     <section className="lg:max-w-[75vw] mx-auto mt-10">
-      <div className="mx-auto ">
+      <div className="mx-auto">
         <div className="flex items-start mt-3 items md:justify-between">
           <div className="space-y-5">
             {Data.map((item, index) => {
@@ -53,6 +54,11 @@ const FAQ = () => {
                 </div>
               );
             })}
+            <Link to="/contact">
+              <button className="my-5 bg-orange-500 tex-white font-semibold rounded-full shadow-2xl shadow-black text-white px-8 py-1.5 hover:brightness-90 ease-in-out duration-300">
+                Talk to our experts
+              </button>
+            </Link>
           </div>
           <div className="hidden h-auto lg:flex">
             <img

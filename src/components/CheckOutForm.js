@@ -5,11 +5,13 @@ import { ColorRing } from "react-loader-spinner";
 import { getAuth, signInWithPhoneNumber } from "firebase/auth";
 import { RecaptchaVerifier } from "firebase/auth";
 
-export default function CheckOutForm({ item, quantity }) {
+export default function CheckOutForm({ item, quantity, name }) {
   const [form, setForm] = useState({
     Name: "",
     Email: "",
     Phone: "",
+    quantity: quantity,
+    name: name,
   });
 
   const [otp, setotp] = useState("");

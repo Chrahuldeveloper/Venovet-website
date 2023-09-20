@@ -21,7 +21,7 @@ const Testimonials = () => {
           WHAT CLIENTS SAY?
         </h1>
         <div
-          className="flex flex-col justify-start gap-14 p-3 overflow-x-scroll max-w-7xl md:gap-72 md:flex-row "
+          className="flex flex-col justify-start p-3 overflow-x-scroll gap-14 scroll-smooth max-w-7xl md:gap-72 md:flex-row "
           ref={scrollref}
         >
           {Data.map((_, index) => {
@@ -54,11 +54,11 @@ const Testimonials = () => {
           <AiOutlineArrowLeft
             onClick={scrollLeft}
             color="white"
-            className="p-2 rounded-full shadow-md w-9 h-9 cursor-pointer md:p-3 md:w-14 md:h-14"
+            className="p-2 rounded-full shadow-md cursor-pointer w-9 h-9 md:p-3 md:w-14 md:h-14"
           />
           <AiOutlineArrowRight
             onClick={scrollRight}
-            className="p-2 rounded-full shadow-md w-9 h-9  md:p-3 md:w-14 md:h-14 cursor-pointer"
+            className="p-2 rounded-full shadow-md cursor-pointer w-9 h-9 md:p-3 md:w-14 md:h-14"
             color="white"
           />
         </div>

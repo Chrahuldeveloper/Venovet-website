@@ -17,6 +17,7 @@ export default function CartTable() {
   const [items, setitems] = useState({
     item: "",
     vol: "",
+    name: "",
   });
 
   return (
@@ -44,7 +45,7 @@ export default function CartTable() {
                     <td className="py-8 pl-10 border">
                       <h1 className="text-sm">{item.name}</h1>
                     </td>
-                    <td className="py-10 cursor-pointer text-[#7e7e7e]  flex space-x-2 items-center justify-center">
+                    <td className="py-10 cursor-pointer text-[#7e7e7e] flex space-x-2 items-center justify-center">
                       <AiOutlinePlus
                         size={10}
                         color="black"
@@ -101,6 +102,9 @@ export default function CartTable() {
                       return item.img;
                     }),
                     vol: quantity,
+                    name: cart.cartItems.map((item) => {
+                      return item.name;
+                    }),
                   });
                 } else {
                   alert("No items in the cart");
@@ -115,7 +119,11 @@ export default function CartTable() {
         </div>
       </div>
       {checkout ? (
-        <CheckOutModel item={items.item} quantity={items.vol} />
+        <CheckOutModel
+          item={items.item}
+          quantity={items.vol}
+          name={items.name}
+        />
       ) : null}
     </>
   );

@@ -40,7 +40,7 @@ export default function Slider() {
             color="white"
             cursor={"pointer"}
           />
-          <div className="text-center md:text-left lg:space-y-4 lg:-ml-36 animate__animated animate__fadeIn">
+          <div className="text-center md:text-left lg:space-y-4 lg:-ml-36 ">
             <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-6xl">
               {Data[index].Tittle}
             </h1>

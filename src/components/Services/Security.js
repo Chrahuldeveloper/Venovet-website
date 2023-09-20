@@ -83,12 +83,12 @@ function Security({ data }) {
         <h1 className="text-2xl font-bold">{data?.Tittle2}</h1>
         <p>{data?.Para2}</p>
         <div className="items-center justify-around pt-4 lg:flex lg:space-x-6">
-          <div className="space-y-5 md:space-y-0 lg:pt-8 grid md:grid-cols-2 md:gap-y-5">
+          <div className="grid space-y-5 md:space-y-0 lg:pt-8 md:grid-cols-2 md:gap-y-5">
             {picdata.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className={`flex flex-row-reverse ${
+                  className={`flex flex-col ${
                     index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"
                   }  md:space-x-4`}
                 >

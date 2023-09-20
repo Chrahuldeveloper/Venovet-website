@@ -7,6 +7,7 @@ import {
   signInWithPhoneNumber,
 } from "firebase/auth";
 import { ColorRing } from "react-loader-spinner";
+import PhoneInput from "react-phone-number-input";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -38,10 +39,12 @@ export default function ContactForm() {
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
-        alert("OTP has bee sent");
+        alert("OTP has been sent");
       })
       .catch((error) => {
         console.log(error);
+        alert("Error! Sending OTP, Try Again...");
+        window.location.reload();
       });
   };
   const handleSubmit = async (e) => {
@@ -63,7 +66,7 @@ export default function ContactForm() {
             await addDoc(collection(db, "CONTACTFORM"), form);
             setIsSubmiting(false);
             window.location.reload();
-            alert("success");
+            // alert("success");
           } catch (error) {
             setIsSubmiting(false);
             console.log(error);
@@ -134,12 +137,14 @@ export default function ContactForm() {
           <label htmlFor="Mobile no" className="text-[#787878]">
             Mobile no :
           </label>
-          <input
-            type="text"
-            id="Nature Of Enquiry"
+
+          <PhoneInput
             value={form.Phone}
             onChange={(e) => {
-              setForm({ ...form, Phone: e.target.value });
+              setForm({
+                ...form,
+                Phone: e,
+              });
             }}
             className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw] outline-none"
           />

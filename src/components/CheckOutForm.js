@@ -4,6 +4,7 @@ import { db } from "../Firebase";
 import { ColorRing } from "react-loader-spinner";
 import { getAuth, signInWithPhoneNumber } from "firebase/auth";
 import { RecaptchaVerifier } from "firebase/auth";
+import PhoneInput from "react-phone-number-input";
 
 export default function CheckOutForm({ item, quantity }) {
   const [form, setForm] = useState({
@@ -33,10 +34,12 @@ export default function CheckOutForm({ item, quantity }) {
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
-        alert("OTP has bee sent");
+        alert("OTP has been sent");
       })
       .catch((error) => {
         console.log(error);
+        alert("Error! Sending OTP, Try Again...");
+        window.location.reload();
       });
   };
   const handleSubmit = async (e) => {
@@ -129,12 +132,13 @@ export default function CheckOutForm({ item, quantity }) {
             <label htmlFor="Mobile no" className="text-[#787878]">
               Mobile no :
             </label>
-            <input
-              type="text"
-              id="Nature Of Enquiry"
+            <PhoneInput
               value={form.Phone}
               onChange={(e) => {
-                setForm({ ...form, Phone: e.target.value });
+                setForm({
+                  ...form,
+                  Phone: e,
+                });
               }}
               className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw] outline-none"
             />
@@ -159,6 +163,7 @@ export default function CheckOutForm({ item, quantity }) {
               className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw] outline-none"
             />
           </div>
+          <div id="sign-in-button"></div>
         </form>
         <div className="flex items-center justify-center mt-6">
           <button

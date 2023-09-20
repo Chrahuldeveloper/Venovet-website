@@ -1,24 +1,19 @@
 import { addDoc, collection } from "firebase/firestore";
 import React, { useState } from "react";
 import { db } from "../Firebase";
-import {
-  RecaptchaVerifier,
-  getAuth,
-  signInWithPhoneNumber,
-} from "firebase/auth";
 import { ColorRing } from "react-loader-spinner";
+import { getAuth, signInWithPhoneNumber } from "firebase/auth";
+import { RecaptchaVerifier } from "firebase/auth";
 
 export default function CheckOutForm({ item, quantity }) {
-  const [otp, setotp] = useState("");
-  const [isSubmitting, setIsSubmiting] = useState(false);
-  const auth = getAuth();
   const [form, setForm] = useState({
     Name: "",
     Email: "",
-    EnquiryType: "",
     Phone: "",
-    Message: "",
   });
+
+  const [otp, setotp] = useState("");
+  const auth = getAuth();
   const configureCaptcha = () => {
     window.recaptchaVerifier = new RecaptchaVerifier(auth, "sign-in-button", {
       size: "invisible",
@@ -27,6 +22,7 @@ export default function CheckOutForm({ item, quantity }) {
       },
     });
   };
+  const [isSubmitting, setIsSubmiting] = useState(false);
 
   const onNumSubmit = (e) => {
     e.preventDefault();
@@ -59,7 +55,7 @@ export default function CheckOutForm({ item, quantity }) {
           alert("Number is verified!");
           // Save form data to Firebase after OTP verification
           try {
-            await addDoc(collection(db, "CHECKOUTS"), form);
+            await addDoc(collection(db, "ORDERS"), form);
             setIsSubmiting(false);
             window.location.reload();
             alert("success");

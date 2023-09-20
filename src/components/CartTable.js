@@ -93,14 +93,18 @@ export default function CartTable() {
           <div className="flex items-center justify-center mt-6">
             <button
               onClick={() => {
-                setcheckout(true);
-                setitems({
-                  ...items,
-                  item: cart.cartItems.map((item) => {
-                    return item.img;
-                  }),
-                  vol: quantity,
-                });
+                if (cart.cartItems.length > 0) {
+                  setcheckout(true);
+                  setitems({
+                    ...items,
+                    item: cart.cartItems.map((item) => {
+                      return item.img;
+                    }),
+                    vol: quantity,
+                  });
+                } else {
+                  alert("No items in the cart");
+                }
               }}
               type="submit"
               className="bg-[#121a37] hover:bg-[#ff5e15] transition duration-300 ease-in-out  font-medium text-sm rounded-lg shadow-2xl shadow-black text-white px-10 py-2.5"

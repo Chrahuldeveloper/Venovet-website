@@ -1,10 +1,10 @@
-import Data from "../Data/FaqData";
+import Data from "../Data/AboutFaqs";
 import { useState } from "react";
 
 const AboutUsFaq = ({ Q, children, open, toggle }) => {
   return (
-    <div className="space-y-4 rounded-2xl px-10 md:px-0">
-      <div className=" cursor-pointer" onClick={toggle}>
+    <div className="px-10 space-y-4 rounded-2xl md:px-0">
+      <div className="cursor-pointer " onClick={toggle}>
         <h1
           className={`${
             !open ? "text-black" : "text-[#ff4747]"
@@ -34,34 +34,36 @@ const FAQ = () => {
   };
 
   return (
-    <>
-      <div className="mx-auto mt-7">
-        <div className="flex md:justify-evenly items-start">
+    <section className="lg:max-w-[75vw] mx-auto mt-10">
+      <div className="mx-auto ">
+        <div className="flex items-start mt-3 items md:justify-between">
           <div className="space-y-5">
             {Data.map((item, index) => {
               return (
-                <div key={index} className="lg:max-w-xl">
+                <div key={index} className=" lg:max-w-sm">
                   <AboutUsFaq
                     Q={item.q}
                     open={index === openIndex}
                     toggle={() => toggleFaq(index)}
                   >
-                    <p>{item.a}</p>
+                    <p className="my-4">{item.Subq}</p>
+                    <p className="text-[#7f8895] font-light my-4">{item.a}</p>
+                    <p className="my-4 underline">{item.underline}</p>
                   </AboutUsFaq>
                 </div>
               );
             })}
           </div>
-          <div className="h-auto hidden lg:flex">
+          <div className="hidden h-auto lg:flex">
             <img
               src="https://www.venovet.com/assets/images/cargo.jpg"
-              className="max-w-md"
+              className=""
               alt="about"
             />
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

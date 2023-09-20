@@ -59,7 +59,7 @@ export default function CheckOutForm({ item, quantity }) {
           alert("Number is verified!");
           // Save form data to Firebase after OTP verification
           try {
-            await addDoc(collection(db, "CONTACTFORM"), form);
+            await addDoc(collection(db, "CHECKOUTS"), form);
             setIsSubmiting(false);
             window.location.reload();
             alert("success");
@@ -80,7 +80,7 @@ export default function CheckOutForm({ item, quantity }) {
   return (
     <>
       <div className="p-6 mx-auto rounded-lg w-[80vw] md:max-w-3xl ">
-        {isSubmitting && ( 
+        {isSubmitting && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-100 bg-opacity-75">
             <ColorRing
               visible={true}
@@ -93,11 +93,7 @@ export default function CheckOutForm({ item, quantity }) {
             />
           </div>
         )}
-        <img
-          src={item}
-          className="max-w-[20vw] mx-auto "
-          alt="picturx"
-        />
+        <img src={item} className="max-w-[20vw] mx-auto " alt="picturx" />
         <h1 className="mt-5 text-xl text-center text-slate-500 lg:text-xl">
           Quantity : {quantity}
         </h1>
@@ -168,6 +164,14 @@ export default function CheckOutForm({ item, quantity }) {
             />
           </div>
         </form>
+        <div className="flex items-center justify-center mt-6">
+          <button
+            onClick={handleSubmit}
+            className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5"
+          >
+            Submit
+          </button>{" "}
+        </div>
       </div>
     </>
   );

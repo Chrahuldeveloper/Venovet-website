@@ -2,16 +2,16 @@ import React from "react";
 
 function Security({ data }) {
   const picdata = [
-    {
-      Title: `${data?.SubCat1?.Tittle}`,
-      p: `${data?.SubCat1?.Para}`,
-      png: "https://venovet.com/assets/images/service-01.png",
-    },
-    {
-      Title: `${data?.SubCat2?.Tittle}`,
-      p: `${data?.SubCat2?.Para}`,
-      png: "https://venovet.com/assets/images/service-02.png",
-    },
+    // {
+    //   Title: `${data?.SubCat1?.Tittle}`,
+    //   p: `${data?.SubCat1?.Para}`,
+    //   png: "https://venovet.com/assets/images/service-01.png",
+    // },
+    // {
+    //   Title: `${data?.SubCat2?.Tittle}`,
+    //   p: `${data?.SubCat2?.Para}`,
+    //   png: "https://venovet.com/assets/images/service-02.png",
+    // },
     {
       Title: `${data?.SubCat3?.Tittle}`,
       p: `${data?.SubCat3?.Para}`,
@@ -56,19 +56,19 @@ function Security({ data }) {
 
   const card = [
     {
-      img: `${data?.SubCat11?.Tittle}`,
+      img: `${data?.SubCat11?.image}`,
       Title: `${data?.SubCat11?.Tittle}`,
-      p: `${data?.SubCat11?.Tittle}`,
+      p: `${data?.SubCat11?.Para}`,
     },
     {
-      img: `${data?.SubCat12?.Tittle}`,
+      img: `${data?.SubCat12?.image}`,
       Title: `${data?.SubCat12?.Tittle}`,
-      p: `${data?.SubCat12?.Tittle}`,
+      p: `${data?.SubCat12?.Para}`,
     },
     {
-      img: `${data?.SubCat13?.Tittle}`,
+      img: `${data?.SubCat13?.image}`,
       Title: `${data?.SubCat13?.Tittle}`,
-      p: `${data?.SubCat13?.Tittle}`,
+      p: `${data?.SubCat13?.Para}`,
     },
   ];
 
@@ -83,18 +83,28 @@ function Security({ data }) {
         <h1 className="text-2xl font-bold">{data?.Tittle2}</h1>
         <p>{data?.Para2}</p>
         <div className="items-center justify-around pt-4 lg:flex lg:space-x-6">
-          <div className="space-y-5">
+          <div className="space-y-5 md:space-y-0 lg:pt-8 grid md:grid-cols-2 md:gap-y-5">
             {picdata.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className="flex flex-row-reverse lg:flex-row md:space-x-3"
+                  className={`flex flex-row-reverse ${
+                    index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"
+                  }  md:space-x-4`}
                 >
-                  <div className="flex flex-col max-w-xs space-y-4 lg:text-right">
+                  <div
+                    className={`flex flex-col max-w-xs space-y-4 ${
+                      index % 2 !== 0 ? "lg:text-left pl-3" : "lg:text-right"
+                    }  `}
+                  >
                     <p className="font-bold">{item.Title}</p>
                     <p className="text-[#777777]">{item.p}</p>
                   </div>
-                  <div className="flex p-1 border-2 border-blue-500 h-9 md:h-12 md:p-2">
+                  <div
+                    className={`flex p-1 border-2 ${
+                      index % 2 !== 0 ? "border-orange-500 " : "border-blue-500"
+                    }  h-9 md:h-12 md:p-2`}
+                  >
                     <img src={item.png} alt="" />
                   </div>
                 </div>

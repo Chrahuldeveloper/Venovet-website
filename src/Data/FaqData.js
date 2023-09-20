@@ -15,14 +15,6 @@ const Data = [
     q: " Will StowNest Storage help me pack?",
     a: "The movers will help you pack and move just about anything that you would like. Some bulkier or fragile items (pool tables, exercise machines) require special care and should be moved with speciality movers. Our movers do not move or store these items but are happy to provide recommendations. If you have anything that may require special arrangements, please contact the StowNest Team.",
   },
-  {
-    q: " Will StowNest Storage help me pack?",
-    a: "The movers will help you pack and move just about anything that you would like. Some bulkier or fragile items (pool tables, exercise machines) require special care and should be moved with speciality movers. Our movers do not move or store these items but are happy to provide recommendations. If you have anything that may require special arrangements, please contact the StowNest Team.",
-  },
-  {
-    q: " Will StowNest Storage help me pack?",
-    a: "The movers will help you pack and move just about anything that you would like. Some bulkier or fragile items (pool tables, exercise machines) require special care and should be moved with speciality movers. Our movers do not move or store these items but are happy to provide recommendations. If you have anything that may require special arrangements, please contact the StowNest Team.",
-  },
 ];
 
 export default Data;

@@ -80,7 +80,7 @@ export default function CheckOutForm({ item, quantity, name }) {
 
   return (
     <>
-      <div className="p-6 mx-auto rounded-lg w-[80vw] md:max-w-3xl ">
+      <div className="p-3 mx-auto rounded-lg w-[80vw] md:max-w-3xl ">
         {isSubmitting && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-100 bg-opacity-75">
             <ColorRing
@@ -94,14 +94,14 @@ export default function CheckOutForm({ item, quantity, name }) {
             />
           </div>
         )}
-        <img src={item} className="max-w-[20vw] mx-auto " alt="picturx" />
+        <img src={item} className="w-28 mx-auto " alt="picturx" />
         <h1 className="mt-5 text-xl text-center text-slate-500 lg:text-xl">
           Quantity : {quantity}
         </h1>
         <p className="my-4 text-sm font-semibold text-center text-slate-500">
           Please fill the form to complete the Checkout
         </p>
-        <form className="justify-center md:grid md:grid-cols-2 place-items-center mt-7">
+        <form className="justify-center md:grid md:grid-cols-2 place-items-center">
           <div className="flex flex-col gap-4 my-2">
             <label htmlFor="name" className="text-[#787878]">
               Full Name

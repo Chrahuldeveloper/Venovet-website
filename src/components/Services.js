@@ -32,7 +32,7 @@ function Services() {
                 <div
                   className={`${
                     hover === index ? "bg-[#ff5e15]" : "bg-white"
-                  } absolute shadow-lg bg-white rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-72 lg:w-60 space-x-4  transition ease-in-out duration-500`}
+                  } absolute shadow-lg  rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-72 lg:w-60 space-x-4  transition ease-in-out duration-500`}
                 >
                   <img
                     className={`w-14 `}

@@ -102,7 +102,7 @@ export default function CartTable() {
                       return item.img;
                     }),
                     vol: quantity,
-                    name: cart.cartItems.map((item) => {
+                    name: cart.cartItems.forEach((item) => {
                       return item.name;
                     }),
                   });

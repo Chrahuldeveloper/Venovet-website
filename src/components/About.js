@@ -10,7 +10,7 @@ export default function About() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const documentRef = doc(db, "WHATWEDO");
+        const documentRef = doc(db, "BROCHURE", "LINKS");
         const documentSnapshot = await getDoc(documentRef);
         if (documentSnapshot.exists()) {
           setData(documentSnapshot.data());
@@ -25,8 +25,6 @@ export default function About() {
     fetchData();
     window.scrollTo(0, 0);
   }, []);
-
-  console.log(data);
 
   return (
     <div

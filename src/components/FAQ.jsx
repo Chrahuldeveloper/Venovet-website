@@ -61,7 +61,7 @@ const FAQ = () => {
               );
             })}
           </div>
-          <div className="w-[25rem] h-auto hidden lg:flex">
+          <div className="w-[20rem] h-auto hidden lg:flex">
             <img
               src="https://www.venovet.com/assets/images/resources/faq-mockup.png"
               alt="https://www.venovet.com/assets/images/resources/faq-mockup.png"

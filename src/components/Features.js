@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 export default function Features() {
   return (
     <section
-      className=" bg-[#fafafa]"
+      className=" bg-[#fafafa] pb-10"
       data-aos="slide-left"
       data-aos-delay="50"
       data-aos-duration="1000"
       data-aos-easing="ease-in-out"
     >
-      <div className="pt-10 space-y-1 text-center">
+      <div className="pt-10 space-y-1 text-center ">
         <h1 className="text-lg font-bold text-slate-500">OUR GOODNESS</h1>
         <h2 className="text-xl font-bold text-orange-500 md:text-3x lg:text-4xl">
           What Makes Us Special
@@ -26,7 +26,7 @@ export default function Features() {
                   <h1 className="font-bold text-lg lg:text-[1.150rem] text-[#757575]">
                     {item.Tittle}
                   </h1>
-                  <p className="text-slate-400 ">{item.Para}</p>
+                  <p className="text-[#777777] ">{item.Para}</p>
                 </div>
               </div>
             </React.Fragment>
@@ -35,7 +35,7 @@ export default function Features() {
       </div>
       <div className="flex justify-center my-10">
         <Link to="/contact">
-          <button className="bg-orange-500 tex-white font-semibold rounded-full shadow-2xl shadow-black text-white px-8 py-1.5 hover:brightness-90 ease-in-out duration-300">
+          <button className="bg-[#ff5e15]  font-semibold rounded-full hover:shadow-none shadow-2xl shadow-black text-white px-8 py-1.5 hover:brightness-90 ease-in-out duration-300">
             Talk to our experts
           </button>
         </Link>

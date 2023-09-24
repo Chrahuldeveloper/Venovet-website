@@ -1,7 +1,7 @@
 const Data = [
   {
     Tittle: "WareHouse",
-    HighLight: "Mangement",
+    HighLight: "Management",
     Para: "Give an efficiency boost your inventory mangement with our experts. we are consistent, reliable and efficient",
     image: "https://www.venovet.com/assets/images/resources/slide1-1.jpg",
     catgeory: "Warehouse Management (2PL & 3PL)",
@@ -13,7 +13,8 @@ const Data = [
     Para: "Our global logistics expertise, advanced supply chain technology & customized logistics solutions will help you analyze, develop and implement successful transport management strategies from end-to-end.",
     image: "https://www.venovet.com/assets/images/resources/slide3.jpg",
     catgeory: "Transportation",
-    Para1: "Relaxes our clients to get the goods delivered at their demanded place",
+    Para1:
+      "Relaxes our clients to get the goods delivered at their demanded place",
   },
   {
     catgeory: "Value Added Services",
@@ -21,7 +22,8 @@ const Data = [
     HighLight: "Services",
     Para: "Solutions that meets your needs in packaging, kitting/dekitting, labelling, quality checks, refurbishing,reverse logistics, returnshandling",
     image: "https://www.venovet.com/assets/images/resources/slide3-3.jpg",
-    Para1: "Improve Efficiencies,Create Flexibility And makes your supply chain more agile",
+    Para1:
+      "Improve Efficiencies,Create Flexibility And makes your supply chain more agile",
   },
   {
     Tittle: "SCM",
@@ -29,8 +31,8 @@ const Data = [
     catgeory: "SCM Automation",
     Para: "Increasing productivity, Volume, Decreasing operating costs, Improving accuracy, time saving, Compliance",
     image: "https://www.venovet.com/assets/images/resources/slide4-4.jpg",
-    Para1: "Improve Efficiencies,Create Flexibility And makes your supply chain more agile",
-
+    Para1:
+      "Improve Efficiencies,Create Flexibility And makes your supply chain more agile",
   },
   {
     Tittle: "Inventory",

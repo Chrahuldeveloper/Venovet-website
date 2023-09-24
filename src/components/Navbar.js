@@ -187,7 +187,12 @@ export default function Navbar({ Page }) {
           <div className="flex items-center justify-between mx-10 gap-x-28">
             <div className="flex items-center space-x-1.5">
               <AiOutlineMail size={25} color="#ff5e15" />
-              <h1>Email:sales@venovet.com</h1>
+              <h1 className="text-[#d5d5d5]  cursor-pointer">
+                Email:{" "}
+                <span className="hover:text-[#ff5e15] transition duration-300 ease-in-out">
+                  sales@venovet.com
+                </span>
+              </h1>
             </div>
             <div className="flex items-center space-x-2.5">
               <img
@@ -372,10 +377,13 @@ export default function Navbar({ Page }) {
             </ul>
           </div>
           <Link to="/contact">
-            <button className="bg-[#ff5e15] text-white p-3.5 flex hover:bg-orange-600 cursor-pointer items-center space-x-1.5 font-semibold rounded-r-md hover:brightness-90 ease-in-out duration-300">
-              <AiOutlineWechat size={30} color="white" />
-              <h1>Request a Call Back</h1>
-              <AiOutlineArrowRight size={30} color="white" />
+            <button className="bg-[#ff5e15] relative overflow-hidden group text-[#fff] p-4 flex  cursor-pointer items-center space-x-1.5  rounded-r-md transition ease-in-out duration-500">
+              <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-500 ease-in-out"></span>
+              <span className="relative flex items-center">
+                <AiOutlineWechat size={20} color="white" />
+                <h1>Request a Call Back</h1>
+                <AiOutlineArrowRight size={20} color="white" />
+              </span>
             </button>
           </Link>
         </div>

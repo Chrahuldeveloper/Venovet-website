@@ -203,7 +203,7 @@ function Enquire() {
               </div>
               <div className="flex items-center justify-center py-4">
                 <button
-                  className="text-white bg-[#fe8704] text-sm font-bold rounded-full px-6 py-2 hover:brightness-90 ease-in-out duration-300"
+                  className="text-white bg-[#fe8704]  hover:shadow-none shadow-2xl shadow-black text-sm font-bold rounded-full px-6 py-2 hover:bg-[#1f5abc] ease-in-out duration-300"
                   type="submit"
                 >
                   SUBMIT NOW

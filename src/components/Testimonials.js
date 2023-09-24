@@ -29,7 +29,7 @@ const Testimonials = () => {
               <React.Fragment key={index}>
                 <div className="flex items-center max-w-sm space-x-8 md:max-w-auto">
                   <img
-                    className="w-36 h-36 md:max-w-md md:w-64 md:h-64 rounded-md border-[#ccc] border-[1px]"
+                    className="w-32 h-32 md:max-w-md md:w-52 md:h-52 rounded-md border-[#ccc] border-[1px]"
                     src={_.image}
                     alt="img.png"
                   />

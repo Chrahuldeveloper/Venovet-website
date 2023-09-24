@@ -2,7 +2,7 @@ import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { Link }  from 'react-router-dom'
+import { Link } from "react-router-dom";
 const Bridge = () => {
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
@@ -85,16 +85,19 @@ const Bridge = () => {
         <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl  max-w-3xl  md:leading-[4rem] text-center pt-8 ">
           Bridging gap between Business and Technology
         </h1>
-        <p className="max-w-md leading-8 text-center md:text-2xl md:max-w-2xl">
+        <p className="max-w-md leading-8 text-center md:text-xl md:max-w-2xl">
           For our clients from Transporting the Goods from Source to our
           Warehouse, Inwarding the Goods, Quality Check, Storage, Dispatch,
           Reporting and End Customer Delivery Transportation.
         </p>
         <Link to="/contact">
-        <button className="bg-white text-[#ff5e15] font-semibold text-sm py-3 px-6 rounded-xl flex items-center space-x-2 hover:brightness-95 ease-in-out duration-200">
-          <h1>CONTACT US</h1>
-          <AiOutlineArrowRight size="23" color="#ff5e15" />
-        </button>
+          <button className="bg-white text-[#ff5e15] relative overflow-hidden group  font-semibold text-sm py-3 px-6 rounded-xl flex items-center space-x-2 ease-in-out duration-200">
+            <span className="absolute left-0 h-full w-0 transition-all bg-[#d2eaff] opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+            <span className="relative flex items-center">
+              <h1>CONTACT US</h1>
+              <AiOutlineArrowRight size="23" color="#ff5e15" />
+            </span>
+          </button>
         </Link>
       </div>
     </div>

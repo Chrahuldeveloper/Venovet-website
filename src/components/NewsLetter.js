@@ -92,9 +92,12 @@ export default function NewsLetter() {
         />
         <button
           onClick={handleSubmit}
-          className="bg-[#ff5e14] duration-300 ease-in-out hover:brightness-90 text-white py-3 px-2 text-xs font-semibold"
+          className="bg-[#ff5e15] relative overflow-hidden group  transition ease-in-out duration-300 font-semibold text-sm  text-white px-5 py-3 flex items-center "
         >
-          <h1>Request Call Back</h1>
+          <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+          <span className="relative flex items-center">
+            <h1>Request Call Back</h1>
+          </span>
         </button>{" "}
       </div>
       <div className="flex items-center space-x-2.5">

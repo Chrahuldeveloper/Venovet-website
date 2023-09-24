@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import { HiMiniArrowSmallRight } from "react-icons/hi2";
 import Data from "../Data/SliderData";
 import { Link } from "react-router-dom";
 export default function Slider() {
@@ -33,18 +34,20 @@ export default function Slider() {
         }}
       >
         <div className="flex items-center justify-between h-screen px-3 md:px-10 gap-7 ">
-          <AiOutlineArrowLeft
-            onClick={prev}
-            size={45}
-            className="w-14 h-14 md:w-11 md:h-11 "
-            color="white"
-            cursor={"pointer"}
-          />
+          <div className="p-2.5 bg-[#00000000] rounded-full hover:bg-[#ff5e15] transition duration-500 ease-in-out">
+            <AiOutlineArrowLeft
+              onClick={prev}
+              size={45}
+              className="w-14 h-14  md:w-11 md:h-11 "
+              color="white"
+              cursor={"pointer"}
+            />
+          </div>
           <div className="text-center md:text-left lg:space-y-4 lg:-ml-36 animate__animated animate__fadeIn">
-            <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-6xl">
+            <h1 className="text-3xl font-semibold text-white md:text-4xl lg:text-6xl">
               {Data[index].Tittle}
             </h1>
-            <h2 className="my-4 text-2xl font-bold text-orange-500 md:text-4xl lg:text-6xl">
+            <h2 className="my-4 text-2xl font-semibold text-[#ff5e15] md:text-4xl lg:text-6xl">
               {Data[index].HighLight}
             </h2>
             <p className="max-w-3xl my-4 text-sm leading-7 text-white sm:text-lg font- lg:text-xl">
@@ -58,19 +61,24 @@ export default function Slider() {
                 Para: Data[index].Para1,
               }}
             >
-              <button className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5 my-4">
-                Learn More
+              <button className="bg-[#ff5e15]  relative  flex space-x-2 transition duration-300 ease-in-out items-center font-semibold rounded-lg overflow-hidden shadow-2xl shadow-black text-white px-6 py-1.5 my-4 group">
+                <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+                <span className="relative flex items-center">
+                  Learn More
+                  <HiMiniArrowSmallRight size={30} />
+                </span>
               </button>
             </Link>
           </div>
-
-          <AiOutlineArrowRight
-            onClick={forward}
-            size={45}
-            className=" md:w-11 md:h-11 w-14 h-14"
-            color="white"
-            cursor={"pointer"}
-          />
+          <div className="p-2.5 bg-[#00000000] rounded-full hover:bg-[#ff5e15] transition duration-500">
+            <AiOutlineArrowRight
+              onClick={forward}
+              size={45}
+              className=" md:w-11 md:h-11 w-14 h-14"
+              color="white"
+              cursor={"pointer"}
+            />
+          </div>
         </div>
       </div>
     </div>

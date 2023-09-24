@@ -114,10 +114,10 @@ export default function Form() {
         </div>
       )}
       <div className="text-center space-y-3.5">
-        <h1 className="text-lg font-semibold text-orange-500 md:text-2xl">
+        <h1 className="text-lg font-medium text-orange-500 md:text-xl">
           CAREER WITH VENOVET
         </h1>
-        <p className="text-xl font-bold md:text-xl ">Submit Your Resume</p>
+        <p className="text-xl font-bold md:text-2xl ">Submit Your Resume</p>
       </div>
       <form onSubmit={handleSubmit} className="p-10 mt-6 bg-white rounded-2xl">
         <div className="justify-center gap-8 md:grid md:grid-cols-2 place-items-center">
@@ -175,9 +175,10 @@ export default function Form() {
           <div className="flex items-center justify-center mt-6">
             <button
               onClick={onNumSubmit}
-              className="bg-[#ff5e15]  font-semibold rounded-lg shadow  shadow-black text-white px-20 py-2"
+              className="bg-[#ff5e15] relative overflow-hidden group flex items-center  font-semibold rounded-lg shadow  shadow-black text-white px-20 py-2"
             >
-              Get OTP
+              <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+              <span className="relative flex items-center">Get OTP</span>
             </button>{" "}
           </div>
           <div className="flex flex-col gap-4">
@@ -225,9 +226,10 @@ export default function Form() {
         <div className="flex items-center justify-center mt-6">
           <button
             type="submit"
-            className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5"
+            className="bg-[#ff5e15] relative overflow-hidden group  font-semibold rounded-lg flex items-center text-white px-8 py-1.5"
           >
-            Submit
+            <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+            <span className="relative flex items-center">Submit</span>
           </button>{" "}
         </div>
         <div id="sign-in-button"></div>

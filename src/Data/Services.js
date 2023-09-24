@@ -28,7 +28,7 @@ const Data = [
     image: "https://www.venovet.com/assets/images/resources/proj-img1-8.jpg",
   },
   {
-    Tittle: "EPR & Solutions",
+    Tittle: "ERP & Solutions",
     image: "https://www.venovet.com/assets/images/resources/proj-img1-2.jpg",
   },
 ];

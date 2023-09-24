@@ -82,7 +82,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-3xl p-6 mx-auto my-24 rounded-lg shadow-xl shadow-slate-200 ">
+    <div className="max-w-3xl p-6 mx-auto my-24 rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_5px_10px] shadow-[#212529] border-1">
       {isSubmitting && ( // Render loader only when isSubmitting is true
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-100 bg-opacity-75">
           <ColorRing
@@ -152,9 +152,10 @@ export default function ContactForm() {
         <div className="flex items-center justify-center mt-6">
           <button
             onClick={onNumSubmit}
-            className="bg-[#ff5e15]  font-semibold rounded-lg shadow  shadow-black text-white px-20 py-2"
+            className="bg-[#ff5e15] flex items-center relative overflow-hidden group  font-semibold rounded-lg  text-white px-20 py-2"
           >
-            Get OTP
+            <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+            <span className="relative flex items-center">Get OTP</span>
           </button>{" "}
         </div>
         <div className="flex flex-col gap-4">
@@ -208,9 +209,10 @@ export default function ContactForm() {
       <div className="flex items-center justify-center mt-6">
         <button
           onClick={handleSubmit}
-          className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5"
+          className="bg-[#ff5e15] flex items-center relative overflow-hidden group  font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5"
         >
-          Submit
+          <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+          <span className="relative flex items-center">Submit</span>
         </button>{" "}
       </div>
     </div>

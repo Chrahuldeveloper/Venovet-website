@@ -24,10 +24,10 @@ export default function Blogs() {
       <section>
         <div className="flex items-center justify-between px-5 lg:px-20">
           <div className=" space-y-1.5 pt-10 ">
-            <h1 className="font-bold lg:ml-24 text-slate-500 md:text-xl">
+            <h1 className="font-bold lg:ml text-[#ff5e15]  md:text-xl">
               Our Blogs
             </h1>
-            <h2 className="text-2xl font-bold text-orange-500 lg:ml-24 md:text-3xl">
+            <h2 className="text-2xl font-bold   md:text-3xl">
               Recent Articles
             </h2>
           </div>
@@ -54,21 +54,24 @@ export default function Blogs() {
               return (
                 <React.Fragment key={i}>
                   <div
-                    className="space-y-4 text-center"
+                    className="space-y-4 text-center "
                     onClick={() => {
                       navigate(`/ReadFull/${item.Tittle}`);
                     }}
                   >
-                    <img
-                      src={item.image}
-                      className="max-w-xs duration-500 ease-in-out cursor-pointer hover:brightness-75"
-                      alt={item.image + "xyz"}
-                    />
+                    <div className="p-2.5 border rounded-md duration-500 ease-in-out cursor-pointer hover:brightness-75">
+                      <img
+                        src={item.image}
+                        className=" duration-500 ease-in-out cursor-pointer hover:brightness-75"
+                        alt={item.image + "xyz"}
+                      />
+                    </div>
+
                     <div className="space-y-2.5">
                       <h1 className="font-bold text-sm md:text-xl text-[#757575]">
                         {item.Tittle}
                       </h1>
-                      <p className="text-slate-400">{item.Para}</p>
+                      <p className="text-[#777777]">{item.Para}</p>
                     </div>
                   </div>
                 </React.Fragment>
@@ -78,8 +81,11 @@ export default function Blogs() {
         </div>
         <div className="flex justify-center mt-6">
           <Link to="/BlogPage">
-            <button className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-8 py-1.5">
-              View all Articles
+            <button className="bg-[#ff5e15] relative overflow-hidden group  transition ease-in-out duration-300 font-semibold rounded-xl  text-white px-8 py-1.5 flex items-center ">
+              <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+              <span className="relative flex items-center">
+                View all Articles
+              </span>
             </button>
           </Link>
         </div>

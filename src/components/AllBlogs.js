@@ -31,8 +31,8 @@ export default function AllBlogs() {
                 <h1 className="text-[#ff602b] font-semibold text-lg">
                   {_.Tittle}
                 </h1>
-                <h2 className="text-[#777777] font-semibold">{_.SubTittle}</h2>
-                <p className="text-[#849bb7]">{_.Para}</p>
+                <h2 className="text-[#777777] font-bold ">{_.SubTittle}</h2>
+                <p className="text-[#777777]">{_.Para}</p>
               </div>
             </div>
           </React.Fragment>

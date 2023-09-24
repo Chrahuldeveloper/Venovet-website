@@ -42,30 +42,33 @@ export default function About() {
         />
       </div>
       <div className="space-y-3 md:space-y-4">
-        <h1 className="text-lg font-semibold text-orange-500">
+        <h1 className="text-lg font-semibold text-[#ff5e15]">
           WELCOME TO VENOVET
         </h1>
         <h2 className="text-3xl font-semibold">
           About Us <br /> Our Company.
         </h2>
       </div>
-      <div className="space-y-3 md:max-w-2xl md:space-y-9">
+      <div className="space-y-3 md:max-w-2xl md:space-y-7">
         <h1 className="text-xl font-semibold md:text-3xl">
           We provide on-demand warehousing space for business and consumers
         </h1>
-        <h2 className="text-xl font-bold text-orange-500 md:text-xl lg:text-2xl">
+        <h2 className="text-xl font-bold text-[#ff5e15] md:text-xl lg:text-3xl">
           Logistics Operations
         </h2>
-        <p className="max-w-lg font-semibold leading-7">
+        <p className="max-w-lg font-medium leading-7 text-[#414042]">
           For our clients from Transporting the Goods from Source to our
           Warehouse, Inwarding the Goods, Quality Check, Storage, Dispatch,
           Reporting and End Customer Delivery Transportation.
         </p>
         <div className="flex flex-col items-start mt-8 space-y-4 md:flex-row md:space-x-6 md:space-y-0">
           <Link to={data?.Pdf}>
-            <button className="flex items-center px-8 py-2 space-x-3 text-sm font-semibold text-white bg-orange-500 rounded-lg shadow-2xl shadow-black">
-              <h1>DOWNLOAD BROCHURE</h1>
-              <FaRegFilePdf size={20} color="white" />
+            <button className="flex items-center px-8 py-2 space-x-3 text-sm font-semibold text-white bg-[#ff5e15] overflow-hidden relative group  transition duration-300 ease-in-out rounded-lg shadow-2xl shadow-black">
+              <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+              <span className="relative flex items-center">
+                <h1>DOWNLOAD BROCHURE</h1>
+                <FaRegFilePdf size={20} color="white" />
+              </span>
             </button>
           </Link>
           <Link to={data?.Link}>

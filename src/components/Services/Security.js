@@ -2,16 +2,6 @@ import React from "react";
 
 function Security({ data }) {
   const picdata = [
-    // {
-    //   Title: `${data?.SubCat1?.Tittle}`,
-    //   p: `${data?.SubCat1?.Para}`,
-    //   png: "https://venovet.com/assets/images/service-01.png",
-    // },
-    // {
-    //   Title: `${data?.SubCat2?.Tittle}`,
-    //   p: `${data?.SubCat2?.Para}`,
-    //   png: "https://venovet.com/assets/images/service-02.png",
-    // },
     {
       Title: `${data?.SubCat3?.Tittle}`,
       p: `${data?.SubCat3?.Para}`,

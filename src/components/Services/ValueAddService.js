@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function ValueAddService({ data }) {
-  console.log(data);
   return (
     <section>
       <div>
@@ -19,7 +18,7 @@ export default function ValueAddService({ data }) {
 
         <div className="flex flex-col items-start gap-6 lg:flex-row mt-7">
           <img
-            className="max-w-xs rounded-lg "
+            className="order-2 max-w-xs rounded-lg"
             src={data?.SubCat1?.image}
             alt="imge"
           />
@@ -47,7 +46,7 @@ export default function ValueAddService({ data }) {
 
         <div className="flex flex-col items-start gap-6 lg:flex-row mt-7">
           <img
-            className="max-w-xs rounded-lg "
+            className="order-2 max-w-xs rounded-lg"
             src={data?.SubCat3?.image}
             alt="imge"
           />
@@ -75,7 +74,7 @@ export default function ValueAddService({ data }) {
 
         <div className="flex flex-col items-start gap-6 lg:flex-row mt-7">
           <img
-            className="max-w-xs rounded-lg "
+            className="order-2 max-w-xs rounded-lg"
             src={data?.SubCat5?.image}
             alt="imge"
           />
@@ -103,7 +102,7 @@ export default function ValueAddService({ data }) {
 
         <div className="flex flex-col items-start gap-6 lg:flex-row mt-7">
           <img
-            className="max-w-xs rounded-lg "
+            className="order-2 max-w-xs rounded-lg"
             src={data?.SubCat7?.image}
             alt="imge"
           />

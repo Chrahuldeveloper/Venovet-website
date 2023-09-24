@@ -59,18 +59,19 @@ export default function EPRSolutions({ data }) {
 
   return (
     <>
-      <div className="space-y-4 text-[#7a7a7a] flex justify-center items-center flex-col">
+      <div className="space-y-8 text-[#7a7a7a] flex justify-center items-center flex-col">
         <h1 className="text-lg font-bold text-black md:text-xl lg:text-2xl">
           {data?.Tittle1}
         </h1>
         <p>{data?.Para1}</p>
       </div>
-      <div className="grid justify-center grid-cols-1 gap-5 mt-5 md:grid-cols-2 lg:grid-cols-3 place-items-center">
+      <div className="grid justify-center grid-cols-1 gap-10 mt-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
         {ERPSolutions.map((item, index) => {
           return (
             <React.Fragment key={index}>
               <div className="max-w-xs p-5 text-center shadow-lg shadow-slate-300">
-                <div className="space-y-2">
+                <div className=
+                "space-y-2">
                   <h1 className="font-semibold text-orange-500 ">
                     {item.Tittle}
                   </h1>
@@ -85,7 +86,7 @@ export default function EPRSolutions({ data }) {
       <div className="mt-7 text-[#7a7a7a] space-y-4">
         <h1 className="text-lg font-bold">{data?.Tittle2}</h1>
         <p>{data?.Para2}</p>
-        <ul className="ml-4 space-y-1 ">
+        <ul className="ml-4 space-y-1">
           <li className="list-disc">Power of One</li>
           <li className="list-disc">Flexible Contract Management</li>
           <li className="list-disc">Skill Anywhere’ Workforce Management</li>

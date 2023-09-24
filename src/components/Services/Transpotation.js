@@ -25,21 +25,30 @@ export default function Transpotation({ data }) {
       image: `${data?.image5?.image}`,
       Para: `${data?.Para5}`,
     },
+    {
+      image: `${data?.image6?.image}`,
+      Para: `${data?.Para5}`,
+    },
   ];
 
   return (
     <>
-      <div className="space-y-3.5">
+      <div className="bg-[#ff5e15] max-w-[50vw] md:max-w-[35vw] lg:max-w-[15vw] rounded-lg p-10 translate-y-72 translate-x-28">
+        <h1 className="text-2xl text-center text-white ">
+          Road <br /> Transportation
+        </h1>
+      </div>
+      <div className="space-y-3.5 -mt-20">
         {section1.map((item, i) => {
           return (
             <React.Fragment key={i}>
-              <div className="flex flex-col items-start gap-5 md:flex-row">
+              <div className="flex flex-col justify-center gap-5 mx-auto md:items-start md:flex-row ">
                 <img
                   src={item.image}
                   alt={i}
                   className="rounded-lg w-80 h-60"
                 />
-                <div className="text-[#7a7a7a] space-y-3">
+                <div className="text-[#7a7a7a] space-y-3 max-w-lg">
                   <p>{item.Para}</p>
                 </div>
               </div>

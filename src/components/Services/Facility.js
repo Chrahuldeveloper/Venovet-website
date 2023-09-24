@@ -27,7 +27,7 @@ function Facility({ data }) {
         </h1>
         <p className="text-[#7a7a7a] ">{data?.Para1}</p>
       </div>
-      <div className="border-[1px] border-gray-200 p-6 mt-7">
+      <div className="border-[1px] border-gray-200 p-10 mt-7">
         <div className="grid grid-cols-3 gap-5 lg:flex lg:items-center lg:gap-5">
           {FacilitySubCatogery.map((_) => {
             return (
@@ -37,7 +37,7 @@ function Facility({ data }) {
                   onClick={() => {
                     setfilterSubcategory(_);
                   }}
-                  className={`p-4 text-sm cursor-pointer font-semibold rounded-lg    ${
+                  className={`p-4 text-xs cursor-pointer font-semibold rounded-lg  ${
                     filterSubcategory === _
                       ? "bg-orange-500 text-white"
                       : "bg-[#f3f3f3] transition duration-500 ease-in-out hover:bg-orange-500 hover:text-white"

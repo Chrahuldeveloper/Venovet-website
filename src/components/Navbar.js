@@ -32,7 +32,7 @@ export default function Navbar({ Page }) {
       setScrollY(false);
     }
   };
-
+  console.log(what,who)
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -378,7 +378,7 @@ export default function Navbar({ Page }) {
           </div>
           <Link to="/contact">
             <button className="bg-[#ff5e15] relative overflow-hidden group text-[#fff] p-4 flex  cursor-pointer items-center space-x-1.5  rounded-r-md transition ease-in-out duration-500">
-              <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-500 ease-in-out"></span>
+              <span className="absolute left-0 w-0 h-full transition-all duration-500 ease-in-out bg-orange-700 opacity-100 group-hover:w-full"></span>
               <span className="relative flex items-center">
                 <AiOutlineWechat size={20} color="white" />
                 <h1>Request a Call Back</h1>

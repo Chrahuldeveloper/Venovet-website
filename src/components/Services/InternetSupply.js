@@ -6,27 +6,27 @@ export default function InternetSupply({ data }) {
     {
       image: "https://venovet.com/assets/images/sicon1.png",
       Titttle: `${data?.SubCat3?.Tittle}`,
-      Para: `${data?.SubCat3?.Tittle}`,
+      Para: `${data?.SubCat3?.Para}`,
     },
     {
       image: "https://venovet.com/assets/images/sicon2.png",
       Titttle: `${data?.SubCat4?.Tittle}`,
-      Para: `${data?.SubCat4?.Tittle}`,
+      Para: `${data?.SubCat4?.Para}`,
     },
     {
       image: "https://venovet.com/assets/images/sicon4.png",
       Titttle: `${data?.SubCat5?.Tittle}`,
-      Para: `${data?.SubCat5?.Tittle}`,
+      Para: `${data?.SubCat5?.Para}`,
     },
     {
       image: "https://venovet.com/assets/images/sicon6.png",
       Titttle: `${data?.SubCat6?.Tittle}`,
-      Para: `${data?.SubCat6?.Tittle}`,
+      Para: `${data?.SubCat6?.Para}`,
     },
     {
       image: "https://venovet.com/assets/images/sicon3.png",
       Titttle: `${data?.SubCat7?.Tittle}`,
-      Para: `${data?.SubCat7?.Tittle}`,
+      Para: `${data?.SubCat7?.Para}`,
     },
   ];
 
@@ -34,27 +34,27 @@ export default function InternetSupply({ data }) {
     {
       icon: "https://venovet.com/assets/images/sicon13.png",
       Titttle: `${data?.SubCat9?.Tittle}`,
-      Para: `${data?.SubCat9?.Tittle}`,
+      Para: `${data?.SubCat9?.Para}`,
     },
     {
       icon: "https://venovet.com/assets/images/sicon14.png",
       Titttle: `${data?.SubCat10?.Tittle}`,
-      Para: `${data?.SubCat10?.Tittle}`,
+      Para: `${data?.SubCat10?.Para}`,
     },
     {
       icon: "https://venovet.com/assets/images/sicon15.png",
       Titttle: `${data?.SubCat11?.Tittle}`,
-      Para: `${data?.SubCat11?.Tittle}`,
+      Para: `${data?.SubCat11?.Para}`,
     },
     {
       icon: "https://venovet.com/assets/images/sicon16.png",
       Titttle: `${data?.SubCat12?.Tittle}`,
-      Para: `${data?.SubCat12?.Tittle}`,
+      Para: `${data?.SubCat12?.Para}`,
     },
     {
       icon: "https://venovet.com/assets/images/sicon17.png",
       Titttle: `${data?.SubCat13?.Tittle}`,
-      Para: `${data?.SubCat13?.Tittle}`,
+      Para: `${data?.SubCat13?.Para}`,
     },
   ];
 
@@ -92,7 +92,7 @@ export default function InternetSupply({ data }) {
         <div>
           <div className="flex flex-col items-start lg:flex-row mt-7 gap-7">
             <img
-              className="max-w-sm rounded-lg lg:order-2"
+              className="max-w-xs rounded-lg md:max-w-sm lg:order-2"
               src={data?.SubCat1?.image}
               alt="imge"
             />
@@ -139,11 +139,11 @@ export default function InternetSupply({ data }) {
       </div>
 
       <div className="mt-10">
-        <h1 className="font-semibold lg:text-lg">{data?.SubCat8?.image}</h1>
+        <h1 className="font-semibold lg:text-xl">{data?.SubCat8?.Tittle}</h1>
         <div className="flex flex-col items-start lg:flex-row mt-7 gap-7">
           <img
             className="max-w-sm rounded-lg "
-            src={data?.SubCat8?.Tittle}
+            src={data?.SubCat8?.image}
             alt="imge "
           />
           <p className="text-[#7a7a7a]  leading-6">{data?.SubCat8?.Para}</p>

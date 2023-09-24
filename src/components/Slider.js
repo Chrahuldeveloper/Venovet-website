@@ -43,8 +43,9 @@ export default function Slider() {
               cursor={"pointer"}
             />
           </div>
-          <div className="text-center md:text-left lg:space-y-4 lg:-ml-36 animate__animated animate__fadeIn">
-            <h1 className="text-3xl font-semibold text-white md:text-4xl lg:text-6xl">
+
+          <div className="text-center md:text-left lg:space-y-4 lg:-ml-36 ">
+            <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-6xl">
               {Data[index].Tittle}
             </h1>
             <h2 className="my-4 text-2xl font-semibold text-[#ff5e15] md:text-4xl lg:text-6xl">
@@ -82,5 +83,6 @@ export default function Slider() {
         </div>
       </div>
     </div>
+    // </div>
   );
 }

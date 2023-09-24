@@ -37,7 +37,7 @@ export default function Transpotation({ data }) {
                 <img
                   src={item.image}
                   alt={i}
-                  className="w-80 h-60 rounded-lg"
+                  className="rounded-lg w-80 h-60"
                 />
                 <div className="text-[#7a7a7a] space-y-3">
                   <p>{item.Para}</p>
@@ -69,7 +69,7 @@ export default function Transpotation({ data }) {
         <h1 className="font-semibold md:text-xl ">
           Types Of Vehicles We Provide
         </h1>
-        <div className="grid grid-cols-4 gap-3 mt-5 place-items-center">
+        <div className="grid gap-3 mt-5 grid-col-1 md:grid-cols-3 lg:grid-col-4 place-items-center">
           {vechilesData.map((item, index) => {
             return (
               <React.Fragment key={index}>

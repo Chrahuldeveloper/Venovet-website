@@ -83,12 +83,12 @@ function Security({ data }) {
         <h1 className="text-2xl font-bold">{data?.Tittle2}</h1>
         <p>{data?.Para2}</p>
         <div className="items-center justify-around pt-4 lg:flex lg:space-x-6">
-          <div className="space-y-5 md:space-y-0 lg:pt-8 grid md:grid-cols-2 md:gap-y-5">
+          <div className="grid space-y-5 md:space-y-0 lg:pt-8 md:grid-cols-2 md:gap-y-5">
             {picdata.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className={`flex flex-row-reverse ${
+                  className={`flex flex-col  items-center ${
                     index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"
                   }  md:space-x-4`}
                 >
@@ -101,7 +101,7 @@ function Security({ data }) {
                     <p className="text-[#777777]">{item.p}</p>
                   </div>
                   <div
-                    className={`flex p-1 border-2 ${
+                    className={`flex p-1 w-8 h-8 border-2 ${
                       index % 2 !== 0 ? "border-orange-500 " : "border-blue-500"
                     }  h-9 md:h-12 md:p-2`}
                   >
@@ -119,7 +119,7 @@ function Security({ data }) {
           <h1 className="text-3xl font-bold">{data?.Tittle3}</h1>
           <p>{data?.Tittle3}</p>
         </div>
-        <div className="grid pt-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid pt-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
           {card.map((item, index) => {
             return (
               <div

@@ -21,7 +21,7 @@ export default function DropDown({ ismobile, type }) {
                     className={` ${
                       ismobile
                         ? "text-[#868686] hover:text-orange-500 transition duration-300 ease-in-out py-1.5 px-3 text-sm"
-                        : "hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b "
+                        : "hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b z-50"
                     } `}
                   >
                     {item.catgeory}
@@ -46,7 +46,7 @@ export default function DropDown({ ismobile, type }) {
                     className={` ${
                       ismobile
                         ? "text-[#868686] hover:text-orange-500 transition duration-300 ease-in-out py-1.5 px-3 text-sm"
-                        : "hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b "
+                        : "hover:text-[#ff5e15] transition duration-300 ease-in-out py-1.5 px-3 border-b z-50"
                     } `}
                   >
                     {item.catgeory}

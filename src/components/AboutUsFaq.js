@@ -8,8 +8,8 @@ const AboutUsFaq = ({ Q, children, open, toggle }) => {
       <div className="cursor-pointer " onClick={toggle}>
         <h1
           className={`${
-            !open ? "text-black" : "text-[#ff4747]"
-          }  lg:text-xl  md:text-xl text-lg`}
+            !open ? "text-black" : "text-[#ff5e15]"
+          }    md:text-xl text-lg`}
         >
           {Q}
         </h1>
@@ -35,21 +35,25 @@ const FAQ = () => {
   };
 
   return (
-    <section className="lg:max-w-[75vw] mx-auto mt-10">
+    <section className=" mx-auto ">
       <div className="mx-auto">
-        <div className="flex items-start mt-3 items md:justify-between">
-          <div className="space-y-5">
+        <div className="flex items-start mt-3 space-x-20 items md:justify-around">
+          <div className="space-y-5 pt-10">
             {Data.map((item, index) => {
               return (
-                <div key={index} className=" lg:max-w-sm">
+                <div key={index} className=" lg:max-w-md">
                   <AboutUsFaq
                     Q={item.q}
                     open={index === openIndex}
                     toggle={() => toggleFaq(index)}
                   >
-                    <p className="my-4">{item.Subq}</p>
-                    <p className="text-[#7f8895] font-light my-4">{item.a}</p>
-                    <p className="my-4 underline">{item.underline}</p>
+                    <p className="my-1 text-justify">{item.Subq}</p>
+                    <p className="text-[#7f8895] font-light my-4 text-justify">
+                      {item.a}
+                    </p>
+                    <p className="my-4 underline text-justify">
+                      {item.underline}
+                    </p>
                   </AboutUsFaq>
                 </div>
               );

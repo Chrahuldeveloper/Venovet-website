@@ -1,6 +1,6 @@
 const Data = [
   {
-    Tittle: "WareHouse",
+    Tittle: "Warehouse",
     HighLight: "Management",
     Para: "Give an efficiency boost your inventory mangement with our experts. we are consistent, reliable and efficient",
     image: "https://www.venovet.com/assets/images/resources/slide1-1.jpg",
@@ -67,7 +67,7 @@ const Data = [
     Para1: "Give an efficiency boost to your inventory management",
   },
   {
-    Tittle: "Industrail",
+    Tittle: "Industrial",
     HighLight: "Real Estate",
     catgeory: "Industrial Real States",
     Para: "We help you find and lease warehouses and industry sheds with the help of our warehouse network and we will build to suit (BTS) according to your requirement.",

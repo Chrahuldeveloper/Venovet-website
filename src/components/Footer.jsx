@@ -96,7 +96,7 @@ const Footer = () => {
             </p>
           </div>
           {/* second section  */}
-          <div className="space-y-8 md:flex md:justify-between md:space-y-0 md:space-x-20 md:pl-8">
+          <div className="space-y-8 md:flex md:justify-between md:space-y-0 md:space-x-20 ">
             <div className="space-y-4 ">
               <h1 className="text-lg font-semibold text-white">ABOUT US</h1>
               <ul className="text-[17px] cursor-pointer">

@@ -14,7 +14,6 @@ import { db } from "../Firebase";
 export default function WhoWeServer() {
   const data = useLocation();
   const { categoryid } = useParams();
-  console.log(categoryid);
   const { image, Tittle, Para } = data.state;
   const [servedata, setservedata] = useState();
 

@@ -27,7 +27,7 @@ export default function Blogs() {
             <h1 className="font-bold lg:ml text-[#ff5e15]  md:text-xl">
               Our Blogs
             </h1>
-            <h2 className="text-2xl font-bold   md:text-3xl">
+            <h2 className="text-2xl font-bold md:text-3xl">
               Recent Articles
             </h2>
           </div>
@@ -46,7 +46,7 @@ export default function Blogs() {
           </div>
         </div>
         <div
-          className="max-w-5xl mx-auto overflow-x-scroll md:max-w-7xl scroll-smooth"
+          className="mx-auto overflow-x-scroll max-w-7xl md:max-w-7xl scroll-smooth"
           ref={blogs}
         >
           <div className="flex flex-row px-8 my-10 gap-9" onClick={scrollRight}>
@@ -62,7 +62,7 @@ export default function Blogs() {
                     <div className="p-2.5 border rounded-md duration-500 ease-in-out cursor-pointer hover:brightness-75">
                       <img
                         src={item.image}
-                        className=" duration-500 ease-in-out cursor-pointer hover:brightness-75"
+                        className="max-w-sm duration-500 ease-in-out cursor-pointer hover:brightness-75"
                         alt={item.image + "xyz"}
                       />
                     </div>
@@ -82,7 +82,7 @@ export default function Blogs() {
         <div className="flex justify-center mt-6">
           <Link to="/BlogPage">
             <button className="bg-[#ff5e15] relative overflow-hidden group  transition ease-in-out duration-300 font-semibold rounded-xl  text-white px-8 py-1.5 flex items-center ">
-              <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+              <span className="absolute left-0 w-0 h-full transition-all duration-300 ease-in-out bg-orange-700 opacity-100 group-hover:w-full"></span>
               <span className="relative flex items-center">
                 View all Articles
               </span>

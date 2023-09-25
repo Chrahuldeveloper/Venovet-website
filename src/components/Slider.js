@@ -38,13 +38,12 @@ export default function Slider() {
             <AiOutlineArrowLeft
               onClick={prev}
               size={45}
-              className="w-14 h-14  md:w-11 md:h-11 "
+              className="hidden md:block md:w-11 md:h-11 "
               color="white"
               cursor={"pointer"}
             />
           </div>
-
-          <div className="text-center md:text-left lg:space-y-4 lg:-ml-36 ">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left lg:space-y-4 lg:-ml-36 ">
             <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-6xl">
               {Data[index].Tittle}
             </h1>
@@ -62,8 +61,8 @@ export default function Slider() {
                 Para: Data[index].Para1,
               }}
             >
-              <button className="bg-[#ff5e15]  relative  flex space-x-2 transition duration-300 ease-in-out items-center font-semibold rounded-lg overflow-hidden shadow-2xl shadow-black text-white px-6 py-1.5 my-4 group">
-                <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+              <button className="bg-[#ff5e15] relative  flex space-x-2 transition duration-300 ease-in-out items-center font-semibold rounded-lg overflow-hidden shadow-2xl shadow-black text-white px-6 py-1.5 my-4 group">
+                <span className="absolute left-0 w-0 h-full transition-all duration-300 ease-in-out bg-orange-700 opacity-100 group-hover:w-full"></span>
                 <span className="relative flex items-center">
                   Learn More
                   <HiMiniArrowSmallRight size={30} />
@@ -75,7 +74,7 @@ export default function Slider() {
             <AiOutlineArrowRight
               onClick={forward}
               size={45}
-              className=" md:w-11 md:h-11 w-14 h-14"
+              className="hidden md:block md:w-11 md:h-11 "
               color="white"
               cursor={"pointer"}
             />

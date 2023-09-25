@@ -2,7 +2,7 @@ import React from "react";
 import { venovetChart } from "../../images/index";
 import { KeyBenifits } from "../../components/index";
 
-export default function WhoWeServeContent({data}) {
+export default function WhoWeServeContent({ data }) {
   const WhyUsData = [
     {
       image: "https://venovet.com/assets/images/icon.png",
@@ -80,12 +80,9 @@ export default function WhoWeServeContent({data}) {
           {DynamicContent.Tittle3}
         </h1>
         <p className="text-[#7a7a7a] leading-8">
-        <p>{data?.How}</p>
+          <p>{data?.How}</p>
         </p>
-        <img
-          src={data?.Image}
-          alt=""
-        />
+        <img src={data?.Image} alt="" />
       </div>
 
       <div className="space-y-4 mt-7">

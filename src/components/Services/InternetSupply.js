@@ -106,7 +106,7 @@ export default function InternetSupply({ data }) {
       <div>
         <div className="flex flex-col items-start lg:flex-row mt-7 gap-7">
           <img
-            className="max-w-sm rounded-lg "
+            className="max-w-xs rounded-lg "
             src={data?.SubCat1?.image}
             alt="imge"
           />
@@ -142,7 +142,7 @@ export default function InternetSupply({ data }) {
         <h1 className="font-semibold lg:text-xl">{data?.SubCat8?.Tittle}</h1>
         <div className="flex flex-col items-start lg:flex-row mt-7 gap-7">
           <img
-            className="max-w-sm rounded-lg "
+            className="max-w-xs rounded-lg "
             src={data?.SubCat8?.image}
             alt="imge "
           />

@@ -27,9 +27,7 @@ export default function Blogs() {
             <h1 className="font-bold lg:ml text-[#ff5e15]  md:text-xl">
               Our Blogs
             </h1>
-            <h2 className="text-2xl font-bold md:text-3xl">
-              Recent Articles
-            </h2>
+            <h2 className="text-2xl font-bold md:text-3xl">Recent Articles</h2>
           </div>
 
           <div className="flex items-center gap-0.5 space-x-4">
@@ -62,7 +60,7 @@ export default function Blogs() {
                     <div className="p-2.5 border rounded-md duration-500 ease-in-out cursor-pointer hover:brightness-75">
                       <img
                         src={item.image}
-                        className="max-w-xs duration-500 ease-in-out cursor-pointer hover:brightness-75"
+                        className=" duration-500 ease-in-out cursor-pointer hover:brightness-75"
                         alt={item.image + "xyz"}
                       />
                     </div>

@@ -43,11 +43,11 @@ export default function Slider() {
               cursor={"pointer"}
             />
           </div>
-          <div className="flex flex-col items-center text-center md:items-start md:text-left lg:space-y-4 lg:-ml-36 ">
-            <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-6xl">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left  lg:-ml-56 ">
+            <h1 className="text-3xl font-poppins text-white md:text-4xl lg:text-5xl">
               {Data[index].Tittle}
             </h1>
-            <h2 className="my-4 text-2xl font-semibold text-[#ff5e15] md:text-4xl lg:text-6xl">
+            <h2 className="my-4 mt-2 font-poppins text-2xl font-semibold text-[#ff5e15] md:text-4xl lg:text-5xl">
               {Data[index].HighLight}
             </h2>
             <p className="max-w-3xl my-4 text-sm leading-7 text-white sm:text-lg font- lg:text-xl">

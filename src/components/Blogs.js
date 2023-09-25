@@ -62,7 +62,7 @@ export default function Blogs() {
                     <div className="p-2.5 border rounded-md duration-500 ease-in-out cursor-pointer hover:brightness-75">
                       <img
                         src={item.image}
-                        className="max-w-sm duration-500 ease-in-out cursor-pointer hover:brightness-75"
+                        className="max-w-xs duration-500 ease-in-out cursor-pointer hover:brightness-75"
                         alt={item.image + "xyz"}
                       />
                     </div>

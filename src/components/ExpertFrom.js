@@ -159,10 +159,11 @@ export default function ExpertFrom() {
           />
         </div>
         <button
-          className="text-white w-32 bg-[#fe8704] text-sm font-bold rounded px-4 py-1 hover:brightness-90 ease-in-out duration-300"
+          className="text-white w-32 flex items-center relative overflow-hidden group bg-[#fe8704] text-sm font-bold rounded px-4 py-1 justify-center ease-in-out duration-300"
           onClick={onNumSubmit}
         >
-          SEND OTP
+          <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+          <span className="relative flex items-center">SEND OTP</span>
         </button>
         <div>
           <input
@@ -222,9 +223,10 @@ export default function ExpertFrom() {
         <div className="flex items-center justify-center mt-6">
           <button
             type="submit"
-            className="bg-orange-500 tex-white font-semibold rounded-lg shadow-2xl shadow-black text-white px-28 py-1.5"
+            className="bg-[#ff5e15]  font-semibold rounded-lg flex items-center justify-center relative overflow-hidden group text-white px-28 py-1.5"
           >
-            Submit
+            <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+            <span className="relative flex items-center">Submit</span>
           </button>{" "}
         </div>
         <div id="sign-in-button"></div>

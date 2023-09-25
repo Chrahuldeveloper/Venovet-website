@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import { HiMiniArrowSmallRight } from "react-icons/hi2";
+import { LiaLessThanSolid, LiaGreaterThanSolid } from "react-icons/lia";
+import { AiOutlineArrowRight} from "react-icons/ai";
 import Data from "../Data/SliderData";
 import { Link } from "react-router-dom";
 export default function Slider() {
@@ -35,7 +35,7 @@ export default function Slider() {
       >
         <div className="flex items-center justify-between h-screen px-3 md:px-10 gap-7 ">
           <div className="p-2.5 bg-[#00000000] rounded-full hover:bg-[#ff5e15] transition duration-500 ease-in-out">
-            <AiOutlineArrowLeft
+            <LiaLessThanSolid
               onClick={prev}
               size={45}
               className="hidden md:block md:w-11 md:h-11 "
@@ -65,13 +65,13 @@ export default function Slider() {
                 <span className="absolute left-0 w-0 h-full transition-all duration-300 ease-in-out bg-orange-700 opacity-100 group-hover:w-full"></span>
                 <span className="relative flex items-center">
                   Learn More
-                  <HiMiniArrowSmallRight size={30} />
+                  <AiOutlineArrowRight className="ml-3" size={25} />
                 </span>
               </button>
             </Link>
           </div>
           <div className="p-2.5 bg-[#00000000] rounded-full hover:bg-[#ff5e15] transition duration-500">
-            <AiOutlineArrowRight
+            <LiaGreaterThanSolid
               onClick={forward}
               size={45}
               className="hidden md:block md:w-11 md:h-11 "

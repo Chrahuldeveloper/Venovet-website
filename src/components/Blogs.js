@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Blog from "../Data/BlogData";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+
 export default function Blogs() {
   const blogs = useRef(null);
   const navigate = useNavigate();
@@ -27,22 +28,24 @@ export default function Blogs() {
             <h1 className="font-bold lg:ml text-[#ff5e15]  md:text-xl">
               Our Blogs
             </h1>
-            <h2 className="text-2xl font-bold md:text-3xl">
-              Recent Articles
-            </h2>
+            <h2 className="text-2xl font-bold md:text-3xl">Recent Articles</h2>
           </div>
 
           <div className="flex items-center gap-0.5 space-x-4">
-            <AiOutlineArrowLeft
-              onClick={scrollLeft}
-              color="orange"
-              className="p-2 rounded-full shadow-md w-9 h-9 md:p-3 md:w-14 md:h-14"
-            />
-            <AiOutlineArrowRight
-              onClick={scrollRight}
-              className="p-2 rounded-full shadow-md w-9 h-9 md:p-3 md:w-14 md:h-14"
-              color="orange"
-            />
+            <div className="p-2.5 bg-[#00000000] rounded-full hover:bg-[#ff5e15] bg-white transition duration-300 ease-in-out">
+              <AiOutlineArrowLeft
+                size={28}
+                className="hover:text-white text-[#ff5e15] "
+                cursor={"pointer"}
+              />
+            </div>
+            <div className="p-2.5 bg-[#00000000] rounded-full hover:bg-[#ff5e15] bg-white transition duration-300 ease-in-out">
+              <AiOutlineArrowRight
+                size={28}
+                className="hover:text-white text-[#ff5e15] "
+                cursor={"pointer"}
+              />
+            </div>
           </div>
         </div>
         <div
@@ -62,7 +65,7 @@ export default function Blogs() {
                     <div className="p-2.5 border rounded-md duration-500 ease-in-out cursor-pointer hover:brightness-75">
                       <img
                         src={item.image}
-                        className="max-w-xs duration-500 ease-in-out cursor-pointer hover:brightness-75"
+                        className="max-w-sm duration-500 ease-in-out cursor-pointer hover:brightness-75"
                         alt={item.image + "xyz"}
                       />
                     </div>

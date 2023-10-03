@@ -33,8 +33,8 @@ export default function Transpotation({ data }) {
 
   return (
     <>
-      <div className="bg-[#ff5e15] max-w-[50vw] md:max-w-[35vw] lg:max-w-[15vw] rounded-lg p-10 translate-y-72 translate-x-28">
-        <h1 className="text-2xl text-center text-white ">
+      <div className="bg-[#ff5e15] border-white border-4 max-w-[70vw] md:max-w-[35vw] lg:max-w-[19vw] rounded-lg p-10 translate-y-72 translate-x-28">
+        <h1 className="text-xl text-center font-semibold  text-white font-poppins ">
           Road <br /> Transportation
         </h1>
       </div>
@@ -82,7 +82,7 @@ export default function Transpotation({ data }) {
           {vechilesData.map((item, index) => {
             return (
               <React.Fragment key={index}>
-                <div className="w-44 text-sm bg-[#f7f7f750] p-5 text-center rounded-lg shadow-md">
+                <div className=" w-full p-7  lg:w-44 text-sm bg-[#f7f7f750] lg:p-5 text-center rounded-lg shadow-md">
                   <h1>{item.Name}</h1>
                 </div>
               </React.Fragment>

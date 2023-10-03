@@ -53,7 +53,7 @@ export default function About() {
         <h1 className="text-xl font-semibold md:text-3xl">
           We provide on-demand warehousing space for business and consumers
         </h1>
-        <h2 className="text-xl font-bold text-[#ff5e15] md:text-xl lg:text-3xl">
+        <h2 className="text-[1.9rem] font-bold text-[#ff5e15]  lg:text-3xl">
           Logistics Operations
         </h2>
         <p className="max-w-lg font-medium leading-7 text-[#414042]">

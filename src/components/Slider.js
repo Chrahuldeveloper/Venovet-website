@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { LiaLessThanSolid, LiaGreaterThanSolid } from "react-icons/lia";
-import { AiOutlineArrowRight} from "react-icons/ai";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import Data from "../Data/SliderData";
 import { Link } from "react-router-dom";
 export default function Slider() {
@@ -47,10 +47,10 @@ export default function Slider() {
             <h1 className="text-3xl font-poppins text-white md:text-4xl lg:text-5xl">
               {Data[index].Tittle}
             </h1>
-            <h2 className="my-4 mt-2 font-poppins text-2xl font-semibold text-[#ff5e15] md:text-4xl lg:text-5xl">
+            <h2 className="mb-4  font-poppins text-[1.9rem] font-semibold text-[#ff5e15] md:text-4xl lg:text-5xl">
               {Data[index].HighLight}
             </h2>
-            <p className="max-w-3xl my-4 text-sm leading-7 text-white sm:text-lg font- lg:text-xl">
+            <p className="max-w-3xl lg:my-4 text-[1.125rem] leading-8 text-white  lg:text-xl">
               {Data[index].Para}
             </p>
             <Link

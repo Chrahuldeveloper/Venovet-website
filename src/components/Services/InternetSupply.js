@@ -85,7 +85,7 @@ export default function InternetSupply({ data }) {
     <section>
       {/* section 1 */}
       <div>
-        <h1 className="text-lg font-semibold text-center md:text-xl lg:text-2xl">
+        <h1 className="text-xl font-semibold lg:text-3xl font-poppins text-center">
           Accelerate your business growth with high-performance Internet leased
           line connection
         </h1>
@@ -117,7 +117,7 @@ export default function InternetSupply({ data }) {
       </div>
 
       <div className="mt-7">
-        <h1 className="text-lg font-semibold text-center md:text-xl lg:text-2xl">
+        <h1 className="text-xl font-semibold lg:text-3xl font-poppins text-center">
           Uncontended connection
         </h1>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 mt-7">
@@ -139,7 +139,9 @@ export default function InternetSupply({ data }) {
       </div>
 
       <div className="mt-10">
-        <h1 className="font-semibold lg:text-xl">{data?.SubCat8?.Tittle}</h1>
+        <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
+          {data?.SubCat8?.Tittle}
+        </h1>
         <div className="flex flex-col items-start lg:flex-row mt-7 gap-7">
           <img
             className="max-w-xs rounded-lg "
@@ -172,7 +174,7 @@ export default function InternetSupply({ data }) {
       </ScrollContainer>
 
       <div className="mt-8 space-y-5">
-        <h1 className="text-lg font-semibold md:text-xl lg:text-2xl">
+        <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
           {data?.SubCat14?.Tittle}
         </h1>
         <p className="text-[#7a7a7a]">{data?.SubCat14?.Para}</p>
@@ -192,14 +194,14 @@ export default function InternetSupply({ data }) {
       </div>
 
       <div className="mt-8 space-y-5">
-        <h1 className="text-lg font-semibold md:text-xl lg:text-2xl">
+        <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
           {data?.SubCat15?.Tittle}
         </h1>
         <p className="text-[#7a7a7a]">{data?.SubCat15?.Para}</p>
       </div>
 
       <div className="mt-8 space-y-5">
-        <h1 className="text-lg font-semibold md:text-xl lg:text-2xl">
+        <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
           Why Us?
         </h1>
         <ul className="text-[#7a7a7a]">

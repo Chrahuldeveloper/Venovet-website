@@ -6,7 +6,7 @@ const Data = [
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
   },
   {
-    catgeory: "Fast Moving Consumer Durables",
+    catgeory: "Fast Moving Consumer Durables (FMCD)",
     Tittle: "Venovet's Value Added Services (VAS)",
     image: "https://venovet.com/assets/images/bgs8.jpg",
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
@@ -42,14 +42,14 @@ const Data = [
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
   },
   {
-    catgeory: "Lens And Frames",
-    Tittle: "Lens And Frames",
+    catgeory: "Lens and Frames",
+    Tittle: "Lens and Frames",
     image: "https://venovet.com/assets/images/bgs8.jpg",
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
   },
   {
-    catgeory: "Auto - Mobility",
-    Tittle: "Auto - Mobility",
+    catgeory: "Auto-Mobility",
+    Tittle: "Auto-Mobility",
     image: "https://venovet.com/assets/images/bgs8.jpg",
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
   },
@@ -60,8 +60,8 @@ const Data = [
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
   },
   {
-    catgeory: "Fruits & Vegetables",
-    Tittle: "Fruits & Vegetables",
+    catgeory: "Fruits & vegetables",
+    Tittle: "Fruits & vegetables",
     image: "https://venovet.com/assets/images/bgs8.jpg",
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
   },

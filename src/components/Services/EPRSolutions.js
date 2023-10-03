@@ -60,7 +60,7 @@ export default function EPRSolutions({ data }) {
   return (
     <>
       <div className="space-y-8 text-[#7a7a7a] flex justify-center items-center flex-col">
-        <h1 className="text-lg font-bold text-black md:text-xl lg:text-2xl">
+        <h1 className="text-xl font-semibold lg:text-3xl font-poppins text-black">
           {data?.Tittle1}
         </h1>
         <p>{data?.Para1}</p>
@@ -70,8 +70,7 @@ export default function EPRSolutions({ data }) {
           return (
             <React.Fragment key={index}>
               <div className="max-w-xs p-5 text-center shadow-lg shadow-slate-300">
-                <div className=
-                "space-y-2">
+                <div className="space-y-2">
                   <h1 className="font-semibold text-orange-500 ">
                     {item.Tittle}
                   </h1>
@@ -99,7 +98,7 @@ export default function EPRSolutions({ data }) {
       </div>
 
       <div className="mt-7">
-        <h1 className="text-lg font-bold text-center">
+        <h1 className="text-xl font-semibold lg:text-3xl font-poppins text-center">
           Check Out The Modules We Support Your Business With
         </h1>
       </div>

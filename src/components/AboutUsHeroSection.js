@@ -10,12 +10,12 @@ export default function AboutUsHeroSection() {
           backgroundSize: "cover",
           height: "40vh",
         }}
-        className="space-y-5 pl-20 md:pl-36 pt-24"
+        className="space-y-5 pl-8 md:pl-20 pt-16"
       >
-        <h1 className="text-orange-500 font-bold md:text-xl text-lg">
+        <h1 className="text-[#ff5e15] font-bold font-poppins  text-xl">
           About Venovet
         </h1>
-        <p className="text-white font-bold md:text-2xl text-xl ">
+        <p className="text-white font-bold text-2xl  ">
           FOR ALL YOUR <br /> CARGO NEEDS
         </p>
       </div>

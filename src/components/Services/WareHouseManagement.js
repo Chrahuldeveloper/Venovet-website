@@ -7,7 +7,7 @@ export default function WareHouseManagement({ data }) {
   return (
     <section className="mt-5 md:mt-0">
       <div className="space-y-6">
-        <h1 className="max-w-sm font-semibold md:max-w-full md:text-2xl lg:text-4xl">
+        <h1 className="max-w-sm font-semibold font-poppins md:max-w-full text-[2rem] lg:text-4xl">
           {data?.Tittle1}
         </h1>
         <div className="flex flex-col items-start space-y-10 lg:space-y-0 lg:space-x-10 lg:flex-row text-[#7a7a7a]">
@@ -17,7 +17,9 @@ export default function WareHouseManagement({ data }) {
       </div>
       {/* Offerings section*/}
       <div className="mt-5">
-        <h1 className="text-lg md:text-xl lg:text-3xl">Our Offerings</h1>
+        <h1 className="font-poppins font-medium text-[2rem] lg:text-4xl">
+          Our Offerings
+        </h1>
         <div className="flex flex-col mt-5 space-y-4 md:items-start lg:space-x-10 lg:flex-row lg:space-y-0">
           <img
             className="max-w-xs rounded-lg"
@@ -94,7 +96,7 @@ export default function WareHouseManagement({ data }) {
 
       {/* efficiency your competitive advantage section */}
       <div className="mt-7">
-        <h1 className="text-xl font-semibold text-center md:text-2xl lg:text-3xl ">
+        <h1 className="text-[2rem] font-medium  text-center  lg:text-4xl ">
           {data?.Tittle3}
         </h1>
         <Card data={data} />
@@ -103,7 +105,7 @@ export default function WareHouseManagement({ data }) {
       {/* Experience Flexible Warehousing section */}
       <div className="flex flex-col items-start justify-start gap-8 mt-8 lg:flex-row">
         <div className="space-y-3">
-          <h1 className="text-lg font-bold md:text-xl lg:text-2xl">
+          <h1 className="text-[2rem] font-bold  lg:text-4xl">
             {data?.Subcat9?.Tittle}
           </h1>
           <h2 className="font-semibold">{data?.Subcat9?.SubTittle}</h2>
@@ -121,7 +123,9 @@ export default function WareHouseManagement({ data }) {
       {/* why us section */}
       <div className="mt-7">
         <div className="space-y-3">
-          <h1 className="text-lg md:text-xl lg:text-3xl">{data?.Tittle5}</h1>
+          <h1 className="text-[2rem] font-semibold lg:text-4xl">
+            {data?.Tittle5}
+          </h1>
           <p className="text-[#777777] leading-7 text-sm">{data?.Para5}</p>
         </div>
         <div className="grid grid-cols-1 gap-8 mt-6 lg:grid-cols-3">

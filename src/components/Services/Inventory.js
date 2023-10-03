@@ -48,7 +48,7 @@ export default function Inventory({ data }) {
       <div className="flex flex-col gap-5 lg:flex-row">
         <img src={data?.SubCat1?.image} className="rounded-lg w-72" alt="" />
         <div className="space-y-4 ">
-          <h1 className="text-lg font-semibold lg:text-2xl">
+          <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
             {data?.SubCat1?.Tittle}
           </h1>
           <p className="text-[#777777]">{data?.SubCat1?.Para}</p>
@@ -58,7 +58,7 @@ export default function Inventory({ data }) {
       {/*Eligibility For Stock Audit Services */}
       <div className="flex flex-col items-start gap-6 mt-8 lg:flex-row">
         <div className="space-y-3">
-          <h1 className="text-lg font-semibold lg:text-2xl">
+          <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
             {data?.SubCat2?.Tittle}
           </h1>
           <ul className="space-y-3 text-[#777777]">
@@ -75,7 +75,7 @@ export default function Inventory({ data }) {
 
       {/*Process for Stock Audit Services */}
       <div>
-        <h1 className="text-lg font-semibold md:text-xl lg:text-2xl">
+        <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
           Process for Stock Audit Services
         </h1>
         <div className="grid grid-cols-1 gap-5 mt-8 lg:grid-cols-2 ">
@@ -95,7 +95,7 @@ export default function Inventory({ data }) {
 
       {/* Benefits  of Stock Audit Services*/}
       <div className="mt-8">
-        <h1 className="text-lg font-semibold md:text-xl lg:text-2xl">
+        <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
           Benefits of Stock Audit Services
         </h1>
         <div className="grid grid-cols-1 gap-5 mt-6 ">

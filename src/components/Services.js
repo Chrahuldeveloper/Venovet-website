@@ -8,8 +8,8 @@ function Services() {
   return (
     <div className="px-10 py-16 pt-24 bg-[#dae2ed] space-y-14">
       <div className="space-y-4">
-        <h1 className="text-[#ff5e15] font-semibold ml-20">OUR SERVICES</h1>
-        <h1 className="ml-20 text-3xl font-bold md:text-4xl">What We Do</h1>
+        <h1 className="text-[#ff5e15] font-semibold lg:ml-20">OUR SERVICES</h1>
+        <h1 className="lg:ml-20 text-3xl font-bold md:text-4xl">What We Do</h1>
       </div>
       <div className="grid py-3 space-y-20 md:space-y-0 md:grid-cols-2 lg:grid-cols-4 md:gap-14 lg:gap-7 place-items-center lg:px-20">
         {Data.map((card, index) => {
@@ -25,7 +25,7 @@ function Services() {
                     hover === index
                       ? "brightness-75 ease-in-out transition duration-300 scale-110 rotate-3"
                       : null
-                  }  cursor-pointer `}
+                  }  cursor-pointer w-96 lg:w-0`}
                   src={card.image}
                   alt=""
                 />
@@ -41,7 +41,11 @@ function Services() {
                     src="https://www.venovet.com/assets/images/logo-br-grey.png"
                     alt=""
                   />
-                  <p className="text-lg text-[#2a2a2a] leading-5 ">
+                  <p
+                    className={`text-lg ${
+                      hover === index ? "text-white" : "text-[#2a2a2a] "
+                    }  leading-5  transition ease-in-out duration-500 `}
+                  >
                     {card.Tittle}
                   </p>
                 </div>

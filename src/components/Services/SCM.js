@@ -77,7 +77,7 @@ export default function SCM() {
           alt=""
         />
         <div className="space-y-3">
-          <h1 className="text-lg font-semibold md:text-xl lg:text-2xl">
+          <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins">
             Overview
           </h1>
           <p className="text-[#777777]">
@@ -105,7 +105,7 @@ export default function SCM() {
 
       <div className="flex flex-col gap-5 mt-7 lg:flex-row">
         <div className="space-y-3">
-          <h1 className="text-lg font-semibold md:text-xl lg:text-2xl">
+          <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins">
             Key Competencies
           </h1>
           <p className="text-[#777777]">
@@ -132,7 +132,7 @@ export default function SCM() {
       </div>
 
       <div>
-        <h1 className="text-lg font-semibold md:text-xl lg:text-2xl">
+        <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins">
           OUR APPROACH
         </h1>
         <div className="flex flex-col gap-5 lg:flex-row mt-7">
@@ -165,7 +165,7 @@ export default function SCM() {
       </div>
 
       <div className="space-y-5 text-[#777777] mt-10">
-        <h1 className="text-lg font-semibold text-center text-black md:text-xl lg:text-2xl">
+        <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins text-black text-center">
           OUR PRODUCT SOLUTIONS
         </h1>
         <p>

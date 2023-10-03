@@ -11,8 +11,10 @@ export default function Features() {
       data-aos-easing="ease-in-out"
     >
       <div className="pt-10 space-y-1 text-center ">
-        <h1 className="text-lg font-bold text-slate-500">OUR GOODNESS</h1>
-        <h2 className="text-xl font-bold text-orange-500 md:text-3x lg:text-4xl">
+        <h1 className="text-[0.875rem] font-bold text-slate-500">
+          OUR GOODNESS
+        </h1>
+        <h2 className="text-[2.25rem] leading-10 md:leading-none font-bold text-[#fe8704] md:text-3xl lg:text-4xl">
           What Makes Us Special
         </h2>
       </div>
@@ -23,7 +25,7 @@ export default function Features() {
               <div className="flex items-center max-w-xl gap-10 md:gap-6">
                 <div className="bg-white p-4 rounded-full">{item.icons}</div>
                 <div className="space-y-3.5">
-                  <h1 className="font-bold text-lg lg:text-[1.150rem] text-[#757575]">
+                  <h1 className="font-bold text-[1.125rem] lg:text-[1.150rem] text-[#6f6f6f]">
                     {item.Tittle}
                   </h1>
                   <p className="text-[#777777] ">{item.Para}</p>

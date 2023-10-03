@@ -53,16 +53,16 @@ export default function WhoWeServeContent({ data }) {
   };
 
   return (
-    <section className="max-w-3xl">
+    <section className="md:max-w-3xl p-4">
       <div className="space-y-4 text-[#7a7a7a]">
-        <h1 className="font-bold text-black md:text-lg lg:text-2xl">
+        <h1 className="font-semibold font-poppins text-black text-2xl md:text-3xl lg:text-4xl">
           {DynamicContent.Tittle1}
         </h1>
         <p>{data?.Overview}</p>
       </div>
 
       <div className="mt-7">
-        <h1 className="font-bold text-black md:text-lg lg:text-2xl">
+        <h1 className="font-semibold font-poppins text-black text-2xl md:text-3xl lg:text-4xl">
           {DynamicContent.Tittle2}
         </h1>
         <div className="flex flex-col items-start gap-5 mt-5 md:flex-row">
@@ -76,7 +76,7 @@ export default function WhoWeServeContent({ data }) {
       </div>
 
       <div className="space-y-4 mt-7">
-        <h1 className="font-bold text-black md:text-lg lg:text-2xl">
+        <h1 className="font-semibold font-poppins text-black text-2xl md:text-3xl lg:text-4xl">
           {DynamicContent.Tittle3}
         </h1>
         <p className="text-[#7a7a7a] leading-8">
@@ -86,7 +86,9 @@ export default function WhoWeServeContent({ data }) {
       </div>
 
       <div className="space-y-4 mt-7">
-        <h1 className="font-bold text-black md:text-lg lg:text-2xl">Why Us!</h1>
+        <h1 className="font-semibold font-poppins text-black text-2xl md:text-3xl lg:text-4xl">
+          Why Us!
+        </h1>
         <p className="text-[#7a7a7a] leading-8">{data?.Why}</p>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {WhyUsData.map((item, index) => {

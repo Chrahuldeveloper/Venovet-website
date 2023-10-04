@@ -104,7 +104,9 @@ function Enquire() {
           />
         </div>
         <div className="bg-white rounded-r-md flex flex-col items-center pt-10 py-10 lg:pb-0  lg:w-[50%]">
-          <h1 className="text-[#fe8704] lg:text-4xl font-bold">Enquire Now</h1>
+          <h1 className="text-[#fe8704] text-[2.2rem] lg:text-4xl font-bold">
+            Enquire Now
+          </h1>
           <form onSubmit={handleSubmit}>
             <div className="">
               <div className="grid md:grid-cols-2 gap-4  pt-8 text-[#333]">

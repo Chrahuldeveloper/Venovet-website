@@ -11,12 +11,12 @@ export default function ServiceHeroSection({ image, Tittle, Para }) {
             backgroundSize: "cover",
             height: "40vh",
           }}
-          className="space-y-5 pl-20 md:pl-36 pt-24"
+          className="space-y-5 pl-8 md:pl-16 pt-16"
         >
-          <h1 className="text-orange-500 font-bold md:text-xl text-lg">
+          <h1 className="text-[#ff5e15] font-poppins font-bold md:text-xl text-lg">
             {Tittle}
           </h1>
-          <p className="text-white font-bold md:text-2xl text-xl">{Para}</p>
+          <p className="text-white font-bold text-2xl ">{Para}</p>
         </div>
       </div>
     </>

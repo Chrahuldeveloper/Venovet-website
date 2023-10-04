@@ -10,7 +10,9 @@ export default function LogisticsProjects({ data }) {
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">{data?.SubCat1?.Tittle}</h1>
+          <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
+            {data?.SubCat1?.Tittle}
+          </h1>
           <p className="text-[#7a7a7a]">{data?.SubCat1?.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
@@ -47,7 +49,9 @@ export default function LogisticsProjects({ data }) {
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">{data?.SubCat2?.Tittle}</h1>
+          <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
+            {data?.SubCat2?.Tittle}
+          </h1>
           <p className="text-[#7a7a7a]">{data?.SubCat2?.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
@@ -82,7 +86,9 @@ export default function LogisticsProjects({ data }) {
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">{data?.SubCat3?.Tittle}</h1>
+          <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
+            {data?.SubCat3?.Tittle}
+          </h1>
           <p className="text-[#7a7a7a]">{data?.SubCat3?.Para}</p>
           <ul className="pl-4 text-[#7a7a7a]">
             <li className="text-sm leading-7 list-disc ">
@@ -114,7 +120,10 @@ export default function LogisticsProjects({ data }) {
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold"> {data?.SubCat4?.Tittle}</h1>
+          <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
+            {" "}
+            {data?.SubCat4?.Tittle}
+          </h1>
           <p className="text-[#7a7a7a]">{data?.SubCat4?.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
@@ -151,7 +160,9 @@ export default function LogisticsProjects({ data }) {
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">{data?.SubCat5?.Tittle}</h1>
+          <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
+            {data?.SubCat5?.Tittle}
+          </h1>
           <p className="text-[#7a7a7a]">{data?.SubCat5?.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
@@ -188,7 +199,9 @@ export default function LogisticsProjects({ data }) {
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">{data?.SubCat6?.Tittle}</h1>
+          <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
+            {data?.SubCat6?.Tittle}
+          </h1>
           <p className="text-[#7a7a7a]">{data?.SubCat6?.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
@@ -225,7 +238,9 @@ export default function LogisticsProjects({ data }) {
           alt="imge"
         />
         <div className="max-w-lg space-y-3">
-          <h1 className="text-xl font-semibold">{data?.SubCat7?.Tittle}</h1>
+          <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
+            {data?.SubCat7?.Tittle}
+          </h1>
           <p className="text-[#7a7a7a]">{data?.SubCat7?.Para}</p>
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">

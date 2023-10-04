@@ -73,7 +73,7 @@ export default function Blogs() {
                     </div>
 
                     <div className="space-y-2.5">
-                      <h1 className="font-bold text-sm md:text-xl text-[#757575]">
+                      <h1 className="font-bold text-[1.25rem] md:text-xl text-[#757575]">
                         {item.Tittle}
                       </h1>
                       <p className="text-[#777777]">{item.Para}</p>

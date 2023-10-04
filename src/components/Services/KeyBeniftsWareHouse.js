@@ -39,7 +39,7 @@ const KeyBeniftsWareHouse = () => {
   const [openIndex, setOpenIndex] = useState(-1);
   return (
     <div className="py-4 ">
-      <h1 className="text-[#ff4747] text-lg font-semibold  lg:text-3xl">
+      <h1 className="text-[#ff4747] text-[2rem] font-semibold  lg:text-4xl">
         Key Benifts
       </h1>
       <div className="divide-y-2">

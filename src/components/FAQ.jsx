@@ -17,7 +17,7 @@ const Faqs = ({ Q, children, index, openIndex, setOpenIndex }) => {
         <h1
           className={`${
             isOpen ? "text-[#ff4747]" : "text-[#333333]"
-          }  lg:text-2xl md:text-xl`}
+          }  lg:text-2xl md:text-xl text-[1.2rem]`}
         >
           {Q}
         </h1>
@@ -29,7 +29,11 @@ const Faqs = ({ Q, children, index, openIndex, setOpenIndex }) => {
           transition: "max-height 2s ease-in-out",
         }}
       >
-        {isOpen && <p className="font-semibold text-[#798795]">{children}</p>}
+        {isOpen && (
+          <p className="font-semibold text-justify text-[#798795]">
+            {children}
+          </p>
+        )}
       </div>
     </div>
   );

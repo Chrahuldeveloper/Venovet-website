@@ -37,6 +37,7 @@ export default function Blogs() {
                 size={28}
                 className="hover:text-white text-[#ff5e15] "
                 cursor={"pointer"}
+                onClick= {scrollLeft}
               />
             </div>
             <div className="p-2.5 bg-[#00000000] rounded-full hover:bg-[#ff5e15] bg-white transition duration-300 ease-in-out">
@@ -44,6 +45,7 @@ export default function Blogs() {
                 size={28}
                 className="hover:text-white text-[#ff5e15] "
                 cursor={"pointer"}
+                onClick= {scrollRight}
               />
             </div>
           </div>

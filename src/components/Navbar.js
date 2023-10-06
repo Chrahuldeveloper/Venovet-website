@@ -32,7 +32,7 @@ export default function Navbar({ Page }) {
       setScrollY(false);
     }
   };
-  console.log(what,who)
+  console.log(what, who);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -194,12 +194,14 @@ export default function Navbar({ Page }) {
                 </span>
               </h1>
             </div>
-            <div className="flex items-center space-x-2.5">
-              <img
-                src="https://venovet.com/assets/images/linkedin-2.png"
-                className="w-28"
-                alt=""
-              />
+            <div className="flex items-center space-x-2.5 cursor-pointer">
+              <Link to={"https://www.linkedin.com/"}>
+                <img
+                  src="https://venovet.com/assets/images/linkedin-2.png"
+                  className="w-28"
+                  alt=""
+                />
+              </Link>
             </div>
           </div>
         </div>

@@ -17,9 +17,9 @@ const Faqs = ({ Q, children, index, openIndex, setOpenIndex }) => {
         <h1
           className={`${
             isOpen ? "text-[#ff4747]" : "text-[#333333]"
-          }  lg:text-2xl md:text-xl text-[1.2rem]`}
+          }  lg:text-2xl md:text-xl text-[1.2rem] hover:text-[#ff4747] transition duration-300 ease-in-out`}
         >
-          {Q}
+          0{index + 1}. {Q}
         </h1>
       </div>
       <div

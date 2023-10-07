@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 import Data from "../Data/AboutFaqs";
 import { useState } from "react";
 
-const AboutUsFaq = ({ Q, children, open, toggle }) => {
+const AboutUsFaq = ({ Q, children, open, toggle, index }) => {
   return (
     <div className="px-10 space-y-4 rounded-2xl md:px-0">
       <div className="cursor-pointer " onClick={toggle}>
         <h1
           className={`${
             !open ? "text-black" : "text-[#ff5e15]"
-          }    md:text-xl text-lg`}
+          }    md:text-xl text-lg hover:text-[#ff5e15] transition duration-300 ease-in-out`}
         >
-          {Q}
+          0{index + 1}. {Q}
         </h1>
       </div>
       <div
@@ -46,6 +46,7 @@ const FAQ = () => {
                     Q={item.q}
                     open={index === openIndex}
                     toggle={() => toggleFaq(index)}
+                    index={index}
                   >
                     <p className="my-1 text-[#798795] text-justify">
                       {item.Subq}

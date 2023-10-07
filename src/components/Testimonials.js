@@ -21,7 +21,7 @@ const Testimonials = () => {
           WHAT CLIENTS SAY?
         </h1>
         <div
-          className="flex flex-col justify-start p-3 overflow-x-scroll gap-14 scroll-smooth max-w-7xl md:gap-72 md:flex-row "
+          className="flex flex-col justify-start p-3 overflow-x-scroll md:px-80 gap-14 scroll-smooth max-w-7xl md:gap-64 md:flex-row md:ml-96 md:mr-96"
           ref={scrollref}
         >
           {Data.map((_, index) => {
@@ -37,7 +37,7 @@ const Testimonials = () => {
                     <h1 className="text-xl font-semibold text-white">
                       {_.Name}
                     </h1>
-                    <p className="text-[#d0d0d0] leading-8 py-4 w-[55vw] md:w-[28vw]">
+                    <p className="text-[#d0d0d0] leading-8 py-4 w-[55vw] md:w-[30vw]">
                       {_.p}
                     </p>
                     <div className="flex space-x-3">
@@ -50,7 +50,7 @@ const Testimonials = () => {
             );
           })}
         </div>
-        <div className="hidden md:flex items-center justify-between gap-0.5 space-x-4  ">
+        <div className="hidden md:flex items-center justify-between gap-0.5 space-x-4">
           <AiOutlineArrowLeft
             onClick={scrollLeft}
             color="white"

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { LiaLessThanSolid, LiaGreaterThanSolid } from "react-icons/lia";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Data from "../Data/SliderData";
 import { Link } from "react-router-dom";
@@ -34,12 +35,13 @@ export default function Slider() {
         }}
       >
         <div className="flex items-center justify-between h-screen px-3 md:px-10 gap-7 ">
-          <div className="p-2.5 bg-[#00000000] rounded-full hover:bg-[#ff5e15] transition duration-500 ease-in-out">
-            <LiaLessThanSolid
+          <div className="p-2.5  flex items-center justify-center bg-[#00000000] rounded-full hover:bg-[#ff5e15] transition duration-500 ease-in-out">
+            <ArrowBackIosNewIcon
               onClick={prev}
-              size={45}
-              className="hidden md:block md:w-11 md:h-11 "
-              color="white"
+              fontSize="large"
+              style={{ color: "white" }}
+              // className="hidden md:block md:w-11 md:h-11 "
+              // color="#fff"
               cursor={"pointer"}
             />
           </div>
@@ -71,11 +73,11 @@ export default function Slider() {
             </Link>
           </div>
           <div className="p-2.5 bg-[#00000000] rounded-full hover:bg-[#ff5e15] transition duration-500">
-            <LiaGreaterThanSolid
+            <ArrowForwardIosIcon
               onClick={forward}
-              size={45}
-              className="hidden md:block md:w-11 md:h-11 "
-              color="white"
+              fontSize="large"
+              style={{ color: "white" }}
+              // className="hidden md:block md:w-11 md:h-11 "
               cursor={"pointer"}
             />
           </div>

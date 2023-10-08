@@ -2,6 +2,8 @@ import ParticleLink from "./ParticleLink";
 import Data from "../Data/TestimonialData";
 import React, { useRef } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 const Testimonials = () => {
   const scrollref = useRef(null);
 
@@ -50,16 +52,18 @@ const Testimonials = () => {
             );
           })}
         </div>
-        <div className="hidden md:flex items-center justify-between gap-0.5 space-x-4">
-          <AiOutlineArrowLeft
+        <div className="hidden md:flex items-center justify-between gap-0.5 space-x-6 pt-10">
+          <ArrowBackIosIcon
             onClick={scrollLeft}
-            color="white"
-            className="p-2 rounded-full shadow-md cursor-pointer w-9 h-9 md:p-3 md:w-14 md:h-14"
+            style={{ color: "white" }}
+            fontSize="large"
+            className="cursor-pointer"
           />
-          <AiOutlineArrowRight
+          <ArrowForwardIosIcon
             onClick={scrollRight}
-            className="p-2 rounded-full shadow-md cursor-pointer w-9 h-9 md:p-3 md:w-14 md:h-14"
-            color="white"
+            className="cursor-pointer"
+            style={{ color: "white" }}
+            fontSize="large"
           />
         </div>
       </div>

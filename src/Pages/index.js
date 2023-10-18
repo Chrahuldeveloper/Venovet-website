@@ -9,6 +9,7 @@ import BlogPage from "./BlogPage";
 import ReadFull from "./ReadFull";
 import CartItem from "./CartItem";
 import Signin from "./Signin";
+import ProductDetail from "./ProductDetail";
 
 export {
   Home,
@@ -21,5 +22,6 @@ export {
   BlogPage,
   ReadFull,
   CartItem,
-  Signin
+  Signin,
+  ProductDetail
 };

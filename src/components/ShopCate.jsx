@@ -4,10 +4,12 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { addTocart } from "../features/ProductSlice";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 function ShopCate() {
   const [point, setPoint] = useState(0);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -38,7 +40,21 @@ function ShopCate() {
                 className="px-4 py-6 space-y-6 rounded-lg shadow-lg"
               >
                 <img className="max-w-[15rem]" src={item.img} alt={item.img} />
-                <p className="text-sm font-semibold text-center">
+                <p
+                  className="text-sm font-semibold text-center cursor-pointer"
+                  onClick={() => {
+                    if (item.name.toUpperCase() !== "") {
+                      navigate(`/detail/${item.name}`, {
+                        state: {
+                          name: item.name,
+                          image: item.img,
+                        },
+                      });
+                    } else {
+                      return;
+                    }
+                  }}
+                >
                   {item.name.toUpperCase() === "" ? (
                     <p className="text-lg font-semibold text-red-600">
                       No Products Found

@@ -11,12 +11,12 @@ import {
   ReadFull,
   CartItem,
   Signin,
+  ProductDetail,
 } from "./Pages/index";
 import { Routes, Route } from "react-router-dom";
 import "animate.css";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css"; 
 AOS.init();
 
 export default function App() {
@@ -33,6 +33,7 @@ export default function App() {
       <Route path="/ReadFull/:tittle" element={<ReadFull />} />
       <Route path="/mycart" element={<CartItem />} />
       <Route path="/signin" element={<Signin />} />
+      <Route path="/detail/:name" element={<ProductDetail />} />
     </Routes>
   );
 }

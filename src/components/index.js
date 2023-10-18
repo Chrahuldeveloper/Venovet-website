@@ -32,8 +32,10 @@ import CartTable from "./CartTable";
 import DragTop from "./DragTop";
 import CheckOutModel from "./CheckOutModel";
 import CheckOutForm from "./CheckOutForm";
+import Detail from "./Detail";
 
 export {
+  Detail,
   CheckOutForm,
   CheckOutModel,
   MobileNavbar,

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { db } from "../Firebase";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
 import {
   getAuth,
   RecaptchaVerifier,

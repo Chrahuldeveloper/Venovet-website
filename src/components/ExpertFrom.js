@@ -202,9 +202,7 @@ export default function ExpertFrom() {
             }}
             className="py-1.5 w-[17rem] rounded outline-none px-4"
           >
-            <option className="" value="" disabled selected>
-              Nature of Enquiry
-            </option>
+            <option className="" value="" disabled selected></option>
             {data.map((item, index) => {
               return (
                 <React.Fragment>

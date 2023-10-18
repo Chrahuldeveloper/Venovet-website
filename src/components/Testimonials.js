@@ -1,18 +1,42 @@
 import ParticleLink from "./ParticleLink";
 import Data from "../Data/TestimonialData";
-import React, { useRef } from "react";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import React, { useRef, useState } from "react";
+
 const Testimonials = () => {
   const scrollref = useRef(null);
 
+  // const scrollRight = () => {
+  //   scrollref.current.scrollLeft += 500;
+  // };
+
+  // const scrollLeft = () => {
+  //   scrollref.current.scrollLeft -= 500;
+  // };
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  const dots = Math.ceil(Data.length / 2);
+
   const scrollRight = () => {
-    scrollref.current.scrollLeft += 500;
+    const nextTestimonial = activeTestimonial + 1;
+    if (nextTestimonial < Data.length) {
+      scrollref.current.scrollLeft =
+        nextTestimonial * scrollref.current.clientWidth;
+      setActiveTestimonial(nextTestimonial);
+    }
   };
 
   const scrollLeft = () => {
-    scrollref.current.scrollLeft -= 500;
+    const prevTestimonial = activeTestimonial - 1;
+    if (prevTestimonial >= 0) {
+      scrollref.current.scrollLeft =
+        prevTestimonial * scrollref.current.clientWidth;
+      setActiveTestimonial(prevTestimonial);
+    }
+  };
+
+  const handleDotClick = (index) => {
+    scrollref.current.scrollLeft = index * scrollref.current.clientWidth;
+    setActiveTestimonial(index);
   };
 
   return (
@@ -23,15 +47,15 @@ const Testimonials = () => {
           WHAT CLIENTS SAY?
         </h1>
         <div
-          className="flex flex-col justify-start p-3 overflow-x-scroll md:px-80 gap-14 scroll-smooth max-w-7xl md:gap-64 md:flex-row md:ml-96 md:mr-96"
+          className="flex flex-col justify-start p-3 overflow-x-scroll md:px gap-14 scroll-smooth max-w-7xl md:gap-64 md:flex-row md:ml-10"
           ref={scrollref}
         >
           {Data.map((_, index) => {
             return (
               <React.Fragment key={index}>
-                <div className="flex items-center max-w-sm space-x-8 md:max-w-auto">
+                <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0  items-center max-w-sm space-x-8 md:max-w-auto">
                   <img
-                    className="w-32 h-32 md:max-w-md md:w-52 md:h-52 rounded-md border-[#ccc] border-[1px]"
+                    className="w-36 h-36 md:max-w-md md:w-52 md:h-52 rounded-md border-[#ccc] border-[1px] p-2"
                     src={_.image}
                     alt="img.png"
                   />
@@ -39,12 +63,12 @@ const Testimonials = () => {
                     <h1 className="text-xl font-semibold text-white">
                       {_.Name}
                     </h1>
-                    <p className="text-[#d0d0d0] leading-8 py-4 w-[55vw] md:w-[30vw]">
+                    <p className="text-[#d0d0d0] leading-8 py-4 w-[55vw] md:w-[30vw] text-justify">
                       {_.p}
                     </p>
                     <div className="flex space-x-3">
                       <p>{_.star}</p>
-                      <p className="text-[#ff4747]">{_.review}</p>
+                      <p className="text-[#ff4747] text-justify">{_.review}</p>
                     </div>
                   </div>
                 </div>
@@ -53,18 +77,31 @@ const Testimonials = () => {
           })}
         </div>
         <div className="hidden md:flex items-center justify-between gap-0.5 space-x-6 pt-10">
-          <ArrowBackIosIcon
-            onClick={scrollLeft}
-            style={{ color: "white" }}
-            fontSize="large"
-            className="cursor-pointer"
-          />
-          <ArrowForwardIosIcon
-            onClick={scrollRight}
-            className="cursor-pointer"
-            style={{ color: "white" }}
-            fontSize="large"
-          />
+          {/* {Data.map((_, index) => {
+            return (
+              <React.Fragment>
+                <button
+                  key={index}
+                  className="w-8 h-4 rounded-2xl bg-[#ffffff1a]"
+                ></button>
+              </React.Fragment>
+            );
+          })} */}
+          {Array.from({ length: dots }).map((_, index) => (
+            <button
+              key={index}
+              className={`w-8 h-4 rounded-2xl  ${
+                index === activeTestimonial ? " bg-[#ff5e15]" : "bg-[#ffffff1a]"
+              }`}
+              onClick={() => handleDotClick(index)}
+            ></button>
+          ))}
+          <button onClick={scrollLeft} className="cursor-pointer">
+            &lt;
+          </button>
+          <button onClick={scrollRight} className="cursor-pointer">
+            &gt;
+          </button>
         </div>
       </div>
     </div>

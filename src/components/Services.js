@@ -5,13 +5,15 @@ import DropdownData from "../Data/WhatweDoCategories";
 import { Link } from "react-router-dom";
 function Services() {
   const [hover, sethover] = useState(null);
+  const encodedTittle = encodeURIComponent(DropdownData[0].catgeory);
+
   return (
-    <div className="px-10 py-16 pt-24 bg-[#dae2ed] space-y-14">
+    <div className="px-14 py-16 pt-24 bg-[#dae2ed] space-y-14">
       <div className="space-y-4">
-        <h1 className="text-[#ff5e15] font-semibold lg:ml-20">OUR SERVICES</h1>
-        <h1 className="text-3xl font-bold lg:ml-20 md:text-4xl">What We Do</h1>
+        <h1 className="text-[#ff5e15] font-semibold">OUR SERVICES</h1>
+        <h1 className="text-3xl font-bold  md:text-4xl">What We Do</h1>
       </div>
-      <div className="grid py-3 space-y-20 md:space-y-0 md:grid-cols-2 lg:grid-cols-4 md:gap-14 lg:gap-7 place-items-center lg:px-20">
+      <div className="grid py-3 space-y-20 md:space-y-0 md:grid-cols-2 lg:grid-cols-4 md:gap-14 lg:gap-7 place-items-center lg:px-10">
         {Data.map((card, index) => {
           return (
             <div
@@ -25,12 +27,12 @@ function Services() {
                     hover === index
                       ? "brightness-75 ease-in-out transition duration-300 scale-110 rotate-3"
                       : null
-                  }  cursor-pointer h-64 `}
+                  }  cursor-pointer md:h-64 `}
                   src={card.image}
                   alt=""
                 />
               </div>
-              <div className="absolute shadow-lg bg-white rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-72 lg:w-60 space-x-4 hover:bg-[#ff5e15] hover:text-white transition ease-in-out duration-500">
+              <div className="absolute shadow-lg bg-white rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-64 lg:w-60 space-x-4 hover:bg-[#ff5e15] hover:text-white transition ease-in-out duration-500">
                 <Link
                   to={`/whatwedo/${DropdownData[index].catgeory}`}
                   state={{
@@ -42,7 +44,7 @@ function Services() {
                   <div
                     className={`${
                       hover === index ? "bg-[#ff5e15]" : "bg-white"
-                    } absolute shadow-lg  rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-72 lg:w-60 space-x-4  transition ease-in-out duration-500`}
+                    } absolute shadow-lg  rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-64 lg:w-60 space-x-4  transition ease-in-out duration-500`}
                   >
                     <img
                       className={`w-14`}
@@ -65,7 +67,7 @@ function Services() {
       </div>
       <div className="flex justify-center my-10">
         <Link
-          to={`/whatwedo/${DropdownData[0].catgeory}`}
+          to={`/whatwedo/${encodedTittle}`}
           state={{
             image: DropdownData[0].image,
             Tittle: DropdownData[0].Tittle,

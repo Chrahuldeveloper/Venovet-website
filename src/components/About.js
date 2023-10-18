@@ -28,7 +28,7 @@ export default function About() {
 
   return (
     <div
-      className="items-start justify-center p-4 space-y-10 lg:flex md:space-y-0 md:px-10 lg:space-x-16 my-28"
+      className="items-start justify-st p-4 space-y-10 lg:flex md:space-y-0 md:px-14 lg:space-x-20 my-28"
       data-aos="fade-up"
       data-aos-delay="50"
       data-aos-duration="1000"

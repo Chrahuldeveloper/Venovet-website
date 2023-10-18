@@ -214,9 +214,11 @@ const Footer = () => {
           <div className="space-y-10 lg:px-10">
             <div>
               <p className="text-white">Call Us</p>
-              <p className="text-[#ff5e15] text-2xl font-bold cursor-pointer">
-                {links?.Phone}
-              </p>
+              <a href={`tel:${links?.Phone}`}>
+                <p className="text-[#ff5e15] text-2xl font-bold cursor-pointer">
+                  {links?.Phone}
+                </p>
+              </a>
             </div>
             <div>
               <p className="text-white">Mail Us</p>

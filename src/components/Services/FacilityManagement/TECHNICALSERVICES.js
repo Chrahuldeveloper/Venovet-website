@@ -11,7 +11,7 @@ export default function TECHNICALSERVICES({ data }) {
             className="lg:max-w-sm"
           />
         </div>
-        <div className="text-[#7a7a7a] space-y-5">
+        <div className="text-[#7a7a7a] space-y-5 text-justify">
           <h1 className="text-lg font-bold text-black md:text-xl">
             {data?.SubCat5?.Tittle1}
           </h1>
@@ -19,19 +19,19 @@ export default function TECHNICALSERVICES({ data }) {
         </div>
       </div>
       <div className="space-y-4">
-        <div className="text-[#7a7a7a] space-y-2">
+        <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 className="font-bold text-black lg:text-lg">
             {data?.SubCat5?.Tittle2}
           </h1>
           <p>{data?.SubCat5?.Para2}</p>
         </div>
-        <div className="text-[#7a7a7a] space-y-2">
+        <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 className="font-bold text-black lg:text-lg">
             {data?.SubCat5?.Tittle3}
           </h1>
           <p>{data?.SubCat5?.Para3}</p>
         </div>
-        <div className="text-[#7a7a7a] space-y-2">
+        <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 className="font-bold text-black lg:text-lg">
             {data?.SubCat5?.Tittle4}
           </h1>
@@ -57,7 +57,7 @@ export default function TECHNICALSERVICES({ data }) {
             <li className="list-disc">Fire suppression systems</li>
           </ul>
         </div>
-        <div className="text-[#7a7a7a] space-y-2">
+        <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 className="font-bold text-black lg:text-lg">
             Handyman Services:
           </h1>
@@ -70,21 +70,19 @@ export default function TECHNICALSERVICES({ data }) {
             maintenance services.
           </p>
         </div>
-        <div className="text-[#7a7a7a] space-y-2">
-          <h1 className="font-bold text-black lg:text-lg">
-            {data?.Tittle5}
-          </h1>
+        <div className="text-[#7a7a7a] space-y-2 text-justify">
+          <h1 className="font-bold text-black lg:text-lg">{data?.Tittle5}</h1>
           <p>{data?.SubCat5?.Para5}</p>
         </div>
 
-        <div className="text-[#7a7a7a] space-y-2">
+        <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 className="font-bold text-black lg:text-lg">
             {data?.SubCat5?.Tittle6}
           </h1>
           <p>{data?.SubCat5?.Para6}</p>
         </div>
 
-        <div className="text-[#7a7a7a] space-y-2">
+        <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 className="font-bold text-black lg:text-lg">
             Manufacturing and Industrial:
           </h1>
@@ -95,7 +93,7 @@ export default function TECHNICALSERVICES({ data }) {
           </p>
         </div>
 
-        <div className="text-[#7a7a7a] space-y-2">
+        <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 className="text-black">Integrated Water Management:</h1>
           <p>
             With our complete audit-to-operation approach for increased water
@@ -106,7 +104,7 @@ export default function TECHNICALSERVICES({ data }) {
           </p>
         </div>
 
-        <div className="text-[#7a7a7a] space-y-2">
+        <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 className="font-bold text-black lg:text-lg">
             Our services include:
           </h1>
@@ -126,7 +124,7 @@ export default function TECHNICALSERVICES({ data }) {
           </ul>
         </div>
 
-        <div className="text-[#7a7a7a] space-y-2">
+        <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 className="text-black">Healthcare and Hospitality:</h1>
           <p>
             We work with our clients to address specific healthcare needs of
@@ -135,7 +133,7 @@ export default function TECHNICALSERVICES({ data }) {
           </p>
         </div>
 
-        <div className="text-[#7a7a7a] space-y-2">
+        <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 className="font-bold text-black lg:text-lg">
             Our services include:
           </h1>
@@ -157,7 +155,7 @@ export default function TECHNICALSERVICES({ data }) {
           </ul>
         </div>
 
-        <div className="text-[#7a7a7a] space-y-2">
+        <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 claclassName="text-black font-bold lg:text-lg">
             Corporate Services, BFSI and IT/ITES:
           </h1>
@@ -185,7 +183,7 @@ export default function TECHNICALSERVICES({ data }) {
           </ul>
         </div>
 
-        <div className="text-[#7a7a7a] space-y-2">
+        <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 className="font-bold text-black lg:text-lg">
             Residential and Educational Institutes:
           </h1>

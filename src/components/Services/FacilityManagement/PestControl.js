@@ -15,7 +15,7 @@ export default function PestControl({ data }) {
           <h1 className="text-lg font-bold text-black md:text-xl">
             {data?.SubCat4?.Tittle}
           </h1>
-          <p className="leading-8">{data?.SubCat4?.Para}</p>
+          <p className="leading-8 text-justify">{data?.SubCat4?.Para}</p>
         </div>
       </div>
       <ul className="ml-5 text-[#7a7a7a] space-y-2  mt-3">

@@ -1,7 +1,9 @@
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { db } from "../Firebase";
+import { doc, getDoc } from "firebase/firestore";
 const Footer = () => {
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
@@ -11,6 +13,27 @@ const Footer = () => {
     // console.log(container);
   }, []);
   const currentYear = new Date().getFullYear();
+
+  const [links, setlinks] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const documentRef = doc(db, "SOCIAL-MEDIA-URL", "LINKS");
+        const documentSnapshot = await getDoc(documentRef);
+        if (documentSnapshot.exists()) {
+          setlinks(documentSnapshot.data());
+        } else {
+          setlinks(null); // Handle the case where the document doesn't exist
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="relative">
       <Particles
@@ -81,8 +104,8 @@ const Footer = () => {
         }}
       />
 
-      <div className="absolute  justify-between top-0 w-[100%] text-[#d5d5d5] ">
-        <div className="px-10 pt-20 lg:flex space-y-14 lg:space-y-0 ">
+      <div className="absolute  justify-betwee   flex justify-center items-center top-0 w-[100%] text-[#d5d5d5] left-3 right-3">
+        <div className=" pt-20 lg:flex space-y-14 lg:space-y-0 ">
           {/* //first section */}
           <div className="space-y-4 ">
             <img
@@ -192,13 +215,13 @@ const Footer = () => {
             <div>
               <p className="text-white">Call Us</p>
               <p className="text-[#ff5e15] text-2xl font-bold cursor-pointer">
-                +91 9912 742 555
+                {links?.Phone}
               </p>
             </div>
             <div>
               <p className="text-white">Mail Us</p>
               <p className="text-[#1065cd] text-2xl font-bold cursor-pointer">
-                sales@venovet.com
+                {links?.Email}
               </p>
             </div>
           </div>

@@ -11,7 +11,7 @@ export default function GUESTHOUSEMANAGEMENT({ data }) {
             className="lg:max-w-sm"
           />
         </div>
-        <div className="text-[#7a7a7a] space-y-5">
+        <div className="text-[#7a7a7a] space-y-5 text-justify">
           <h1 className="text-lg font-bold text-black md:text-xl">
             {data?.SubCat3?.Tittle}
           </h1>

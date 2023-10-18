@@ -28,7 +28,7 @@ export default function Slider() {
         key={index}
         // className="z-40 animate__animated animate__fadeIn"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0.2, 0.1, 0.7), rgba(0, 0, 0, 0.4)),url(${Data[index].image})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 20 , 0.6), rgba(0, 0, 20, 0.6)),url(${Data[index].image})`,
           backgroundPosition: "center center",
           backgroundSize: "cover",
           height: "90vh",

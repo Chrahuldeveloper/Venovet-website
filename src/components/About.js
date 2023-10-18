@@ -10,7 +10,7 @@ export default function About() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const documentRef = doc(db, "BROCHURE", "LINKS");
+        const documentRef = doc(db, "SOCIAL-MEDIA-URL", "LINKS");
         const documentSnapshot = await getDoc(documentRef);
         if (documentSnapshot.exists()) {
           setData(documentSnapshot.data());
@@ -71,7 +71,7 @@ export default function About() {
               </span>
             </button>
           </Link>
-          <Link to={data?.Link}>
+          <Link to={data?.Link} target="_blank" rel="noopener noreferrer">
             <button className="text-sm  flex items-center space-x-3 bg-[#121a37] text-white font-semibold px-8 py-2 rounded-lg shadow-2xl shadow-black">
               <h1>WATCH OUR SHORT VIDEO</h1>
               <BsFillPlayFill size={20} color="white" />

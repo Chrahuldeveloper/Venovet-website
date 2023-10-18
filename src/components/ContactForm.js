@@ -33,7 +33,7 @@ export default function ContactForm() {
   const onNumSubmit = (e) => {
     e.preventDefault();
     configureCaptcha();
-    const phoneNumber = form.Phone;
+    const phoneNumber = 91 + form.Phone;
     console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
@@ -138,12 +138,13 @@ export default function ContactForm() {
             Mobile no :
           </label>
 
-          <PhoneInput
+          <input
             value={form.Phone}
+            type="number"
             onChange={(e) => {
               setForm({
                 ...form,
-                Phone: e,
+                Phone: e.target.value,
               });
             }}
             className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw] outline-none"

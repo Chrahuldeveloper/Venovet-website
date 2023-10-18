@@ -48,7 +48,7 @@ export default function Transpotation({ data }) {
                   alt={i}
                   className="rounded-lg w-80 h-60"
                 />
-                <div className="text-[#7a7a7a] space-y-3 max-w-lg">
+                <div className="text-[#7a7a7a] space-y-3 max-w-lg text-justify">
                   <p>{item.Para}</p>
                 </div>
               </div>
@@ -57,7 +57,7 @@ export default function Transpotation({ data }) {
         })}
       </div>
 
-      <div className="text-[#7a7a7a] space-y-3.5 mt-5">
+      <div className="text-[#7a7a7a] space-y-3.5 mt-5 text-justify">
         <p>{data?.Para6}</p>
         <p>{data?.Para7}</p>
       </div>
@@ -65,7 +65,7 @@ export default function Transpotation({ data }) {
         {section3.map((item, i) => {
           return (
             <React.Fragment key={i}>
-              <div className="flex flex-col items-start gap-8 md:flex-row">
+              <div className="flex flex-col items-start gap-8 md:flex-row text-justify">
                 <img src={item.image} alt={i} className="max-w-sm rounded-lg" />
                 <p>{item.Para}</p>
               </div>

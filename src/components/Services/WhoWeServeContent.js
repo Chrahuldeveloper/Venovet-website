@@ -58,7 +58,7 @@ export default function WhoWeServeContent({ data }) {
         <h1 className="font-semibold font-poppins text-black text-2xl md:text-3xl lg:text-4xl">
           {DynamicContent.Tittle1}
         </h1>
-        <p>{data?.Overview}</p>
+        <p className="text-justify">{data?.Overview}</p>
       </div>
 
       <div className="mt-7">
@@ -67,7 +67,7 @@ export default function WhoWeServeContent({ data }) {
         </h1>
         <div className="flex flex-col items-start gap-5 mt-5 md:flex-row">
           <div className="space-y-4 text-[#7a7a7a]">
-            <p>{data?.Stats}</p>
+            <p className="text-justify">{data?.Stats}</p>
           </div>
           <div>
             <img src={venovetChart} alt={venovetChart} className="max-w-md" />
@@ -80,7 +80,7 @@ export default function WhoWeServeContent({ data }) {
           {DynamicContent.Tittle3}
         </h1>
         <p className="text-[#7a7a7a] leading-8">
-          <p>{data?.How}</p>
+          <p className="text-justify">{data?.How}</p>
         </p>
         <img src={data?.Image} alt="" />
       </div>
@@ -96,7 +96,7 @@ export default function WhoWeServeContent({ data }) {
               <React.Fragment key={index}>
                 <div className="p-3 space-y-3 text-center shadow-xl rounded-xl">
                   <img src={item.image} alt={index} className="mx-auto" />
-                  <h1 className="text-lg font-extrabold md:text-xl ">
+                  <h1 className="text-lg font-semibold md:text-xl ">
                     {item.Tittle}
                   </h1>
                 </div>

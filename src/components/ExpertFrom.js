@@ -6,7 +6,6 @@ import {
   getAuth,
   signInWithPhoneNumber,
 } from "firebase/auth";
-import PhoneInput from "react-phone-number-input";
 import { ColorRing } from "react-loader-spinner";
 
 export default function ExpertFrom() {
@@ -40,7 +39,7 @@ export default function ExpertFrom() {
     e.preventDefault();
     configureCaptcha();
 
-    const phoneNumber = form.Mobile;
+    const phoneNumber = 91 + form.Mobile;
     console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
 
@@ -147,15 +146,17 @@ export default function ExpertFrom() {
           />
         </div>
         <div>
-          <PhoneInput
+          <input
             value={form.Mobile}
+            type="number"
+            placeholder="Phone"
             onChange={(e) => {
               setForm({
                 ...form,
-                Mobile: e,
+                Mobile: e.target.value,
               });
             }}
-            className="py-1.5 w-[17rem] rounded outline-none px-4 bg-white"
+            className="py-1.5 w-[17rem] rounded outline-none px-4"
           />
         </div>
         <button
@@ -195,12 +196,15 @@ export default function ExpertFrom() {
           <select
             name="nature of enquire"
             value={form.Enquiry}
+            // placeholder="Nature of Enquiry"
             onChange={(e) => {
               setForm({ ...form, Enquiry: e.target.value });
             }}
             className="py-1.5 w-[17rem] rounded outline-none px-4"
           >
-            <option value="Product Realted">Nature of Enquiry</option>
+            <option className="" value="" disabled selected>
+              Nature of Enquiry
+            </option>
             {data.map((item, index) => {
               return (
                 <React.Fragment>
@@ -217,7 +221,7 @@ export default function ExpertFrom() {
             id="messages"
             cols="32"
             rows="4"
-            className="outline-none rounded px-2.5"
+            className="outline-none w-[17rem] rounded px-2.5"
           ></textarea>
         </div>
         <div className="flex items-center justify-center mt-6">

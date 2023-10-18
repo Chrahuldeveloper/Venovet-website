@@ -26,7 +26,7 @@ const Faqs = ({ Q, children, index, openIndex, setOpenIndex }) => {
         style={{
           maxHeight: isOpen ? "2000px" : "0",
           overflow: "hidden",
-          transition: "max-height 2s ease-in-out",
+          transition: "max-height 3s ease-in-out",
         }}
       >
         {isOpen && (
@@ -42,13 +42,13 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(-1);
 
   return (
-    <div className="py-4 m-6 ">
-      <h1 className="text-[#ff4747] text-lg font-semibold lg:ml-28">OUR FAQ</h1>
-      <h1 className="lg:ml-28 text-2xl font-bold md:text-3xl lg:text-4xl text-[#222] pt-4">
+    <div className="py-4 m-6 mx-10">
+      <h1 className="text-[#ff4747] text-lg font-semibold ">OUR FAQ</h1>
+      <h1 className=" text-2xl font-bold md:text-3xl lg:text-4xl text-[#222] pt-4">
         Frequently Asked Questions?
       </h1>
       <div className="divide-y-2">
-        <div className="flex items-start justify-around text-left ">
+        <div className="flex items-start justify-between text-left ">
           <div className="pt-10">
             {Data.map((_, index) => {
               return (

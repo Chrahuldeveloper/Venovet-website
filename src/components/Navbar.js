@@ -12,6 +12,9 @@ import {
 import { Link } from "react-router-dom";
 import { DropDown, MobileNavbar } from "./index";
 import { useSelector } from "react-redux";
+import vvmain from "../images/vvlogo.png";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../Firebase";
 export default function Navbar({ Page }) {
   const [service, setservice] = useState(false);
   const [what, setWhat] = useState(false);
@@ -23,6 +26,27 @@ export default function Navbar({ Page }) {
   const [mobileservice, setmobileservice] = useState(false);
   const [nonmobilewhat, setnonmobilewhat] = useState(false);
   const [nonmobilewho, setnonmobilewho] = useState(false);
+
+  const [links, setlinks] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const documentRef = doc(db, "SOCIAL-MEDIA-URL", "LINKS");
+        const documentSnapshot = await getDoc(documentRef);
+        if (documentSnapshot.exists()) {
+          setlinks(documentSnapshot.data());
+        } else {
+          setlinks(null); // Handle the case where the document doesn't exist
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+    window.scrollTo(0, 0);
+  }, []);
 
   const cart = useSelector((state) => state.cart);
   const handleScroll = () => {
@@ -190,7 +214,7 @@ export default function Navbar({ Page }) {
               <h1 className="text-[#d5d5d5]  cursor-pointer">
                 Email:{" "}
                 <span className="hover:text-[#ff5e15] transition duration-300 ease-in-out">
-                  sales@venovet.com
+                  {links?.Email}
                 </span>
               </h1>
             </div>
@@ -206,7 +230,7 @@ export default function Navbar({ Page }) {
           </div>
         </div>
         {/* Main Navbar */}
-        <div className="my-3.5 flex items-center justify-between mx-5 md:mx-28 ">
+        <div className="my- flex items-center justify-between mx-5 md:mx-28 ">
           <div>
             <Link
               to={"/"}
@@ -214,7 +238,7 @@ export default function Navbar({ Page }) {
                 window.scrollTo(0, 0);
               }}
             >
-              <img src="https://venovet.com/assets/images/logo.png" alt="pic" />
+              <img src={vvmain} alt="pic" />
             </Link>
           </div>
           <div>
@@ -231,12 +255,22 @@ export default function Navbar({ Page }) {
                 24/7 Services
               </p>
               <div className="flex items-center">
-                <img
-                  src="https://venovet.com/assets/images/whatsapp-icon.png"
-                  alt="whatsup"
-                  className="w-10 h-10"
-                />
-                <h1 className="text-lg font-semibold">+91 9912 742 555</h1>
+                {/* <Link to={`https://wa.me/${links?.Whatsapp}`}> */}
+                <a
+                  href={`whatsapp://send?phone=${links?.Whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex items-center">
+                    <img
+                      src="https://venovet.com/assets/images/whatsapp-icon.png"
+                      alt="whatsup"
+                      className="w-10 h-10"
+                    />
+                    <h1 className="text-lg font-semibold">{links?.Whatsapp}</h1>
+                  </div>
+                  {/* </Link> */}
+                </a>
                 <Link to="/mycart">
                   <div className="flex items-center ml-10 space-x-2">
                     <AiOutlineShoppingCart

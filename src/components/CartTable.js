@@ -46,14 +46,6 @@ export default function CartTable() {
                       <h1 className="text-sm">{item.name}</h1>
                     </td>
                     <td className="py-10 cursor-pointer text-[#7e7e7e] flex space-x-2 items-center justify-center">
-                      <AiOutlinePlus
-                        size={10}
-                        color="black"
-                        onClick={() => {
-                          setquantity(quantity + 1);
-                        }}
-                      />
-                      <p>{quantity}</p>
                       <BiMinus
                         size={10}
                         color="black"
@@ -63,6 +55,15 @@ export default function CartTable() {
                           } else {
                             setquantity(quantity - 1);
                           }
+                        }}
+                      />
+                      <p>{quantity}</p>
+
+                      <AiOutlinePlus
+                        size={10}
+                        color="black"
+                        onClick={() => {
+                          setquantity(quantity + 1);
                         }}
                       />
                     </td>

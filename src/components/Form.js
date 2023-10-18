@@ -35,7 +35,7 @@ export default function Form() {
     e.preventDefault();
     configureCaptcha();
 
-    const phoneNumber = resume.Phone;
+    const phoneNumber = 91 + resume.Phone;
     console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
@@ -160,12 +160,13 @@ export default function Form() {
               Phone
             </label>
             <div>
-              <PhoneInput
+              <input
                 value={resume.Phone}
+                type="number"
                 onChange={(e) => {
                   setResume({
                     ...resume,
-                    Phone: e,
+                    Phone: e.target.value,
                   });
                 }}
                 className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw]  outline-none"

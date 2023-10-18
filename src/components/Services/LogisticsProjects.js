@@ -9,7 +9,7 @@ export default function LogisticsProjects({ data }) {
           src={data?.SubCat1?.image}
           alt="imge"
         />
-        <div className="max-w-lg space-y-3">
+        <div className="max-w-lg space-y-3 text-justify">
           <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
             {data?.SubCat1?.Tittle}
           </h1>
@@ -48,7 +48,7 @@ export default function LogisticsProjects({ data }) {
           src={data?.SubCat2?.image}
           alt="imge"
         />
-        <div className="max-w-lg space-y-3">
+        <div className="max-w-lg space-y-3 text-justify">
           <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
             {data?.SubCat2?.Tittle}
           </h1>
@@ -85,7 +85,7 @@ export default function LogisticsProjects({ data }) {
           src={data?.SubCat3?.image}
           alt="imge"
         />
-        <div className="max-w-lg space-y-3">
+        <div className="max-w-lg space-y-3 text-justify">
           <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
             {data?.SubCat3?.Tittle}
           </h1>
@@ -119,7 +119,7 @@ export default function LogisticsProjects({ data }) {
           src={data?.SubCat4?.image}
           alt="imge"
         />
-        <div className="max-w-lg space-y-3">
+        <div className="max-w-lg space-y-3 text-justify">
           <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
             {" "}
             {data?.SubCat4?.Tittle}
@@ -159,7 +159,7 @@ export default function LogisticsProjects({ data }) {
           src={data?.SubCat5?.image}
           alt="imge"
         />
-        <div className="max-w-lg space-y-3">
+        <div className="max-w-lg space-y-3 text-justify">
           <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
             {data?.SubCat5?.Tittle}
           </h1>
@@ -198,7 +198,7 @@ export default function LogisticsProjects({ data }) {
           src={data?.SubCat6?.image}
           alt="imge"
         />
-        <div className="max-w-lg space-y-3">
+        <div className="max-w-lg space-y-3 text-justify">
           <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
             {data?.SubCat6?.Tittle}
           </h1>
@@ -237,7 +237,7 @@ export default function LogisticsProjects({ data }) {
           src={data?.SubCat7?.image}
           alt="imge"
         />
-        <div className="max-w-lg space-y-3">
+        <div className="max-w-lg space-y-3 text-justify">
           <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
             {data?.SubCat7?.Tittle}
           </h1>

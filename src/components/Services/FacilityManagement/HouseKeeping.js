@@ -12,7 +12,7 @@ export default function HouseKeeping({ data }) {
               className="lg:max-w-xs"
             />
           </div>
-          <div className="text-[#7a7a7a] space-y-5">
+          <div className="text-[#7a7a7a] space-y-5 text-justify">
             <h1 className="text-lg font-bold text-black md:text-xl">
               Housekeeping Services
             </h1>
@@ -33,7 +33,7 @@ export default function HouseKeeping({ data }) {
             </p>
           </div>
         </div>
-        <div className="text-[#7a7a7a]  mt-3.5">
+        <div className="text-[#7a7a7a]  mt-3.5 text-justify">
           <h1 className="text-lg font-bold text-black md:text-xl">
             Our Housekeeping cleaning are as follows:
           </h1>

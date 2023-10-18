@@ -75,7 +75,7 @@ function RealEstate({ data }) {
             src={data?.SubCat1?.image}
             alt=""
           />
-          <div className="space-y-6 max-w-md text-[#777777] ">
+          <div className="space-y-6 max-w-md text-[#777777] text-justify">
             {data?.SubCat1?.Para}
           </div>
         </div>
@@ -98,7 +98,7 @@ function RealEstate({ data }) {
                   className="flex space-x-4 h-[32vh] shadow-lg px-4 py-8 rounded-lg bg-white my-2"
                 >
                   <img className="w-10 h-10" src={item.png} alt={item.png} />
-                  <div className="max-w-xs space-y-2">
+                  <div className="max-w-xs space-y-2 text-justify">
                     <h1 className="font-bold">{item.Title}</h1>
                     <p className="text-[#777777]">{item.p}</p>
                   </div>
@@ -120,7 +120,7 @@ function RealEstate({ data }) {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center justify-center"
+                className="flex flex-col items-center justify-center text-justify"
               >
                 <img src={item.img} alt="" />
                 <h1>{item.Title}</h1>
@@ -139,7 +139,7 @@ function RealEstate({ data }) {
             return (
               <div
                 key={index}
-                className="flex p-6 px-4 space-x-4 bg-white rounded-lg shadow-lg"
+                className="flex p-6 px-4 space-x-4 bg-white rounded-lg shadow-lg text-justify"
               >
                 <img className="w-10 h-10" src={item.img} alt="" />
                 <div>

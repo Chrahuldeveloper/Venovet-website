@@ -76,7 +76,7 @@ export default function SCM() {
           className="rounded-lg lg:max-w-sm"
           alt=""
         />
-        <div className="space-y-3">
+        <div className="space-y-3 text-justify">
           <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins">
             Overview
           </h1>
@@ -104,7 +104,7 @@ export default function SCM() {
       </div>
 
       <div className="flex flex-col gap-5 mt-7 lg:flex-row">
-        <div className="space-y-3">
+        <div className="space-y-3 text-justify">
           <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins">
             Key Competencies
           </h1>
@@ -149,7 +149,7 @@ export default function SCM() {
                   <h1 className="font-semibold text-orange-500">
                     {item.Tittle}
                   </h1>
-                  <p className="text-[#777777]">{item.Para}</p>
+                  <p className="text-[#777777] text-justify">{item.Para}</p>
                   <hr />
                   <ul className="space-y-1">
                     <li>{item.list1}</li>
@@ -164,7 +164,7 @@ export default function SCM() {
         </div>
       </div>
 
-      <div className="space-y-5 text-[#777777] mt-10">
+      <div className="space-y-5 text-[#777777] mt-10 text-justify">
         <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins text-black text-center">
           OUR PRODUCT SOLUTIONS
         </h1>
@@ -186,7 +186,7 @@ export default function SCM() {
           return (
             <>
               <div className="" key={index}>
-                <div className="p-7 space-y-3 text-center shadow-md border-[1px] border-gray-300">
+                <div className="p-7 space-y-3 text-center shadow-md border-[1px] border-gray-300 ">
                   <div className="border-[1px] w-14 h-14 mx-auto border-gray-300 p-3 ">
                     {item.icons}
                   </div>

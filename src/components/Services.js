@@ -25,30 +25,39 @@ function Services() {
                     hover === index
                       ? "brightness-75 ease-in-out transition duration-300 scale-110 rotate-3"
                       : null
-                  }  cursor-pointer w-96 `}
+                  }  cursor-pointer h-64 `}
                   src={card.image}
                   alt=""
                 />
               </div>
               <div className="absolute shadow-lg bg-white rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-72 lg:w-60 space-x-4 hover:bg-[#ff5e15] hover:text-white transition ease-in-out duration-500">
-                <div
-                  className={`${
-                    hover === index ? "bg-[#ff5e15]" : "bg-white"
-                  } absolute shadow-lg  rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-72 lg:w-60 space-x-4  transition ease-in-out duration-500`}
+                <Link
+                  to={`/whatwedo/${DropdownData[index].catgeory}`}
+                  state={{
+                    image: DropdownData[index].image,
+                    Tittle: DropdownData[index].Tittle,
+                    Para: DropdownData[index].Para,
+                  }}
                 >
-                  <img
-                    className={`w-14`}
-                    src="https://www.venovet.com/assets/images/logo-br-grey.png"
-                    alt=""
-                  />
-                  <p
-                    className={`text-lg ${
-                      hover === index ? "text-white" : "text-[#2a2a2a] "
-                    }  leading-5  transition ease-in-out duration-500 `}
+                  <div
+                    className={`${
+                      hover === index ? "bg-[#ff5e15]" : "bg-white"
+                    } absolute shadow-lg  rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-72 lg:w-60 space-x-4  transition ease-in-out duration-500`}
                   >
-                    {card.Tittle}
-                  </p>
-                </div>
+                    <img
+                      className={`w-14`}
+                      src="https://www.venovet.com/assets/images/logo-br-grey.png"
+                      alt=""
+                    />
+                    <p
+                      className={`text-lg ${
+                        hover === index ? "text-white" : "text-[#2a2a2a] "
+                      }  leading-5  transition ease-in-out duration-500 `}
+                    >
+                      {card.Tittle}
+                    </p>
+                  </div>
+                </Link>
               </div>
             </div>
           );

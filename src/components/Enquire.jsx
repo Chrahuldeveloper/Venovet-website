@@ -36,7 +36,7 @@ function Enquire() {
     e.preventDefault();
     configureCaptcha();
 
-    const phoneNumber = form.Mobile;
+    const phoneNumber = 91 + form.Mobile;
     console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
 
@@ -134,15 +134,17 @@ function Enquire() {
                     });
                   }}
                 />
-                <PhoneInput
+                <input
                   value={form.Mobile}
+                  type="number"
+                  placeholder="Phone Number"
                   onChange={(e) => {
                     setForm({
                       ...form,
-                      Mobile: e,
+                      Mobile: e.target.value,
                     });
                   }}
-                  className="px-4 py-2 border outline-none w-60 rounded-3xl focus:border-none"
+                  className="border w-60 rounded-3xl px-4 py-2 focus:outline-[#ced4da] focus:border-none"
                 />
 
                 <button

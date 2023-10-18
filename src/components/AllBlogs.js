@@ -14,7 +14,7 @@ export default function AllBlogs() {
               onClick={() => {
                 navigate(`/ReadFull/${_.Tittle}`);
               }}
-              className="flex flex-col justify-start gap-5 p-6 shadow-md lg:max-w-4xl lg:flex-row md:items-center"
+              className="flex flex-col justify-start gap-5 p-6 shadow-md lg:max-w-4xl lg:flex-row md:items-center cursor-pointer"
               data-aos="fade-up"
               data-aos-delay="50"
               data-aos-duration="1000"
@@ -27,12 +27,14 @@ export default function AllBlogs() {
                   className="rounded-lg"
                 />
               </div>
-              <div className="space-y-3">
+              <div className="space-y-3 text-justify">
                 <h1 className="text-[#ff602b] font-semibold text-lg">
                   {_.Tittle}
                 </h1>
-                <h2 className="text-[#777777] font-bold ">{_.SubTittle}</h2>
-                <p className="text-[#777777]">{_.Para}</p>
+                <h2 className="text-[#777777] font-bold text-justify">
+                  {_.SubTittle}
+                </h2>
+                <p className="text-[#777777] text-justify">{_.Para}</p>
               </div>
             </div>
           </React.Fragment>

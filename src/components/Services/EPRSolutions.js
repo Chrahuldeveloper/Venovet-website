@@ -59,7 +59,7 @@ export default function EPRSolutions({ data }) {
 
   return (
     <>
-      <div className="space-y-8 text-[#7a7a7a] flex justify-center items-center flex-col">
+      <div className="space-y-8 text-[#7a7a7a] flex justify-center items-center flex-col text-justify">
         <h1 className="text-xl font-semibold lg:text-3xl font-poppins text-black">
           {data?.Tittle1}
         </h1>
@@ -70,7 +70,7 @@ export default function EPRSolutions({ data }) {
           return (
             <React.Fragment key={index}>
               <div className="max-w-xs p-5 text-center shadow-lg shadow-slate-300">
-                <div className="space-y-2">
+                <div className="space-y-2 text-justify">
                   <h1 className="font-semibold text-orange-500 ">
                     {item.Tittle}
                   </h1>
@@ -82,7 +82,7 @@ export default function EPRSolutions({ data }) {
         })}
       </div>
 
-      <div className="mt-7 text-[#7a7a7a] space-y-4">
+      <div className="mt-7 text-[#7a7a7a] space-y-4 text-justify">
         <h1 className="text-lg font-bold">{data?.Tittle2}</h1>
         <p>{data?.Para2}</p>
         <ul className="ml-4 space-y-1">
@@ -109,7 +109,7 @@ export default function EPRSolutions({ data }) {
             <React.Fragment key={index}>
               <div className="max-w-xs p-5 space-y-2 text-center shadow-md shadow-slate-300">
                 <img src={item.image} alt="" className="mx-auto" />
-                <div className="space-y-2">
+                <div className="space-y-2 text-justify">
                   <h1 className="font-semibold text-orange-500 ">
                     {item.Tittle}
                   </h1>

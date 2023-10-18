@@ -1,11 +1,12 @@
 import React from "react";
+import blog1 from "../images/blog.jpg";
 
 export default function BlogPageHeroSection() {
   return (
     <div>
       <div
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0.2, 0.1, 0.7), rgba(0, 0, 0, 0.4)),url(https://venovet.com/assets/images/pagetop-bg1.jpg)`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 20 , 0.6), rgba(0, 0, 20, 0.6)),url(${blog1})`,
           backgroundPosition: "center center",
           backgroundSize: "cover",
           height: "40vh",

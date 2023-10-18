@@ -10,7 +10,7 @@ export default function WareHouseManagement({ data }) {
         <h1 className="max-w-sm font-semibold font-poppins md:max-w-full text-[2rem] lg:text-4xl">
           {data?.Tittle1}
         </h1>
-        <div className="flex flex-col items-start space-y-10 lg:space-y-0 lg:space-x-10 lg:flex-row text-[#7a7a7a]">
+        <div className="flex flex-col items-start space-y-10 lg:space-y-0 lg:space-x-10 lg:flex-row text-[#7a7a7a] text-justify">
           <p>{data?.Para1}</p>
           <p>{data?.Para2}</p>
         </div>
@@ -26,31 +26,31 @@ export default function WareHouseManagement({ data }) {
             src={data?.SubCat1?.image}
             alt="imge"
           />
-          <div className="max-w-lg space-y-3.5">
+          <div className="max-w-md space-y-3.5 text-justify">
             <h1 className="text-xl font-bold text-orange-500 ">
               {data?.SubCat1?.Tittle}
             </h1>
-            <p className="text-[#7a7a7a] text-sm leading-6">
+            <p className="text-justify text-[#7a7a7a] text-sm leading-6">
               {data?.SubCat1?.Para}
             </p>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col items-start space-y-4 lg:flex-row mt-7 lg:space-y-0">
-        <img
-          className="max-w-xs rounded-lg lg:order-2"
-          src={data?.SubCat2?.image}
-          alt="imge"
-        />
-        <div className="max-w-lg space-y-3.5 ">
+      <div className="flex flex-col items-start space-y-4 lg:space-x-10 lg:flex-row mt-7 lg:space-y-0 ">
+        <div className="max-w-md space-y-3.5 text-justify">
           <h1 className="text-xl font-bold text-orange-500 ">
             {data?.SubCat2?.Tittle}
           </h1>
-          <p className="text-[#7a7a7a] text-sm leading-6">
+          <p className="text-justify text-[#7a7a7a] text-sm leading-6">
             {data?.SubCat2?.Para}
           </p>
         </div>
+        <img
+          className="max-w-xs rounded-lg"
+          src={data?.SubCat2?.image}
+          alt="imge"
+        />
       </div>
 
       <div className="flex flex-col items-start space-y-4 lg:space-x-10 lg:flex-row mt-7 lg:space-y-0">
@@ -59,27 +59,22 @@ export default function WareHouseManagement({ data }) {
           src={data?.SubCat3?.image}
           alt="imge"
         />
-        <div className="max-w-lg space-y-3.5">
+        <div className="max-w-md space-y-3.5 text-justify">
           <h1 className="text-xl font-bold text-orange-500 ">
             {data?.SubCat3?.Tittle}
           </h1>
-          <p className="text-[#7a7a7a] text-sm leading-6">
+          <p className="text-justify text-[#7a7a7a] text-sm leading-6">
             {data?.SubCat3?.Para}
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col items-start space-y-4 lg:flex-row mt-7 lg:space-y-0">
-        <img
-          className="max-w-xs rounded-lg lg:order-2"
-          src={data?.SubCat4?.image}
-          alt="imge"
-        />
-        <div className="max-w-lg space-y-3.5">
+      <div className="flex flex-col items-start lg:space-x-10 space-y-4 lg:flex-row mt-7 lg:space-y-0">
+        <div className="max-w-md space-y-3.5">
           <h1 className="text-xl font-bold text-orange-500 ">
             {data?.SubCat4?.Tittle}
           </h1>
-          <p className="text-[#7a7a7a] text-sm leading-6">
+          <p className="text-justify text-[#7a7a7a] text-sm leading-6">
             {data?.SubCat4?.Para}
 
             <ul className="pt-5 pl-4">
@@ -91,6 +86,11 @@ export default function WareHouseManagement({ data }) {
             </ul>
           </p>
         </div>
+        <img
+          className="max-w-xs rounded-lg "
+          src={data?.SubCat4?.image}
+          alt="imge"
+        />
       </div>
       {/* Offerings section*/}
 
@@ -109,7 +109,7 @@ export default function WareHouseManagement({ data }) {
             {data?.Subcat9?.Tittle}
           </h1>
           <h2 className="font-semibold">{data?.Subcat9?.SubTittle}</h2>
-          <p className="text-[#777777] leading-7 text-sm">
+          <p className="text-justify text-[#777777] leading-7 text-sm">
             {data?.Subcat9?.Para}
           </p>
         </div>
@@ -126,7 +126,9 @@ export default function WareHouseManagement({ data }) {
           <h1 className="text-[2rem] font-semibold lg:text-4xl">
             {data?.Tittle5}
           </h1>
-          <p className="text-[#777777] leading-7 text-sm">{data?.Para5}</p>
+          <p className="text-justify text-[#777777] leading-7 text-sm">
+            {data?.Para5}
+          </p>
         </div>
         <div className="grid grid-cols-1 gap-8 mt-6 lg:grid-cols-3">
           <Icons />

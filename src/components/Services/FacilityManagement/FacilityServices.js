@@ -11,7 +11,7 @@ export default function FacilityServices({ data }) {
             className="lg:max-w-xs"
           />
         </div>
-        <div className="text-[#7a7a7a] space-y-5">
+        <div className="text-[#7a7a7a] space-y-5 text-justify">
           <h1 className="text-lg font-bold text-black md:text-xl">
             {data?.SubCat1?.Tittle}
           </h1>
@@ -19,7 +19,7 @@ export default function FacilityServices({ data }) {
           <p className="leading-8">{data?.SubCat1?.Para2}</p>
         </div>
       </div>
-      <div className="text-[#7a7a7a] space-y-5 mt-3.5">
+      <div className="text-[#7a7a7a] space-y-5 mt-3.5 text-justify">
         <p className="leading-8">{data?.SubCat1?.Para3}</p>
         <p className="leading-8">{data?.SubCat1?.Para4}</p>
       </div>

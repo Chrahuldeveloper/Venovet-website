@@ -51,7 +51,7 @@ export default function Inventory({ data }) {
           <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
             {data?.SubCat1?.Tittle}
           </h1>
-          <p className="text-[#777777]">{data?.SubCat1?.Para}</p>
+          <p className="text-justify text-[#777777]">{data?.SubCat1?.Para}</p>
         </div>
       </div>
       {/* What is Stock Audit Services*/}
@@ -62,7 +62,7 @@ export default function Inventory({ data }) {
             {data?.SubCat2?.Tittle}
           </h1>
           <ul className="space-y-3 text-[#777777]">
-            <p className="text-[#777777]">{data?.SubCat2?.Para}</p>
+            <p className="text-justify text-[#777777]">{data?.SubCat2?.Para}</p>
           </ul>
         </div>
         <img
@@ -85,7 +85,7 @@ export default function Inventory({ data }) {
                 <h1 className="text-lg font-semibold md:text-xl ">
                   {item.Tittle}
                 </h1>
-                <p className="text-[#777777]">{item.Para}</p>
+                <p className="text-justify text-[#777777]">{item.Para}</p>
               </div>
             );
           })}
@@ -105,7 +105,7 @@ export default function Inventory({ data }) {
                 <h1 className="text-lg font-semibold md:text-xl ">
                   {item.Tittle}
                 </h1>
-                <p className="text-[#777777]">{item.Para}</p>
+                <p className="text-justify text-[#777777]">{item.Para}</p>
               </div>
             );
           })}

@@ -41,7 +41,7 @@ function ShopCate() {
               >
                 <img className="max-w-[15rem]" src={item.img} alt={item.img} />
                 <p
-                  className="text-sm font-semibold text-center cursor-pointer"
+                  className="text-sm font-semibold text-center cursor-pointer hover:text-[#ff5e15] transition duration-300 ease-in-out"
                   onClick={() => {
                     if (item.name.toUpperCase() !== "") {
                       navigate(`/detail/${item.name}`, {

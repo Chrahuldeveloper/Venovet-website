@@ -7,10 +7,12 @@ export default function DropDown({ ismobile, type }) {
     <ul>
       {type === "Whatwedo"
         ? DropdownData.map((item, i) => {
+            const encodedTittle = encodeURIComponent(item.catgeory);
+
             return (
               <React.Fragment key={i}>
                 <Link
-                  to={`/whatwedo/${item.catgeory}`}
+                  to={`/whatwedo/${encodedTittle}`}
                   state={{
                     image: item.image,
                     Tittle: item.Tittle,

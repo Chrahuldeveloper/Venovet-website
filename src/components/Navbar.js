@@ -292,8 +292,8 @@ export default function Navbar({ Page }) {
         </div>
 
         {/* Menu Bar with drop down only for Big screens */}
-        <div className="z-50 justify-center hidden mt-1 translate-y-6 lg:flex">
-          <div className="flex items-center bg-[#121a37] p-4 rounded-l-md pr-40">
+        <div className="z-50 justify-center hidden mt-1 translate-y-6 lg:flex px-14">
+          <div className="flex items-center bg-[#121a37] p-4  rounded-l-md w-full">
             <ul className="flex items-center space-x-12 text-white">
               <Link to={"/"}>
                 <li className="cursor-pointer  hover:text-[#ff5e15] transition duration-300 ease-in-out">
@@ -413,7 +413,7 @@ export default function Navbar({ Page }) {
             </ul>
           </div>
           <Link to="/contact">
-            <button className="bg-[#ff5e15] relative overflow-hidden group text-[#fff] p-4 flex  cursor-pointer items-center space-x-1.5  rounded-r-md transition ease-in-out duration-500">
+            <button className="bg-[#ff5e15] relative overflow-hidden group text-[#fff] p-4 py-2 flex  cursor-pointer items-center space-x-1.5  rounded-r-md transition ease-in-out duration-500">
               <span className="absolute left-0 w-0 h-full transition-all duration-500 ease-in-out bg-orange-700 opacity-100 group-hover:w-full"></span>
               <span className="relative flex items-center">
                 <AiOutlineWechat size={20} color="white" />

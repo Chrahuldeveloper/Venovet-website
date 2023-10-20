@@ -18,6 +18,9 @@ export default function ProductDetail() {
     image,
   };
 
+
+  
+
   return (
     <>
       <Navbar Page={"Shop"} />

@@ -1,12 +1,12 @@
 import { addDoc, collection } from "firebase/firestore";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { db } from "../Firebase";
 import { ColorRing } from "react-loader-spinner";
 import { getAuth, signInWithPhoneNumber } from "firebase/auth";
 import { RecaptchaVerifier } from "firebase/auth";
-import PhoneInput from "react-phone-number-input";
-
+import emailjs from "@emailjs/browser";
 export default function CheckOutForm({ item, quantity, name }) {
+  const formRef = useRef();
   const [form, setForm] = useState({
     Name: "",
     Email: "",
@@ -30,8 +30,8 @@ export default function CheckOutForm({ item, quantity, name }) {
   const onNumSubmit = (e) => {
     e.preventDefault();
     configureCaptcha();
-    const phoneNumber = 91 + form.Phone;
-    console.log(phoneNumber);
+    const phoneNumber = "+" + 91 + form.Phone;
+    // console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
       .then((confirmationResult) => {
@@ -58,6 +58,8 @@ export default function CheckOutForm({ item, quantity, name }) {
           // const user = result.user;
           // console.log(JSON.stringify(user));
           alert("Number is verified!");
+          sendEmail();
+
           // Save form data to Firebase after OTP verification
           try {
             await addDoc(collection(db, "ORDERS"), form);
@@ -76,6 +78,31 @@ export default function CheckOutForm({ item, quantity, name }) {
           window.location.reload();
         });
     }
+  };
+
+  const sendEmail = () => {
+    emailjs
+      .send(
+        "service_zroajyn",
+        "template_iowctjd",
+        {
+          from_name: "VENOVET",
+          to_name: form.Name,
+          from_email: "jayprakashpj2525@gmail.com",
+          to_email: form.Email,
+          message:
+            "Your Order number 555001 is confirmed! Our Venovet team will get back to you as soon as possible.",
+        },
+        "sE-s_AZMedbPMZx18"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -101,7 +128,10 @@ export default function CheckOutForm({ item, quantity, name }) {
         <p className="my-4 text-sm font-semibold text-center text-slate-500">
           Please fill the form to complete the Checkout
         </p>
-        <form className="justify-center md:grid md:grid-cols-2 place-items-center">
+        <form
+          ref={formRef}
+          className="justify-center md:grid md:grid-cols-2 place-items-center"
+        >
           <div className="flex flex-col gap-4 my-2">
             <label htmlFor="name" className="text-[#787878]">
               Full Name

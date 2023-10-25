@@ -413,7 +413,7 @@ export default function Navbar({ Page }) {
             </ul>
           </div>
           <Link to="/contact">
-            <button className="bg-[#ff5e15] relative overflow-hidden group text-[#fff] p-4 py-2 flex  cursor-pointer items-center space-x-1.5  rounded-r-md transition ease-in-out duration-500">
+            <button className="bg-[#ff5e15] w-60 h-full relative overflow-hidden group text-[#fff] p-4 py-2 flex  cursor-pointer items-center space-x-1.5  rounded-r-md transition ease-in-out duration-500">
               <span className="absolute left-0 w-0 h-full transition-all duration-500 ease-in-out bg-orange-700 opacity-100 group-hover:w-full"></span>
               <span className="relative flex items-center">
                 <AiOutlineWechat size={20} color="white" />

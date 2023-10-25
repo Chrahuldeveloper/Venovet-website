@@ -7,7 +7,6 @@ import {
   signInWithPhoneNumber,
 } from "firebase/auth";
 import { ColorRing } from "react-loader-spinner";
-import PhoneInput from "react-phone-number-input";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -33,7 +32,7 @@ export default function ContactForm() {
   const onNumSubmit = (e) => {
     e.preventDefault();
     configureCaptcha();
-    const phoneNumber = 91 + form.Phone;
+    const phoneNumber = "+" + 91 + form.Phone;
     console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)

@@ -35,7 +35,7 @@ function Enquire() {
     e.preventDefault();
     configureCaptcha();
 
-    const phoneNumber = 91 + form.Mobile;
+    const phoneNumber = "+" + 91 + form.Mobile;
     console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
 

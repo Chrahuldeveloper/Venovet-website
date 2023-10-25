@@ -35,7 +35,7 @@ export default function Form() {
     e.preventDefault();
     configureCaptcha();
 
-    const phoneNumber = 91 + resume.Phone;
+    const phoneNumber = "+" + 91 + resume.Phone;
     console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)

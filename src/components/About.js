@@ -28,7 +28,7 @@ export default function About() {
 
   return (
     <div
-      className="items-start justify-st p-4 space-y-10 lg:flex md:space-y-0 md:px-14 lg:space-x-20 my-28"
+      className="items-center justify-center p-4 space-y-10 lg:flex md:space-y-0 md:px-14 lg:space-x-20 my-28"
       data-aos="fade-up"
       data-aos-delay="50"
       data-aos-duration="1000"
@@ -63,9 +63,9 @@ export default function About() {
         </p>
         <div className="flex flex-col items-start mt-8 space-y-4 md:flex-row md:space-x-6 md:space-y-0">
           <Link to={data?.Pdf}>
-            <button className="flex items-center px-8 py-2 space-x-3 text-sm font-semibold text-white bg-[#ff5e15] overflow-hidden relative group  transition duration-300 ease-in-out rounded-lg shadow-2xl shadow-black">
-              <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
-              <span className="relative flex items-center">
+            <button className="flex  items-center px-8 py-2  text-sm font-semibold text-white bg-[#ff5e15] overflow-hidden relative group  transition duration-300 ease-in-out rounded-lg shadow-2xl shadow-black">
+              <span className="absolute left-0 w-0 h-full transition-all duration-300 ease-in-out bg-orange-700 opacity-100 group-hover:w-full"></span>
+              <span className="relative flex items-center gap-3">
                 <h1>DOWNLOAD BROCHURE</h1>
                 <FaRegFilePdf size={20} color="white" />
               </span>

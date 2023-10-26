@@ -26,13 +26,12 @@ export default function CheckOutForm({ item, quantity, name }) {
     });
   };
   const [isSubmitting, setIsSubmiting] = useState(false);
-
   const onNumSubmit = (e) => {
     e.preventDefault();
     configureCaptcha();
     const phoneNumber = "+" + 91 + form.Phone;
-    // console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
+
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
@@ -41,42 +40,38 @@ export default function CheckOutForm({ item, quantity, name }) {
       .catch((error) => {
         console.log(error);
         alert("Error! Sending OTP, Try Again...");
-        window.location.reload();
       });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmiting(true);
-    if (Object.values(form).every((i) => i === "")) {
-      alert("Please Fill the form");
-    } else {
-      const code = otp; // Use the OTP entered by the user
-      window.confirmationResult
-        .confirm(code)
-        .then(async (result) => {
-          // User signed in successfully.
-          // const user = result.user;
-          // console.log(JSON.stringify(user));
-          alert("Number is verified!");
-          sendEmail();
 
-          // Save form data to Firebase after OTP verification
-          try {
-            await addDoc(collection(db, "ORDERS"), form);
-            setIsSubmiting(false);
-            window.location.reload();
-            alert("success");
-          } catch (error) {
-            setIsSubmiting(false);
-            console.log(error);
-          }
-        })
-        .catch((error) => {
-          // Handle OTP verification errors.
-          console.error(error);
-          alert("OTP verification failed. Please try again.");
-          window.location.reload();
-        });
+    if (
+      form.Name === "" ||
+      form.Email === "" ||
+      form.Phone === "" ||
+      form.quantity === "" ||
+      form.name === ""
+    ) {
+      alert("Please fill in all required fields");
+      setIsSubmiting(false);
+    } else {
+      const code = otp;
+      try {
+        const result = await window.confirmationResult.confirm(code);
+        alert("Number is verified!");
+        sendEmail();
+        await addDoc(collection(db, "ORDERS"), form);
+        alert("Sucess");
+      } catch (error) {
+        console.error(error);
+        alert(
+          "OTP verification failed or an error occurred. Please try again."
+        );
+      } finally {
+        setIsSubmiting(false); // Reset the loading state
+      }
     }
   };
 
@@ -121,7 +116,7 @@ export default function CheckOutForm({ item, quantity, name }) {
             />
           </div>
         )}
-        <img src={item} className="w-28 mx-auto " alt="picturx" />
+        <img src={item} className="mx-auto w-28 " alt="picturx" />
         <h1 className="mt-5 text-xl text-center text-slate-500 lg:text-xl">
           Quantity : {quantity}
         </h1>

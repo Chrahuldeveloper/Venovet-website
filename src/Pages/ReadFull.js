@@ -12,7 +12,7 @@ import { useParams } from "react-router-dom";
 
 export default function ReadFull() {
   const { tittle } = useParams();
-  console.log(tittle)
+  console.log(tittle);
   return (
     <body className="overflow-x-clip">
       <main>

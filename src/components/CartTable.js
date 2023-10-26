@@ -6,6 +6,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { BiMinus } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { CheckOutModel } from "./index";
+import { CleaningServices } from "@mui/icons-material";
 
 export default function CartTable() {
   const cart = useSelector((state) => state.cart);
@@ -97,15 +98,17 @@ export default function CartTable() {
               onClick={() => {
                 if (cart.cartItems.length > 0) {
                   setcheckout(true);
+                  const itemNames = cart.cartItems
+                    .map((item) => item.name)
+                    .join(", ");
+                  console.log("itemNames:", itemNames);
                   setitems({
                     ...items,
                     item: cart.cartItems.map((item) => {
                       return item.img;
                     }),
                     vol: quantity,
-                    name: cart.cartItems.forEach((item) => {
-                      return item.name;
-                    }),
+                    name: itemNames,
                   });
                 } else {
                   alert("No items in the cart");

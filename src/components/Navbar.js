@@ -125,7 +125,7 @@ export default function Navbar({ Page }) {
                           setmobilewhat(true);
                           setmobilewho(false);
                         }}
-                        className="bg-white border py-1.5 px-3 animate__animated animate__fadeInDown hover:text-[#ff5e15] transition ease-in-out duration-300"
+                        className="bg-white border py-1.5 px-3  hover:text-[#ff5e15] transition ease-in-out duration-300"
                       >
                         What we do
                       </li>
@@ -135,7 +135,7 @@ export default function Navbar({ Page }) {
                           setmobilewhat(false);
                         }}
                       >
-                        <li className="bg-white border animate__animated animate__fadeInDown py-1.5 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300">
+                        <li className="bg-white border  py-1.5 px-3 hover:text-[#ff5e15] transition ease-in-out duration-300">
                           Who we serve
                         </li>
                       </li>
@@ -331,7 +331,7 @@ export default function Navbar({ Page }) {
                       }}
                       className={`cursor-pointer ${
                         Page === "whatwedo" ? "text-orange-500" : null
-                      }  bg-white border py-1 px-3 animate__animated animate__fadeInDown hover:text-[#ff5e15] transition ease-in-out duration-300`}
+                      }  bg-white border py-1 px-3  hover:text-[#ff5e15] transition ease-in-out duration-300`}
                     >
                       What we do
                     </li>
@@ -346,7 +346,7 @@ export default function Navbar({ Page }) {
                         }}
                         className={`cursor-pointer ${
                           Page === "whoweserve" ? "text-orange-500" : null
-                        }  bg-white border py-1 px-3 animate__animated animate__fadeInDown hover:text-[#ff5e15] transition ease-in-out duration-300`}
+                        }  bg-white border py-1 px-3  hover:text-[#ff5e15] transition ease-in-out duration-300`}
                       >
                         Who we serve
                       </li>

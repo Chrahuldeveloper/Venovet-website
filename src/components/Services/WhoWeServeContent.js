@@ -30,40 +30,18 @@ export default function WhoWeServeContent({ data }) {
     },
   ];
 
-  const DynamicContent = {
-    Tittle1: "Overview",
-    Para1:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quas provident ea, ex, cum incidunt officia pariatur amet, velit recusandae est. Dignissimos praesentium iste deleniti reprehenderit! Excepturi exercitationem porro vero deserunt molestiae perspiciatis. Aut tempore molestias, sed ipsam sequi nisi! Aliquid nemo atque quibusdam harum. Suscipit labore repudiandae cum quos nulla voluptates totam, delectus minus molestiae reprehenderit consectetur eaque corporis incidunt dolore asperiores iure doloribus, voluptatem dolorum unde. Accusamus distinctio libero aliquid nam? Accusamus veritatis rerum, explicabo voluptate alias deleniti eaque! Dolores recusandae eveniet explicabo voluptas ducimus pariatur deserunt. Eaque dolorum debitis iste velit magni consequatur modi perferendis voluptatem iure.",
-    Para2:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quas provident ea, ex, cum incidunt officia pariatur amet, velit recusandae est. Dignissimos praesentium iste deleniti reprehenderit! Excepturi exercitationem porro vero deserunt molestiae perspiciatis. Aut tempore molestias, sed ipsam sequi nisi! Aliquid nemo atque quibusdam harum. Suscipit labore repudiandae cum quos nulla voluptates totam, delectus minus molestiae reprehenderit consectetur eaque corporis incidunt dolore asperiores iure doloribus, voluptatem dolorum unde. Accusamus distinctio libero aliquid nam? Accusamus veritatis rerum, explicabo voluptate alias deleniti eaque! Dolores recusandae eveniet explicabo voluptas ducimus pariatur deserunt. Eaque dolorum debitis iste velit magni consequatur modi perferendis voluptatem iure.",
-    Para3:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quas provident ea, ex, cum incidunt officia pariatur amet, velit recusandae est. Dignissimos praesentium iste deleniti reprehenderit! Excepturi exercitationem porro vero deserunt molestiae perspiciatis. Aut tempore molestias, sed ipsam sequi nisi! Aliquid nemo atque quibusdam harum. Suscipit labore repudiandae cum quos nulla voluptates totam, delectus minus molestiae reprehenderit consectetur eaque corporis incidunt dolore asperiores iure doloribus, voluptatem dolorum unde. Accusamus distinctio libero aliquid nam? Accusamus veritatis rerum, explicabo voluptate alias deleniti eaque! Dolores recusandae eveniet explicabo voluptas ducimus pariatur deserunt. Eaque dolorum debitis iste velit magni consequatur modi perferendis voluptatem iure.",
-    Tittle2: "Stats & Charts",
-    ChartsPara1:
-      "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry^^s standard dummy textever since the 1500s, when an unknown printer took a galley oftype and scrambled it to make a type specimen book.",
-    ChartsPara2:
-      "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry^^s standard dummy textever since the 1500s, when an unknown printer took a galley oftype and scrambled it to make a type specimen book.",
-    ChartsPara3:
-      "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry^^s standard dummy textever since the 1500s, when an unknown printer took a galley oftype and scrambled it to make a type specimen book",
-    Tittle3: "How It Works?",
-    HowItWorksPara:
-      "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry^^s standard dummy textever since the 1500s, when an unknown printer took a galley of typeand scrambled it to make a type specimen book.",
-    whyusPara:
-      "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry^^s standard dummy textever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  };
-
   return (
     <section className="md:max-w-3xl p-4">
       <div className="space-y-4 text-[#7a7a7a]">
         <h1 className="font-semibold font-poppins text-black text-2xl md:text-3xl lg:text-4xl">
-          {DynamicContent.Tittle1}
+          {data?.Title1}
         </h1>
         <p className="text-justify">{data?.Overview}</p>
       </div>
 
       <div className="mt-7">
         <h1 className="font-semibold font-poppins text-black text-2xl md:text-3xl lg:text-4xl">
-          {DynamicContent.Tittle2}
+          {data?.Title2}
         </h1>
         <div className="flex flex-col items-start gap-5 mt-5 md:flex-row">
           <div className="space-y-4 text-[#7a7a7a]">
@@ -77,7 +55,7 @@ export default function WhoWeServeContent({ data }) {
 
       <div className="space-y-4 mt-7">
         <h1 className="font-semibold font-poppins text-black text-2xl md:text-3xl lg:text-4xl">
-          {DynamicContent.Tittle3}
+          {data?.Title3}
         </h1>
         <p className="text-[#7a7a7a] leading-8">
           <p className="text-justify">{data?.How}</p>
@@ -87,7 +65,7 @@ export default function WhoWeServeContent({ data }) {
 
       <div className="space-y-4 mt-7">
         <h1 className="font-semibold font-poppins text-black text-2xl md:text-3xl lg:text-4xl">
-          Why Us!
+          {data?.Title4}
         </h1>
         <p className="text-[#7a7a7a] leading-8">{data?.Why}</p>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">

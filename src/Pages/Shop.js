@@ -5,6 +5,7 @@ import {
   NewsLetter,
   ShopHeroSection,
   ShopCate,
+  DragTop,
 } from "../components";
 import { useLocation } from "react-router-dom";
 
@@ -20,6 +21,8 @@ export default function Shop() {
       <ShopHeroSection />
       <ShopCate />
       <NewsLetter />
+      <DragTop />
+
       <Footer />
     </body>
   );

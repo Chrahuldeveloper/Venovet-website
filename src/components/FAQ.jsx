@@ -49,7 +49,7 @@ const FAQ = () => {
         Frequently Asked Questions?
       </h1>
       <div className="divide-y-2">
-        <div className="flex items-start justify-between text-left ">
+        <div className="flex items-start justify-around text-left ">
           <div className="pt-10">
             {Data.map((_, index) => {
               return (
@@ -66,7 +66,7 @@ const FAQ = () => {
               );
             })}
           </div>
-          <div className="w-[20rem] h-auto hidden lg:flex">
+          <div className="w-[24rem] pr-10 h-auto hidden lg:flex">
             <img src={faq} alt="faq.png" />
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import {
   CareerHeroSection,
+  DragTop,
   Footer,
   Form,
   Navbar,
@@ -23,6 +24,8 @@ export default function Career() {
       />
       <Form />
       <NewsLetter />
+      <DragTop />
+
       <Footer />
     </body>
   );

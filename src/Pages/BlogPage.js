@@ -5,6 +5,7 @@ import {
   NewsLetter,
   Footer,
   AllBlogs,
+  DragTop,
 } from "../components";
 import { Help, Brochure } from "../components/Services/index";
 
@@ -23,6 +24,7 @@ export default function BlogPage() {
         </div>
       </div>
       <NewsLetter />
+      <DragTop />
       <Footer />
     </body>
   );

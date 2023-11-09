@@ -5,6 +5,7 @@ import {
   NewsLetter,
   ShopHeroSection,
   CartTable,
+  DragTop,
 } from "../components";
 
 export default function CartItem() {
@@ -15,6 +16,8 @@ export default function CartItem() {
         <ShopHeroSection />
         <CartTable />
         <NewsLetter />
+        <DragTop />
+
         <Footer />
       </body>
     </>

@@ -5,6 +5,7 @@ import {
   NewsLetter,
   CareerHeroSection,
   ContactForm,
+  DragTop,
 } from "../components/index";
 import { useLocation } from "react-router-dom";
 export default function Contact() {
@@ -22,6 +23,8 @@ export default function Contact() {
       />
       <ContactForm />
       <NewsLetter />
+      <DragTop />
+
       <Footer />
     </body>
   );

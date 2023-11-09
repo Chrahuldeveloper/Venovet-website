@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import {
   Detail,
+  DragTop,
   Footer,
   Navbar,
   NewsLetter,
@@ -18,15 +19,13 @@ export default function ProductDetail() {
     image,
   };
 
-
-  
-
   return (
     <>
       <Navbar Page={"Shop"} />
       <ShopHeroSection />
       <Detail Product={Product} />
       <NewsLetter />
+      <DragTop />
       <Footer />
     </>
   );

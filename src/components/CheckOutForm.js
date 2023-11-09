@@ -83,7 +83,7 @@ export default function CheckOutForm({ item, quantity, name }) {
         {
           from_name: "VENOVET",
           to_name: form.Name,
-          from_email: "jayprakashpj2525@gmail.com",
+          from_email: "sales@venovet.com",
           to_email: form.Email,
           message:
             "Your Order number 555001 is confirmed! Our Venovet team will get back to you as soon as possible.",

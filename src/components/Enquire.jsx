@@ -179,7 +179,7 @@ function Enquire() {
                   }}
                   className="md:w-[100%] w-60 focus:outline-[#ced4da] rounded-3xl px-4 py-2 text-[#676767 focus:border-[#ced4da] border"
                 >
-                  <option></option>
+                  <option>Nature of Enquiry</option>
 
                   {data.map((item, index) => {
                     return (

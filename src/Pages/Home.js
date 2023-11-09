@@ -3,7 +3,7 @@ import {
   About,
   Navbar,
   Slider,
-  Testimonials,
+  // Testimonials,
   FAQ,
   Footer,
   Features,
@@ -52,7 +52,7 @@ export default function Home() {
       <Services />
       <Features />
       <Enquire />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <FAQ />
       <Bridge />
       <Blogs />

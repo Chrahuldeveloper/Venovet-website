@@ -104,8 +104,8 @@ export default function ContactForm() {
       <h1 className="mt-5 text-xl font-semibold text-center lg:text-3xl">
         Send Enquiry for more Details
       </h1>
-      <form className="justify-center gap-8 md:grid md:grid-cols-2 place-items-center mt-7">
-        <div className="flex flex-col gap-4">
+      <form className="justify-center gap-2 md:grid md:grid-cols-2 place-items-center mt-7">
+        <div className="flex flex-col gap-2">
           <label htmlFor="name" className="text-[#787878]">
             Full Name
           </label>
@@ -119,7 +119,7 @@ export default function ContactForm() {
             className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw] outline-none"
           />
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           <label htmlFor="Email Address :" className="text-[#787878]">
             Email Address :
           </label>
@@ -133,7 +133,7 @@ export default function ContactForm() {
             className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw] outline-none"
           />
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           <label htmlFor="Mobile no" className="text-[#787878]">
             Mobile no :
           </label>
@@ -159,7 +159,7 @@ export default function ContactForm() {
             <span className="relative flex items-center">Get OTP</span>
           </button>{" "}
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           <label htmlFor="OTP" className="text-[#787878]">
             Enter OTP{" "}
           </label>
@@ -171,7 +171,7 @@ export default function ContactForm() {
             className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw] outline-none"
           />
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           <label htmlFor="Nature Of Enquiry" className="text-[#787878]">
             Nature Of Enquiry{" "}
           </label>
@@ -189,12 +189,12 @@ export default function ContactForm() {
             <option value="Sales">Sales</option>
           </select>
         </div>
-        <div className="flex flex-col gap-4 md:col-span-2">
+        <div className="flex flex-col gap-2 md:col-span-2">
           <label htmlFor="Write a Message" className="text-[#787878]">
             Write a Message :
           </label>
           <textarea
-            rows="4"
+            rows="3"
             cols="70"
             type="text"
             value={form.Message}

@@ -5,6 +5,7 @@ import {
   NewsLetter,
   BlogContent,
   BlogPageHeroSection,
+  DragTop,
 } from "../components";
 import { Brochure } from "../components/Services/index";
 import { Help } from "../components/Services/index";
@@ -28,6 +29,7 @@ export default function ReadFull() {
           </div>
         </div>
         <NewsLetter />
+        <DragTop />
         <Footer />
       </main>
     </body>

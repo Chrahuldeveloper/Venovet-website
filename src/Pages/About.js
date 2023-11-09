@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import {
   AboutUsHeroSection,
   AboutUsSection,
+  DragTop,
   Footer,
   Navbar,
   NewsLetter,
@@ -20,6 +21,7 @@ export default function About() {
       <AboutUsHeroSection />
       <AboutUsSection />
       <NewsLetter />
+      <DragTop />
       <Footer />
     </body>
   );

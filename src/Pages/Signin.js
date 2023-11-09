@@ -1,6 +1,7 @@
 import React from "react";
 import {
   ContactForm,
+  DragTop,
   Footer,
   Navbar,
   NewsLetter,
@@ -14,6 +15,8 @@ export default function Signin() {
       <ServiceHeroSection image={""} Tittle={""} Para={""} />
       <ContactForm />
       <NewsLetter />
+      <DragTop />
+
       <Footer />
     </>
   );

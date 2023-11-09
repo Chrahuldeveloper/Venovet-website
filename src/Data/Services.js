@@ -1,35 +1,46 @@
+import {
+  services1,
+  services2,
+  services3,
+  services4,
+  services5,
+  services6,
+  services7,
+  services8,
+} from "../images/services/index";
+
 const Data = [
   {
     Tittle: "WareHouse Management",
-    image: "https://www.venovet.com/assets/images/resources/proj-img1-1.jpg",
+    image: services1,
   },
   {
     Tittle: "Transpotation",
-    image: "https://www.venovet.com/assets/images/resources/proj-img1-4.jpg",
+    image: services2,
   },
   {
     Tittle: "Value Added Services",
-    image: "https://www.venovet.com/assets/images/resources/proj-img1-3.jpg",
+    image: services3,
   },
   {
     Tittle: "SCM Automation",
-    image: "https://www.venovet.com/assets/images/resources/proj-img1-5.jpg",
+    image: services4,
   },
   {
     Tittle: "Inventory Audits",
-    image: "https://www.venovet.com/assets/images/resources/proj-img1-6.jpg",
+    image: services5,
   },
   {
     Tittle: "Logistics Projects Designing",
-    image: "https://www.venovet.com/assets/images/resources/proj-img1-7.jpg",
+    image: services6,
   },
   {
     Tittle: "Internet Supply Chain",
-    image: "https://www.venovet.com/assets/images/resources/proj-img1-8.jpg",
+    image: services7,
   },
   {
     Tittle: "ERP & Solutions",
-    image: "https://www.venovet.com/assets/images/resources/proj-img1-2.jpg",
+    image: services8,
   },
 ];
 

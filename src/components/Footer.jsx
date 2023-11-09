@@ -4,6 +4,8 @@ import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { db } from "../Firebase";
 import { doc, getDoc } from "firebase/firestore";
+import vvmain from "../images/home/footer/foot-logo.png";
+
 const Footer = () => {
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
@@ -108,10 +110,8 @@ const Footer = () => {
         <div className=" pt-20 lg:flex space-y-14 lg:space-y-0 ">
           {/* //first section */}
           <div className="space-y-4 ">
-            <img
-              src="https://venovet.com/assets/images/retina-logo2.png"
-              alt=""
-            />
+            <img src={vvmain} alt="pic" />
+
             <p className="max-w-sm leading-8">
               Transporting the Goods from Source to our Warehouse, Inwarding the
               Goods, Quality Check, Storage, Dispatch, Reporting and End

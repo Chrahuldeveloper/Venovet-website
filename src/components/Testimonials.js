@@ -47,7 +47,7 @@ const Testimonials = () => {
           WHAT CLIENTS SAY?
         </h1>
         <div
-          className="flex flex-col justify-start p-3 overflow-x-scroll md:px gap-14 scroll-smooth max-w-7xl md:gap-64 md:flex-row md:ml-10"
+          className="flex flex-col justify-start p-3 overflow-x-scroll  gap-14 scroll-smooth max-w-7xl md:gap-64 md:flex-row md:ml-10"
           ref={scrollref}
         >
           {Data.map((_, index) => {
@@ -77,16 +77,6 @@ const Testimonials = () => {
           })}
         </div>
         <div className="hidden md:flex items-center justify-between gap-0.5 space-x-6 pt-10">
-          {/* {Data.map((_, index) => {
-            return (
-              <React.Fragment>
-                <button
-                  key={index}
-                  className="w-8 h-4 rounded-2xl bg-[#ffffff1a]"
-                ></button>
-              </React.Fragment>
-            );
-          })} */}
           {Array.from({ length: dots }).map((_, index) => (
             <button
               key={index}

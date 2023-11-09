@@ -13,6 +13,8 @@ import { Link } from "react-router-dom";
 import { DropDown, MobileNavbar } from "./index";
 import { useSelector } from "react-redux";
 import vvmain from "../images/vvlogo.png";
+import whatsapp from "../images/whatsapp-icon.png";
+import linkedin from "../images/linkedin.png";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../Firebase";
 export default function Navbar({ Page }) {
@@ -84,11 +86,7 @@ export default function Navbar({ Page }) {
                   window.scrollTo(0, 0);
                 }}
               >
-                <img
-                  src="https://venovet.com/assets/images/logo.png"
-                  alt="https://venovet.com/assets/images/logo.png"
-                  className=""
-                />
+                <img src={vvmain} alt="pic" />
               </Link>
             </div>
             <div>
@@ -219,18 +217,14 @@ export default function Navbar({ Page }) {
               </h1>
             </div>
             <div className="flex items-center space-x-2.5 cursor-pointer">
-              <Link to={"https://www.linkedin.com/"}>
-                <img
-                  src="https://venovet.com/assets/images/linkedin-2.png"
-                  className="w-28"
-                  alt=""
-                />
+              <Link to={links?.Linkedin}>
+                <img src={linkedin} className="w-28" alt="" />
               </Link>
             </div>
           </div>
         </div>
         {/* Main Navbar */}
-        <div className="my- flex items-center justify-between mx-5 md:mx-28 ">
+        <div className="mt-5 flex items-center justify-between mx-5 md:mx-16 ">
           <div>
             <Link
               to={"/"}
@@ -251,9 +245,6 @@ export default function Navbar({ Page }) {
               className="md:hidden cursor-pointer bg-[#121a37] p-1.5 hover:bg-orange-600 ease-in-out duration-300"
             />
             <div className="hidden md:block">
-              <p className="text-[#8d8d8d] pl-11 mb-[-0.75rem] font-semibold text-sm">
-                24/7 Services
-              </p>
               <div className="flex items-center">
                 {/* <Link to={`https://wa.me/${links?.Whatsapp}`}> */}
                 <a
@@ -261,13 +252,22 @@ export default function Navbar({ Page }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="flex items-center">
-                    <img
-                      src="https://venovet.com/assets/images/whatsapp-icon.png"
-                      alt="whatsup"
-                      className="w-10 h-10"
-                    />
-                    <h1 className="text-lg font-semibold">{links?.Whatsapp}</h1>
+                  <div className="flex items-end space-x-2">
+                    <div className="">
+                      <img
+                        src={whatsapp}
+                        alt="whatsapp"
+                        className="w-10 h-10"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-[#8d8d8d] font-semibold text-sm">
+                        24/7 Services
+                      </p>
+                      <h1 className="text-lg md:text-xl font-semibold">
+                        {links?.Whatsapp}
+                      </h1>
+                    </div>
                   </div>
                   {/* </Link> */}
                 </a>

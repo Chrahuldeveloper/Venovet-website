@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { db } from "../Firebase";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import "react-phone-number-input/style.css";
+import { enquire } from "../images/home";
 import {
   getAuth,
   RecaptchaVerifier,
@@ -96,11 +97,7 @@ function Enquire() {
     <div className="bg-[#dae2ed]">
       <div className="px-3 py-24 lg:flex md:px-7 ">
         <div className="rounded-l-md">
-          <img
-            className="rounded-l-md"
-            src="https://venovet.com/assets/images/quote-pic.jpg"
-            alt=""
-          />
+          <img className="rounded-l-md h-full" src={enquire} alt="" />
         </div>
         <div className="bg-white rounded-r-md flex flex-col items-center pt-10 py-10 lg:pb-0  lg:w-[50%]">
           <h1 className="text-[#fe8704] text-[2.2rem] lg:text-4xl font-bold">

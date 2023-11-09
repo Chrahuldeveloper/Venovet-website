@@ -1,8 +1,10 @@
+import { services1 } from "../images/services/index";
+
 const DropdownData = [
   {
     catgeory: "Warehouse Management (2PL & 3PL)",
     Tittle: "Venovet's Warehouse Management",
-    image: "https://venovet.com/assets/images/bgs8.jpg",
+    image: services1,
     Para: "Give an efficiency boost to your inventory management",
   },
   {

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Data from "../Data/AboutFaqs";
 import { useState } from "react";
+import cargo from "../images/about/about-page.jpg";
 
 const AboutUsFaq = ({ Q, children, open, toggle, index }) => {
   return (
@@ -37,11 +38,11 @@ const FAQ = () => {
   return (
     <section className=" mx-auto ">
       <div className="mx-auto">
-        <div className="flex items-start mt-3 space-x-20 items md:justify-around">
+        <div className="flex items-start mt-3 space-x-16 items md:justify-around">
           <div className="space-y-5 pt-10">
             {Data.map((item, index) => {
               return (
-                <div key={index} className="w-[22rem] lg:max-w-md">
+                <div key={index} className="w-[22rem] lg:w-[29rem]">
                   <AboutUsFaq
                     Q={item.q}
                     open={index === openIndex}
@@ -68,11 +69,7 @@ const FAQ = () => {
             </Link>
           </div>
           <div className="hidden h-auto lg:flex">
-            <img
-              src="https://www.venovet.com/assets/images/cargo.jpg"
-              className=""
-              alt="about"
-            />
+            <img src={cargo} className="" alt="about" />
           </div>
         </div>
       </div>

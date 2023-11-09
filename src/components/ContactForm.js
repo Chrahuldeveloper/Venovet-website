@@ -7,6 +7,7 @@ import {
   signInWithPhoneNumber,
 } from "firebase/auth";
 import { ColorRing } from "react-loader-spinner";
+import { rocket } from "../images/home";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -96,7 +97,7 @@ export default function ContactForm() {
         </div>
       )}
       <img
-        src="https://venovet.com/assets/images/rocket_contact.jpg"
+        src={rocket}
         className="w-16 h-16 mx-auto rounded-full shadow-md"
         alt="picturx"
       />

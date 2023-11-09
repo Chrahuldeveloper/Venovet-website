@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Data from "../Data/FaqData";
+import { faq } from "../images/home";
 
 const Faqs = ({ Q, children, index, openIndex, setOpenIndex }) => {
   const isOpen = index === openIndex;
@@ -66,10 +67,7 @@ const FAQ = () => {
             })}
           </div>
           <div className="w-[20rem] h-auto hidden lg:flex">
-            <img
-              src="https://www.venovet.com/assets/images/resources/faq-mockup.png"
-              alt="https://www.venovet.com/assets/images/resources/faq-mockup.png"
-            />
+            <img src={faq} alt="faq.png" />
           </div>
         </div>
       </div>

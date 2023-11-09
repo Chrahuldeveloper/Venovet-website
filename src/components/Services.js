@@ -3,6 +3,7 @@ import Data from "../Data/Services";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import DropdownData from "../Data/WhatweDoCategories";
 import { Link } from "react-router-dom";
+import { servicelogo } from "../images/services/index";
 function Services() {
   const [hover, sethover] = useState(null);
   const encodedTittle = encodeURIComponent(DropdownData[0].catgeory);
@@ -13,7 +14,7 @@ function Services() {
         <h1 className="text-[#ff5e15] font-semibold">OUR SERVICES</h1>
         <h1 className="text-3xl font-bold  md:text-4xl">What We Do</h1>
       </div>
-      <div className="grid py-3 space-y-20 md:space-y-0 md:grid-cols-2 lg:grid-cols-4 md:gap-14 lg:gap-7 place-items-center lg:px-10">
+      <div className="grid py-3 space-y-20 md:space-y-0 md:grid-cols-2 lg:grid-cols-4 md:gap-14  lg:gap-7 place-items-center ">
         {Data.map((card, index) => {
           return (
             <div
@@ -27,7 +28,7 @@ function Services() {
                     hover === index
                       ? "brightness-75 ease-in-out transition duration-300 scale-110 rotate-3"
                       : null
-                  }  cursor-pointer md:h-64 `}
+                  }  cursor-pointer md:h-72 md:w-80 `}
                   src={card.image}
                   alt=""
                 />
@@ -46,11 +47,7 @@ function Services() {
                       hover === index ? "bg-[#ff5e15]" : "bg-white"
                     } absolute shadow-lg  rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-64 lg:w-60 space-x-4  transition ease-in-out duration-500`}
                   >
-                    <img
-                      className={`w-14`}
-                      src="https://www.venovet.com/assets/images/logo-br-grey.png"
-                      alt=""
-                    />
+                    <img className={`w-14`} src={servicelogo} alt="" />
                     <p
                       className={`text-lg ${
                         hover === index ? "text-white" : "text-[#2a2a2a] "

@@ -88,7 +88,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      {video ? <Youtube /> : ""}
+      {video ? <Youtube link={data?.Link} playVideo={playVideo} /> : ""}
     </>
   );
 }

@@ -78,8 +78,8 @@ export default function CheckOutForm({ item, quantity, name }) {
   const sendEmail = () => {
     emailjs
       .send(
-        "service_zroajyn",
-        "template_iowctjd",
+        "service_glza9jo",
+        "template_zc80fak",
         {
           from_name: "VENOVET",
           to_name: form.Name,
@@ -88,7 +88,7 @@ export default function CheckOutForm({ item, quantity, name }) {
           message:
             "Your Order number 555001 is confirmed! Our Venovet team will get back to you as soon as possible.",
         },
-        "sE-s_AZMedbPMZx18"
+        "zbz4k5jiUpfyIZOo8"
       )
       .then(
         (result) => {

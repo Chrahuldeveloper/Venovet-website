@@ -63,7 +63,6 @@ export default function CheckOutForm({ item, quantity, name }) {
         alert("Number is verified!");
         sendEmail();
         orderId(item, quantity, name, form);
-        alert("Sucess");
       } catch (error) {
         console.error(error);
         alert(
@@ -105,11 +104,12 @@ export default function CheckOutForm({ item, quantity, name }) {
       const orderid = "555" + Math.floor(Math.random() * 999);
       await addDoc(collection(db, "ORDERSID"), {
         item,
-        [quantity]: [quantity],
-        [name]: [name],
+        quantity,
+         name,
         orderid,
         form,
       });
+      alert("Sucess")
     } catch (error) {
       console.log(error);
     }

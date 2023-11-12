@@ -105,11 +105,11 @@ export default function CheckOutForm({ item, quantity, name }) {
       await addDoc(collection(db, "ORDERSID"), {
         item,
         quantity,
-         name,
+        name,
         orderid,
         form,
       });
-      alert("Sucess")
+      alert("Sucess");
     } catch (error) {
       console.log(error);
     }
@@ -133,7 +133,7 @@ export default function CheckOutForm({ item, quantity, name }) {
         )}
         <img src={item} className="mx-auto w-28 " alt="picturx" />
         <h1 className="mt-5 text-xl text-center text-slate-500 lg:text-xl">
-          Quantity : {quantity}
+          Quantity : {quantity + ","}
         </h1>
         <p className="my-4 text-sm font-semibold text-center text-slate-500">
           Please fill the form to complete the Checkout

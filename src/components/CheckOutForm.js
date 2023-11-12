@@ -60,8 +60,7 @@ export default function CheckOutForm({ item, quantity, name }) {
         await window.confirmationResult.confirm(code);
         alert("Number is verified!");
         sendEmail();
-        await addDoc(collection(db, "ORDERS"), form);
-        orderId(item, quantity, name);
+        orderId(item, quantity, name, form);
         alert("Sucess");
       } catch (error) {
         console.error(error);
@@ -99,7 +98,7 @@ export default function CheckOutForm({ item, quantity, name }) {
       );
   };
 
-  const orderId = async (item, quantity, name) => {
+  const orderId = async (item, quantity, name, form) => {
     try {
       const orderid = "555" + Math.floor(Math.random() * 999);
       await addDoc(collection(db, "ORDERSID"), {
@@ -107,6 +106,7 @@ export default function CheckOutForm({ item, quantity, name }) {
         quantity,
         name,
         orderid,
+        form,
       });
     } catch (error) {
       console.log(error);

@@ -6,6 +6,8 @@ import { getAuth, signInWithPhoneNumber } from "firebase/auth";
 import { RecaptchaVerifier } from "firebase/auth";
 import emailjs from "@emailjs/browser";
 export default function CheckOutForm({ item, quantity, name }) {
+  console.log(item, quantity, name);
+
   const formRef = useRef();
   const [form, setForm] = useState({
     Name: "",
@@ -103,8 +105,8 @@ export default function CheckOutForm({ item, quantity, name }) {
       const orderid = "555" + Math.floor(Math.random() * 999);
       await addDoc(collection(db, "ORDERSID"), {
         item,
-        quantity,
-        name,
+        [quantity]: [quantity],
+        [name]: [name],
         orderid,
         form,
       });

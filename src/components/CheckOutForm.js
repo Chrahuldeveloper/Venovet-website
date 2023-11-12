@@ -14,7 +14,7 @@ export default function CheckOutForm({ item, quantity, name }) {
     quantity: quantity,
     name: name,
   });
-
+  const [isSubmitting, setIsSubmiting] = useState(false);
   const [otp, setotp] = useState("");
   const auth = getAuth();
   const configureCaptcha = () => {
@@ -25,13 +25,12 @@ export default function CheckOutForm({ item, quantity, name }) {
       },
     });
   };
-  const [isSubmitting, setIsSubmiting] = useState(false);
+
   const onNumSubmit = (e) => {
     e.preventDefault();
     configureCaptcha();
     const phoneNumber = "+" + 91 + form.Phone;
     const appVerifier = window.recaptchaVerifier;
-
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
@@ -46,7 +45,6 @@ export default function CheckOutForm({ item, quantity, name }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmiting(true);
-
     if (
       form.Name === "" ||
       form.Email === "" ||
@@ -59,10 +57,11 @@ export default function CheckOutForm({ item, quantity, name }) {
     } else {
       const code = otp;
       try {
-        const result = await window.confirmationResult.confirm(code);
+        await window.confirmationResult.confirm(code);
         alert("Number is verified!");
         sendEmail();
         await addDoc(collection(db, "ORDERS"), form);
+        orderId(item, quantity, name);
         alert("Sucess");
       } catch (error) {
         console.error(error);
@@ -70,7 +69,7 @@ export default function CheckOutForm({ item, quantity, name }) {
           "OTP verification failed or an error occurred. Please try again."
         );
       } finally {
-        setIsSubmiting(false); // Reset the loading state
+        setIsSubmiting(false);
       }
     }
   };
@@ -98,6 +97,20 @@ export default function CheckOutForm({ item, quantity, name }) {
           console.log(error.text);
         }
       );
+  };
+
+  const orderId = async (item, quantity, name) => {
+    try {
+      const orderid = "555" + Math.floor(Math.random() * 999);
+      await addDoc(collection(db, "ORDERSID"), {
+        item,
+        quantity,
+        name,
+        orderid,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

@@ -22,7 +22,6 @@ export default function Shop() {
       <ShopCate />
       <NewsLetter />
       <DragTop />
-
       <Footer />
     </body>
   );

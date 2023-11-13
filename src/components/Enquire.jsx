@@ -183,7 +183,7 @@ function Enquire() {
 
                   {data.map((item, index) => {
                     return (
-                      <React.Fragment>
+                      <React.Fragment key={index}>
                         <option>{item.Title}</option>
                       </React.Fragment>
                     );

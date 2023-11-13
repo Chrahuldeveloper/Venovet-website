@@ -58,7 +58,7 @@ export default function Navbar({ Page }) {
       setScrollY(false);
     }
   };
-  console.log(what, who);
+  // console.log(what, who);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 

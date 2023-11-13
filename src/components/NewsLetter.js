@@ -53,7 +53,7 @@ export default function NewsLetter() {
       console.log(error);
     }
   };
-  console.log(data);
+  // console.log(data);
   return (
     <div className="flex flex-col justify-center items-center space-y-5 md:space-y-0 md:flex-row md:justify-around bg-[#f9f9f9] p-4 py-8 mt-3.5">
       {isSubmitting && ( // Render loader only when isSubmitting is true

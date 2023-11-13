@@ -22,14 +22,14 @@ export default function WhoWeServer() {
       const documentRef = doc(db, "WHO-WE-SERVE", categoryid);
       const documentSnapshot = await getDoc(documentRef);
       setservedata(documentSnapshot.data());
-      console.log(documentSnapshot.data());
+      // console.log(documentSnapshot.data());
     };
     fetchData();
     window.scrollTo(0, 0);
   }, [categoryid]);
 
   return (
-    <body className="overflow-x-clip">
+    <div className="overflow-x-clip">
       <main>
         <Navbar Page={"whatwedo"} />
         <ServiceHeroSection image={image} Tittle={Tittle} Para={Para} />
@@ -40,6 +40,6 @@ export default function WhoWeServer() {
         <NewsLetter />
         <Footer />
       </main>
-    </body>
+    </div>
   );
 }

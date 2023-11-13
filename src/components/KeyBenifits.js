@@ -6,7 +6,7 @@ const Faqs = ({ Q, children }) => {
     setOpen(!open);
   };
   return (
-    <div className=" w-[20rem] md:w-[30rem] lg:w-[42rem] py-2.5 space-y-4 rounded-2xl">
+    <div className=" w-[20rem] md:w-[30rem] lg:w-[42rem] px-4 p-2.5 space-y-4 rounded-2xl">
       <div className="flex justify-between cursor-pointer" onClick={toggle}>
         <h1
           className={`${
@@ -31,7 +31,7 @@ const Faqs = ({ Q, children }) => {
 
 const KeyBenifits = () => {
   return (
-    <div className="py-4 m-6 ">
+    <div className="py-4 m-6 mx-0 ">
       <h1 className="text-lg font-bold md:text-xl lg:text-2xl">Key Benifits</h1>
       <div>
         <div className="flex items-start justify-around text-left ">

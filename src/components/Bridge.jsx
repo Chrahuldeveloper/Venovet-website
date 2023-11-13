@@ -9,7 +9,7 @@ const Bridge = () => {
   }, []);
 
   const particlesLoaded = useCallback((container) => {
-    console.log(container);
+    // console.log(container);
   }, []);
   return (
     <div className="relative">

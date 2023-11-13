@@ -45,7 +45,7 @@ export default function Slider() {
               cursor={"pointer"}
             />
           </div>
-          <div className="flex flex-col items-center text-center md:items-start md:text-left  lg:-ml-56 ">
+          <div className="flex flex-col items-center justify-center text-center md:items-start md:text-left  lg:-ml-56 ">
             <h1 className="text-3xl font-poppins text-white md:text-4xl lg:text-5xl">
               {Data[index].Tittle}
             </h1>

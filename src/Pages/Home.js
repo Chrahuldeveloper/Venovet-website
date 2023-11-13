@@ -32,7 +32,7 @@ export default function Home() {
     }, 2000);
   }, []);
   return (
-    <body className="scroll-smooth overflow-x-clip animate__animated animate__fadeIn animate__delay-0.3s">
+    <div className="scroll-smooth overflow-x-clip animate__animated animate__fadeIn animate__delay-0.3s">
       {isSubmitting && ( // Render loader only when isSubmitting is true
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-100 bg-opacity-75">
           <ColorRing
@@ -59,6 +59,6 @@ export default function Home() {
       <NewsLetter />
       <DragTop />
       <Footer />
-    </body>
+    </div>
   );
 }

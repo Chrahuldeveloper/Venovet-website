@@ -33,12 +33,12 @@ export default function Transpotation({ data }) {
 
   return (
     <>
-      <div className="bg-[#ff5e15] border-white border-4 max-w-[70vw] md:max-w-[35vw] lg:max-w-[19vw] rounded-lg p-9   translate-y-72 md:translate-x-24  translate-x-16">
+      <div className="bg-[#ff5e15] border-white border-4 max-w-[70vw] md:max-w-[35vw] lg:max-w-[19vw] rounded-lg p-9 translate-y-72 md:translate-x-24  translate-x-[2.8rem]">
         <h1 className="text-xl text-center font-semibold  text-white font-poppins ">
           Road <br /> Transportation
         </h1>
       </div>
-      <div className="space-y-3.5 -mt-20">
+      <div className="space-y-3.5 -mt-20 pr-5">
         {section1.map((item, i) => {
           return (
             <React.Fragment key={i}>
@@ -46,9 +46,9 @@ export default function Transpotation({ data }) {
                 <img
                   src={item.image}
                   alt={i}
-                  className="rounded-lg w-80 h-60"
+                  className="rounded-lg w-72 h-72"
                 />
-                <div className="text-[#7a7a7a] space-y-3 max-w-lg text-justify">
+                <div className="text-[#7a7a7a] space-y-3 text-start  text-sm">
                   <p>{item.Para}</p>
                 </div>
               </div>
@@ -56,7 +56,7 @@ export default function Transpotation({ data }) {
           );
         })}
       </div>
-      <div className="text-[#7a7a7a] space-y-3.5 mt-5 text-justify">
+      <div className="text-[#7a7a7a] space-y-3.5 mt-5 text-start text-sm">
         <p>{data?.Para6}</p>
         <p>{data?.Para7}</p>
       </div>
@@ -64,7 +64,7 @@ export default function Transpotation({ data }) {
         {section3.map((item, i) => {
           return (
             <React.Fragment key={i}>
-              <div className="flex flex-col items-center md:items-start gap-8 md:flex-row text-justify">
+              <div className="flex flex-col items-center  md:items-start gap-8 md:flex-row text-start text-sm text-[#7a7a7a]">
                 <img src={item.image} alt={i} className="max-w-sm rounded-lg" />
                 <p>{item.Para}</p>
               </div>

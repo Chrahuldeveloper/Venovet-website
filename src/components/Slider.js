@@ -34,8 +34,8 @@ export default function Slider() {
           height: "90vh",
         }}
       >
-        <div className="flex items-center justify-between h-screen px-3 md:px-10 gap-7 ">
-          <div className="  flex items-center justify-center bg-[#00000000] rounded-full hover:bg-[#ff5e15] transition duration-500 ease-in-out">
+        <div className="flex items-center justify-between h-screen px-3 md:px-10 gap-7">
+          <div className="p-2.5 flex items-center justify-center bg-[#00000000] rounded-full hover:bg-[#ff5e15] transition duration-500 ease-in-out">
             <ArrowBackIosNewIcon
               onClick={prev}
               fontSize="large"
@@ -45,14 +45,14 @@ export default function Slider() {
               cursor={"pointer"}
             />
           </div>
-          <div className="flex flex-col items-center justify-center text-center md:items-start md:text-left  lg:-ml-56 ">
-            <h1 className="text-3xl font-poppins text-white md:text-4xl lg:text-5xl">
+          <div className="flex flex-col items-center justify-center text-center md:items-start md:text-left lg:-ml-56 ">
+            <h1 className="text-3xl text-white font-poppins md:text-4xl lg:text-5xl">
               {Data[index].Tittle}
             </h1>
             <h2 className="mb-4  font-poppins text-[1.9rem] font-semibold text-[#ff5e15] md:text-4xl lg:text-5xl">
               {Data[index].HighLight}
             </h2>
-            <p className="max-w-3xl lg:my-4 text-[1.018rem] leading-8 text-white  lg:text-xl">
+            <p className="max-w-3xl lg:my-4 text-[1.018rem]  leading-7 text-white  lg:text-xl">
               {Data[index].Para}
             </p>
             <Link

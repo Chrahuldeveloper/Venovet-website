@@ -23,7 +23,7 @@ export default function Slider() {
   };
 
   return (
-    <div className="w-screen ">
+    <div className="w-screen">
       <div
         key={index}
         // className="z-40 animate__animated animate__fadeIn"

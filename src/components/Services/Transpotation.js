@@ -33,7 +33,7 @@ export default function Transpotation({ data }) {
 
   return (
     <>
-      <div className="bg-[#ff5e15] border-white border-4 max-w-[70vw] md:max-w-[35vw] lg:max-w-[19vw] rounded-lg p-10  translate-y-72 translate-x-24">
+      <div className="bg-[#ff5e15] border-white border-4 max-w-[70vw] md:max-w-[35vw] lg:max-w-[19vw] rounded-lg p-9   translate-y-72 md:translate-x-24  translate-x-16">
         <h1 className="text-xl text-center font-semibold  text-white font-poppins ">
           Road <br /> Transportation
         </h1>
@@ -42,7 +42,7 @@ export default function Transpotation({ data }) {
         {section1.map((item, i) => {
           return (
             <React.Fragment key={i}>
-              <div className="flex flex-col justify-center space-x-8  md:items-start md:flex-row ">
+              <div className="flex flex-col justify-center space-x-8 items-center md:items-start md:flex-row">
                 <img
                   src={item.image}
                   alt={i}
@@ -56,7 +56,6 @@ export default function Transpotation({ data }) {
           );
         })}
       </div>
-
       <div className="text-[#7a7a7a] space-y-3.5 mt-5 text-justify">
         <p>{data?.Para6}</p>
         <p>{data?.Para7}</p>
@@ -65,7 +64,7 @@ export default function Transpotation({ data }) {
         {section3.map((item, i) => {
           return (
             <React.Fragment key={i}>
-              <div className="flex flex-col items-start gap-8 md:flex-row text-justify">
+              <div className="flex flex-col items-center md:items-start gap-8 md:flex-row text-justify">
                 <img src={item.image} alt={i} className="max-w-sm rounded-lg" />
                 <p>{item.Para}</p>
               </div>
@@ -73,16 +72,15 @@ export default function Transpotation({ data }) {
           );
         })}
       </div>
-
       <div className="mt-7">
-        <h1 className="font-semibold md:text-xl ">
+        <h1 className="font-semibold md:text-xl">
           Types Of Vehicles We Provide
         </h1>
         <div className="grid gap-3 mt-5 grid-col-1 md:grid-cols-3 lg:grid-col-4 place-items-center">
           {vechilesData.map((item, index) => {
             return (
               <React.Fragment key={index}>
-                <div className=" w-full p-7  lg:w-44 text-sm bg-[#f7f7f750] lg:p-5 text-center rounded-lg shadow-md">
+                <div className=" w-full p-7 lg:w-44 text-sm bg-[#f7f7f750] lg:p-5 text-center rounded-lg shadow-md">
                   <h1>{item.Name}</h1>
                 </div>
               </React.Fragment>

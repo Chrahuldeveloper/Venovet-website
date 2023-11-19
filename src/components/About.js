@@ -4,6 +4,7 @@ import { BsFillPlayFill } from "react-icons/bs";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../Firebase";
 import { Link } from "react-router-dom";
+import { candle } from "../images/home";
 import Youtube from "./Youtube";
 export default function About() {
   const [data, setData] = useState(null);
@@ -31,24 +32,20 @@ export default function About() {
   return (
     <>
       <div
-        className="items-center justify-center p-4 space-y-10 lg:flex md:space-y-0 md:px-14 lg:space-x-20 my-28"
+        className="items-center justify-center lg:items-start p-4 space-y-10 lg:flex md:space-y-0 md:px-14 lg:space-x-20 my-28"
         data-aos="fade-up"
         data-aos-delay="50"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
       >
         <div>
-          <img
-            src="https://www.venovet.com/assets/images/title-shp1.png"
-            alt="png"
-            className="opacity-40"
-          />
+          <img src={candle} alt="png" className="opacity-40" />
         </div>
         <div className="space-y-3 md:space-y-4">
           <h1 className="text-lg font-semibold text-[#ff5e15]">
             WELCOME TO VENOVET
           </h1>
-          <h2 className="text-3xl font-semibold">
+          <h2 className="text-3xl lg:text-4xl font-semibold">
             About Us <br /> Our Company.
           </h2>
         </div>

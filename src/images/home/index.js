@@ -7,5 +7,17 @@ import blog1 from "./blogs/blog1.jpg";
 import blog2 from "./blogs/blog2.jpg";
 import blog3 from "./blogs/blog3.jpg";
 import rocket from "./rocket_contact.jpg";
+import candle from "./candle.png";
 
-export { enquire, testi1, testi2, testi3, faq, blog1, blog2, blog3, rocket };
+export {
+  enquire,
+  testi1,
+  testi2,
+  testi3,
+  faq,
+  blog1,
+  blog2,
+  blog3,
+  rocket,
+  candle,
+};

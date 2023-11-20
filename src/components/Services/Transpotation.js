@@ -33,22 +33,22 @@ export default function Transpotation({ data }) {
 
   return (
     <>
-      <div className="bg-[#ff5e15] hidden lg:block border-white border-4 max-w-[70vw] md:max-w-[35vw] lg:max-w-[19vw] rounded-lg p-9 translate-y-72 translate-x-16  ">
+      <div className="bg-[#ff5e15] hidden lg:block border-white border-4 max-w-[70vw] md:max-w-[35vw] lg:max-w-[19vw] rounded-lg p-9 translate-y-72 translate-x-16 ">
         <h1 className="text-xl font-semibold text-center text-white font-poppins ">
           Road <br /> Transportation
         </h1>
       </div>
-      <div className="space-y-3.5 -mt-20">
+      <div className="-mt-20 space-y-2">
         {section1.map((item, i) => {
           return (
             <React.Fragment key={i}>
-              <div className="flex flex-col items-center justify-center space-x-8 md:items-start md:flex-row">
+              <div className="flex flex-col items-center justify-center gap-8 md:items-start md:flex-row">
                 <img
                   src={item.image}
                   alt={i}
-                  className="rounded-lg w-72 h-72"
+                  className="max-w-sm lg:w-[20vw] rounded-lg"
                 />
-                <div className="text-[#7a7a7a] space-y-3 text-start  text-sm">
+                <div className="text-[#7a7a7a] space-y-3 text-start text-sm">
                   <p>{item.Para}</p>
                 </div>
               </div>
@@ -64,7 +64,7 @@ export default function Transpotation({ data }) {
         {section3.map((item, i) => {
           return (
             <React.Fragment key={i}>
-              <div className="flex flex-col items-center  md:items-start gap-8 md:flex-row text-start text-sm text-[#7a7a7a]">
+              <div className="flex flex-col items-center md:items-start gap-8 md:flex-row text-start text-sm text-[#7a7a7a]">
                 <img src={item.image} alt={i} className="max-w-sm rounded-lg" />
                 <p>{item.Para}</p>
               </div>

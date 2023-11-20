@@ -20,9 +20,9 @@ export default function WareHouseManagement({ data }) {
         <h1 className="font-poppins font-medium text-[2rem] lg:text-4xl">
           Our Offerings
         </h1>
-        <div className="flex flex-col mt-5 space-y-4 md:items-start lg:space-x-10 lg:flex-row lg:space-y-0">
+        <div className="flex flex-col items-center mt-5 space-y-4 md:items-start lg:space-x-20 lg:flex-row lg:space-y-0">
           <img
-            className="max-w-xs rounded-lg"
+            className="max-w-sm lg:w-[20vw] rounded-lg"
             src={data?.SubCat1?.image}
             alt="imge"
           />
@@ -37,7 +37,7 @@ export default function WareHouseManagement({ data }) {
         </div>
       </div>
 
-      <div className="flex flex-col items-start space-y-4 lg:space-x-10 lg:flex-row mt-7 lg:space-y-0 ">
+      <div className="flex flex-col items-center space-y-4 lg:space-x-20 lg:flex-row mt-7 lg:space-y-0 ">
         <div className="max-w-md space-y-3.5 text-justify">
           <h1 className="text-xl font-bold text-orange-500 ">
             {data?.SubCat2?.Tittle}
@@ -47,15 +47,15 @@ export default function WareHouseManagement({ data }) {
           </p>
         </div>
         <img
-          className="max-w-xs rounded-lg"
+          className="max-w-sm lg:w-[20vw] rounded-lg"
           src={data?.SubCat2?.image}
           alt="imge"
         />
       </div>
 
-      <div className="flex flex-col items-start space-y-4 lg:space-x-10 lg:flex-row mt-7 lg:space-y-0">
+      <div className="flex flex-col items-center space-y-4 lg:space-x-20 lg:flex-row mt-7 lg:space-y-0">
         <img
-          className="max-w-xs rounded-lg"
+          className="max-w-sm lg:w-[20vw] rounded-lg"
           src={data?.SubCat3?.image}
           alt="imge"
         />
@@ -69,14 +69,13 @@ export default function WareHouseManagement({ data }) {
         </div>
       </div>
 
-      <div className="flex flex-col items-start lg:space-x-10 space-y-4 lg:flex-row mt-7 lg:space-y-0">
+      <div className="flex flex-col items-center space-y-4 lg:space-x-20 lg:flex-row mt-7 lg:space-y-0">
         <div className="max-w-md space-y-3.5">
           <h1 className="text-xl font-bold text-orange-500 ">
             {data?.SubCat4?.Tittle}
           </h1>
           <p className="text-justify text-[#7a7a7a] text-sm leading-6">
             {data?.SubCat4?.Para}
-
             <ul className="pt-5 pl-4">
               <li className="list-disc">Labelling</li>
               <li className="list-disc">Reverse logistics</li>
@@ -87,25 +86,24 @@ export default function WareHouseManagement({ data }) {
           </p>
         </div>
         <img
-          className="max-w-xs rounded-lg "
+          className="max-w-sm lg:w-[20vw] mx-auto rounded-lg "
           src={data?.SubCat4?.image}
           alt="imge"
         />
       </div>
       {/* Offerings section*/}
-
       {/* efficiency your competitive advantage section */}
       <div className="mt-7">
-        <h1 className="text-[2rem] font-medium  text-center  lg:text-4xl ">
+        <h1 className="text-[2rem] font-medium text-center lg:text-4xl ">
           {data?.Tittle3}
         </h1>
         <Card data={data} />
       </div>
       {/* efficiency your competitive advantage section */}
       {/* Experience Flexible Warehousing section */}
-      <div className="flex flex-col items-start justify-start gap-8 mt-8 lg:flex-row">
+      <div className="flex flex-col items-center justify-start gap-8 mt-8 lg:flex-row">
         <div className="space-y-3">
-          <h1 className="text-[2rem] font-bold  lg:text-4xl">
+          <h1 className="text-[2rem] font-bold lg:text-4xl">
             {data?.Subcat9?.Tittle}
           </h1>
           <h2 className="font-semibold">{data?.Subcat9?.SubTittle}</h2>
@@ -114,7 +112,7 @@ export default function WareHouseManagement({ data }) {
           </p>
         </div>
         <img
-          className="max-w-sm rounded-lg"
+          className="max-w-sm lg:w-[30vw]  rounded-lg"
           src={data?.Subcat9?.image}
           alt="img.png"
         />

@@ -43,7 +43,7 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(-1);
 
   return (
-    <div className="py-4 m-6 mx-10">
+    <div className="py-4 m-6 mx-10 lg:mx-24">
       <h1 className="text-[#ff4747] text-lg font-semibold ">OUR FAQ</h1>
       <h1 className=" text-2xl font-bold md:text-3xl lg:text-4xl text-[#222] pt-4">
         Frequently Asked Questions?
@@ -66,7 +66,7 @@ const FAQ = () => {
               );
             })}
           </div>
-          <div className="w-[24rem] pr-10 h-auto hidden lg:flex">
+          <div className="w-[24rem] -mt-16 pr-10 h-auto hidden lg:flex">
             <img src={faq} alt="faq.png" />
           </div>
         </div>

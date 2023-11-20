@@ -11,7 +11,7 @@ export default function BlogPageHeroSection() {
           backgroundSize: "cover",
           height: "40vh",
         }}
-        className="pt-24 pl-20 space-y-5 md:pl-36"
+        className="pt-24 pl-20 space-y-5 md:pl-24"
       >
         <h1 className="text-lg font-bold text-orange-500 md:text-2xl">
           Venovet Blog

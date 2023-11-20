@@ -14,7 +14,7 @@ export default function BlogPage() {
     <body className="overflow-x-clip">
       <Navbar />
       <BlogPageHeroSection />
-      <div className="flex flex-col max-w-5xl p-5 mx-auto lg:max-w-7xl gap-x-10 lg:flex-row md:justify-around md:items-start">
+      <div className="flex flex-col max-w-5xl lg:px-24 p-5 mx-auto lg:max-w-7xl gap-x-10 lg:flex-row md:justify-around md:items-start">
         <div className="space-y-8">
           <Help />
           <Brochure />

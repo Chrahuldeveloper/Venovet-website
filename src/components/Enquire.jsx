@@ -95,11 +95,11 @@ function Enquire() {
   };
   return (
     <div className="bg-[#dae2ed]">
-      <div className="px-3 py-24 lg:flex md:px-7 ">
+      <div className="px-3 py-24 lg:flex md:px-24 ">
         <div className="rounded-l-md">
           <img className="rounded-l-md h-full" src={enquire} alt="" />
         </div>
-        <div className="bg-white rounded-r-md flex flex-col items-center pt-10 py-10 lg:pb-0  lg:w-[50%]">
+        <div className="bg-white rounded-r-md flex flex-col items-center pt-10 py-10 lg:pb-0  lg:w-[60%]">
           <h1 className="text-[#fe8704] text-[2.2rem] lg:text-4xl font-bold">
             Enquire Now
           </h1>

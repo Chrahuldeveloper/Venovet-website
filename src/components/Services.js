@@ -9,7 +9,7 @@ function Services() {
   const encodedTittle = encodeURIComponent(DropdownData[0].catgeory);
 
   return (
-    <div className="px-14 py-16 pt-24 bg-[#dae2ed] space-y-14">
+    <div className="px-24 py-16 pt-24 bg-[#dae2ed] space-y-14">
       <div className="space-y-4">
         <h1 className="text-[#ff5e15] font-semibold">OUR SERVICES</h1>
         <h1 className="text-3xl font-bold  md:text-4xl">What We Do</h1>

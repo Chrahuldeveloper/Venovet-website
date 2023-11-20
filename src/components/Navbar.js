@@ -78,7 +78,7 @@ export default function Navbar({ Page }) {
               : "hidden"
           } w-screen `}
         >
-          <div className=" px-10 py-3.5 flex justify-between items-center shadow-md  ">
+          <div className=" px-10 lg:px-24 py-3.5 flex justify-between items-center shadow-md  ">
             <div>
               <Link
                 to={"/"}
@@ -205,8 +205,8 @@ export default function Navbar({ Page }) {
         </div>
 
         {/* Show case bar for Big screens */}
-        <div className="hidden md:block text-white bg-[#121a37] w-screen z-50 p-3.5">
-          <div className="flex items-center justify-between mx-10 gap-x-28">
+        <div className="hidden md:block text-white bg-[#121a37] w-screen z-50 p-3.5 px-0">
+          <div className="flex items-center justify-between mx-24 gap-x-28">
             <div className="flex items-center space-x-1.5">
               <AiOutlineMail size={25} color="#ff5e15" />
               <h1 className="text-[#d5d5d5]  cursor-pointer">
@@ -224,7 +224,7 @@ export default function Navbar({ Page }) {
           </div>
         </div>
         {/* Main Navbar */}
-        <div className="mt-5 flex items-center justify-between mx-5 md:mx-16 ">
+        <div className="mt-5 flex items-center justify-between mx-5 md:mx-24 ">
           <div>
             <Link
               to={"/"}
@@ -292,7 +292,7 @@ export default function Navbar({ Page }) {
         </div>
 
         {/* Menu Bar with drop down only for Big screens */}
-        <div className="z-50 justify-center hidden mt-1 translate-y-6 lg:flex px-14">
+        <div className="z-50 justify-center hidden mt-1 translate-y-6 lg:flex px-24">
           <div className="flex items-center bg-[#121a37] p-4  rounded-l-md w-full">
             <ul className="flex items-center space-x-12 text-white">
               <Link to={"/"}>

@@ -23,7 +23,7 @@ export default function Blogs() {
   return (
     <>
       <section>
-        <div className="flex items-center justify-between px-5 lg:px-20">
+        <div className="flex items-center justify-between px-5 lg:px-24">
           <div className=" space-y-1.5 pt-10 ">
             <h1 className="font-bold lg:ml text-[#ff5e15]  md:text-xl">
               Our Blogs
@@ -54,7 +54,10 @@ export default function Blogs() {
           className="mx-auto overflow-x-scroll max-w-7xl md:max-w-7xl scroll-smooth"
           ref={blogs}
         >
-          <div className="flex flex-row px-8 my-10 gap-9" onClick={scrollRight}>
+          <div
+            className="flex flex-row px-8 lg:px-24 my-10 gap-9"
+            onClick={scrollRight}
+          >
             {Blog.map((item, i) => {
               return (
                 <React.Fragment key={i}>

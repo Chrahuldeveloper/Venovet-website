@@ -106,7 +106,7 @@ const Footer = () => {
         }}
       />
 
-      <div className="absolute  justify-betwee   flex justify-center items-center top-0 w-[100%] text-[#d5d5d5] left-3 right-3">
+      <div className="absolute   flex justify-center items-center top-0 w-[100%] text-[#d5d5d5] left-3 right-3">
         <div className=" pt-20 lg:flex space-y-14 lg:space-y-0 ">
           {/* //first section */}
           <div className="space-y-4 ">

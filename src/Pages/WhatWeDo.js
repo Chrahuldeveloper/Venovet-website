@@ -17,6 +17,7 @@ export default function WhatWeDo() {
   const data = useLocation();
   const { image, Tittle, Para } = data.state;
 
+
   return (
     <body className="overflow-x-clip">
       <main>

@@ -3,7 +3,7 @@ import React from "react";
 export default function TECHNICALSERVICES({ data }) {
   return (
     <>
-      <div className="flex flex-col justify-start gap-4 mt-5 md:flex-row">
+      <div className="flex flex-col justify-start gap-6 mt-5 md:flex-row">
         <div>
           <img
             src={"https://venovet.com/assets/images/s55.jpg"}
@@ -12,11 +12,11 @@ export default function TECHNICALSERVICES({ data }) {
           />
         </div>
         <div className="text-[#7a7a7a] space-y-5 text-justify">
-          <h1 className="text-lg font-bold text-black md:text-xl">
+          <h1 className="text-lg font-bold text-black md:text-lg">
             Technical Services Electro Mechanical Services: Generating Impact
             with Smart Engineering
           </h1>
-          <p className="leading-8">
+          <p className="leading-7">
             We offer professionally managed engineering services through a team
             of highly experienced engineers to help you increase productivity
             and reduce costs.Every project undertaken by us is handled using the

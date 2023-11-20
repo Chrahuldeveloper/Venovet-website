@@ -1,5 +1,17 @@
 import React from "react";
-
+import {
+  log1,
+  log2,
+  log3,
+  log4,
+  log5,
+  log6,
+  log7,
+  log8,
+  log9,
+  log10,
+  log11,
+} from "../../images/logo/index";
 import ScrollContainer from "react-indiana-drag-scroll";
 export default function InternetSupply({ data }) {
   const UncontendedData = [
@@ -65,24 +77,51 @@ export default function InternetSupply({ data }) {
 
   const AdvantagesData = [
     {
-      image: "https://venovet.com/assets/images/tree1.jpg",
+      image: log7,
       Para: "High Speed Internet Connection",
     },
     {
-      image: "https://venovet.com/assets/images/tree2.jpg",
+      image: log8,
       Para: "Carrier-grade Connectivity",
     },
     {
-      image: "https://venovet.com/assets/images/tree3.jpg",
+      image: log9,
       Para: "Widespread Reach",
     },
     {
-      image: "https://venovet.com/assets/images/tree4.jpg",
+      image: log10,
       Para: "End-to-end Service Level Agreement",
     },
     {
-      image: "https://venovet.com/assets/images/tree5.jpg",
+      image: log11,
       Para: "User Friendly Web Tool",
+    },
+  ];
+
+  const Efficiency = [
+    {
+      image: log1,
+      Para: "Higher Availability Connection with enterprise grade SLA",
+    },
+    {
+      image: log2,
+      Para: "Enterprise CPE with SD-WAN capability",
+    },
+    {
+      image: log3,
+      Para: "Constant IP configurations in LAN & Server network",
+    },
+    {
+      image: log4,
+      Para: "Single Contract covering multiple connection",
+    },
+    {
+      image: log5,
+      Para: "Regulatory compliant",
+    },
+    {
+      image: log6,
+      Para: "Pay as you grow model",
     },
   ];
 
@@ -162,6 +201,27 @@ export default function InternetSupply({ data }) {
         </div>
       </div>
 
+      <div>
+        <h1 className="mt-10 text-xl font-semibold font-poppins">
+          Better Speed, Better Efficiency
+        </h1>
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 mt-7">
+          {Efficiency.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="flex items-start max-w-md gap-5 p-6 shadow-md"
+              >
+                <img src={item.image} alt={item.image} className="w-10 h-10" />
+                <div className="space-y-1.5">
+                  <h1 className="text-lg font-semibold">{item.Para}</h1>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
       {/* Scroll OnboardData  */}
       <ScrollContainer className="flex flex-col justify-center max-w-3xl mx-auto mt-8 border-2">
         {OnboardData.map((item, index) => {
@@ -173,7 +233,7 @@ export default function InternetSupply({ data }) {
                   <h1 className="max-w-md text-sm font-semibold md:text-xl lg:text-2xl">
                     {item.Titttle}
                   </h1>
-                  <p className="text-justify text-[#7a7a7a] max-w-xl text-xs md:text-base">
+                  <p className="text-justify my-3 text-[#7a7a7a] max-w-xl text-xs md:text-base">
                     {item.Para}
                   </p>
                 </div>

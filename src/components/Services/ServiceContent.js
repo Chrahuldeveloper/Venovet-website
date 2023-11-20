@@ -16,7 +16,7 @@ import { db } from "../../Firebase";
 import { doc, getDoc } from "firebase/firestore";
 
 export default function ServiceContent({ category }) {
-  const [data, setData] = useState(null); // Initialize data as null
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,7 +26,7 @@ export default function ServiceContent({ category }) {
         if (documentSnapshot.exists()) {
           setData(documentSnapshot.data());
         } else {
-          setData(null); // Handle the case where the document doesn't exist
+          setData(null);
         }
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -38,7 +38,7 @@ export default function ServiceContent({ category }) {
   }, [category]);
 
   return (
-    <>
+    <main className="lg:px-9">
       {category === "Warehouse Management (2PL & 3PL)" && (
         <WareHouseManagement data={data} />
       )}
@@ -54,6 +54,6 @@ export default function ServiceContent({ category }) {
       {category === "Internet Supply Chain" && <InternetSupply data={data} />}
       {category === "Industrial Real States" && <RealEstate data={data} />}
       {category === "Facility Management" && <Facility data={data} />}
-    </>
+    </main>
   );
 }

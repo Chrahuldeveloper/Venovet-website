@@ -24,9 +24,14 @@ export default function InternetSupply({ data }) {
       Para: `${data?.SubCat6?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/sicon3.png",
+      image: "https://venovet.com/assets/images/sicon6.png",
       Titttle: `${data?.SubCat7?.Tittle}`,
       Para: `${data?.SubCat7?.Para}`,
+    },
+    {
+      image: "https://venovet.com/assets/images/sicon3.png",
+      Titttle: `${data?.SubCat16?.Tittle}`,
+      Para: `${data?.SubCat16?.Para}`,
     },
   ];
 
@@ -85,12 +90,12 @@ export default function InternetSupply({ data }) {
     <section>
       {/* section 1 */}
       <div>
-        <h1 className="text-xl font-semibold lg:text-3xl font-poppins text-center">
+        <h1 className="text-xl font-semibold text-center lg:text-3xl font-poppins">
           Accelerate your business growth with high-performance Internet leased
           line connection
         </h1>
         <div>
-          <div className="flex flex-col items-start lg:flex-row mt-7 gap-7 text-justify">
+          <div className="flex flex-col items-start text-justify lg:flex-row mt-7 gap-7">
             <img
               className="max-w-xs rounded-lg md:max-w-sm lg:order-2"
               src={data?.SubCat1?.image}
@@ -103,7 +108,10 @@ export default function InternetSupply({ data }) {
         </div>
       </div>
       {/* Section 2 */}
-      <div>
+      <div className="mt-5">
+        <h1 className="text-xl font-semibold lg:text-sm font-poppins">
+          A leased line network that is dedicated solely to your business needs
+        </h1>
         <div className="flex flex-col items-start lg:flex-row mt-7 gap-7">
           <img
             className="max-w-xs rounded-lg "
@@ -117,7 +125,7 @@ export default function InternetSupply({ data }) {
       </div>
 
       <div className="mt-7">
-        <h1 className="text-xl font-semibold lg:text-3xl font-poppins text-center">
+        <h1 className="text-xl font-semibold text-center lg:text-3xl font-poppins">
           Uncontended connection
         </h1>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 mt-7">

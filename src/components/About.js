@@ -32,7 +32,7 @@ export default function About() {
   return (
     <>
       <div
-        className="items-center justify-center lg:items-start p-4 space-y-10 lg:flex md:space-y-0 md:px-14 lg:space-x-20 my-28"
+        className="items-center justify-center lg:items-start p-4 px-5 space-y-10 lg:flex md:space-y-0 md:px-12 lg:px-24 lg:space-x-20 my-28"
         data-aos="fade-up"
         data-aos-delay="50"
         data-aos-duration="1000"

@@ -5,7 +5,7 @@ import cargo from "../images/about/about-page.jpg";
 
 const AboutUsFaq = ({ Q, children, open, toggle, index }) => {
   return (
-    <div className="px-10 space-y-4 rounded-2xl md:px-0">
+    <div className=" space-y-4 rounded-2xl ">
       <div className="cursor-pointer " onClick={toggle}>
         <h1
           className={`${
@@ -42,7 +42,7 @@ const FAQ = () => {
           <div className="space-y-5 pt-10">
             {Data.map((item, index) => {
               return (
-                <div key={index} className="w-[22rem] lg:w-[29rem]">
+                <div key={index} className=" lg:w-[29rem]">
                   <AboutUsFaq
                     Q={item.q}
                     open={index === openIndex}

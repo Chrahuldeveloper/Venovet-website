@@ -9,7 +9,7 @@ export default function MobileNavbar({ settoogle }) {
 
   return (
     <>
-      <aside className="fixed top-0 bottom-0 right-0 z-50 md:hidden">
+      <aside className="fixed top-0 bottom-0 right-0 z-50 lg:hidden">
         <nav className="bg-[#0c0c0c] text-white font-semibold h-screen w-[60vw] overflow-y-scroll ">
           <div className="flex justify-end px-10 pt-5 pb-5">
             <RxCross2

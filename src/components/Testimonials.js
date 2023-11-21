@@ -5,13 +5,6 @@ import React, { useRef, useState } from "react";
 const Testimonials = () => {
   const scrollref = useRef(null);
 
-  // const scrollRight = () => {
-  //   scrollref.current.scrollLeft += 500;
-  // };
-
-  // const scrollLeft = () => {
-  //   scrollref.current.scrollLeft -= 500;
-  // };
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   const dots = Math.ceil(Data.length / 2);

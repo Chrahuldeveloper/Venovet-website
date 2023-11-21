@@ -22,8 +22,8 @@ export default function Blogs() {
   }, [location]);
   return (
     <>
-      <section>
-        <div className="flex items-center justify-between px-5 lg:px-24">
+      <section className="px-5 md:px-12 lg:px-24">
+        <div className="flex items-center justify-between ">
           <div className=" space-y-1.5 pt-10 ">
             <h1 className="font-bold lg:ml text-[#ff5e15]  md:text-xl">
               Our Blogs
@@ -50,19 +50,13 @@ export default function Blogs() {
             </div>
           </div>
         </div>
-        <div
-          className="mx-auto overflow-x-scroll max-w-7xl md:max-w-7xl scroll-smooth"
-          ref={blogs}
-        >
-          <div
-            className="flex flex-row px-8 lg:px-24 my-10 gap-9"
-            onClick={scrollRight}
-          >
+        <div className=" overflow-x-scroll   scroll-smooth" ref={blogs}>
+          <div className="flex  my-10 gap-4 md:gap-9 " onClick={scrollRight}>
             {Blog.map((item, i) => {
               return (
-                <React.Fragment key={i}>
+                <div className="w-screen" key={i}>
                   <div
-                    className="space-y-4 text-center "
+                    className="space-y-4 text-center w-[80vw] lg:w-auto"
                     onClick={() => {
                       navigate(`/ReadFull/${item.Tittle}`);
                     }}
@@ -70,7 +64,7 @@ export default function Blogs() {
                     <div className="p-2.5 border rounded-md duration-500 ease-in-out cursor-pointer hover:brightness-75">
                       <img
                         src={item.image}
-                        className="max-w-xs duration-500 ease-in-out cursor-pointer hover:brightness-75"
+                        className="w-full rounded-md duration-500 ease-in-out cursor-pointer hover:brightness-75"
                         alt={item.image + "xyz"}
                       />
                     </div>
@@ -82,7 +76,7 @@ export default function Blogs() {
                       <p className="text-[#777777]">{item.Para}</p>
                     </div>
                   </div>
-                </React.Fragment>
+                </div>
               );
             })}
           </div>

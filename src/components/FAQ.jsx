@@ -43,7 +43,7 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className="py-4 m-6 mx-10 lg:mx-24">
+    <div className="py-4 m-6 mx-5 md:mx-12 lg:mx-24">
       <h1 className="text-[#ff4747] text-lg font-semibold ">OUR FAQ</h1>
       <h1 className=" text-2xl font-bold md:text-3xl lg:text-4xl text-[#222] pt-4">
         Frequently Asked Questions?

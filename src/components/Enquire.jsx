@@ -95,7 +95,7 @@ function Enquire() {
   };
   return (
     <div className="bg-[#dae2ed]">
-      <div className="px-3 py-24 lg:flex md:px-24 ">
+      <div className="px-5 md:px-12 py-24 lg:flex lg:px-24 ">
         <div className="rounded-l-md">
           <img className="rounded-l-md h-full" src={enquire} alt="" />
         </div>

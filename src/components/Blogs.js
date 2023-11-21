@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from "react";
-import Blog from "../Data/BlogData";
+import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { db } from "../Firebase";
+import { collection, getDocs, query } from "firebase/firestore";
 
 export default function Blogs() {
   const blogs = useRef(null);
@@ -16,6 +17,28 @@ export default function Blogs() {
   };
 
   const location = useLocation();
+
+  const [Blogs, setBlogs] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const q = query(collection(db, "BLOGS"));
+        const querySnapshot = await getDocs(q);
+        const blogsData = [];
+        querySnapshot.forEach((doc) => {
+          blogsData.push(doc.data());
+          console.log(doc.data());
+        });
+        setBlogs(blogsData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -50,35 +73,35 @@ export default function Blogs() {
             </div>
           </div>
         </div>
-        <div className=" overflow-x-scroll   scroll-smooth" ref={blogs}>
-          <div className="flex  my-10 gap-4 md:gap-9 " onClick={scrollRight}>
-            {Blog.map((item, i) => {
+        <div className="overflow-x-scroll scroll-smooth" ref={blogs}>
+          <div className="flex gap-4 my-10 md:gap-9 " onClick={scrollRight}>
+            {Blogs?.length === 3 ? Blogs?.map((item, i) => {
               return (
                 <div className="w-screen" key={i}>
                   <div
                     className="space-y-4 text-center w-[80vw] lg:w-auto"
                     onClick={() => {
-                      navigate(`/ReadFull/${item.Tittle}`);
+                      navigate(`/ReadFull/${item.Tittle1}`);
                     }}
                   >
                     <div className="p-2.5 border rounded-md duration-500 ease-in-out cursor-pointer hover:brightness-75">
                       <img
-                        src={item.image}
-                        className="w-full rounded-md duration-500 ease-in-out cursor-pointer hover:brightness-75"
-                        alt={item.image + "xyz"}
+                        src={item.Blogimage}
+                        className="w-full duration-500 ease-in-out rounded-md cursor-pointer hover:brightness-75"
+                        alt={item.Blogimage + "xyz"}
                       />
                     </div>
 
                     <div className="space-y-2.5">
                       <h1 className="font-bold text-[1.25rem] md:text-xl text-[#757575]">
-                        {item.Tittle}
+                        {item.Tittle1}
                       </h1>
-                      <p className="text-[#777777]">{item.Para}</p>
+                      <p className="text-[#777777]">{item.Para1}</p>
                     </div>
                   </div>
                 </div>
               );
-            })}
+            }) : null}
           </div>
         </div>
         <div className="flex justify-center mt-6">

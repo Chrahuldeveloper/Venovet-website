@@ -18,7 +18,7 @@ export default function BlogContent({ category }) {
       <main className="p-5 shadow-md lg:max-w-3xl">
         <div>
           <div>
-            <img src={data?.image} alt="" />
+            <img src={data?.Blogimage} alt="" />
           </div>
           <div className="mt-3 space-y-3 text-[#777777]">
             <h1 className="text-lg text-[#ff5e14] lg:text-xl font-semibold">
@@ -34,20 +34,28 @@ export default function BlogContent({ category }) {
           <div className="mt-4">
             <ul className="space-y-4 text-[#777777] ">
               <li className="space-y-1.5">
-                <h1 className="text-[#919191] font-bold">{data?.Tittle3}</h1>
+                <h1 className="text-[#919191] font-bold">
+                  {data?.SubCat1?.ListTittle1}
+                </h1>
                 <p>{data?.Para4}</p>
               </li>
               <li className="space-y-1.5">
-                <h1 className="text-[#919191] font-bold">{data?.Tittle4}</h1>
-                <p>{data?.Para5}</p>
+                <h1 className="text-[#919191] font-bold">
+                  {data?.SubCat1?.ListTittle2}
+                </h1>
+                <p>{data?.SubCat1?.Para1}</p>
               </li>
               <li className="space-y-1.5">
-                <h1 className="text-[#919191] font-bold">{data?.Tittle5}</h1>
-                <p>{data?.Para6}</p>
+                <h1 className="text-[#919191] font-bold">
+                  {data?.SubCat1?.ListTittle3}
+                </h1>
+                <p>{data?.SubCat1?.Para2}</p>
               </li>
               <li className="space-y-1.5">
-                <h1 className="text-[#919191] font-bold">{data?.Tittle6}</h1>
-                <p>{data?.Para7}</p>
+                <h1 className="text-[#919191] font-bold">
+                  {data?.SubCat1?.ListTittle4}
+                </h1>
+                <p>{data?.SubCat1?.Para3}</p>
               </li>
             </ul>
             <div className="space-y-3">
@@ -58,20 +66,59 @@ export default function BlogContent({ category }) {
             </div>
             <ul className="space-y-4 text-[#777777] mt-4">
               <li className="space-y-1.5">
-                <h1 className="text-[#919191] font-bold">{data?.Tittle8}</h1>
-                <p>{data?.Para9}</p>
+                <h1 className="text-[#919191] ">
+                  {data?.SubCat2?.ListTittle1}
+                </h1>
+                <p>{data?.SubCat2?.Para1}</p>
               </li>
               <li className="space-y-1.5">
-                <h1 className="text-[#919191] font-bold">{data?.Tittle9}</h1>
-                <p>{data?.Para10}</p>
+                <h1 className="text-[#919191] ">
+                  {data?.SubCat2?.ListTittle2}
+                </h1>
+                <p>{data?.SubCat2?.Para2}</p>
               </li>
               <li className="space-y-1.5">
-                <h1 className="text-[#919191] font-bold">{data?.Tittle10}</h1>
-                <p>{data?.Para11}</p>
+                <h1 className="text-[#919191] ">
+                  {data?.SubCat2?.ListTittle3}
+                </h1>
+                <p>{data?.SubCat2?.Para3}</p>
               </li>
               <li className="space-y-1.5">
-                <h1 className="text-[#919191] font-bold">{data?.Tittle11}</h1>
-                <p>{data?.Para12}</p>
+                <h1 className="text-[#919191] ">
+                  {data?.SubCat2?.ListTittle4}
+                </h1>
+                <p>{data?.SubCat2?.Para4}</p>
+              </li>
+            </ul>
+            <ul className="space-y-4 text-[#777777] mt-4">
+              <li className="space-y-1.5">
+                <h1 className="text-[#919191] ">{data?.SubCat3?.List1}</h1>
+              </li>
+              <li className="space-y-1.5">
+                <h1 className="text-[#919191] ">{data?.SubCat3?.List2}</h1>
+              </li>
+              <li className="space-y-1.5">
+                <h1 className="text-[#919191] ">{data?.SubCat3?.List3}</h1>
+              </li>
+              <li className="space-y-1.5">
+                <h1 className="text-[#919191] ">{data?.SubCat3?.List4}</h1>
+              </li>
+              <li className="space-y-1.5">
+                <h1 className="text-[#919191] ">{data?.SubCat3?.List5}</h1>
+              </li>
+            </ul>
+            <ul className="space-y-4 text-[#777777] mt-4">
+              <li className="space-y-1.5">
+                <h1 className="text-[#919191] ">{data?.SubCat4?.List1}</h1>
+              </li>
+              <li className="space-y-1.5">
+                <h1 className="text-[#919191] ">{data?.SubCat4?.List2}</h1>
+              </li>
+              <li className="space-y-1.5">
+                <h1 className="text-[#919191] ">{data?.SubCat4?.List3}</h1>
+              </li>
+              <li className="space-y-1.5">
+                <h1 className="text-[#919191] ">{data?.SubCat4?.List4}</h1>
               </li>
             </ul>
           </div>

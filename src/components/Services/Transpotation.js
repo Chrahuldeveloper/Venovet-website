@@ -48,7 +48,7 @@ export default function Transpotation({ data }) {
                   alt={i}
                   className="max-w-sm lg:w-[20vw] rounded-lg"
                 />
-                <div className="text-[#7a7a7a] space-y-3 text-start text-sm">
+                <div className="text-[#7a7a7a] space-y-3 text-start text-sm lg:text-base">
                   <p>{item.Para}</p>
                 </div>
               </div>
@@ -56,7 +56,7 @@ export default function Transpotation({ data }) {
           );
         })}
       </div>
-      <div className="text-[#7a7a7a] space-y-3.5 mt-5 text-start text-sm">
+      <div className="text-[#7a7a7a] space-y-3.5 mt-5 text-start text-sm lg:text-base">
         <p>{data?.Para6}</p>
         <p>{data?.Para7}</p>
       </div>

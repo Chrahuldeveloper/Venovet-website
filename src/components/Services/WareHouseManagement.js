@@ -22,7 +22,7 @@ export default function WareHouseManagement({ data }) {
         </h1>
         <div className="flex flex-col items-center mt-5 space-y-4 md:items-start lg:space-x-20 lg:flex-row lg:space-y-0">
           <img
-            className="max-w-sm lg:w-[20vw] rounded-lg"
+            className="max-w-sm lg:w-[20vw] rounded-lg object-cover"
             src={data?.SubCat1?.image}
             alt="imge"
           />
@@ -30,7 +30,7 @@ export default function WareHouseManagement({ data }) {
             <h1 className="text-xl font-bold text-orange-500 ">
               {data?.SubCat1?.Tittle}
             </h1>
-            <p className="text-justify text-[#7a7a7a] text-sm leading-6">
+            <p className="text-justify text-[#7a7a7a] text-sm lg:text-base leading-6">
               {data?.SubCat1?.Para}
             </p>
           </div>
@@ -42,7 +42,7 @@ export default function WareHouseManagement({ data }) {
           <h1 className="text-xl font-bold text-orange-500 ">
             {data?.SubCat2?.Tittle}
           </h1>
-          <p className="text-justify text-[#7a7a7a] text-sm leading-6">
+          <p className="text-justify text-[#7a7a7a] text-sm lg:text-base leading-6">
             {data?.SubCat2?.Para}
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function WareHouseManagement({ data }) {
           <h1 className="text-xl font-bold text-orange-500 ">
             {data?.SubCat3?.Tittle}
           </h1>
-          <p className="text-justify text-[#7a7a7a] text-sm leading-6">
+          <p className="text-justify text-[#7a7a7a] text-sm lg:text-base leading-6">
             {data?.SubCat3?.Para}
           </p>
         </div>
@@ -74,7 +74,7 @@ export default function WareHouseManagement({ data }) {
           <h1 className="text-xl font-bold text-orange-500 ">
             {data?.SubCat4?.Tittle}
           </h1>
-          <p className="text-justify text-[#7a7a7a] text-sm leading-6">
+          <p className="text-justify text-[#7a7a7a] text-sm  lg:text-base leading-6">
             {data?.SubCat4?.Para}
             <ul className="pt-5 pl-4">
               <li className="list-disc">Labelling</li>
@@ -107,7 +107,7 @@ export default function WareHouseManagement({ data }) {
             {data?.Subcat9?.Tittle}
           </h1>
           <h2 className="font-semibold">{data?.Subcat9?.SubTittle}</h2>
-          <p className="text-justify text-[#777777] leading-7 text-sm">
+          <p className="text-justify text-[#777777] leading-7 text-sm lg:text-base">
             {data?.Subcat9?.Para}
           </p>
         </div>
@@ -124,7 +124,7 @@ export default function WareHouseManagement({ data }) {
           <h1 className="text-[2rem] font-semibold lg:text-4xl">
             {data?.Tittle5}
           </h1>
-          <p className="text-justify text-[#777777] leading-7 text-sm">
+          <p className="text-justify text-[#777777] leading-7 text-sm lg:text-base">
             {data?.Para5}
           </p>
         </div>

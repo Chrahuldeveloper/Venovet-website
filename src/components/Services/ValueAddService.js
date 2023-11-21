@@ -23,7 +23,7 @@ export default function ValueAddService({ data }) {
           />
           <div className="max-w-lg space-y-3.5">
             <h1 className="text-xl font-semibold">{data?.SubCat1?.Tittle}</h1>
-            <p className="text-justify text-[#7a7a7a] text-sm leading-7">
+            <p className="text-justify text-[#7a7a7a] text-sm lg:text-base   leading-7">
               {data?.SubCat1?.Para}
             </p>
           </div>
@@ -37,7 +37,7 @@ export default function ValueAddService({ data }) {
           />
           <div className="max-w-lg space-y-3.5">
             <h1 className="text-xl font-semibold">{data?.SubCat2?.Tittle}</h1>
-            <p className="text-justify text-[#7a7a7a] text-sm leading-7">
+            <p className="text-justify text-[#7a7a7a] text-sm lg:text-base  leading-7">
               {data?.SubCat2?.Para}
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function ValueAddService({ data }) {
           />
           <div className="max-w-lg space-y-3.5">
             <h1 className="text-xl font-semibold">{data?.SubCat3?.Tittle}</h1>
-            <p className="text-justify text-[#7a7a7a] text-sm leading-7">
+            <p className="text-justify text-[#7a7a7a] text-sm lg:text-base  leading-7">
               {data?.SubCat3?.Para}
             </p>
           </div>
@@ -65,7 +65,7 @@ export default function ValueAddService({ data }) {
           />
           <div className="max-w-lg space-y-3.5">
             <h1 className="text-xl font-semibold">{data?.SubCat4?.Tittle}</h1>
-            <p className="text-justify text-[#7a7a7a] text-sm leading-7">
+            <p className="text-justify text-[#7a7a7a] text-smlg:text-base   leading-7">
               {data?.SubCat4?.Para}
             </p>
           </div>
@@ -79,7 +79,7 @@ export default function ValueAddService({ data }) {
           />
           <div className="max-w-lg space-y-3.5">
             <h1 className="text-xl font-semibold">{data?.SubCat5?.Tittle}</h1>
-            <p className="text-justify text-[#7a7a7a] text-sm leading-7">
+            <p className="text-justify text-[#7a7a7a] text-sm lg:text-base leading-7">
               {data?.SubCat5?.Para}
             </p>
           </div>
@@ -93,7 +93,7 @@ export default function ValueAddService({ data }) {
           />
           <div className="max-w-lg space-y-3.5">
             <h1 className="text-xl font-semibold">{data?.SubCat6?.Tittle}</h1>
-            <p className="text-justify text-[#7a7a7a] text-sm leading-7">
+            <p className="text-justify text-[#7a7a7a] text-sm  lg:text-base leading-7">
               {data?.SubCat6?.Para}
             </p>
           </div>
@@ -107,7 +107,7 @@ export default function ValueAddService({ data }) {
           />
           <div className="max-w-lg space-y-3.5">
             <h1 className="text-xl font-semibold">{data?.SubCat7?.Tittle}</h1>
-            <p className="text-justify text-[#7a7a7a] text-sm leading-7">
+            <p className="text-justify text-[#7a7a7a] text-sm lg:text-base leading-7">
               {data?.SubCat7?.Para}
             </p>
           </div>
@@ -121,7 +121,7 @@ export default function ValueAddService({ data }) {
           />
           <div className="max-w-lg space-y-3.5">
             <h1 className="text-xl font-semibold">{data?.SubCat8?.Tittle}</h1>
-            <p className="text-justify text-[#7a7a7a] text-sm leading-7">
+            <p className="text-justify text-[#7a7a7a] text-sm  leading-7">
               {data?.SubCat8?.Para}
             </p>
           </div>

@@ -12,15 +12,15 @@ function Services() {
     <div className="px-24 py-16 pt-24 bg-[#dae2ed] space-y-14">
       <div className="space-y-4">
         <h1 className="text-[#ff5e15] font-semibold">OUR SERVICES</h1>
-        <h1 className="text-3xl font-bold  md:text-4xl">What We Do</h1>
+        <h1 className="text-3xl font-bold md:text-4xl">What We Do</h1>
       </div>
-      <div className="grid py-3 space-y-20 md:space-y-0 md:grid-cols-2 lg:grid-cols-4 md:gap-14  lg:gap-7 place-items-center ">
+      <div className="grid py-3 space-y-20 md:space-y-0 md:grid-cols-2 lg:grid-cols-4 md:gap-14 lg:gap-7 place-items-center">
         {Data.map((card, index) => {
           return (
             <div
               key={index}
               onMouseEnter={() => sethover(index)}
-              className="relative lg:pb-6 "
+              className="relative lg:pb-6"
             >
               <div className="overflow-hidden">
                 <img
@@ -47,7 +47,7 @@ function Services() {
                       hover === index ? "bg-[#ff5e15]" : "bg-white"
                     } absolute shadow-lg  rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-64 lg:w-60 space-x-4  transition ease-in-out duration-500`}
                   >
-                    <img className={`w-14`} src={servicelogo} alt="" />
+                    <img className={`w-7`} src={servicelogo} alt="" />
                     <p
                       className={`text-lg ${
                         hover === index ? "text-white" : "text-[#2a2a2a] "

@@ -18,7 +18,7 @@ export default function Features() {
           What Makes Us Special
         </h2>
       </div>
-      <div className="grid grid-cols-1 px-5 md:grid-cols-2 place-items-center gap-14 my-14 md:px-24">
+      <div className="grid grid-cols-1 px-5 md:grid-cols-2 place-items-center gap-14 my-14 md:px-12 text-justify lg:px-24">
         {Data.map((item, i) => {
           return (
             <React.Fragment key={i}>

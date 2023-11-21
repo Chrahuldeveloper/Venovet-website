@@ -74,7 +74,7 @@ export default function Navbar({ Page }) {
         <div
           className={` ${
             ScrollY
-              ? "md:fixed top-0 left-0 right-0 z-50  bg-white shadow-md ease-in-out duration-500"
+              ? "lg:fixed top-0 left-0 right-0 z-50  bg-white shadow-md ease-in-out duration-500"
               : "hidden"
           } w-screen `}
         >
@@ -198,14 +198,14 @@ export default function Navbar({ Page }) {
         </div>
 
         {/*Social icons for Mobile */}
-        <div className="md:hidden bg-[#252a2c] w-screen p-2.5 flex items-center space-x-3">
+        <div className="lg:hidden bg-[#252a2c] w-screen p-2.5 px-5 md:px-12 flex items-center space-x-3">
           <AiOutlineTwitter size={25} color="white" />
           <AiFillLinkedin size={25} color="white" />
           <AiFillFacebook size={25} color="white" />
         </div>
 
         {/* Show case bar for Big screens */}
-        <div className="hidden md:block text-white bg-[#121a37] w-screen z-50 p-3.5 px-0">
+        <div className="hidden lg:block text-white bg-[#121a37] w-screen z-50 p-3.5 px-0">
           <div className="flex items-center justify-between mx-24 gap-x-28">
             <div className="flex items-center space-x-1.5">
               <AiOutlineMail size={25} color="#ff5e15" />
@@ -224,7 +224,7 @@ export default function Navbar({ Page }) {
           </div>
         </div>
         {/* Main Navbar */}
-        <div className="mt-5 flex items-center justify-between mx-5 md:mx-24 ">
+        <div className="mt-5 flex items-center justify-between mx-5 md:mx-12 lg:mx-24 ">
           <div>
             <Link
               to={"/"}
@@ -242,9 +242,9 @@ export default function Navbar({ Page }) {
                 settoogle(true);
               }}
               color="white"
-              className="md:hidden cursor-pointer bg-[#121a37] p-1.5 hover:bg-orange-600 ease-in-out duration-300"
+              className="lg:hidden cursor-pointer bg-[#121a37] p-1.5 hover:bg-orange-600 ease-in-out duration-300"
             />
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <div className="flex items-center">
                 {/* <Link to={`https://wa.me/${links?.Whatsapp}`}> */}
                 <a

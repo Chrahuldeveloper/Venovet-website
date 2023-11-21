@@ -55,7 +55,7 @@ export default function NewsLetter() {
   };
   // console.log(data);
   return (
-    <div className="flex flex-col justify-center items-center space-y-5 md:space-y-0 md:flex-row md:justify-between bg-[#f9f9f9] p-4 lg:px-24 py-8 mt-3.5">
+    <div className="flex flex-col justify-center items-center space-y-5 md:space-y-0 md:flex-row md:justify-between bg-[#f9f9f9] p-4 px-5 md:px-12 lg:px-24 py-8 mt-3.5">
       {isSubmitting && ( // Render loader only when isSubmitting is true
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-100 bg-opacity-75">
           <ColorRing
@@ -69,14 +69,14 @@ export default function NewsLetter() {
           />
         </div>
       )}
-      <div className="space-y-3">
+      <div className="space-y-3 w-full md:w-auto">
         <h1 className="font-bold md:text-lg">Our Newsletter</h1>
         <p className="text-[#777777]">
           Sign up for industry alerts, <br className="hidden md:block" /> news &
           insights.
         </p>
       </div>
-      <div className="flex items-center">
+      <div className="md:flex items-center w-full md:w-auto">
         <input
           type="email"
           placeholder="Your Email Address"
@@ -88,7 +88,7 @@ export default function NewsLetter() {
               mail: e.target.value,
             });
           }}
-          className="md:px-5 py-2 border-[1px]  lg:w-[30rem] outline-none"
+          className="w-full  px-5 py-2 border-[1px]  lg:w-[30rem] outline-none"
         />
         <button
           onClick={handleSubmit}

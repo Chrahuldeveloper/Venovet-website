@@ -38,7 +38,7 @@ export default function ServiceContent({ category }) {
   }, [category]);
 
   return (
-    <main className="lg:px-">
+    <main className="">
       {category === "Warehouse Management (2PL & 3PL)" && (
         <WareHouseManagement data={data} />
       )}

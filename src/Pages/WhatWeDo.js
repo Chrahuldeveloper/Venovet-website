@@ -22,7 +22,7 @@ export default function WhatWeDo() {
       <main>
         <Navbar Page={"whatwedo"} />
         <ServiceHeroSection image={image} Tittle={Tittle} Para={Para} />
-        <div className="flex flex-col max-w-5xl gap-16 p-5 lg:px-24 mx-auto lg:max-w-7xl lg:flex-row md:justify-around md:items-start">
+        <div className="flex flex-col max-w-5xl gap-16 p-5 mx-auto lg:max-w-none lg:px-24 lg:flex-row md:justify-around md:items-start">
           <div className="space-y-8">
             <FilterCategory Tittle={"Category"} Page={"whatwedo"} />
             <Help />

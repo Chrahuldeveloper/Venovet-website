@@ -40,7 +40,7 @@ const Faqs = ({ Q, children, index, openIndex, setOpenIndex }) => {
   );
 };
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(-1);
+  const [openIndex, setOpenIndex] = useState(0);
 
   return (
     <div className="py-4 m-6 mx-10 lg:mx-24">

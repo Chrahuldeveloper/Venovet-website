@@ -46,7 +46,7 @@ export default function Inventory({ data }) {
     <section>
       {/* What is Stock Audit Services*/}
       <div className="flex flex-col gap-5 lg:flex-row">
-        <img src={data?.SubCat1?.image} className="rounded-lg w-72" alt="" />
+        <img src={data?.SubCat1?.image} className="mx-auto rounded-lg w-72" alt="" />
         <div className="space-y-4 ">
           <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
             {data?.SubCat1?.Tittle}
@@ -56,7 +56,7 @@ export default function Inventory({ data }) {
       </div>
       {/* What is Stock Audit Services*/}
       {/*Eligibility For Stock Audit Services */}
-      <div className="flex flex-col items-start gap-6 mt-11 lg:flex-row">
+      <div className="flex flex-col items-center gap-6 md:items-start mt-11 lg:flex-row">
         <div className="space-y-3">
           <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
             {data?.SubCat2?.Tittle}

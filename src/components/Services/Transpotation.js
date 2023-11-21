@@ -38,7 +38,7 @@ export default function Transpotation({ data }) {
           Road <br /> Transportation
         </h1>
       </div>
-      <div className="-mt-20 space-y-2">
+      <div className="space-y-2 md:-mt-0 lg:-mt-20">
         {section1.map((item, i) => {
           return (
             <React.Fragment key={i}>

@@ -15,7 +15,6 @@ export default function ValueAddService({ data }) {
         <h1 className="text-lg md:text-xl lg:text-2xl">
           Value Added Services Include
         </h1>
-
         <div className="flex flex-col items-center gap-6 lg:items-start lg:flex-row mt-7">
           <img
             className="order-2 max-w-xs rounded-lg"

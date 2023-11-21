@@ -37,7 +37,7 @@ export default function WareHouseManagement({ data }) {
         </div>
       </div>
 
-      <div className="flex flex-col items-center space-y-4 lg:space-x-20 lg:flex-row mt-7 lg:space-y-0 ">
+      <div className="flex flex-col items-center mt-4 space-y-4 lg:-mt-6 lg:space-x-20 lg:flex-row lg:space-y-0 ">
         <div className="max-w-md space-y-3.5 text-justify">
           <h1 className="text-xl font-bold text-orange-500 ">
             {data?.SubCat2?.Tittle}
@@ -53,7 +53,7 @@ export default function WareHouseManagement({ data }) {
         />
       </div>
 
-      <div className="flex flex-col items-center space-y-4 lg:space-x-20 lg:flex-row mt-7 lg:space-y-0">
+      <div className="flex flex-col items-center mt-4 space-y-4 lg:space-x-20 lg:-mt-6 lg:flex-row lg:space-y-0">
         <img
           className="max-w-sm lg:w-[20vw] rounded-lg"
           src={data?.SubCat3?.image}
@@ -69,7 +69,7 @@ export default function WareHouseManagement({ data }) {
         </div>
       </div>
 
-      <div className="flex flex-col items-center space-y-4 lg:space-x-20 lg:flex-row mt-7 lg:space-y-0">
+      <div className="flex flex-col items-center mt-4 space-y-4 lg:space-x-20 lg:flex-row lg:space-y-0">
         <div className="max-w-md space-y-3.5">
           <h1 className="text-xl font-bold text-orange-500 ">
             {data?.SubCat4?.Tittle}
@@ -87,7 +87,7 @@ export default function WareHouseManagement({ data }) {
         </div>
         <img
           className="max-w-sm lg:w-[20vw] mx-auto rounded-lg "
-          src={data?.SubCat4?.image}
+          src={data?.SubCat4?.image}W
           alt="imge"
         />
       </div>
@@ -101,7 +101,7 @@ export default function WareHouseManagement({ data }) {
       </div>
       {/* efficiency your competitive advantage section */}
       {/* Experience Flexible Warehousing section */}
-      <div className="flex flex-col items-center justify-start gap-8 mt-8 lg:flex-row">
+      <div className="flex flex-col items-center justify-start gap-8 mt-5 lg:flex-row">
         <div className="space-y-3">
           <h1 className="text-[2rem] font-bold lg:text-4xl">
             {data?.Subcat9?.Tittle}
@@ -119,7 +119,7 @@ export default function WareHouseManagement({ data }) {
       </div>
       {/* Experience Flexible Warehousing section */}
       {/* why us section */}
-      <div className="mt-7">
+      <div className="mt-4">
         <div className="space-y-3">
           <h1 className="text-[2rem] font-semibold lg:text-4xl">
             {data?.Tittle5}

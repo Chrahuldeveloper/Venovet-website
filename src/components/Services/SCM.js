@@ -2,6 +2,7 @@ import React from "react";
 import { BsLightbulb } from "react-icons/bs";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
 import { RxCountdownTimer } from "react-icons/rx";
+import { image1, image2 }  from '../../images/services/index'
 export default function SCM() {
   const Approch = [
     {
@@ -70,13 +71,13 @@ export default function SCM() {
 
   return (
     <section>
-      <div className="flex flex-col justify-center lg:flex-row gap-7">
+      <div className="flex flex-col items-center justify-center lg:flex-row gap-7">
         <img
-          src="https://venovet.com/assets/images/s13.jpg"
+          src={image1}
           className="rounded-lg lg:max-w-sm"
           alt=""
         />
-        <div className="space-y-3 text-justify">
+        <div className="space-y-6 text-justify">
           <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins">
             Overview
           </h1>
@@ -104,7 +105,7 @@ export default function SCM() {
       </div>
 
       <div className="flex flex-col gap-5 mt-7 lg:flex-row">
-        <div className="space-y-3 text-justify">
+        <div className="space-y-6 text-justify">
           <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins">
             Key Competencies
           </h1>
@@ -125,13 +126,13 @@ export default function SCM() {
           </p>
         </div>
         <img
-          src="https://venovet.com/assets/images/s13-1.jpg"
-          className="max-w-sm rounded-lg"
+          src={image2}
+          className="max-w-sm mx-auto rounded-lg lg:mx-0"
           alt=""
         />
       </div>
 
-      <div>
+      <div className="mt-7">
         <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins">
           OUR APPROACH
         </h1>
@@ -164,8 +165,8 @@ export default function SCM() {
         </div>
       </div>
 
-      <div className="space-y-5 text-[#777777] mt-10 text-justify">
-        <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins text-black text-center">
+      <div className="space-y-6 text-[#777777] mt-10 text-justify">
+        <h1 className="text-xl font-semibold text-center text-black md:text-2xl lg:text-3xl font-poppins">
           OUR PRODUCT SOLUTIONS
         </h1>
         <p>

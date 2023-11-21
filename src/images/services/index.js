@@ -7,6 +7,8 @@ import services6 from "./services-6.jpg";
 import services7 from "./services-7.jpg";
 import services8 from "./services-8.jpg";
 import servicelogo from "./service-logo.png";
+import image1 from "./image1.jpg";
+import image2 from "./image2.jpg";
 
 export {
   services1,
@@ -18,4 +20,6 @@ export {
   services7,
   services8,
   servicelogo,
+  image1,
+  image2,
 };

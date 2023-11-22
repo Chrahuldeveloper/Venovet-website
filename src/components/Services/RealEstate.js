@@ -71,11 +71,11 @@ function RealEstate({ data }) {
         <h1 className="pb-8 text-xl font-bold">{data?.SubCat1?.Tittle}</h1>
         <div className="space-x-4 lg:flex">
           <img
-            className="max-w-xs rounded-md"
+            className="max-w-xs lg:max-w-[50%] rounded-md"
             src={data?.SubCat1?.image}
             alt=""
           />
-          <div className="space-y-6 max-w-md text-[#777777] text-justify">
+          <div className="space-y-6 max-w-md lg:max-w-none text-[#777777] text-justify">
             {data?.SubCat1?.Para}
           </div>
         </div>
@@ -84,7 +84,7 @@ function RealEstate({ data }) {
       {/* second section ... */}
       <div className="py-10">
         <h1 className="py-8 text-xl font-bold">{data?.Tittle1}</h1>
-        <div className="space-x-8 lg:flex">
+        <div className="space-x-8 lg:flex lg:justify-between">
           <img
             className="h-[45rem] rounded-md"
             src={"https://venovet.com/assets/images/s32.jpg"}
@@ -95,7 +95,7 @@ function RealEstate({ data }) {
               return (
                 <div
                   key={index}
-                  className="flex space-x-4 h-[32vh] shadow-lg px-4 py-8 rounded-lg bg-white my-2"
+                  className="flex space-x-4 h-[32vh] lg:h-auto shadow-lg px-4 py-8 rounded-lg bg-white my-2"
                 >
                   <img className="w-10 h-10" src={item.png} alt={item.png} />
                   <div className="max-w-xs space-y-2 text-justify">

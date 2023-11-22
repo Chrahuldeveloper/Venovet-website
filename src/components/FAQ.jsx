@@ -10,7 +10,7 @@ const Faqs = ({ Q, children, index, openIndex, setOpenIndex }) => {
   };
 
   return (
-    <div className="w-[20rem] md:w-[30rem] lg:w-[42rem] py-2.5 space-y-4 rounded-2xl">
+    <div className="w-full md:w-[30rem] lg:w-[42rem] py-2.5 space-y-4 rounded-2xl">
       <div
         className="flex justify-between divide-y-2 cursor-pointer"
         onClick={toggle}

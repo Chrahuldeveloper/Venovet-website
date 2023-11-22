@@ -9,7 +9,7 @@ function Services() {
   const encodedTittle = encodeURIComponent(DropdownData[0].catgeory);
 
   return (
-    <div className="px-24 py-16 pt-24 bg-[#dae2ed] space-y-14">
+    <div className="px-5 md:px-12 lg:px-24 py-16 pt-24 bg-[#dae2ed] space-y-14">
       <div className="space-y-4">
         <h1 className="text-[#ff5e15] font-semibold">OUR SERVICES</h1>
         <h1 className="text-3xl font-bold md:text-4xl">What We Do</h1>
@@ -28,7 +28,7 @@ function Services() {
                     hover === index
                       ? "brightness-75 ease-in-out transition duration-300 scale-110 rotate-3"
                       : null
-                  }  cursor-pointer md:h-72 md:w-80 `}
+                  }  cursor-pointer w-auto md:h-72 md:w-80 `}
                   src={card.image}
                   alt=""
                 />

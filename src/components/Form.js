@@ -8,7 +8,6 @@ import {
   getAuth,
   signInWithPhoneNumber,
 } from "firebase/auth";
-import PhoneInput from "react-phone-number-input";
 
 export default function Form() {
   const [resume, setResume] = useState({
@@ -99,7 +98,7 @@ export default function Form() {
     }
   };
   return (
-    <div className="bg-[#e3f3fb] p-6 my-24 rounded-lg max-w-3xl mx-auto shadow-md">
+    <div className="bg-[#e3f3fb] p-6 px-5 my-24 rounded-lg max-w-3xl mx-auto shadow-md">
       {isSubmitting && ( // Render loader only when isSubmitting is true
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-100 bg-opacity-75">
           <ColorRing
@@ -173,15 +172,7 @@ export default function Form() {
               />
             </div>
           </div>
-          <div className="flex items-center justify-center mt-6">
-            <button
-              onClick={onNumSubmit}
-              className="bg-[#ff5e15] relative overflow-hidden group flex items-center  font-semibold rounded-lg shadow  shadow-black text-white px-20 py-2"
-            >
-              <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
-              <span className="relative flex items-center">Get OTP</span>
-            </button>{" "}
-          </div>
+
           <div className="flex flex-col gap-4">
             <label htmlFor="OTP" className="text-[#787878]">
               Enter OTP{" "}
@@ -193,6 +184,15 @@ export default function Form() {
               }}
               className="border-[1px] rounded-md border-slate-300 p-2.5 md:w-[20vw] outline-none"
             />
+          </div>
+          <div className="flex items-center justify-center mt-6">
+            <button
+              onClick={onNumSubmit}
+              className="bg-[#ff5e15] relative overflow-hidden group flex items-center  font-semibold rounded-lg shadow  shadow-black text-white px-16 md:px-20 py-2"
+            >
+              <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
+              <span className="relative flex items-center">Get OTP</span>
+            </button>{" "}
           </div>
           <div className="flex flex-col gap-4">
             <label htmlFor="UploadResume" className="text-[#787878]">

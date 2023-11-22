@@ -15,17 +15,19 @@ export default function Contact() {
     window.scrollTo(0, 0);
   }, [location]);
   return (
-    <body className="overflow-x-clip">
+    <div className="overflow-x-clip">
       <Navbar />
       <CareerHeroSection
         Tittle={"Get in Touch with Venovet"}
         Para={"Contact Us"}
       />
-      <ContactForm />
+      <div className="px-5 md:px-12 lg:px-0">
+        <ContactForm />
+      </div>
       <NewsLetter />
       <DragTop />
 
       <Footer />
-    </body>
+    </div>
   );
 }

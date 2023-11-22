@@ -17,11 +17,11 @@ export default function ValueAddService({ data }) {
         </h1>
         <div className="flex flex-col items-center gap-6 lg:items-start lg:flex-row mt-7">
           <img
-            className="order-2 max-w-xs rounded-lg"
+            className="order-2 max-w-xs lg:max-w-[50%] rounded-lg"
             src={data?.SubCat1?.image}
             alt="imge"
           />
-          <div className="max-w-lg space-y-3.5">
+          <div className="max-w-lg lg:max-w-none space-y-3.5">
             <h1 className="text-xl font-semibold">{data?.SubCat1?.Tittle}</h1>
             <p className="text-justify text-[#7a7a7a] text-sm lg:text-base   leading-7">
               {data?.SubCat1?.Para}
@@ -29,9 +29,9 @@ export default function ValueAddService({ data }) {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-6 lg:items-start lg:flex-row mt-7">
+        <div className="flex flex-col items-center gap-6 lg:justify-between lg:items-start lg:flex-row mt-7">
           <img
-            className="max-w-xs rounded-lg "
+            className="max-w-xs lg:max-w-[50%] rounded-lg "
             src={data?.SubCat2?.image}
             alt="imge"
           />
@@ -45,7 +45,7 @@ export default function ValueAddService({ data }) {
 
         <div className="flex flex-col items-center gap-6 lg:items-start lg:flex-row mt-7">
           <img
-            className="order-2 max-w-xs rounded-lg"
+            className="order-2 max-w-xs lg:max-w-[50%]  rounded-lg"
             src={data?.SubCat3?.image}
             alt="imge"
           />
@@ -59,7 +59,7 @@ export default function ValueAddService({ data }) {
 
         <div className="flex flex-col items-center gap-6 lg:items-start lg:flex-row mt-7">
           <img
-            className="max-w-xs rounded-lg "
+            className="max-w-xs rounded-lg lg:max-w-[50%]"
             src={data?.SubCat4?.image}
             alt="imge"
           />
@@ -73,7 +73,7 @@ export default function ValueAddService({ data }) {
 
         <div className="flex flex-col items-center gap-6 lg:items-start lg:flex-row mt-7">
           <img
-            className="order-2 max-w-xs rounded-lg"
+            className="order-2 max-w-xs rounded-lg lg:max-w-[50%]"
             src={data?.SubCat5?.image}
             alt="imge"
           />
@@ -87,7 +87,7 @@ export default function ValueAddService({ data }) {
 
         <div className="flex flex-col items-center gap-6 lg:items-start lg:flex-row mt-7">
           <img
-            className="max-w-xs rounded-lg "
+            className="max-w-xs rounded-lg lg:max-w-[50%] "
             src={data?.SubCat6?.image}
             alt="imge"
           />
@@ -101,7 +101,7 @@ export default function ValueAddService({ data }) {
 
         <div className="flex flex-col items-center gap-6 lg:items-start lg:flex-row mt-7">
           <img
-            className="order-2 max-w-xs rounded-lg"
+            className="order-2 max-w-xs rounded-lg lg:max-w-[50%]"
             src={data?.SubCat7?.image}
             alt="imge"
           />
@@ -115,7 +115,7 @@ export default function ValueAddService({ data }) {
 
         <div className="flex flex-col items-center gap-6 lg:items-start lg:flex-row mt-7">
           <img
-            className="max-w-xs rounded-lg "
+            className="max-w-xs rounded-lg lg:max-w-[50%] "
             src={data?.SubCat8?.image}
             alt="imge"
           />

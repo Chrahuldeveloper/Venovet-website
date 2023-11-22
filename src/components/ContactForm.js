@@ -153,7 +153,7 @@ export default function ContactForm() {
         <div className="flex items-center justify-center mt-6">
           <button
             onClick={onNumSubmit}
-            className="bg-[#ff5e15] flex items-center relative overflow-hidden group  font-semibold rounded-lg  text-white px-20 py-2"
+            className="bg-[#ff5e15] flex items-center relative overflow-hidden group  font-semibold rounded-lg  text-white px-16 md:px-20 py-2"
           >
             <span className="absolute left-0 h-full w-0 transition-all bg-orange-700 opacity-100 group-hover:w-full duration-300 ease-in-out"></span>
             <span className="relative flex items-center">Get OTP</span>

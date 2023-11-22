@@ -33,7 +33,7 @@ export default function Transpotation({ data }) {
 
   return (
     <>
-      <div className="bg-[#ff5e15] hidden lg:block border-white border-4 max-w-[70vw] md:max-w-[35vw] lg:max-w-[19vw] rounded-lg p-9 translate-y-72 translate-x-16 ">
+      <div className="bg-[#ff5e15] hidden lg:block border-white border-4 max-w-[70vw] md:max-w-[35vw] lg:max-w-[19vw] rounded-lg p-9 translate-y-72  -translate-x-1">
         <h1 className="text-xl font-semibold text-center text-white font-poppins ">
           Road <br /> Transportation
         </h1>
@@ -42,7 +42,7 @@ export default function Transpotation({ data }) {
         {section1.map((item, i) => {
           return (
             <React.Fragment key={i}>
-              <div className="flex flex-col items-center justify-center gap-8 md:items-start md:flex-row">
+              <div className="flex flex-col items-center justify-center gap-10 lg:gap-20 md:items-start md:flex-row">
                 <img
                   src={item.image}
                   alt={i}

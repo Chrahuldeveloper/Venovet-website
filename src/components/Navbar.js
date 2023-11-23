@@ -212,7 +212,7 @@ export default function Navbar({ Page }) {
               <h1 className="text-[#d5d5d5]  cursor-pointer">
                 Email:{" "}
                 <span className="hover:text-[#ff5e15] transition duration-300 ease-in-out">
-                  {links?.Email}
+                  <a href={`mailto:${links?.Email}`}>{links?.Email}</a>
                 </span>
               </h1>
             </div>

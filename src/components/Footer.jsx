@@ -222,9 +222,11 @@ const Footer = () => {
             </div>
             <div>
               <p className="text-white">Mail Us</p>
-              <p className="text-[#1065cd] text-2xl font-bold cursor-pointer">
-                {links?.Email}
-              </p>
+              <a href={`mailto:${links?.Email}`}>
+                <p className="text-[#1065cd] text-2xl font-bold cursor-pointer">
+                  {links?.Email}
+                </p>
+              </a>
             </div>
           </div>
         </div>

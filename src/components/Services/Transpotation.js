@@ -42,13 +42,15 @@ export default function Transpotation({ data }) {
         {section1.map((item, i) => {
           return (
             <React.Fragment key={i}>
-              <div className="flex flex-col items-center justify-center gap-10 lg:gap-20 md:items-start md:flex-row">
+              <div className="flex flex-col items-center justify-center gap-10  md:items-start md:flex-row">
+                {/* <div className="lg:rem]"> */}
                 <img
                   src={item.image}
                   alt={i}
-                  className="max-w-sm lg:w-[20vw] rounded-lg"
+                  className="lg:max-w-[40%] rounded-lg"
                 />
-                <div className="text-[#7a7a7a] space-y-3 text-start text-sm lg:text-base">
+                {/* </div> */}
+                <div className="text-[#7a7a7a] space-y-3 text-start text-sm lg:text-justify lg:text-base">
                   <p>{item.Para}</p>
                 </div>
               </div>

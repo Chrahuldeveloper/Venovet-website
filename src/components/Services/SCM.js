@@ -2,7 +2,7 @@ import React from "react";
 import { BsLightbulb } from "react-icons/bs";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
 import { RxCountdownTimer } from "react-icons/rx";
-import { image1, image2 }  from '../../images/services/index'
+import { image1, image2 } from "../../images/services/index";
 export default function SCM() {
   const Approch = [
     {
@@ -71,13 +71,9 @@ export default function SCM() {
 
   return (
     <section>
-      <div className="flex flex-col items-center justify-center lg:flex-row gap-7">
-        <img
-          src={image1}
-          className="rounded-lg lg:max-w-sm"
-          alt=""
-        />
-        <div className="space-y-6 text-justify">
+      <div className="flex flex-col items-start justify-center lg:flex-row gap-7 pt-10">
+        <img src={image1} className="rounded-lg lg:max-w-[40%]" alt="" />
+        <div className="space-y-4 text-justify">
           <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins">
             Overview
           </h1>
@@ -104,7 +100,7 @@ export default function SCM() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-5 mt-7 lg:flex-row">
+      <div className="flex flex-col gap-5 mt-7 lg:flex-row lg:pt-10">
         <div className="space-y-6 text-justify">
           <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins">
             Key Competencies
@@ -127,32 +123,34 @@ export default function SCM() {
         </div>
         <img
           src={image2}
-          className="max-w-sm mx-auto rounded-lg lg:mx-0"
+          className="max-w-[40%] mx-auto rounded-lg lg:mx-0"
           alt=""
         />
       </div>
 
-      <div className="mt-7">
-        <h1 className="text-xl font-semibold md:text-2xl lg:text-3xl font-poppins">
+      <div className="pt-14">
+        <h1 className="text-xl text-center font-semibold md:text-2xl lg:text-3xl font-poppins">
           OUR APPROACH
         </h1>
-        <div className="flex flex-col gap-5 lg:flex-row mt-7">
+        <div className="flex flex-col gap-5 lg:flex-row ">
           {Approch.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center justify-center"
+                className="flex flex-col items-center justify-center rounded"
                 key={index}
               >
                 <div className="border-[1px] border-gray-300 p-2 translate-y-5">
                   {item.icons}
                 </div>
-                <div className=" space-y-3 text-center bg-white shadow-md shadow-slate-50 border-[1px] border-gray-300 p-6 mt-3">
-                  <h1 className="font-semibold text-orange-500">
+                <div className=" space-y-3 text-center bg-white shadow-md rounded shadow-slate-50 border-[1px] border-gray-300 py-6 mt-3">
+                  <h1 className="font-semibold font-poppins text-orange-500">
                     {item.Tittle}
                   </h1>
-                  <p className="text-[#777777] text-justify">{item.Para}</p>
+                  <p className="text-[#777777] text-center px-2 text-sm lg:pb-3">
+                    {item.Para}
+                  </p>
                   <hr />
-                  <ul className="space-y-1">
+                  <ul className="space-y-1 lg:pt-2">
                     <li>{item.list1}</li>
                     <li>{item.list2}</li>
                     <li>{item.list3}</li>

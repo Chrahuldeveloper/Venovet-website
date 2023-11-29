@@ -10,8 +10,8 @@ export default function WareHouseManagement({ data }) {
         <h1 className="max-w-sm font-semibold font-poppins md:max-w-full text-[2rem] lg:text-4xl">
           {data?.Tittle1}
         </h1>
-        <div className="flex flex-col items-start space-y-10 lg:space-y-0 lg:space-x-10  lg:flex-row text-[#7a7a7a] text-justify">
-          <p className="lg:max-w-[50%]">{data?.Para1}</p>
+        <div className="flex flex-col items-start space-y-10 lg:space-y-0 lg:gap-x-10  lg:grid lg:grid-cols-2 text-[#7a7a7a] text-justify">
+          <p className="lg:max-w-[">{data?.Para1}</p>
           <p>{data?.Para2}</p>
         </div>
       </div>
@@ -20,13 +20,15 @@ export default function WareHouseManagement({ data }) {
         <h1 className="font-poppins font-medium text-[2rem] lg:text-4xl">
           Our Offerings
         </h1>
-        <div className="flex flex-col items-center mt-5 space-y-4 md:items-start lg:space-x-10 lg:flex-row lg:space-y-0">
-          <img
-            className="max-w-sm lg:max-w-none lg:w-[50%] rounded-lg object-cover"
-            src={data?.SubCat1?.image}
-            alt="imge"
-          />
-          <div className="max-w-md lg:max-w-[50%] space-y-3.5 text-justify">
+        <div className="flex flex-col items-center mt-5 space-y-4 md:items-start lg:gap-x-10 lg:grid lg:grid-cols-2 lg:space-y-0">
+          <div>
+            <img
+              className="rounded-lg object-cover"
+              src={data?.SubCat1?.image}
+              alt="imge"
+            />
+          </div>
+          <div className="max-w-md lg:max-w-none space-y-3.5 text-justify">
             <h1 className="text-xl font-bold text-orange-500 ">
               {data?.SubCat1?.Tittle}
             </h1>
@@ -37,8 +39,8 @@ export default function WareHouseManagement({ data }) {
         </div>
       </div>
 
-      <div className="flex flex-col items-center mt-4 space-y-4 lg:justify-between lg:-mt-6 lg:space-x-10 lg:flex-row lg:space-y-0 ">
-        <div className="max-w-md space-y-3.5 text-justify lg:max-w-[50%]">
+      <div className="flex flex-col items-center mt-4 space-y-4 lg:justify-between  lg:grid lg:grid-cols-2 lg:gap-x-10 lg:space-y-0 ">
+        <div className=" space-y-3.5 text-justify ">
           <h1 className="text-xl font-bold text-orange-500 ">
             {data?.SubCat2?.Tittle}
           </h1>
@@ -46,20 +48,16 @@ export default function WareHouseManagement({ data }) {
             {data?.SubCat2?.Para}
           </p>
         </div>
-        <img
-          className="max-w-sm lg:max-w-none lg:w-[50%]  rounded-lg"
-          src={data?.SubCat2?.image}
-          alt="imge"
-        />
+        <div>
+          <img className="  rounded-lg" src={data?.SubCat2?.image} alt="imge" />
+        </div>
       </div>
 
-      <div className="flex flex-col items-center mt-4 space-y-4 lg:space-x-10 lg:-mt-6 lg:flex-row lg:space-y-0">
-        <img
-          className="max-w-sm lg:max-w-none lg:w-[50%]  rounded-lg"
-          src={data?.SubCat3?.image}
-          alt="imge"
-        />
-        <div className="max-w-md lg:max-w-[50%] space-y-3.5 text-justify">
+      <div className="flex flex-col items-center mt-4 space-y-4  lg:grid lg:grid-cols-2 lg:gap-x-10 lg:space-y-0">
+        <div>
+          <img className="  rounded-lg" src={data?.SubCat3?.image} alt="imge" />
+        </div>
+        <div className=" space-y-3.5 text-justify">
           <h1 className="text-xl font-bold text-orange-500 ">
             {data?.SubCat3?.Tittle}
           </h1>
@@ -69,8 +67,8 @@ export default function WareHouseManagement({ data }) {
         </div>
       </div>
 
-      <div className="flex flex-col items-center mt-4 space-y-4 lg:space-x-10 lg:flex-row lg:space-y-0">
-        <div className="max-w-md lg:max-w-[50%] space-y-3.5">
+      <div className="flex flex-col items-center mt-4 space-y-4  lg:grid lg:grid-cols-2 lg:gap-x-10 lg:space-y-0">
+        <div className=" space-y-3.5">
           <h1 className="text-xl font-bold text-orange-500 ">
             {data?.SubCat4?.Tittle}
           </h1>
@@ -85,12 +83,14 @@ export default function WareHouseManagement({ data }) {
             </ul>
           </p>
         </div>
-        <img
-          className="max-w-sm lg:max-w-none lg:w-[50%]  mx-auto rounded-lg "
-          src={data?.SubCat4?.image}
-          W
-          alt="imge"
-        />
+        <div className="lg:h-full">
+          <img
+            className="  rounded-lg h-full"
+            src={data?.SubCat4?.image}
+            W
+            alt="imge"
+          />
+        </div>
       </div>
       {/* Offerings section*/}
       {/* efficiency your competitive advantage section */}
@@ -102,8 +102,8 @@ export default function WareHouseManagement({ data }) {
       </div>
       {/* efficiency your competitive advantage section */}
       {/* Experience Flexible Warehousing section */}
-      <div className="flex flex-col items-center justify-start gap-8 mt-5 lg:flex-row">
-        <div className="space-y-3 lg:max-w-[50%]">
+      <div className="flex flex-col items-center justify-start gap-8 mt-5  lg:grid lg:grid-cols-2 lg:gap-x-10">
+        <div className="space-y-3 ">
           <h1 className="text-[2rem] font-bold lg:text-4xl">
             {data?.Subcat9?.Tittle}
           </h1>
@@ -113,7 +113,7 @@ export default function WareHouseManagement({ data }) {
           </p>
         </div>
         <img
-          className="max-w-sm lg:max-w-none lg:w-[50%]   rounded-lg"
+          className=" lg:h-full  rounded-lg"
           src={data?.Subcat9?.image}
           alt="img.png"
         />

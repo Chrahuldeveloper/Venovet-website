@@ -28,7 +28,7 @@ export default function Blogs() {
         const blogsData = [];
         querySnapshot.forEach((doc) => {
           blogsData.push(doc.data());
-          console.log(doc.data());
+          // console.log(doc.data());
         });
         setBlogs(blogsData);
       } catch (error) {
@@ -75,33 +75,35 @@ export default function Blogs() {
         </div>
         <div className="overflow-x-scroll scroll-smooth" ref={blogs}>
           <div className="flex gap-4 my-10 md:gap-9 " onClick={scrollRight}>
-            {Blogs?.length === 3 ? Blogs?.map((item, i) => {
-              return (
-                <div className="w-screen" key={i}>
-                  <div
-                    className="space-y-4 text-center w-[80vw] lg:w-auto"
-                    onClick={() => {
-                      navigate(`/ReadFull/${item.Tittle1}`);
-                    }}
-                  >
-                    <div className="p-2.5 border rounded-md duration-500 ease-in-out cursor-pointer hover:brightness-75">
-                      <img
-                        src={item.Blogimage}
-                        className="w-full duration-500 ease-in-out rounded-md cursor-pointer hover:brightness-75"
-                        alt={item.Blogimage + "xyz"}
-                      />
-                    </div>
+            {Blogs?.length === 3
+              ? Blogs?.map((item, i) => {
+                  return (
+                    <div className="w-screen" key={i}>
+                      <div
+                        className="space-y-4 text-center w-[80vw] lg:w-auto"
+                        onClick={() => {
+                          navigate(`/ReadFull/${item.Tittle1}`);
+                        }}
+                      >
+                        <div className="p-2.5 border rounded-md duration-500 ease-in-out cursor-pointer hover:brightness-75">
+                          <img
+                            src={item.Blogimage}
+                            className="w-full duration-500 ease-in-out rounded-md cursor-pointer hover:brightness-75"
+                            alt={item.Blogimage + "xyz"}
+                          />
+                        </div>
 
-                    <div className="space-y-2.5">
-                      <h1 className="font-bold text-[1.25rem] md:text-xl text-[#757575]">
-                        {item.Tittle1}
-                      </h1>
-                      <p className="text-[#777777]">{item.Para1}</p>
+                        <div className="space-y-2.5">
+                          <h1 className="font-bold text-[1.25rem] md:text-xl text-[#757575]">
+                            {item.Tittle1}
+                          </h1>
+                          <p className="text-[#777777]">{item.Para1}</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              );
-            }) : null}
+                  );
+                })
+              : null}
           </div>
         </div>
         <div className="flex justify-center mt-6">

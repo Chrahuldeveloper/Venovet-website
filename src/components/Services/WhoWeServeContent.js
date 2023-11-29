@@ -50,7 +50,8 @@ export default function WhoWeServeContent({ data }) {
           <div className="flex items-center justify-center">
             <img
               src={data?.ChartImage}
-              alt={venovetChart}
+              // alt={venovetChart}
+              alt=""
               className="w-52 md:w-auto md:max-w-md"
             />
           </div>

@@ -31,7 +31,7 @@ export default function WhoWeServeContent({ data }) {
   ];
 
   return (
-    <section className="md:max-w-3xl max-w-xs p-4 pr-6 md:pr-4">
+    <section className="md:max-w-3xl max-w-xs p-4 px-0">
       <div className="space-y-4 text-[#7a7a7a]">
         <h1 className="font-semibold font-poppins text-black text-2xl md:text-3xl lg:text-4xl">
           {data?.Title1}
@@ -49,7 +49,7 @@ export default function WhoWeServeContent({ data }) {
           </div>
           <div className="flex items-center justify-center">
             <img
-              src={venovetChart}
+              src={data?.ChartImage}
               alt={venovetChart}
               className="w-52 md:w-auto md:max-w-md"
             />

@@ -70,7 +70,7 @@ export default function EPRSolutions({ data }) {
           return (
             <React.Fragment key={index}>
               <div className="max-w-xs p-5 text-center shadow-lg shadow-slate-300">
-                <div className="space-y-2 text-justify">
+                <div className="space-y-2 text-center">
                   <h1 className="font-semibold text-orange-500 ">
                     {item.Tittle}
                   </h1>
@@ -109,7 +109,7 @@ export default function EPRSolutions({ data }) {
             <React.Fragment key={index}>
               <div className="max-w-xs p-5 space-y-2 text-center shadow-md shadow-slate-300">
                 <img src={item.image} alt="" className="mx-auto" />
-                <div className="space-y-2 text-justify">
+                <div className="space-y-2 text-center">
                   <h1 className="font-semibold text-orange-500 ">
                     {item.Tittle}
                   </h1>

@@ -152,11 +152,13 @@ export default function InternetSupply({ data }) {
           A leased line network that is dedicated solely to your business needs
         </h1>
         <div className="flex flex-col items-start lg:flex-row mt-7 gap-7">
-          <img
-            className="max-w-xs rounded-lg "
-            src={data?.SubCat1?.image}
-            alt="imge"
-          />
+          <div className="lg:h-full">
+            <img
+              className="max-w-xs rounded-lg lg:h-full"
+              src={data?.SubCat1?.image}
+              alt="imge"
+            />
+          </div>
           <p className="text-justify text-[#7a7a7a] text-sm leading-6">
             {data?.SubCat1?.Para}
           </p>
@@ -191,7 +193,7 @@ export default function InternetSupply({ data }) {
         </h1>
         <div className="flex flex-col items-start lg:flex-row mt-7 gap-7">
           <img
-            className="max-w-xs rounded-lg "
+            className="max-w-xs lg:max-w-sm  rounded-lg "
             src={data?.SubCat8?.image}
             alt="imge "
           />

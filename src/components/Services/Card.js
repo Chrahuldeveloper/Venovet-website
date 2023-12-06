@@ -1,24 +1,25 @@
 import React from "react";
+import { icon1, icon2, icon3, icon4 } from "../../images/services/Card";
 
 export default function Card({ data }) {
   const CardData = [
     {
-      image: "https://venovet.com/assets/images/icon4.png",
+      image: icon4,
       Tittle: `${data?.SubCat5?.Tittle}`,
       Para: `${data?.SubCat5?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/icon2.png",
+      image: icon2,
       Tittle: `${data?.SubCat6?.Tittle}`,
       Para: `${data?.SubCat6?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/icon3.png",
+      image: icon3,
       Tittle: `${data?.SubCat7?.Tittle}`,
       Para: `${data?.SubCat7?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/icon1.png",
+      image: icon1,
       Tittle: `${data?.SubCat8?.Tittle}`,
       Para: `${data?.SubCat8?.Para}`,
     },

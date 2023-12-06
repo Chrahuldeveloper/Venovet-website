@@ -85,27 +85,27 @@ function Security({ data }) {
         <h1 className="text-2xl font-bold">{data?.Tittle2}</h1>
         <p>{data?.Para2}</p>
         <div className="items-center justify-around pt-4 lg:flex lg:space-x-6">
-          <div className="grid space-y-5 md:space-y-0 lg:pt-8 md:grid-cols-2 md:gap-y-5">
+          <div className="grid space-y-5 md:space-y-0 lg:pt-8 md:grid-cols-2 md:gap-5">
             {picdata.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className={`flex    items-center ${
+                  className={`flex   items-center md:items-start ${
                     index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"
                   }  md:space-x-4`}
                 >
                   <div
                     className={`flex flex-col max-w-xs space-y-4 ${
-                      index % 2 !== 0 ? "lg:text-left pl-3" : "lg:text-right"
+                      index % 2 !== 0 ? "lg:text-left md:pl-3" : "lg:text-right"
                     }  `}
                   >
                     <p className="font-bold">{item.Title}</p>
                     <p className="text-[#777777]">{item.p}</p>
                   </div>
                   <div
-                    className={`flex p-1  border-2 ${
+                    className={`hidden md:flex p-1  border-2 ${
                       index % 2 !== 0 ? "border-orange-500 " : "border-blue-500"
-                    }  h-9 md:h-12 md:p-2`}
+                    }  h-9 md:h-auto md:w-20 md:p-2`}
                   >
                     <img src={item.png} alt="" />
                   </div>

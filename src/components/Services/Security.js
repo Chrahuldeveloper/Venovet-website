@@ -126,7 +126,7 @@ function Security({ data }) {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center p-3 rounded-lg shadow-xl py-5 w-64 h-[23rem] space-y-4"
+                className="flex flex-col items-center p-3 rounded-lg shadow-xl py-5  h-[23rem] space-y-4"
               >
                 <img className="rounded-lg w-52" src={item.img} alt="" />
                 <p className="text-[#ff5e14] font-semibold hover:text-[#007bff] cursor-pointer">

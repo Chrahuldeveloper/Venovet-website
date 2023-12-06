@@ -1,31 +1,39 @@
 import React from "react";
 import { venovetChart } from "../../images/index";
 import { KeyBenifits } from "../../components/index";
+import {
+  why1,
+  why2,
+  why3,
+  why4,
+  why5,
+  why6,
+} from "../../images/services/WHY-US";
 
 export default function WhoWeServeContent({ data }) {
   const WhyUsData = [
     {
-      image: "https://venovet.com/assets/images/icon.png",
+      image: why1,
       Tittle: "Transparent Pricing         ",
     },
     {
-      image: "https://venovet.com/assets/images/icon-1.png",
+      image: why2,
       Tittle: "Real-Time Tracking",
     },
     {
-      image: "https://venovet.com/assets/images/icon-5.png",
+      image: why3,
       Tittle: "Warehouse Storage",
     },
     {
-      image: "https://venovet.com/assets/images/icon-2.png",
+      image: why4,
       Tittle: "Security For Cargo",
     },
     {
-      image: "https://venovet.com/assets/images/icon-3.png",
+      image: why5,
       Tittle: "Payment Methods",
     },
     {
-      image: "https://venovet.com/assets/images/icon-4.png",
+      image: why6,
       Tittle: "24/7 Hours Support",
     },
   ];

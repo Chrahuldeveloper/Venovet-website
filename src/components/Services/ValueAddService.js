@@ -1,10 +1,11 @@
 import React from "react";
+import { s4 } from "../../images/services/Value";
 
 export default function ValueAddService({ data }) {
   return (
     <section>
       <div>
-        <img src="https://venovet.com/assets/images/s4.jpg" alt="" />
+        <img src={s4} alt="" />
         <div className=" text-justify text-white bg-[#1165cd] p-8 rounded-lg -translate-y-10  md:max-w-3xl mx-auto text-sm md:text-base">
           {data?.Para}
         </div>

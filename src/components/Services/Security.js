@@ -27,32 +27,32 @@ function Security({ data }) {
     {
       Title: `${data?.SubCat5?.Tittle}`,
       p: `${data?.SubCat5?.Para}`,
-      png: "https://venovet.com/assets/images/service-02.png",
+      png: sec3,
     },
     {
       Title: `${data?.SubCat6?.Tittle}`,
       p: `${data?.SubCat6?.Para}`,
-      png: "https://venovet.com/assets/images/service-02.png",
+      png: sec4,
     },
     {
       Title: `${data?.SubCat7?.Tittle}`,
       p: `${data?.SubCat7?.Para}`,
-      png: "https://venovet.com/assets/images/service-02.png",
+      png: sec5,
     },
     {
       Title: `${data?.SubCat8?.Tittle}`,
       p: `${data?.SubCat8?.Para}`,
-      png: "https://venovet.com/assets/images/service-02.png",
+      png: sec6,
     },
     {
       Title: `${data?.SubCat9?.Tittle}`,
       p: `${data?.SubCat9?.Para}`,
-      png: "https://venovet.com/assets/images/service-02.png",
+      png: sec9,
     },
     {
       Title: `${data?.SubCat10?.Tittle}`,
       p: `${data?.SubCat10?.Para}`,
-      png: "https://venovet.com/assets/images/service-02.png",
+      png: sec10,
     },
   ];
 

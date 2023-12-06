@@ -1,4 +1,13 @@
 import React from "react";
+import {
+  erp1,
+  erp2,
+  erp3,
+  erp4,
+  erp5,
+  erp6,
+  erp7,
+} from "../../images/services/ERP";
 
 export default function EPRSolutions({ data }) {
   const ERPSolutions = [
@@ -26,32 +35,32 @@ export default function EPRSolutions({ data }) {
 
   const modules = [
     {
-      image: "https://venovet.com/assets/images/erp-icon1.png",
+      image: erp1,
       Tittle: `${data?.SubCat6?.Tittle}`,
       Para: `${data?.SubCat6?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/erp-icon2.png",
+      image: erp2,
       Tittle: `${data?.SubCat7?.Tittle}`,
       Para: `${data?.SubCat7?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/erp-icon3.png",
+      image: erp3,
       Tittle: `${data?.SubCat8?.Tittle}`,
       Para: `${data?.SubCat8?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/erp-icon4.png",
+      image: erp4,
       Tittle: `${data?.SubCat9?.Tittle}`,
       Para: `${data?.SubCat9?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/erp-icon5.png",
+      image: erp5,
       Tittle: `${data?.SubCat10?.Tittle}`,
       Para: `${data?.SubCat10?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/erp-icon6.png",
+      image: erp6,
       Tittle: `${data?.SubCat11?.Tittle}`,
       Para: `${data?.SubCat11?.Para}`,
     },

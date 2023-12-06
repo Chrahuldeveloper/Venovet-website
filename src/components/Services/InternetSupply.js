@@ -12,36 +12,54 @@ import {
   log10,
   log11,
 } from "../../images/logo/index";
+import {
+  sicon1,
+  sicon2,
+  sicon3,
+  sicon4,
+  sicon5,
+  sicon6,
+  sicon7,
+  sicon8,
+  sicon9,
+  sicon11,
+  sicon12,
+  sicon13,
+  sicon14,
+  sicon15,
+  sicon16,
+  sicon17,
+} from "../../images/services/InternetSupply";
 import ScrollContainer from "react-indiana-drag-scroll";
 export default function InternetSupply({ data }) {
   const UncontendedData = [
     {
-      image: "https://venovet.com/assets/images/sicon1.png",
+      image: sicon1,
       Titttle: `${data?.SubCat3?.Tittle}`,
       Para: `${data?.SubCat3?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/sicon2.png",
+      image: sicon2,
       Titttle: `${data?.SubCat4?.Tittle}`,
       Para: `${data?.SubCat4?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/sicon4.png",
+      image: sicon3,
       Titttle: `${data?.SubCat5?.Tittle}`,
       Para: `${data?.SubCat5?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/sicon6.png",
+      image: sicon4,
       Titttle: `${data?.SubCat6?.Tittle}`,
       Para: `${data?.SubCat6?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/sicon6.png",
+      image: sicon5,
       Titttle: `${data?.SubCat7?.Tittle}`,
       Para: `${data?.SubCat7?.Para}`,
     },
     {
-      image: "https://venovet.com/assets/images/sicon3.png",
+      image: sicon6,
       Titttle: `${data?.SubCat16?.Tittle}`,
       Para: `${data?.SubCat16?.Para}`,
     },
@@ -49,27 +67,27 @@ export default function InternetSupply({ data }) {
 
   const OnboardData = [
     {
-      icon: "https://venovet.com/assets/images/sicon13.png",
+      icon: sicon13,
       Titttle: `${data?.SubCat9?.Tittle}`,
       Para: `${data?.SubCat9?.Para}`,
     },
     {
-      icon: "https://venovet.com/assets/images/sicon14.png",
+      icon: sicon14,
       Titttle: `${data?.SubCat10?.Tittle}`,
       Para: `${data?.SubCat10?.Para}`,
     },
     {
-      icon: "https://venovet.com/assets/images/sicon15.png",
+      icon: sicon15,
       Titttle: `${data?.SubCat11?.Tittle}`,
       Para: `${data?.SubCat11?.Para}`,
     },
     {
-      icon: "https://venovet.com/assets/images/sicon16.png",
+      icon: sicon16,
       Titttle: `${data?.SubCat12?.Tittle}`,
       Para: `${data?.SubCat12?.Para}`,
     },
     {
-      icon: "https://venovet.com/assets/images/sicon17.png",
+      icon: sicon17,
       Titttle: `${data?.SubCat13?.Tittle}`,
       Para: `${data?.SubCat13?.Para}`,
     },

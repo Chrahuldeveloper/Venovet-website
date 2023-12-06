@@ -1,24 +1,38 @@
 import React from "react";
+import {
+  re1,
+  re2,
+  re3,
+  re4,
+  re5,
+  re6,
+  re7,
+  re8,
+  re9,
+  re10,
+  re11,
+  s32,
+} from "../../images/services/RealEstate";
 
 function RealEstate({ data }) {
   const card = [
     {
-      png: "https://venovet.com/assets/images/sicon18.png",
+      png: re1,
       Title: `${data?.SubCat2?.Tittle}`,
       p: `${data?.SubCat2?.Para}`,
     },
     {
-      png: "https://venovet.com/assets/images/sicon19.png",
+      png: re2,
       Title: `${data?.SubCat3?.Tittle}`,
       p: `${data?.SubCat3?.Para}`,
     },
     {
-      png: "https://venovet.com/assets/images/sicon20.png",
+      png: re3,
       Title: `${data?.SubCat4?.Tittle}`,
       p: `${data?.SubCat4?.Para}`,
     },
     {
-      png: "https://venovet.com/assets/images/sicon21.png",
+      png: re4,
       Title: `${data?.SubCat5?.Tittle}`,
       p: `${data?.SubCat5?.Para}`,
     },
@@ -26,17 +40,17 @@ function RealEstate({ data }) {
 
   const classification = [
     {
-      img: "https://venovet.com/assets/images/sicon22.png",
+      img: re5,
       Title: `${data?.SubCat6?.Tittle}`,
       p: `${data?.SubCat6?.Para}`,
     },
     {
-      img: "https://venovet.com/assets/images/sicon23.png",
+      img: re6,
       Title: `${data?.SubCat7?.Tittle}`,
       p: `${data?.SubCat7?.Para}`,
     },
     {
-      img: "https://venovet.com/assets/images/sicon24.png",
+      img: re7,
       Title: `${data?.SubCat8?.Tittle}`,
       p: `${data?.SubCat8?.Para}`,
     },
@@ -44,22 +58,22 @@ function RealEstate({ data }) {
 
   const Everyone = [
     {
-      img: "https://venovet.com/assets/images/sicon25.png",
+      img: re8,
       T: `${data?.SubCat9?.Tittle}`,
       p: `${data?.SubCat9?.Para}`,
     },
     {
-      img: "https://venovet.com/assets/images/sicon26.png",
+      img: re9,
       T: `${data?.SubCat10?.Tittle}`,
       p: `${data?.SubCat10?.Para}`,
     },
     {
-      img: "https://venovet.com/assets/images/sicon27.png",
+      img: re10,
       T: `${data?.SubCat11?.Tittle}`,
       p: `${data?.SubCat11?.Para}`,
     },
     {
-      img: "https://venovet.com/assets/images/sicon28.png",
+      img: re11,
       T: `${data?.SubCat12?.Tittle}`,
       p: `${data?.SubCat12?.Para}`,
     },
@@ -85,11 +99,7 @@ function RealEstate({ data }) {
       <div className="py-10">
         <h1 className="py-8 text-xl font-bold">{data?.Tittle1}</h1>
         <div className="space-x-8 lg:flex lg:justify-between">
-          <img
-            className="h-[45rem] rounded-md"
-            src={"https://venovet.com/assets/images/s32.jpg"}
-            alt=""
-          />
+          <img className="h-[45rem] rounded-md" src={s32} alt="" />
           <div className="">
             {card.map((item, index) => {
               return (

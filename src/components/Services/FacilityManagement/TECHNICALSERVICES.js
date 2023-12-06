@@ -1,15 +1,12 @@
 import React from "react";
+import { s55 } from "../../../images/services/RealEstate";
 
 export default function TECHNICALSERVICES({ data }) {
   return (
     <>
       <div className="flex flex-col justify-start gap-6 mt-5 md:flex-row">
         <div>
-          <img
-            src={"https://venovet.com/assets/images/s55.jpg"}
-            alt={"https://venovet.com/assets/images/s55.jpg"}
-            className="lg:max-w-sm"
-          />
+          <img src={s55} alt={""} className="lg:max-w-sm" />
         </div>
         <div className="text-[#7a7a7a] space-y-5 text-justify">
           <h1 className="text-lg font-bold text-black md:text-lg">

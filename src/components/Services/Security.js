@@ -1,16 +1,28 @@
 import React from "react";
+import {
+  sec1,
+  sec2,
+  sec3,
+  sec4,
+  sec5,
+  sec6,
+  sec7,
+  sec8,
+  sec9,
+  sec10,
+} from "../../images/services/security";
 
 function Security({ data }) {
   const picdata = [
     {
       Title: `${data?.SubCat3?.Tittle}`,
       p: `${data?.SubCat3?.Para}`,
-      png: "https://venovet.com/assets/images/service-02.png",
+      png: sec1,
     },
     {
       Title: `${data?.SubCat4?.Tittle}`,
       p: `${data?.SubCat4?.Para}`,
-      png: "https://venovet.com/assets/images/service-02.png",
+      png: sec2,
     },
     {
       Title: `${data?.SubCat5?.Tittle}`,
@@ -78,7 +90,7 @@ function Security({ data }) {
               return (
                 <div
                   key={index}
-                  className={`flex flex-col  items-center ${
+                  className={`flex    items-center ${
                     index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"
                   }  md:space-x-4`}
                 >
@@ -91,7 +103,7 @@ function Security({ data }) {
                     <p className="text-[#777777]">{item.p}</p>
                   </div>
                   <div
-                    className={`flex p-1 w-8 h-8 border-2 ${
+                    className={`flex p-1  border-2 ${
                       index % 2 !== 0 ? "border-orange-500 " : "border-blue-500"
                     }  h-9 md:h-12 md:p-2`}
                   >

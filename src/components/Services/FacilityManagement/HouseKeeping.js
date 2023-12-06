@@ -1,4 +1,5 @@
 import React from "react";
+import { s51 } from "../../../images/services/Card";
 
 export default function HouseKeeping({ data }) {
   return (
@@ -6,11 +7,7 @@ export default function HouseKeeping({ data }) {
       <section className="mt-7">
         <div className="flex flex-col justify-start gap-4 md:flex-row">
           <div>
-            <img
-              src="https://venovet.com/assets/images/s51.jpg"
-              alt="https://venovet.com/assets/images/s51.jpg"
-              className="lg:max-w-xs"
-            />
+            <img src={s51} alt="" className="lg:max-w-xs" />
           </div>
           <div className="text-[#7a7a7a] space-y-5 text-justify">
             <h1 className="text-lg font-bold text-black md:text-xl">

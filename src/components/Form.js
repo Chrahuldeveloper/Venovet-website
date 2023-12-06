@@ -8,6 +8,7 @@ import {
   getAuth,
   signInWithPhoneNumber,
 } from "firebase/auth";
+import { career } from "../images/logo";
 
 export default function Form() {
   const [resume, setResume] = useState({
@@ -236,7 +237,7 @@ export default function Form() {
         <div id="sign-in-button"></div>
       </form>
       <div>
-        <img src="https://venovet.com/assets/images/career-logo.png" alt="" />
+        <img src={career} alt="" />
       </div>
     </div>
   );

@@ -9,5 +9,19 @@ import log8 from "./log8.jpg";
 import log9 from "./log9.jpg";
 import log10 from "./log10.jpg";
 import log11 from "./log11.jpg";
+import career from "./career-logo.png";
 
-export { log1, log2, log3, log4, log5, log6, log7, log8, log9, log10, log11 };
+export {
+  log1,
+  log2,
+  log3,
+  log4,
+  log5,
+  log6,
+  log7,
+  log8,
+  log9,
+  log10,
+  log11,
+  career,
+};

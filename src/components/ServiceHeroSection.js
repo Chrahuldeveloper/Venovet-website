@@ -11,7 +11,7 @@ export default function ServiceHeroSection({ image, Tittle, Para }) {
             backgroundSize: "cover",
             height: "40vh",
           }}
-          className="pt-16 pl-5 md:pl-12 space-y-5 lg:pl-24"
+          className="pt-16 pl-5 space-y-5 md:pl-12 lg:pl-24"
         >
           <h1 className="text-[#ff5e15] font-poppins font-bold md:text-xl">
             {Tittle}

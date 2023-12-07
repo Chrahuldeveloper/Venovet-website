@@ -108,6 +108,9 @@ export default function Navbar({ Page }) {
                     onMouseEnter={() => {
                       setmobileservice(!mobileservice);
                     }}
+                    onMouseLeave={() => {
+                      setmobileservice(false);
+                    }}
                     className="cursor-pointer"
                   >
                     SERVICES
@@ -117,7 +120,7 @@ export default function Navbar({ Page }) {
                     onMouseLeave={() => setmobileservice(false)}
                     className={`${
                       mobileservice ? "flex" : "hidden"
-                    } mt-2 absolute cursor-pointer `}
+                    } pt-2 absolute cursor-pointer `}
                   >
                     <ul className="text-sm text-[#676767] w-[16vw] font-semibold">
                       <li

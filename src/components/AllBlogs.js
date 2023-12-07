@@ -37,27 +37,33 @@ export default function AllBlogs() {
               onClick={() => {
                 navigate(`/ReadFull/${_.Tittle1}`);
               }}
-              className="flex flex-col justify-start gap-5 p-6 shadow-md cursor-pointer lg:max-w-4xl lg:flex-row md:items-center"
+              className="flex flex-col justify-start gap-5 p-6 shadow-md cursor-pointer lg:max-w-4xl  lg:flex-row md:items-center"
               data-aos="fade-up"
               data-aos-delay="50"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
             >
-              <div>
+              <div className="w-[50rem]">
                 <img
                   src={_.Blogimage}
                   alt={_.Blogimage + index}
-                  className="rounded-lg"
+                  className="rounded-lg "
                 />
               </div>
-              <div className="space-y-3 text-justify">
-                <h1 className="text-[#ff602b] font-semibold text-lg">
-                  {_.Tittle1}
-                </h1>
-                <h2 className="text-[#777777] font-bold text-justify">
-                  {_.Tittle2}
-                </h2>
-                <p className="text-[#777777] text-justify">{_.Para1}</p>
+              <div className="gap-y-3 grid content-between text-justify h-full">
+                <div>
+                  <h1 className="text-[#ff602b] font-semibold text-lg">
+                    {_.Tittle1}
+                  </h1>
+                </div>
+                <div>
+                  <h2 className="text-[#777777] font-bold text-justify">
+                    {_.Tittle2}
+                  </h2>
+                </div>
+                <div>
+                  <p className="text-[#777777] text-justify">{_.Para1}</p>
+                </div>
               </div>
             </div>
           </React.Fragment>

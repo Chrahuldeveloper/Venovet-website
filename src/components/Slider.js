@@ -14,6 +14,7 @@ export default function Slider() {
       setindex(index + 1);
     }
   };
+  const encodedTittle = encodeURIComponent(Data[index].catgeory);
 
   const prev = () => {
     if (index === 0) {
@@ -56,7 +57,7 @@ export default function Slider() {
               {Data[index].Para}
             </p>
             <Link
-              to={`/whatwedo/${Data[index].catgeory}`}
+              to={`/whatwedo/${encodedTittle}`}
               state={{
                 image: Data[index].image,
                 Tittle: Data[index].Tittle,

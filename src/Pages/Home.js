@@ -19,17 +19,22 @@ import { ColorRing } from "react-loader-spinner";
 
 export default function Home() {
   const location = useLocation();
-  const [isSubmitting, setIsSubmiting] = useState(false);
+  const [isSubmitting, setIsSubmiting] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
   useEffect(() => {
-    setIsSubmiting(true);
-    setTimeout(() => {
+    const handleLoad = () => {
       setIsSubmiting(false);
-    }, 2000);
+    };
+
+    window.addEventListener("load", handleLoad);
+    //to avoid memory leaks
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
   }, []);
   return (
     <div className="scroll-smooth overflow-x-clip animate__animated animate__fadeIn animate__delay-0.3s">

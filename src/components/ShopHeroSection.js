@@ -1,11 +1,12 @@
 import React from "react";
+import shop from "../images/career/shop.jpg";
 
 export default function ShopHeroSection() {
   return (
     <div>
       <div
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0.2, 0.1, 0.7), rgba(0, 0, 0, 0.4)),url(https://venovet.com/assets/images/pagetop-bg.jpg)`,
+          backgroundImage: `linear-gradient(rgba(0, 0.2, 0.1, 0.7), rgba(0, 0, 0, 0.4)),url(${shop})`,
           backgroundPosition: "center center",
           backgroundSize: "cover",
           height: "40vh",

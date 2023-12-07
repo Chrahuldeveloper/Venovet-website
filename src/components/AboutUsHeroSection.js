@@ -1,11 +1,12 @@
 import React from "react";
+import bgs2 from "../images/about/bgs2.jpg";
 
 export default function AboutUsHeroSection() {
   return (
     <div>
       <div
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0.2, 0.1, 0.7), rgba(0, 0, 0, 0.4)),url(https://www.venovet.com/assets/images/bgs2.jpg)`,
+          backgroundImage: `linear-gradient(rgba(0, 0.2, 0.1, 0.7), rgba(0, 0, 0, 0.4)),url(${bgs2})`,
           backgroundPosition: "center center",
           backgroundSize: "cover",
           height: "40vh",

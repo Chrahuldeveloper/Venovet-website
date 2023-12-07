@@ -22,7 +22,7 @@ const Data = [
     HighLight: "in Transpotation",
     Para: "Our global logistics expertise, advanced supply chain technology & customized logistics solutions will help you analyze, develop and implement successful transport management strategies from end-to-end.",
     image: transport,
-    catgeory: "Transportation",
+    catgeory: "Transportation Fleet",
     Para1:
       "Relaxes our clients to get the goods delivered at their demanded place",
   },

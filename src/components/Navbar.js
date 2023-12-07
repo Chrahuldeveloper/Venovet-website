@@ -317,6 +317,9 @@ export default function Navbar({ Page }) {
                   onMouseEnter={() => {
                     setservice(!service);
                   }}
+                  onMouseLeave={() => {
+                    setservice(false);
+                  }}
                   className="cursor-pointer  hover:text-[#ff5e15] transition duration-300 ease-in-out"
                 >
                   SERVICES
@@ -324,7 +327,7 @@ export default function Navbar({ Page }) {
                 <div
                   onMouseEnter={() => setservice(true)}
                   onMouseLeave={() => setservice(false)}
-                  className={`${service ? "flex" : "hidden"} mt-2 absolute`}
+                  className={`${service ? "flex" : "hidden"} pt-2 absolute`}
                 >
                   <ul className="text-sm text-[#676767] w-[15vw] cursor-pointer">
                     <li

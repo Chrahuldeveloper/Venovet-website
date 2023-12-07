@@ -8,6 +8,7 @@ import {
   RecaptchaVerifier,
   signInWithPhoneNumber,
 } from "firebase/auth";
+import { ColorRing } from "react-loader-spinner";
 function Enquire() {
   const auth = getAuth();
   const [form, setForm] = useState({
@@ -31,18 +32,20 @@ function Enquire() {
       },
     });
   };
+  const [isSubmitting, setIsSubmiting] = useState(false);
 
   const onNumSubmit = (e) => {
     e.preventDefault();
+    setIsSubmiting(true);
     configureCaptcha();
 
     const phoneNumber = "+" + 91 + form.Mobile;
-    console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
 
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
+        setIsSubmiting(false);
         alert("OTP has been sent");
       })
       .catch((error) => {
@@ -95,6 +98,19 @@ function Enquire() {
   };
   return (
     <div className="bg-[#dae2ed]">
+      {isSubmitting && ( // Render loader only when isSubmitting is true
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-100 bg-opacity-75">
+          <ColorRing
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="blocks-loading"
+            wrapperStyle={{}}
+            wrapperClass="blocks-wrapper"
+            colors={["#ff5e15"]}
+          />
+        </div>
+      )}
       <div className="px-5 md:px-12 py-24 lg:flex lg:px-24 ">
         <div className="rounded-l-md">
           <img className="rounded-l-md h-full" src={enquire} alt="" />

@@ -43,7 +43,7 @@ function Enquire() {
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
-        alert("OTP has bee sent");
+        alert("OTP has been sent");
       })
       .catch((error) => {
         console.log(error);

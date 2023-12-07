@@ -44,7 +44,7 @@ export default function ContactForm() {
       .catch((error) => {
         console.log(error);
         alert("Error! Sending OTP, Try Again...");
-        window.location.reload();
+        // window.location.reload();
       });
   };
   const handleSubmit = async (e) => {

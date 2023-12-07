@@ -10,8 +10,8 @@ export default function WhatWeDo() {
   const defaultData = DropdownData.find(
     (item) => item.catgeory === decodedCategory
   );
-  console.log(defaultData);
-  console.log(decodedCategory);
+  // console.log(defaultData);
+  // console.log(decodedCategory);
 
   return (
     <body className="overflow-x-clip">

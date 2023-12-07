@@ -32,6 +32,7 @@ export default function ContactForm() {
 
   const onNumSubmit = (e) => {
     e.preventDefault();
+    setIsSubmiting(true);
     configureCaptcha();
     const phoneNumber = "+" + 91 + form.Phone;
     console.log(phoneNumber);
@@ -39,6 +40,7 @@ export default function ContactForm() {
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
+        setIsSubmiting(false);
         alert("OTP has been sent");
       })
       .catch((error) => {

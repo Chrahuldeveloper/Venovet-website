@@ -33,15 +33,16 @@ export default function Form() {
 
   const onNumSubmit = (e) => {
     e.preventDefault();
+    setIsSubmiting(true);
     configureCaptcha();
 
     const phoneNumber = "+" + 91 + resume.Phone;
-    console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
-        alert("OTP has bee sent");
+        setIsSubmiting(false);
+        alert("OTP has been sent");
       })
       .catch((error) => {
         console.log(error);

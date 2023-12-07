@@ -1,11 +1,12 @@
 import React from "react";
+import career from "../images/career/career.jpg";
 
 export default function CareerHeroSection({ Tittle, Para }) {
   return (
     <div>
       <div
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0.2, 0.1, 0.7), rgba(0, 0, 0, 0.4)),url(https://venovet.com/assets/images/pagetop-bg1.jpg)`,
+          backgroundImage: `linear-gradient(rgba(0, 0.2, 0.1, 0.7), rgba(0, 0, 0, 0.4)),url(${career})`,
           backgroundPosition: "center center",
           backgroundSize: "cover",
           height: "40vh",

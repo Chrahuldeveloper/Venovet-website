@@ -7,15 +7,17 @@ import {
   ServiceHeroSection,
 } from "../components";
 import { WhoWeServeContent } from "../components/Services/index";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../Firebase";
-
+import Data from '../Data/WhoweserveCategories'
 export default function WhoWeServer() {
-  const data = useLocation();
   const { categoryid } = useParams();
-  const { image, Tittle, Para } = data.state;
   const [servedata, setservedata] = useState();
+  const decodedCategory = decodeURIComponent(categoryid);
+  const defaultData = Data.find(
+    (item) => item.catgeory === decodedCategory
+  );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,8 +34,12 @@ export default function WhoWeServer() {
     <div className="overflow-x-clip">
       <main>
         <Navbar Page={"whatwedo"} />
-        <ServiceHeroSection image={image} Tittle={Tittle} Para={Para} />
-        <div className="flex flex-col items-start justify-center px-5 md:px-12 lg:px-24 gap-10 mt-4 lg:flex-row">
+        <ServiceHeroSection
+          image={defaultData.image}
+          Tittle={defaultData.Tittle}
+          Para={defaultData.Para}
+        />
+        <div className="flex flex-col items-start justify-center gap-10 px-5 mt-4 md:px-12 lg:px-24 lg:flex-row">
           <FilterCategory Tittle={"Who We Serve"} Page={"whoweserve"} />
           <WhoWeServeContent data={servedata} />
         </div>

@@ -19,6 +19,8 @@ const Footer = () => {
 
   const [links, setlinks] = useState(false);
 
+  const encodedTittle = encodeURIComponent("Warehouse Management (2PL & 3PL)");
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -130,7 +132,7 @@ const Footer = () => {
                   </li>
                 </Link>
                 <Link
-                  to="/whatwedo/Warehouse Management (2PL & 3PL)"
+                  to={`/whatwedo/${encodedTittle}`}
                   state={{
                     image: img1,
                     Tittle: "Venovet's Warehouse Management",
@@ -144,7 +146,7 @@ const Footer = () => {
                 <Link
                   to="/whoweserve/Fast Moving Consumer Goods (FMCG)"
                   state={{
-                    image: "https://venovet.com/assets/images/bgs8.jpg",
+                    image: img1,
                     Tittle: "Fast Moving Consumer Goods (FMCG)",
                     Para: "Relaxes our clients to get the goods delivered at their demanded place",
                   }}

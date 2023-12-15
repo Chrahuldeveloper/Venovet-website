@@ -37,16 +37,18 @@ export default function ExpertFrom() {
 
   const onNumSubmit = (e) => {
     e.preventDefault();
+    setIsSubmiting(true);
     configureCaptcha();
 
-    const phoneNumber = 91 + form.Mobile;
+    const phoneNumber = "+" + 91 + form.Mobile;
     console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
 
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
-        alert("OTP has bee sent");
+        setIsSubmiting(false);
+        alert("OTP has been sent");
       })
       .catch((error) => {
         console.log(error);

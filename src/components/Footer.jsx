@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { db } from "../Firebase";
 import { doc, getDoc } from "firebase/firestore";
 import vvmain from "../images/home/footer/foot-logo.png";
+import { img1 } from "../images/Bannerimages";
 
 const Footer = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -131,7 +132,7 @@ const Footer = () => {
                 <Link
                   to="/whatwedo/Warehouse Management (2PL & 3PL)"
                   state={{
-                    image: "https://venovet.com/assets/images/bgs8.jpg",
+                    image: img1,
                     Tittle: "Venovet's Warehouse Management",
                     Para: "Give an efficiency boost to your inventory management",
                   }}
@@ -141,7 +142,7 @@ const Footer = () => {
                   </li>
                 </Link>
                 <Link
-                  to="/whoweserve/"
+                  to="/whoweserve/Fast Moving Consumer Goods (FMCG)"
                   state={{
                     image: "https://venovet.com/assets/images/bgs8.jpg",
                     Tittle: "Fast Moving Consumer Goods (FMCG)",

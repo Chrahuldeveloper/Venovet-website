@@ -62,11 +62,12 @@ export default function ContactForm() {
           // User signed in successfully.
           // const user = result.user;
           // console.log(JSON.stringify(user));
-          alert("Number is verified!");
+          // alert("Number is verified!");
           // Save form data to Firebase after OTP verification
           try {
             await addDoc(collection(db, "CONTACTFORM"), form);
             setIsSubmiting(false);
+            alert("We recieved your query!");
             window.location.reload();
             // alert("success");
           } catch (error) {

@@ -37,13 +37,13 @@ export default function AllBlogs() {
               onClick={() => {
                 navigate(`/ReadFull/${_.Tittle1}`);
               }}
-              className="flex flex-col justify-start gap-5 p-6 shadow-md cursor-pointer lg:max-w-4xl  lg:flex-row md:items-center"
+              className="flex flex-col justify-start gap-5 p-6 shadow-md max-w-sm cursor-pointer lg:max-w-3xl  lg:flex-row md:items-center"
               data-aos="fade-up"
               data-aos-delay="50"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
             >
-              <div className="w-[50rem]">
+              <div className="lg:w-[50rem]">
                 <img
                   src={_.Blogimage}
                   alt={_.Blogimage + index}

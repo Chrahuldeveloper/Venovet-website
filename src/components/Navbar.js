@@ -202,9 +202,15 @@ export default function Navbar({ Page }) {
 
         {/*Social icons for Mobile */}
         <div className="lg:hidden bg-[#252a2c] w-screen p-2.5 px-5 md:px-12 flex items-center space-x-3">
-          <AiOutlineTwitter size={25} color="white" />
-          <AiFillLinkedin size={25} color="white" />
-          <AiFillFacebook size={25} color="white" />
+          <Link to={links?.Twitter}>
+            <AiOutlineTwitter size={25} color="white" />
+          </Link>
+          <Link to={links?.Linkedin}>
+            <AiFillLinkedin size={25} color="white" />
+          </Link>
+          <Link to={links?.Facebook}>
+            <AiFillFacebook size={25} color="white" />
+          </Link>
         </div>
 
         {/* Show case bar for Big screens */}

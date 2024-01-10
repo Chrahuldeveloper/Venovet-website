@@ -45,7 +45,7 @@ export default function FilterCategory({ Tittle, Page }) {
                 return (
                   <React.Fragment key={key}>
                     <Link
-                      to={`/whoweserve/${item.catgeory}`}
+                      to={`/whoweserve/${encodedTittle}`}
                       state={{
                         image: item.image,
                         Tittle: item.Tittle,

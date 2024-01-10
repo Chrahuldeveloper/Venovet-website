@@ -3,7 +3,7 @@ import React from "react";
 export default function LogisticsProjects({ data }) {
   return (
     <section className="space-y-10">
-      <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
+      <div className="flex flex-col items-center gap-8 lg:flex-row mt-7">
         <img
           className="w-64 lg:w-[22rem] rounded-lg "
           src={data?.SubCat1?.image}
@@ -42,7 +42,7 @@ export default function LogisticsProjects({ data }) {
         </div>
       </div>
 
-      <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
+      <div className="flex flex-col items-center gap-8 lg:flex-row mt-7">
         <img
           className="w-64 lg:w-72 rounded-lg md:order-2"
           src={data?.SubCat2?.image}
@@ -79,7 +79,7 @@ export default function LogisticsProjects({ data }) {
         </div>
       </div>
 
-      <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
+      <div className="flex flex-col items-center gap-8 lg:flex-row mt-7">
         <img
           className="w-64 lg:w-72 rounded-lg "
           src={data?.SubCat3?.image}
@@ -113,7 +113,7 @@ export default function LogisticsProjects({ data }) {
         </div>
       </div>
 
-      <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
+      <div className="flex flex-col items-center gap-8 lg:flex-row mt-7">
         <img
           className="w-64 lg:w-72 rounded-lg md:order-2"
           src={data?.SubCat4?.image}
@@ -153,7 +153,7 @@ export default function LogisticsProjects({ data }) {
         </div>
       </div>
 
-      <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
+      <div className="flex flex-col items-center gap-8 lg:flex-row mt-7">
         <img
           className="w-64 lg:w-72 rounded-lg "
           src={data?.SubCat5?.image}
@@ -192,7 +192,7 @@ export default function LogisticsProjects({ data }) {
         </div>
       </div>
 
-      <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
+      <div className="flex flex-col items-center gap-8 lg:flex-row mt-7">
         <img
           className="w-64 lg:w-72 rounded-lg md:order-2"
           src={data?.SubCat6?.image}
@@ -231,7 +231,7 @@ export default function LogisticsProjects({ data }) {
         </div>
       </div>
 
-      <div className="flex flex-col items-start gap-8 lg:flex-row mt-7">
+      <div className="flex flex-col items-center gap-8 lg:flex-row mt-7">
         <img
           className="w-64 lg:w-72 rounded-lg "
           src={data?.SubCat7?.image}

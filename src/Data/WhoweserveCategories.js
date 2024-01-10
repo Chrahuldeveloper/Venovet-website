@@ -14,7 +14,7 @@ const Data = [
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
   },
   {
-    catgeory: "Fashion & Lifestyle",
+    catgeory: "Fashion-Lifestyle",
     Tittle: "Fashion & Lifestyle",
     image: img1,
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
@@ -44,7 +44,7 @@ const Data = [
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
   },
   {
-    catgeory: "Lens and Frames",
+    catgeory: "Lens-Frames",
     Tittle: "Lens and Frames",
     image: img1,
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
@@ -62,13 +62,13 @@ const Data = [
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
   },
   {
-    catgeory: "Fruits & vegetables",
+    catgeory: "Fruits-vegetables",
     Tittle: "Fruits & vegetables",
     image: img1,
     Para: "Relaxes our clients to get the goods delivered at their demanded place",
   },
   {
-    catgeory: "Home & Furniture",
+    catgeory: "Home-Furniture",
     Tittle: "Home & Furniture",
     image: img1,
     Para: "Relaxes our clients to get the goods delivered at their demanded place",

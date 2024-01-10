@@ -48,7 +48,7 @@ export default function Blogs() {
       <section className="px-5 md:px-12 lg:px-24">
         <div className="flex items-center justify-between ">
           <div className=" space-y-1.5 pt-10 ">
-            <h1 className="font-bold lg:ml text-[#ff5e15]  md:text-xl">
+            <h1 className="font-bold lg:ml text-[#ff5e15] md:text-xl">
               Our Blogs
             </h1>
             <h2 className="text-2xl font-bold md:text-3xl">Recent Articles</h2>

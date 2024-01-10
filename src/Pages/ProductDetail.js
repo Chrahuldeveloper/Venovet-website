@@ -12,11 +12,14 @@ import {
 export default function ProductDetail() {
   const data = useLocation();
   const { name } = useParams();
-  const { image } = data.state;
+  const { image1, image2, image3, image4 } = data.state;
 
   const Product = {
     name,
-    image,
+    image1,
+    image2,
+    image3,
+    image4,
   };
 
   return (

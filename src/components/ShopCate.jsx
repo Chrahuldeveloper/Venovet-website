@@ -1,24 +1,48 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Shop from "../Data/Shops";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { addTocart } from "../features/ProductSlice";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { db } from "../Firebase";
+import { collection, getDocs, query } from "firebase/firestore";
 
 function ShopCate() {
   const [point, setPoint] = useState(0);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const [products, setproducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const q = query(collection(db, "PRODUCTS"));
+        const querySnapshot = await getDocs(q);
+        const shopdata = [];
+        querySnapshot.forEach((doc) => {
+          console.log(doc?.data());
+          shopdata.push(doc?.data());
+        });
+        setproducts(shopdata);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
-      <div className="flex flex-col items-center gap-10 py-10 px-5 md:px-12 lg:px-24 space-y-4 md:flex-row">
+      <div className="flex flex-col items-center gap-10 px-5 py-10 space-y-4 md:px-12 lg:px-24 md:flex-row">
         <div className="">
           <button className="bg-[#b8daff] pl-6 py-3 rounded-t transition duration-300 ease-in-out  font-bold border w-72 text-left">
             Category
           </button>
-          {Shop.map((item, index) => {
+          {products?.map((item, index) => {
             return (
               <div key={index}>
                 <button
@@ -26,28 +50,35 @@ function ShopCate() {
                   key={index}
                   onClick={() => setPoint(index)}
                 >
-                  {item.Tittle}
+                  {item?.Tittle}
                 </button>
               </div>
             );
           })}
         </div>
         <div className="px-5">
-          {Shop[point].Products.map((item, index) => {
+          {products.map((item, index) => {
             return (
               <div
                 key={index}
                 className="px-4 py-6 space-y-6 rounded-lg shadow-lg"
               >
-                <img className="max-w-[15rem]" src={item.img} alt={item.img} />
+                <img
+                  className="max-w-[15rem]"
+                  src={item?.image1}
+                  alt={item?.image1}
+                />
                 <p
                   className="text-sm font-semibold text-center cursor-pointer hover:text-[#ff5e15] transition duration-300 ease-in-out"
                   onClick={() => {
-                    if (item.name.toUpperCase() !== "") {
+                    if (item?.Tittle?.toUpperCase() !== "") {
                       navigate(`/detail/${item.name}`, {
                         state: {
-                          name: item.name,
-                          image: item.img,
+                          name: item?.Tittle,
+                          image1: item?.image1,
+                          image2: item?.image2,
+                          image3: item?.image3,
+                          image4: item?.image4,
                         },
                       });
                     } else {
@@ -55,17 +86,17 @@ function ShopCate() {
                     }
                   }}
                 >
-                  {item.name.toUpperCase() === "" ? (
+                  {item?.Tittle?.toUpperCase() === "" ? (
                     <p className="text-lg font-semibold text-red-600">
                       No Products Found
                     </p>
                   ) : (
-                    item.name.toUpperCase()
+                    item?.Tittle?.toUpperCase()
                   )}
                 </p>
                 <button
                   onClick={() => {
-                    if (item.name.toUpperCase() !== "") {
+                    if (item?.Tittle?.toUpperCase() !== "") {
                       dispatch(addTocart(item));
                       Swal.fire({
                         title: "Sucess",

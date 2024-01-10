@@ -51,16 +51,16 @@ export default function WhoWeServeContent({ data }) {
         <h1 className="font-semibold font-poppins text-black text-2xl md:text-3xl lg:text-4xl">
           {data?.Title2}
         </h1>
-        <div className="flex flex-col items-start gap-5 mt-5 md:flex-row">
+        <div className="flex flex-col items-start gap-5 mt-5 ">
           <div className="space-y-4 text-[#7a7a7a]">
             <p className="text-justify">{data?.Stats}</p>
           </div>
-          <div className="flex items-center justify-center">
+          <div className="flex w-full items-center justify-center">
             <img
               src={data?.ChartImage}
               // alt={venovetChart}
               alt=""
-              className="w-52 md:w-auto md:max-w-md"
+              className=""
             />
           </div>
         </div>
@@ -73,7 +73,9 @@ export default function WhoWeServeContent({ data }) {
         <p className="text-[#7a7a7a] leading-8">
           <span className="text-justify">{data?.How}</span>
         </p>
-        <img src={data?.Image} alt="" />
+        <div className="flex items-center justify-center w-full">
+          <img src={data?.Image} alt="" />
+        </div>
       </div>
 
       <div className="space-y-4 mt-7">

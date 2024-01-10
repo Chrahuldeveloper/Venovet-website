@@ -129,9 +129,7 @@ function Security({ data }) {
                 className="flex flex-col items-center p-3 rounded-lg shadow-xl py-5  h-[23rem] space-y-4"
               >
                 <img className="rounded-lg w-52" src={item.img} alt="" />
-                <p className="text-[#ff5e14] font-semibold hover:text-[#007bff] cursor-pointer">
-                  {item.Title}
-                </p>
+                <p className="text-[#ff5e14] font-semibold  ">{item.Title}</p>
                 <p className="text-center">{item.p}</p>
               </div>
             );

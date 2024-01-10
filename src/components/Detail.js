@@ -1,50 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { addTocart } from "../features/ProductSlice";
 import Swal from "sweetalert2";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../Firebase";
 import { Link } from "react-router-dom";
 
 export default function Detail({ Product }) {
   const dispatch = useDispatch();
   const item = {
     name: Product.name,
-    img: Product.image,
+    image1: Product.image1,
+    image2: Product.image2,
+    image3: Product.image3,
+    image4: Product.image4,
+    desc: Product.desc,
+    Price: Product.Price,
   };
-
-  const [data, setData] = useState(null);
-  // Get full details of the product
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const documentRef = doc(db, "PRODUCTS", Product.name);
-        const documentSnapshot = await getDoc(documentRef);
-        if (documentSnapshot.exists()) {
-          setData(documentSnapshot.data());
-        } else {
-          setData(null);
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-    window.scrollTo(0, 0);
-  }, [Product.name]);
 
   return (
     <main className="flex flex-col items-center gap-6 my-12 md:flex-row justify-evenly md:gap-0">
       <div className="border-[1px] border-gray-300 max-w-sm p-3">
         <div className="grid grid-cols-2 gap-5 p-4">
-          {data?.images.map((item, index) => {
-            return (
-              <React.Fragment key={index + 1}>
-                <img src={item} alt={item + index} />
-              </React.Fragment>
-            );
-          })}
+          <img src={item.image1} alt={item.image1} />
+          <img src={item.image2} alt={item.image1} />
+          <img src={item.image3} alt={item.image1} />
+          <img src={item.image4} alt={item.image1} />
         </div>
       </div>
       <div className="space-y-5">
@@ -75,8 +54,11 @@ export default function Detail({ Product }) {
             </button>
           </Link>
         </div>
-        <div className="border-[1px] border-gray-200 max-w-md text-gray-500 p-3.5 text-sm">
-          {data?.description ? data?.description : "No description"}
+        <div className="border-[1px] border-gray-200 max-w-md text-gray-500 p-3.5 text-sm space-y-2">
+          <p className="text-lg font-semibold text-slate-500">
+            Price : {item?.Price}
+          </p>
+          {item?.desc ? item?.desc : "No description"}
         </div>
       </div>
     </main>

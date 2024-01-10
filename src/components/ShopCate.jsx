@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Shop from "../Data/Shops";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { addTocart } from "../features/ProductSlice";
@@ -72,13 +71,15 @@ function ShopCate() {
                   className="text-sm font-semibold text-center cursor-pointer hover:text-[#ff5e15] transition duration-300 ease-in-out"
                   onClick={() => {
                     if (item?.Tittle?.toUpperCase() !== "") {
-                      navigate(`/detail/${item.name}`, {
+                      navigate(`/detail/${item.Tittle}`, {
                         state: {
                           name: item?.Tittle,
                           image1: item?.image1,
                           image2: item?.image2,
                           image3: item?.image3,
                           image4: item?.image4,
+                          desc: item?.Description,
+                          Price: item?.Dealprice,
                         },
                       });
                     } else {

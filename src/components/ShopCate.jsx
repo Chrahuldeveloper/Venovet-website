@@ -39,8 +39,6 @@ function ShopCate() {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log(cat);
-
   return (
     <>
       <div className="flex flex-col items-center gap-10 px-5 py-10 space-y-4 md:px-12 lg:px-24 md:flex-row">
@@ -71,20 +69,20 @@ function ShopCate() {
               >
                 <img
                   className="max-w-[15rem]"
-                  src={item?.image1}
-                  alt={item?.image1}
+                  src={item?.Image1}
+                  alt={item?.Image1}
                 />
                 <p
                   className="text-sm font-semibold text-center cursor-pointer hover:text-[#ff5e15] transition duration-300 ease-in-out"
                   onClick={() => {
-                    if (item?.Tittle?.toUpperCase() !== "") {
-                      navigate(`/detail/${item.Tittle}`, {
+                    if (item?.ProductName?.toUpperCase() !== "") {
+                      navigate(`/detail/${item.ProductName}`, {
                         state: {
-                          name: item?.Tittle,
-                          image1: item?.image1,
-                          image2: item?.image2,
-                          image3: item?.image3,
-                          image4: item?.image4,
+                          name: item?.ProductName,
+                          image1: item?.Image1,
+                          image2: item?.Image2,
+                          image3: item?.Image3,
+                          image4: item?.Image4,
                           desc: item?.Description,
                           Price: item?.Dealprice,
                         },
@@ -94,17 +92,17 @@ function ShopCate() {
                     }
                   }}
                 >
-                  {item?.Tittle?.toUpperCase() === "" ? (
+                  {item?.ProductName?.toUpperCase() === "" ? (
                     <p className="text-lg font-semibold text-red-600">
                       No Products Found
                     </p>
                   ) : (
-                    item?.Tittle?.toUpperCase()
+                    item?.ProductName?.toUpperCase()
                   )}
                 </p>
                 <button
                   onClick={() => {
-                    if (item?.Tittle?.toUpperCase() !== "") {
+                    if (item?.ProductName?.toUpperCase() !== "") {
                       dispatch(addTocart(item));
                       Swal.fire({
                         title: "Sucess",

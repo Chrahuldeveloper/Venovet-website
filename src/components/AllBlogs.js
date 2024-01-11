@@ -50,7 +50,7 @@ export default function AllBlogs() {
                   className="rounded-lg "
                 />
               </div>
-              <div className="gap-y-3 grid content-between text-justify h-full">
+              <div className="gap-y-3 max-w- grid content-between text-justify h-full">
                 <div>
                   <h1 className="text-[#ff602b] font-semibold text-lg">
                     {_.Tittle1}
@@ -62,7 +62,9 @@ export default function AllBlogs() {
                   </h2>
                 </div>
                 <div>
-                  <p className="text-[#777777] text-justify">{_.Para1}</p>
+                  <p className="text-[#777777] text-justify">
+                    {_.Para1.substr(0, 150)}
+                  </p>
                 </div>
               </div>
             </div>

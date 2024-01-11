@@ -27,7 +27,7 @@ export default function Transpotation({ data }) {
     },
     {
       image: `${data?.image6?.image}`,
-      Para: `${data?.Para5}`,
+      // Para: `${data?.Para5}`,
     },
   ];
 
@@ -66,9 +66,17 @@ export default function Transpotation({ data }) {
         {section3.map((item, i) => {
           return (
             <React.Fragment key={i}>
-              <div className="flex flex-col items-center md:items-start gap-8 md:flex-row text-start text-sm text-[#7a7a7a]">
-                <img src={item.image} alt={i} className="max-w-sm rounded-lg" />
-                <p>{item.Para}</p>
+              <div className="flex flex-col items-center justify-center gap-10  md:items-start md:flex-row">
+                {item.image ? (
+                  <img
+                    src={item.image}
+                    alt=""
+                    className="lg:max-w-[40%] rounded-lg"
+                  />
+                ) : null}
+                <div className="text-[#7a7a7a] space-y-3 text-start text-sm lg:text-justify lg:text-base">
+                  <p>{item?.Para}</p>
+                </div>
               </div>
             </React.Fragment>
           );

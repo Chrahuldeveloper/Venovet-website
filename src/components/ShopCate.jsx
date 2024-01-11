@@ -13,6 +13,7 @@ function ShopCate() {
   const navigate = useNavigate();
 
   const [products, setproducts] = useState([]);
+  const [cat, setCat] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +26,10 @@ function ShopCate() {
           shopdata.push(doc?.data());
         });
         setproducts(shopdata);
+
+        const docRef = collection(db, "CATEGORIES");
+        const snap = await getDocs(docRef);
+        setCat(snap.docs.map((doc) => doc.data().Name));
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -34,6 +39,8 @@ function ShopCate() {
     window.scrollTo(0, 0);
   }, []);
 
+  console.log(cat);
+
   return (
     <>
       <div className="flex flex-col items-center gap-10 px-5 py-10 space-y-4 md:px-12 lg:px-24 md:flex-row">
@@ -41,7 +48,7 @@ function ShopCate() {
           <button className="bg-[#b8daff] pl-6 py-3 rounded-t transition duration-300 ease-in-out  font-bold border w-72 text-left">
             Category
           </button>
-          {products?.map((item, index) => {
+          {cat?.map((item, index) => {
             return (
               <div key={index}>
                 <button
@@ -49,7 +56,7 @@ function ShopCate() {
                   key={index}
                   onClick={() => setPoint(index)}
                 >
-                  {item?.Tittle}
+                  {item}
                 </button>
               </div>
             );

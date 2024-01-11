@@ -74,11 +74,14 @@ export default function Blogs() {
           </div>
         </div>
         <div className="overflow-x-scroll scroll-smooth" ref={blogs}>
-          <div className="flex gap-4 my-10 md:gap-9 " onClick={scrollRight}>
-            {Blogs?.length === 3
+          <div
+            className="grid grid-cols-3 gap-4 my-10 md:gap-9 "
+            onClick={scrollRight}
+          >
+            {Blogs?.length !== 0
               ? Blogs?.map((item, i) => {
                   return (
-                    <div className="w-screen" key={i}>
+                    <div className="" key={i}>
                       <div
                         className="space-y-4 text-center w-[80vw] lg:w-auto"
                         onClick={() => {

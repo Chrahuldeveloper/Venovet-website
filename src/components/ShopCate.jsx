@@ -69,8 +69,8 @@ function ShopCate() {
               >
                 <img
                   className="max-w-[15rem]"
-                  src={item?.Image1}
-                  alt={item?.Image1}
+                  src={item?.Image1?.image}
+                  alt={item?.Image1?.image}
                 />
                 <p
                   className="text-sm font-semibold text-center cursor-pointer hover:text-[#ff5e15] transition duration-300 ease-in-out"
@@ -79,10 +79,10 @@ function ShopCate() {
                       navigate(`/detail/${item.ProductName}`, {
                         state: {
                           name: item?.ProductName,
-                          image1: item?.Image1,
-                          image2: item?.Image2,
-                          image3: item?.Image3,
-                          image4: item?.Image4,
+                          image1: item?.Image1?.image,
+                          image2: item?.Image2?.image,
+                          image3: item?.Image3?.image,
+                          image4: item?.Image4?.image,
                           desc: item?.Description,
                           Price: item?.Dealprice,
                         },

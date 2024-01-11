@@ -67,7 +67,6 @@ function Enquire() {
         // Save form data to Firebase after OTP verification
         try {
           await addDoc(collection(db, "ENQUIRY"), form);
-          alert("Form data has been saved to Firebase.");
           window.location.reload();
         } catch (error) {
           console.error(error);

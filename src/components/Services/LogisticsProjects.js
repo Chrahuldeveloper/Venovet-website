@@ -44,7 +44,7 @@ export default function LogisticsProjects({ data }) {
 
       <div className="flex flex-col items-center gap-8 lg:flex-row mt-7">
         <img
-          className="w-64 lg:w-72 rounded-lg md:order-2"
+          className="w-64 lg:w-[22rem] rounded-lg md:order-2"
           src={data?.SubCat2?.image}
           alt="imge"
         />
@@ -81,7 +81,7 @@ export default function LogisticsProjects({ data }) {
 
       <div className="flex flex-col items-center gap-8 lg:flex-row mt-7">
         <img
-          className="w-64 lg:w-72 rounded-lg "
+          className="w-64 lg:w-[22rem] rounded-lg "
           src={data?.SubCat3?.image}
           alt="imge"
         />
@@ -115,7 +115,7 @@ export default function LogisticsProjects({ data }) {
 
       <div className="flex flex-col items-center gap-8 lg:flex-row mt-7">
         <img
-          className="w-64 lg:w-72 rounded-lg md:order-2"
+          className="w-64 lg:w-[22rem] rounded-lg md:order-2"
           src={data?.SubCat4?.image}
           alt="imge"
         />
@@ -155,7 +155,7 @@ export default function LogisticsProjects({ data }) {
 
       <div className="flex flex-col items-center gap-8 lg:flex-row mt-7">
         <img
-          className="w-64 lg:w-72 rounded-lg "
+          className="w-64 lg:w-[22rem] rounded-lg "
           src={data?.SubCat5?.image}
           alt="imge"
         />
@@ -194,7 +194,7 @@ export default function LogisticsProjects({ data }) {
 
       <div className="flex flex-col items-center gap-8 lg:flex-row mt-7">
         <img
-          className="w-64 lg:w-72 rounded-lg md:order-2"
+          className="w-64 lg:w-[22rem] rounded-lg md:order-2"
           src={data?.SubCat6?.image}
           alt="imge"
         />
@@ -233,7 +233,7 @@ export default function LogisticsProjects({ data }) {
 
       <div className="flex flex-col items-center gap-8 lg:flex-row mt-7">
         <img
-          className="w-64 lg:w-72 rounded-lg "
+          className="w-64 lg:w-[22rem] rounded-lg "
           src={data?.SubCat7?.image}
           alt="imge"
         />

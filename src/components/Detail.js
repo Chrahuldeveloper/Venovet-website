@@ -20,10 +20,10 @@ export default function Detail({ Product }) {
     <main className="flex flex-col items-center gap-6 my-12 md:flex-row justify-evenly md:gap-0">
       <div className="border-[1px] border-gray-300 max-w-sm p-3">
         <div className="grid grid-cols-2 gap-5 p-4">
-          <img src={item.image1} alt={item.image1} />
-          <img src={item.image2} alt={item.image1} />
-          <img src={item.image3} alt={item.image1} />
-          <img src={item.image4} alt={item.image1} />
+          <img className="rounded-md" src={item.image1} alt={item.image1} />
+          <img className="rounded-md" src={item.image2} alt={item.image1} />
+          <img className="rounded-md" src={item.image3} alt="" />
+          <img className="rounded-md" src={item.image4} alt="" />
         </div>
       </div>
       <div className="space-y-5">

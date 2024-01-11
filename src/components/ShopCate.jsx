@@ -5,7 +5,7 @@ import { addTocart } from "../features/ProductSlice";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { db } from "../Firebase";
-import { collection, getDocs, query } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
 
 function ShopCate() {
   const [point, setPoint] = useState(0);
@@ -18,15 +18,6 @@ function ShopCate() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const q = query(collection(db, "PRODUCTS"));
-        const querySnapshot = await getDocs(q);
-        const shopdata = [];
-        querySnapshot.forEach((doc) => {
-          console.log(doc?.data());
-          shopdata.push(doc?.data());
-        });
-        setproducts(shopdata);
-
         const docRef = collection(db, "CATEGORIES");
         const snap = await getDocs(docRef);
         setCat(snap.docs.map((doc) => doc.data().Name));
@@ -39,10 +30,32 @@ function ShopCate() {
     window.scrollTo(0, 0);
   }, []);
 
+  const filterproduct = async (item) => {
+    try {
+      const docRef = collection(db, "PRODUCTS");
+      const snap = await getDocs(docRef);
+      const category = snap.docs
+        .map((doc) => doc.data().Category)
+        .find((cat) => cat === item);
+      if (category) {
+        const filteredProducts = snap.docs
+          .filter((doc) => doc.data().Category === category)
+          .map((doc) => doc.data());
+        console.log(filteredProducts);
+        setproducts(filteredProducts);
+      } else {
+        console.log("Category not found");
+        setproducts([]);
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   return (
     <>
       <div className="flex flex-col items-center gap-10 px-5 py-10 space-y-4 md:px-12 lg:px-24 md:flex-row">
-        <div className="">
+        <div>
           <button className="bg-[#b8daff] pl-6 py-3 rounded-t transition duration-300 ease-in-out  font-bold border w-72 text-left">
             Category
           </button>
@@ -52,7 +65,9 @@ function ShopCate() {
                 <button
                   className="pl-6 py-3 hover:text-[#007bff] transition duration-300 ease-in-out text-[#777777] text-sm border w-72 text-left"
                   key={index}
-                  onClick={() => setPoint(index)}
+                  onClick={() => {
+                    filterproduct(item);
+                  }}
                 >
                   {item}
                 </button>
@@ -61,7 +76,7 @@ function ShopCate() {
           })}
         </div>
         <div className="px-5">
-          {products.map((item, index) => {
+          {products?.map((item, index) => {
             return (
               <div
                 key={index}
@@ -69,8 +84,8 @@ function ShopCate() {
               >
                 <img
                   className="max-w-[15rem]"
-                  src={item?.Image1?.image}
-                  alt={item?.Image1?.image}
+                  src={item?.Image1}
+                  alt={item?.Image1}
                 />
                 <p
                   className="text-sm font-semibold text-center cursor-pointer hover:text-[#ff5e15] transition duration-300 ease-in-out"
@@ -79,10 +94,10 @@ function ShopCate() {
                       navigate(`/detail/${item.ProductName}`, {
                         state: {
                           name: item?.ProductName,
-                          image1: item?.Image1?.image,
-                          image2: item?.Image2?.image,
-                          image3: item?.Image3?.image,
-                          image4: item?.Image4?.image,
+                          image1: item?.Image1,
+                          image2: item?.Image2,
+                          image3: item?.Image3,
+                          image4: item?.Image4,
                           desc: item?.Description,
                           Price: item?.Dealprice,
                         },
@@ -92,7 +107,7 @@ function ShopCate() {
                     }
                   }}
                 >
-                  {item?.ProductName?.toUpperCase() === "" ? (
+                  {products?.length === 0 ? (
                     <p className="text-lg font-semibold text-red-600">
                       No Products Found
                     </p>

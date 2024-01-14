@@ -75,7 +75,7 @@ export default function Blogs() {
         </div>
         <div className="overflow-x-scroll scroll-smooth" ref={blogs}>
           <div
-            className="grid grid-cols-3 gap-4 my-10 md:gap-9 "
+            className="lg:grid lg:grid-cols-3 flex gap-4 my-10 md:gap-9 "
             onClick={scrollRight}
           >
             {Blogs?.length !== 0
@@ -91,7 +91,7 @@ export default function Blogs() {
                         <div className="p-2.5 border rounded-md duration-500 ease-in-out cursor-pointer hover:brightness-75">
                           <img
                             src={item.Blogimage}
-                            className="w-full duration-500 ease-in-out rounded-md cursor-pointer hover:brightness-75"
+                            className="w-80 h-48 duration-500 ease-in-out rounded-md cursor-pointer hover:brightness-75"
                             alt={item.Blogimage + "xyz"}
                           />
                         </div>
@@ -100,7 +100,9 @@ export default function Blogs() {
                           <h1 className="font-bold text-[1.25rem] md:text-xl text-[#757575]">
                             {item.Tittle1}
                           </h1>
-                          <p className="text-[#777777]">{item.Para1}</p>
+                          <p className="text-[#777777]">
+                            {item.Para1.substr(0, 100)}......
+                          </p>
                         </div>
                       </div>
                     </div>

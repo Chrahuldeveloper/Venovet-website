@@ -15,7 +15,7 @@ export default function ReadFull() {
   const { tittle } = useParams();
   console.log(tittle);
   return (
-    <body className="overflow-x-clip">
+    <div className="overflow-x-clip">
       <main>
         <Navbar Page={"Blog"} />
         <BlogPageHeroSection />
@@ -32,6 +32,6 @@ export default function ReadFull() {
         <DragTop />
         <Footer />
       </main>
-    </body>
+    </div>
   );
 }

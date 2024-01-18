@@ -77,7 +77,7 @@ function Security({ data }) {
   return (
     <div>
       <div className="py-10 space-y-3">
-        <h1 className="text-2xl font-bold">{data?.Tittle1}</h1>
+        <h1 className="text-2xl font-bold text-center">{data?.Tittle1}</h1>
         <p className="text-[#777777] text-sm md:text-lg">{data?.Para1}</p>
       </div>
       {/* Services ...... */}
@@ -103,7 +103,7 @@ function Security({ data }) {
                     <p className="text-[#777777]">{item.p}</p>
                   </div>
                   <div
-                    className={`hidden md:flex p-1  border-2 ${
+                    className={`hidden md:flex p-1 items-center justify-center  border-2 ${
                       index % 2 !== 0 ? "border-orange-500 " : "border-blue-500"
                     }  h-9 md:h-auto md:w-20 md:p-2`}
                   >
@@ -119,7 +119,7 @@ function Security({ data }) {
       <div className="py-20">
         <div className="flex flex-col items-center space-y-3">
           <h1 className="text-3xl font-bold">{data?.Tittle3}</h1>
-          <p>{data?.Tittle3}</p>
+          {/* <p>{data?.Tittle3}</p> */}
         </div>
         <div className="grid pt-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
           {card.map((item, index) => {

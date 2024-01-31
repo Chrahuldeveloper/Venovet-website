@@ -1,5 +1,6 @@
 import React from "react";
 import vechilesData from "../../Data/Vehicles";
+import DOMPurify from "dompurify";
 export default function Transpotation({ data }) {
   const section1 = [
     {
@@ -51,7 +52,11 @@ export default function Transpotation({ data }) {
                 />
                 {/* </div> */}
                 <div className="text-[#7a7a7a] space-y-3 text-start text-sm lg:text-justify lg:text-base">
-                  <p>{item.Para}</p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(item.Para),
+                    }}
+                  />
                 </div>
               </div>
             </React.Fragment>
@@ -59,8 +64,16 @@ export default function Transpotation({ data }) {
         })}
       </div>
       <div className="text-[#7a7a7a] space-y-3.5 mt-5 text-start text-sm lg:text-base">
-        <p>{data?.Para6}</p>
-        <p>{data?.Para7}</p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(data?.Para6),
+          }}
+        />
+        <p
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(data?.Para7),
+          }}
+        />
       </div>
       <div className="mt-6 space-y-7">
         {section3.map((item, i) => {
@@ -75,7 +88,11 @@ export default function Transpotation({ data }) {
                   />
                 ) : null}
                 <div className="text-[#7a7a7a] space-y-3 text-start text-sm lg:text-justify lg:text-base">
-                  <p>{item?.Para}</p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(item?.Para),
+                    }}
+                  />
                 </div>
               </div>
             </React.Fragment>
@@ -91,7 +108,11 @@ export default function Transpotation({ data }) {
             return (
               <React.Fragment key={index}>
                 <div className=" w-full p-7 lg:w-44 text-sm bg-[#f7f7f750] lg:p-5 text-center rounded-lg shadow-md">
-                  <h1>{item.Name}</h1>
+                  <h1
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(item.Name),
+                    }}
+                  />
                 </div>
               </React.Fragment>
             );

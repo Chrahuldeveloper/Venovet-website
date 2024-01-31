@@ -31,7 +31,7 @@ export default function WhoWeServeContent({ data }) {
           dangerouslySetInnerHTML={{
             __html: DOMPurify.sanitize(data?.Overview),
           }}
-        ></p>
+        />
       </div>
 
       <div className="mt-7">
@@ -45,7 +45,7 @@ export default function WhoWeServeContent({ data }) {
               dangerouslySetInnerHTML={{
                 __html: DOMPurify.sanitize(data?.Stats),
               }}
-            ></p>
+            />
           </div>
           <div className="flex w-full items-center justify-center">
             <img src={data?.ChartImage} alt="" className="" />
@@ -60,7 +60,7 @@ export default function WhoWeServeContent({ data }) {
         <p className="text-[#7a7a7a] leading-8">
           <span
             dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(data?.How) }}
-          ></span>
+          />
         </p>
         <div className="flex items-center justify-center w-full">
           <img src={data?.Image} alt="" />
@@ -74,7 +74,7 @@ export default function WhoWeServeContent({ data }) {
         <p
           className="text-[#7a7a7a] leading-8"
           dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(data?.Why) }}
-        ></p>
+        />
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {WhyUsData.map((item, index) => (
             <div

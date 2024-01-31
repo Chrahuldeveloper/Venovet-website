@@ -1,4 +1,5 @@
 import React from "react";
+import DOMPurify from "dompurify";
 
 export default function LogisticsProjects({ data }) {
   return (
@@ -13,7 +14,12 @@ export default function LogisticsProjects({ data }) {
           <h1 className="text-xl font-semibold lg:text-xl font-poppins">
             {data?.SubCat1?.Tittle}
           </h1>
-          <p className="text-[#7a7a7a]">{data?.SubCat1?.Para}</p>
+          <p
+            className="text-[#7a7a7a]"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat1?.Para),
+            }}
+          />
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -52,7 +58,12 @@ export default function LogisticsProjects({ data }) {
           <h1 className="text-xl font-semibold lg:text-xl font-poppins">
             {data?.SubCat2?.Tittle}
           </h1>
-          <p className="text-[#7a7a7a]">{data?.SubCat2?.Para}</p>
+          <p
+            className="text-[#7a7a7a]"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat2?.Para),
+            }}
+          />
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Manage permits and entitlements
@@ -89,7 +100,12 @@ export default function LogisticsProjects({ data }) {
           <h1 className="text-xl font-semibold text-start lg:text-xl font-poppins">
             {data?.SubCat3?.Tittle}
           </h1>
-          <p className="text-[#7a7a7a]">{data?.SubCat3?.Para}</p>
+          <p
+            className="text-[#7a7a7a]"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat3?.Para),
+            }}
+          />
           <ul className="pl-4 text-[#7a7a7a]">
             <li className="text-sm leading-7 list-disc ">
               Outline specifications
@@ -124,7 +140,12 @@ export default function LogisticsProjects({ data }) {
             {" "}
             {data?.SubCat4?.Tittle}
           </h1>
-          <p className="text-[#7a7a7a]">{data?.SubCat4?.Para}</p>
+          <p
+            className="text-[#7a7a7a]"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat4?.Para),
+            }}
+          />
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -163,7 +184,12 @@ export default function LogisticsProjects({ data }) {
           <h1 className="text-xl font-semibold lg:text-xl font-poppins">
             {data?.SubCat5?.Tittle}
           </h1>
-          <p className="text-[#7a7a7a]">{data?.SubCat5?.Para}</p>
+          <p
+            className="text-[#7a7a7a]"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat5?.Para),
+            }}
+          />
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -202,7 +228,12 @@ export default function LogisticsProjects({ data }) {
           <h1 className="text-xl font-semibold lg:text-xl font-poppins">
             {data?.SubCat6?.Tittle}
           </h1>
-          <p className="text-[#7a7a7a]">{data?.SubCat6?.Para}</p>
+          <p
+            className="text-[#7a7a7a]"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat6?.Para),
+            }}
+          />
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis
@@ -241,7 +272,12 @@ export default function LogisticsProjects({ data }) {
           <h1 className="text-xl font-semibold lg:text-xl font-poppins">
             {data?.SubCat7?.Tittle}
           </h1>
-          <p className="text-[#7a7a7a]">{data?.SubCat7?.Para}</p>
+          <p
+            className="text-[#7a7a7a]"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat7?.Para),
+            }}
+          />
           <ul className="text-[#7a7a7a] pl-4">
             <li className="text-[#7a7a7a] list-disc text-sm leading-7">
               Site evaluation and feasibility analysis

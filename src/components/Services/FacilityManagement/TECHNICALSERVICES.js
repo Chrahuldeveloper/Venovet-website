@@ -1,5 +1,6 @@
 import React from "react";
 import { s55 } from "../../../images/services/RealEstate";
+import DOMPurify from "dompurify";
 
 export default function TECHNICALSERVICES({ data }) {
   return (
@@ -95,14 +96,22 @@ export default function TECHNICALSERVICES({ data }) {
         </div>
         <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 className="font-bold text-black lg:text-lg">{data?.Tittle5}</h1>
-          <p>{data?.SubCat5?.Para5}</p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat5?.Para5),
+            }}
+          />
         </div>
 
         <div className="text-[#7a7a7a] space-y-2 text-justify">
           <h1 className="font-bold text-black lg:text-lg">
             {data?.SubCat5?.Tittle6}
           </h1>
-          <p>{data?.SubCat5?.Para6}</p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat5?.Para6),
+            }}
+          />
         </div>
 
         <div className="text-[#7a7a7a] space-y-2 text-justify">

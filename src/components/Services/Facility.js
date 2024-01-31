@@ -7,6 +7,7 @@ import {
   StationeryPrinting,
   TECHNICALSERVICES,
 } from "./FacilityManagement/index";
+import DOMPurify from "dompurify";
 function Facility({ data }) {
   const [filterSubcategory, setfilterSubcategory] = useState();
 
@@ -25,7 +26,12 @@ function Facility({ data }) {
         <h1 className="text-[1.75rem] font-semibold font-poppins md:text-3xl lg:text-4xl">
           {data?.Tittle1}
         </h1>
-        <p className="text-[#7a7a7a] ">{data?.Para1}</p>
+        <p
+          className="text-[#7a7a7a] "
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(data?.Para1),
+          }}
+        />
       </div>
       <div className="border-[1px] border-gray-200 p-5 md:p-10 mt-7">
         <div className="grid grid-cols-3 gap-1 lg:flex lg:items-center lg:gap-5">

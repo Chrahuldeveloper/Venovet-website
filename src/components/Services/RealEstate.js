@@ -13,6 +13,7 @@ import {
   re11,
   s32,
 } from "../../images/services/RealEstate";
+import DOMPurify from "dompurify";
 
 function RealEstate({ data }) {
   const card = [
@@ -89,9 +90,12 @@ function RealEstate({ data }) {
             src={data?.SubCat1?.image}
             alt=""
           />
-          <div className="space-y-6 max-w-md lg:max-w-none text-[#777777] text-justify">
-            {data?.SubCat1?.Para}
-          </div>
+          <div
+            className="space-y-6 max-w-md lg:max-w-none text-[#777777] text-justify"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat1?.Para),
+            }}
+          />
         </div>
       </div>
 
@@ -110,7 +114,13 @@ function RealEstate({ data }) {
                   <img className="w-10 h-10" src={item.png} alt={item.png} />
                   <div className="max-w-xs space-y-2 text-justify">
                     <h1 className="font-bold">{item.Title}</h1>
-                    <p className="text-[#777777]">{item.p}</p>
+                    <p
+                      className="text-[#777777]"
+                      dangerouslySetInnerHTML={{
+                        __html: DOMPurify.sanitize(item.p),
+                      }}
+                    />
+                    {item.p}
                   </div>
                 </div>
               );
@@ -134,7 +144,12 @@ function RealEstate({ data }) {
               >
                 <img src={item.img} alt="" />
                 <h1>{item.Title}</h1>
-                <p className="text-[#777777] text-center max-w-xs">{item.p}</p>
+                <p
+                  className="text-[#777777] text-center max-w-xs"
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(item.p),
+                  }}
+                />
               </div>
             );
           })}
@@ -154,7 +169,12 @@ function RealEstate({ data }) {
                 <img className="w-10 h-10" src={item.img} alt="" />
                 <div>
                   <p className="font-bold">{item.T}</p>
-                  <p className="text-[#777777]">{item.p}</p>
+                  <p
+                    className="text-[#777777]"
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(item.p),
+                    }}
+                  />
                 </div>
               </div>
             );

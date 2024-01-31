@@ -6,11 +6,10 @@ import {
   sec4,
   sec5,
   sec6,
-  sec7,
-  sec8,
   sec9,
   sec10,
 } from "../../images/services/security";
+import DOMPurify from "dompurify";
 
 function Security({ data }) {
   const picdata = [
@@ -78,12 +77,21 @@ function Security({ data }) {
     <div>
       <div className="py-10 space-y-3">
         <h1 className="text-2xl font-bold text-center">{data?.Tittle1}</h1>
-        <p className="text-[#777777] text-sm md:text-lg">{data?.Para1}</p>
+        <p
+          className="text-[#777777] text-sm md:text-lg"
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(data?.Para1),
+          }}
+        />
       </div>
       {/* Services ...... */}
       <div className="flex flex-col items-center space-y-3">
         <h1 className="text-2xl font-bold">{data?.Tittle2}</h1>
-        <p>{data?.Para2}</p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(data?.Para2),
+          }}
+        />
         <div className="items-center justify-around pt-4 lg:flex lg:space-x-6">
           <div className="grid space-y-5 md:space-y-0 lg:pt-8 md:grid-cols-2 md:gap-5">
             {picdata.map((item, index) => {
@@ -100,7 +108,12 @@ function Security({ data }) {
                     }  `}
                   >
                     <p className="font-bold">{item.Title}</p>
-                    <p className="text-[#777777]">{item.p}</p>
+                    <p
+                      className="text-[#777777]"
+                      dangerouslySetInnerHTML={{
+                        __html: DOMPurify.sanitize(item.p),
+                      }}
+                    />
                   </div>
                   <div
                     className={`hidden md:flex p-1 items-center justify-center  border-2 ${
@@ -129,8 +142,13 @@ function Security({ data }) {
                 className="flex flex-col items-center p-3 rounded-lg shadow-xl py-5  h-[23rem] space-y-4"
               >
                 <img className="rounded-lg w-52" src={item.img} alt="" />
-                <p className="text-[#ff5e14] font-semibold  ">{item.Title}</p>
-                <p className="text-center">{item.p}</p>
+                <h1 className="text-[#ff5e14] font-semibold  ">{item.Title}</h1>
+                <p
+                  className="text-center"
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(item.p),
+                  }}
+                />
               </div>
             );
           })}

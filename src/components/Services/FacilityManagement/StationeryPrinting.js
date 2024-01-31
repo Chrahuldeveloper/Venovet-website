@@ -1,4 +1,5 @@
 import React from "react";
+import DOMPurify from "dompurify";
 
 export default function StationeryPrinting({ data }) {
   return (
@@ -15,8 +16,18 @@ export default function StationeryPrinting({ data }) {
           <h1 className="text-lg font-bold text-black md:text-xl">
             {data?.SubCat2?.Tittle}
           </h1>
-          <p className="leading-8">{data?.SubCat2?.Para1}</p>
-          <p className="leading-8">{data?.SubCat2?.Para2}</p>
+          <p
+            className="leading-8"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat2?.Para1),
+            }}
+          />
+          <p
+            className="leading-8"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat2?.Para2),
+            }}
+          />
         </div>
       </div>
     </>

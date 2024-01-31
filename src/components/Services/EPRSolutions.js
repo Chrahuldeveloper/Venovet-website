@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  erp1,
-  erp2,
-  erp3,
-  erp4,
-  erp5,
-  erp6,
-  erp7,
-} from "../../images/services/ERP";
+import { erp1, erp2, erp3, erp4, erp5, erp6 } from "../../images/services/ERP";
+import DOMPurify from "dompurify";
 
 export default function EPRSolutions({ data }) {
   const ERPSolutions = [
@@ -72,7 +65,11 @@ export default function EPRSolutions({ data }) {
         <h1 className="text-xl font-semibold lg:text-3xl font-poppins text-black">
           {data?.Tittle1}
         </h1>
-        <p>{data?.Para1}</p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(data?.Para1),
+          }}
+        />
       </div>
       <div className="grid justify-center grid-cols-1 gap-10 mt-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
         {ERPSolutions.map((item, index) => {
@@ -83,7 +80,12 @@ export default function EPRSolutions({ data }) {
                   <h1 className="font-semibold text-orange-500 ">
                     {item.Tittle}
                   </h1>
-                  <p className="text-[#7a7a7a]">{item.Para}</p>
+                  <p
+                    className="text-[#7a7a7a]"
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(item.Para),
+                    }}
+                  />
                 </div>
               </div>
             </React.Fragment>
@@ -93,7 +95,11 @@ export default function EPRSolutions({ data }) {
 
       <div className="mt-7 text-[#7a7a7a] space-y-4 text-justify">
         <h1 className="text-lg font-bold">{data?.Tittle2}</h1>
-        <p>{data?.Para2}</p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(data?.Para2),
+          }}
+        />
         <ul className="ml-4 space-y-1">
           <li className="list-disc">Power of One</li>
           <li className="list-disc">Flexible Contract Management</li>
@@ -122,7 +128,12 @@ export default function EPRSolutions({ data }) {
                   <h1 className="font-semibold text-orange-500 ">
                     {item.Tittle}
                   </h1>
-                  <p className="text-[#7a7a7a]">{item.Para}</p>
+                  <p
+                    className="text-[#7a7a7a]"
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(item.Para),
+                    }}
+                  />
                 </div>
               </div>
             </React.Fragment>

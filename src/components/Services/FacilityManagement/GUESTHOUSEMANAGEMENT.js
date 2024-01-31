@@ -1,4 +1,5 @@
 import React from "react";
+import DOMPurify from "dompurify";
 
 export default function GUESTHOUSEMANAGEMENT({ data }) {
   return (
@@ -15,7 +16,12 @@ export default function GUESTHOUSEMANAGEMENT({ data }) {
           <h1 className="text-lg font-bold text-black md:text-xl">
             {data?.SubCat3?.Tittle}
           </h1>
-          <p className="leading-8">{data?.SubCat3?.Para}</p>
+          <p
+            className="leading-8"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat3?.Para),
+            }}
+          />
           <ul className="ml-5 space-y-3">
             <li className="list-disc">Front office service</li>
             <li className="list-disc">Food and beverages services</li>

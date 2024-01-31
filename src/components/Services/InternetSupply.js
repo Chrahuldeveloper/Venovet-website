@@ -1,4 +1,5 @@
 import React from "react";
+import DOMPurify from "dompurify";
 import {
   log1,
   log2,
@@ -19,11 +20,6 @@ import {
   sicon4,
   sicon5,
   sicon6,
-  sicon7,
-  sicon8,
-  sicon9,
-  sicon11,
-  sicon12,
   sicon13,
   sicon14,
   sicon15,
@@ -158,9 +154,12 @@ export default function InternetSupply({ data }) {
               src={data?.SubCat1?.image}
               alt="imge"
             />
-            <p className="text-justify text-[#7a7a7a] text-sm leading-6">
-              {data?.SubCat1?.Para}
-            </p>
+            <p
+              className="text-justify text-[#7a7a7a] text-sm leading-6"
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(data?.SubCat1?.Para),
+              }}
+            />
           </div>
         </div>
       </div>
@@ -177,9 +176,12 @@ export default function InternetSupply({ data }) {
               alt="imge"
             />
           </div>
-          <p className="text-justify text-[#7a7a7a] text-sm leading-6">
-            {data?.SubCat1?.Para}
-          </p>
+          <p
+            className="text-justify text-[#7a7a7a] text-sm leading-6"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat1?.Para),
+            }}
+          />
         </div>
       </div>
 
@@ -197,7 +199,12 @@ export default function InternetSupply({ data }) {
                 <img src={item.image} alt={item.image} className="w-10 h-10" />
                 <div className="space-y-1.5">
                   <h1 className="text-lg font-bold">{item.Titttle}</h1>
-                  <p className="text-justify text-[#7a7a7a]">{item.Para}</p>
+                  <p
+                    className="text-justify text-[#7a7a7a]"
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(item.Para),
+                    }}
+                  />
                 </div>
               </div>
             );
@@ -215,9 +222,12 @@ export default function InternetSupply({ data }) {
             src={data?.SubCat8?.image}
             alt="imge "
           />
-          <p className="text-justify text-[#7a7a7a]  leading-6">
-            {data?.SubCat8?.Para}
-          </p>
+          <p
+            className="text-justify text-[#7a7a7a]  leading-6"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat8?.Para),
+            }}
+          />
         </div>
       </div>
 
@@ -234,7 +244,12 @@ export default function InternetSupply({ data }) {
               >
                 <img src={item.image} alt={item.image} className="w-10 h-10" />
                 <div className="space-y-1.5">
-                  <h1 className="text-lg font-semibold">{item.Para}</h1>
+                  <p
+                    className="text-lg font-semibold"
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(item.Para),
+                    }}
+                  />
                 </div>
               </div>
             );
@@ -253,9 +268,12 @@ export default function InternetSupply({ data }) {
                   <h1 className="max-w-md text-sm font-semibold md:text-xl lg:text-2xl">
                     {item.Titttle}
                   </h1>
-                  <p className="text-justify my-3 text-[#7a7a7a] max-w-xl text-xs md:text-base">
-                    {item.Para}
-                  </p>
+                  <p
+                    className="text-justify my-3 text-[#7a7a7a] max-w-xl text-xs md:text-base"
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(item.Para),
+                    }}
+                  />
                 </div>
               </div>
             </React.Fragment>
@@ -267,7 +285,12 @@ export default function InternetSupply({ data }) {
         <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
           {data?.SubCat14?.Tittle}
         </h1>
-        <p className="text-justify text-[#7a7a7a]">{data?.SubCat14?.Para}</p>
+        <p
+          className="text-justify text-[#7a7a7a]"
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(data?.SubCat14?.Para),
+          }}
+        />
       </div>
 
       <div className="grid grid-cols-1 gap-5 mt-8 md:grid-cols-3">
@@ -276,7 +299,12 @@ export default function InternetSupply({ data }) {
             <React.Fragment key={index}>
               <div className="flex gap-5 p-4 shadow-sm border-[1px] border-gray-300 max-w-sm">
                 <img className="w-8 h-8" src={item.image} alt={item.image} />
-                <p className="text-justify text-[#7a7a7a]">{item.Para}</p>
+                <p
+                  className="text-justify text-[#7a7a7a]"
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(item.Para),
+                  }}
+                />
               </div>
             </React.Fragment>
           );
@@ -287,7 +315,12 @@ export default function InternetSupply({ data }) {
         <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
           {data?.SubCat15?.Tittle}
         </h1>
-        <p className="text-justify text-[#7a7a7a]">{data?.SubCat15?.Para}</p>
+        <p
+          className="text-justify text-[#7a7a7a]"
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(data?.SubCat15?.Para),
+          }}
+        />
       </div>
 
       <div className="mt-8 space-y-5 text-justify">

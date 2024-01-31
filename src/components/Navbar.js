@@ -89,6 +89,7 @@ export default function Navbar({ Page }) {
                 <img src={vvmain} alt="pic" />
               </Link>
             </div>
+
             <div>
               <ul className="flex items-center text-[0.95rem] text-[#121a37] font-[500] space-x-14">
                 <Link to={"/"}>
@@ -233,7 +234,7 @@ export default function Navbar({ Page }) {
           </div>
         </div>
         {/* Main Navbar */}
-        <div className="mt-5 flex items-center justify-between mx-5 md:mx-12 lg:mx-24 ">
+        <div className="flex items-center justify-between mx-5 mt-5 md:mx-12 lg:mx-24 ">
           <div>
             <Link
               to={"/"}
@@ -245,14 +246,31 @@ export default function Navbar({ Page }) {
             </Link>
           </div>
           <div>
-            <AiOutlineMenu
-              size={35}
-              onClick={() => {
-                settoogle(true);
-              }}
-              color="white"
-              className="lg:hidden cursor-pointer bg-[#121a37] p-1.5 hover:bg-orange-600 ease-in-out duration-300"
-            />
+            <div className="flex items-center gap-7">
+              <Link to="/mycart">
+                <div className="flex items-center ml-10 space-x-2">
+                  <AiOutlineShoppingCart
+                    size={31}
+                    color="white"
+                    className="p-2 bg-orange-500 rounded-full"
+                  />
+                  <div className="font-semibold">
+                    <h1 className="text-xs font-semibold">MyCart</h1>
+                    <p className="text-xs text-slate-400">
+                      item : {cart.cartItems.length}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+              <AiOutlineMenu
+                size={35}
+                onClick={() => {
+                  settoogle(true);
+                }}
+                color="white"
+                className="lg:hidden cursor-pointer bg-[#121a37] p-1.5 hover:bg-orange-600 ease-in-out duration-300"
+              />
+            </div>
             <div className="hidden lg:block">
               <div className="flex items-center">
                 {/* <Link to={`https://wa.me/${links?.Whatsapp}`}> */}
@@ -273,7 +291,7 @@ export default function Navbar({ Page }) {
                       <p className="text-[#8d8d8d] font-semibold text-sm">
                         24/7 Services
                       </p>
-                      <h1 className="text-lg md:text-xl font-semibold">
+                      <h1 className="text-lg font-semibold md:text-xl">
                         {links?.Whatsapp}
                       </h1>
                     </div>
@@ -301,7 +319,7 @@ export default function Navbar({ Page }) {
         </div>
 
         {/* Menu Bar with drop down only for Big screens */}
-        <div className="z-50 justify-center hidden mt-1 translate-y-6 lg:flex px-24">
+        <div className="z-50 justify-center hidden px-24 mt-1 translate-y-6 lg:flex">
           <div className="flex items-center bg-[#121a37] p-4  rounded-l-md w-full">
             <ul className="flex items-center space-x-12 text-white">
               <Link to={"/"}>

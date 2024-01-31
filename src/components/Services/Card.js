@@ -1,5 +1,6 @@
 import React from "react";
 import { icon1, icon2, icon3, icon4 } from "../../images/services/Card";
+import DOMPurify from "dompurify";
 
 export default function Card({ data }) {
   const CardData = [
@@ -33,7 +34,12 @@ export default function Card({ data }) {
               <img src={_.image} className="w-10 h-10" alt={index} />
               <div className="space-y-2">
                 <h1 className="text-lg font-semibold">{_.Tittle}</h1>
-                <p className="text-[#7a7a7a] lg:text-sm ">{_.Para}</p>
+                <p
+                  className="text-[#7a7a7a] lg:text-sm "
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(data?.Para1),
+                  }}
+                />
               </div>
             </div>
           </React.Fragment>

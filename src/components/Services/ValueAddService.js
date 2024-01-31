@@ -19,14 +19,14 @@ export default function ValueAddService({ data }) {
         </h1>
         <div className="flex flex-col items-center gap-6 lg:items-start lg:flex-row mt-7">
           <img
-            className="order-2 max-w-xs  rounded-lg"
+            className="order-2 max-w-xs rounded-lg"
             src={data?.SubCat1?.image}
             alt="imge"
           />
           <div className="max-w-lg lg:max-w-none space-y-3.5">
             <h1 className="text-xl font-semibold">{data?.SubCat1?.Tittle}</h1>
             <p
-              className="text-justify text-[#7a7a7a] text-sm lg:text-base  leading-7"
+              className="text-justify text-[#7a7a7a] text-sm lg:text-base leading-7"
               dangerouslySetInnerHTML={{
                 __html: DOMPurify.sanitize(data?.SubCat1?.Para),
               }}

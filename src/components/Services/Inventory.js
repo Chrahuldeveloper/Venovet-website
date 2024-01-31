@@ -1,4 +1,5 @@
 import React from "react";
+import DOMPurify from "dompurify";
 
 export default function Inventory({ data }) {
   const AuditServices = [
@@ -55,7 +56,12 @@ export default function Inventory({ data }) {
           <h1 className="text-xl font-semibold lg:text-xl font-poppins">
             {data?.SubCat1?.Tittle}
           </h1>
-          <p className="text-justify text-[#777777]">{data?.SubCat1?.Para}</p>
+          <p
+            className="text-justify text-[#777777]"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.SubCat1?.Para),
+            }}
+          />
         </div>
       </div>
       {/* What is Stock Audit Services*/}
@@ -66,7 +72,12 @@ export default function Inventory({ data }) {
             {data?.SubCat2?.Tittle}
           </h1>
           <ul className="space-y-3 text-[#777777]">
-            <p className="text-justify text-[#777777]">{data?.SubCat2?.Para}</p>
+            <p
+              className="text-justify text-[#777777]"
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(data?.SubCat2?.Para),
+              }}
+            />
           </ul>
         </div>
         <img
@@ -76,7 +87,6 @@ export default function Inventory({ data }) {
         />
       </div>
       {/*Eligibility For Stock Audit Services */}
-
       {/*Process for Stock Audit Services */}
       <div className="mt-11">
         <h1 className="text-xl font-semibold lg:text-xl font-poppins">
@@ -90,14 +100,18 @@ export default function Inventory({ data }) {
                 className={`space-y-3 ${index === 4 ? "" : ""} `}
               >
                 <h1 className="text-lg font-semibold ">{item.Tittle}</h1>
-                <p className="text-justify text-[#777777]">{item.Para}</p>
+                <p
+                  className="text-justify text-[#777777]"
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(item.Para),
+                  }}
+                />
               </div>
             );
           })}
         </div>
       </div>
       {/*Process for Stock Audit Services */}
-
       {/* Benefits  of Stock Audit Services*/}
       <div className="mt-11">
         <h1 className="text-xl font-semibold lg:text-3xl font-poppins">
@@ -110,7 +124,12 @@ export default function Inventory({ data }) {
                 <h1 className="text-lg font-semibold md:text-xl ">
                   {item.Tittle}
                 </h1>
-                <p className="text-justify text-[#777777]">{item.Para}</p>
+                <p
+                  className="text-justify text-[#777777]"
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(item.Para),
+                  }}
+                />
               </div>
             );
           })}

@@ -3,6 +3,8 @@ import { BsLightbulb } from "react-icons/bs";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
 import { RxCountdownTimer } from "react-icons/rx";
 import { image1, image2 } from "../../images/services/index";
+import DOMPurify from "dompurify";
+
 export default function SCM() {
   const Approch = [
     {
@@ -146,9 +148,12 @@ export default function SCM() {
                   <h1 className="font-semibold font-poppins text-orange-500">
                     {item.Tittle}
                   </h1>
-                  <p className="text-[#777777] text-center px-2 text-sm lg:pb-3">
-                    {item.Para}
-                  </p>
+                  <p
+                    className="text-[#777777] text-center px-2 text-sm lg:pb-3"
+                    dangerouslySetInnerHTML={{
+                      __html: DOMPurify.sanitize(item.Para),
+                    }}
+                  />
                   <hr />
                   <ul className="space-y-1 lg:pt-2">
                     <li>{item.list1}</li>

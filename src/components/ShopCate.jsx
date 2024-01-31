@@ -87,6 +87,7 @@ function ShopCate() {
                   src={item?.Image1?.image}
                   alt={item?.Image1?.image}
                 />
+                {console.log(item)}
                 <p
                   className="text-sm font-semibold text-center cursor-pointer hover:text-[#ff5e15] transition duration-300 ease-in-out"
                   onClick={() => {
@@ -100,6 +101,7 @@ function ShopCate() {
                           image4: item?.Image4?.image,
                           desc: item?.Description,
                           Price: item?.Dealprice,
+                          MRP: item?.MRP,
                         },
                       });
                     } else {

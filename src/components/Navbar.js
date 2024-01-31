@@ -246,7 +246,7 @@ export default function Navbar({ Page }) {
             </Link>
           </div>
           <div>
-            <div className="flex items-center gap-7">
+            <div className="flex lg:hidden items-center gap-7">
               <Link to="/mycart">
                 <div className="flex items-center ml-10 space-x-2">
                   <AiOutlineShoppingCart

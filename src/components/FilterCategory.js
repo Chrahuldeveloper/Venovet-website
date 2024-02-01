@@ -39,13 +39,13 @@ export default function FilterCategory({ Tittle, Page }) {
               })
             : Page === "whoweserve"
             ? Data.map((item, key) => {
-                const encodedTittle = encodeURIComponent(item.catgeory);
                 const isActive =
-                  location.pathname === `/whoweserve/${encodedTittle}`;
+                  location.pathname ===
+                  `/whoweserve/${item.catgeory.replace(/\s+/g, "-")}`;
                 return (
                   <React.Fragment key={key}>
                     <Link
-                      to={`/whoweserve/${encodedTittle}`}
+                      to={`/whoweserve/${item.catgeory.replace(/\s+/g, "-")}`}
                       state={{
                         image: item.image,
                         Tittle: item.Tittle,

@@ -37,7 +37,7 @@ export default function DropDown({ ismobile, type }) {
             return (
               <div className="animate__animated animate__fadeInDown" key={i}>
                 <Link
-                  to={`/whoweserve/${item.catgeory}`}
+                  to={`/whoweserve/${item.catgeory.replace(/\s+/g, "-")}`}
                   state={{
                     image: item.image,
                     Tittle: item.Tittle,

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { servicelogo } from "../images/services/index";
 function Services() {
   const [hover, sethover] = useState(null);
-  const encodedTittle = encodeURIComponent(DropdownData[0].catgeory);
+  const encodedTittle = DropdownData[0].catgeory.replace(/\s+/g, "-");
 
   return (
     <div className="px-5 md:px-12 lg:px-24 py-16 pt-24 bg-[#dae2ed] space-y-14">
@@ -35,7 +35,10 @@ function Services() {
               </div>
               <div className="absolute shadow-lg bg-white rounded-lg rounded-br-none top-[-1rem] px-2 py-4 right-0 flex items-center w-64 lg:w-60 space-x-4 hover:bg-[#ff5e15] hover:text-white transition ease-in-out duration-500">
                 <Link
-                  to={`/whatwedo/${DropdownData[index].catgeory}`}
+                  to={`/whatwedo/${DropdownData[index].catgeory.replace(
+                    /\s+/g,
+                    "-"
+                  )}`}
                   state={{
                     image: DropdownData[index].image,
                     Tittle: DropdownData[index].Tittle,

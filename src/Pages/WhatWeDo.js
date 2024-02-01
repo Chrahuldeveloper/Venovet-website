@@ -6,7 +6,7 @@ import DropdownData from "../Data/WhatweDoCategories";
 export default function WhatWeDo() {
   // From Params take the categeory and chamge the whole ui
   const { category } = useParams();
-  const decodedCategory = decodeURIComponent(category);
+  const decodedCategory = category.replace(/-/g, " ");
   const defaultData = DropdownData.find(
     (item) => item.catgeory === decodedCategory
   );

@@ -12,14 +12,14 @@ export default function FilterCategory({ Tittle, Page }) {
         <ul>
           {Page === "whatwedo"
             ? DropdownData.map((item, key) => {
-                const encodedTittle = encodeURIComponent(item.catgeory);
                 const isActive =
-                  location.pathname === `/whatwedo/${encodedTittle}`;
+                  location.pathname ===
+                  `/whatwedo/${item.catgeory.replace(/\s+/g, "-")}`;
 
                 return (
                   <React.Fragment key={key}>
                     <Link
-                      to={`/whatwedo/${encodedTittle}`}
+                      to={`/whatwedo/${item.catgeory.replace(/\s+/g, "-")}`}
                       state={{
                         image: item.image,
                         Tittle: item.Tittle,

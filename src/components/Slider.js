@@ -14,7 +14,7 @@ export default function Slider() {
       setindex(index + 1);
     }
   };
-  const encodedTittle = encodeURIComponent(Data[index].catgeory);
+  const encodedTittle = Data[index].catgeory.replace(/\s+/g, "-");
 
   const prev = () => {
     if (index === 0) {

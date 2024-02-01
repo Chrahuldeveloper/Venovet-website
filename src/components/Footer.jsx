@@ -19,8 +19,6 @@ const Footer = () => {
 
   const [links, setlinks] = useState(false);
 
-  const encodedTittle = encodeURIComponent("Warehouse Management (2PL & 3PL)");
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -132,7 +130,7 @@ const Footer = () => {
                   </li>
                 </Link>
                 <Link
-                  to={`/whatwedo/${encodedTittle}`}
+                  to={`/whatwedo/Warehouse-Management-(2PL-&-3PL)`}
                   state={{
                     image: img1,
                     Tittle: "Venovet's Warehouse Management",
@@ -144,7 +142,7 @@ const Footer = () => {
                   </li>
                 </Link>
                 <Link
-                  to="/whoweserve/Fast Moving Consumer Goods (FMCG)"
+                  to="/whoweserve/Fast-Moving-Consumer-Goods-(FMCG)"
                   state={{
                     image: img1,
                     Tittle: "Fast Moving Consumer Goods (FMCG)",

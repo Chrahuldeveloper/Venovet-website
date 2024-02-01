@@ -7,12 +7,10 @@ export default function DropDown({ ismobile, type }) {
     <ul>
       {type === "Whatwedo"
         ? DropdownData.map((item, i) => {
-            const encodedTittle = encodeURIComponent(item.catgeory);
-
             return (
               <div className="animate__animated animate__fadeInDown" key={i}>
                 <Link
-                  to={`/whatwedo/${encodedTittle}`}
+                  to={`/whatwedo/${item.catgeory.replace(/\s+/g, "-")}`}
                   state={{
                     image: item.image,
                     Tittle: item.Tittle,

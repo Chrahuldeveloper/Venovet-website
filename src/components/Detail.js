@@ -26,6 +26,8 @@ export default function Detail({ Product }) {
     Product.image4,
   ];
 
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
   const scrollRight = () => {
     const nextImage = activeImage + 1;
     if (nextImage < images.length) {
@@ -42,9 +44,14 @@ export default function Detail({ Product }) {
     }
   };
 
+  const handleDotClick = (index) => {
+    scrollref.current.scrollLeft = index * scrollref.current.clientWidth;
+    setActiveTestimonial(index);
+  };
+
   return (
     <main className="flex flex-col items-center gap-6 my-12 md:flex-row justify-evenly md:gap-0">
-      <div className="border-[1px] border-gray-300 max-w-[20rem] p-1 overflow-x-scroll">
+      {/* <div className="border-[1px] border-gray-300 max-w-[20rem] p-1 overflow-x-scroll">
         <div className="flex gap-5 p-2" ref={scrollref}>
           {images.map((image, index) => (
             <img
@@ -55,15 +62,39 @@ export default function Detail({ Product }) {
             />
           ))}
         </div>
-      </div>
-      {/* <div className="flex justify-between w-full max-w-[20rem]">
-        <button onClick={scrollLeft} className="cursor-pointer">
-          &lt;
-        </button>
-        <button onClick={scrollRight} className="cursor-pointer">
-          &gt;
-        </button>
       </div> */}
+      <div>
+        <div
+          className="flex  justify-start p-3 overflow-x-scroll max-w-xs  gap-14 md:gap-20 scroll-smooth md:max-w-sm pl-20 md:flex-row "
+          ref={scrollref}
+        >
+          {images.map((_, index) => {
+            return (
+              <React.Fragment key={index}>
+                <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0  items-center max-w-sm space-x-8 md:max-w-auto">
+                  <img
+                    className="w-36 h-36 max-w-md md:w-64 md:h-64 rounded-md border-[#ccc] border-[1px] p-2"
+                    src={_}
+                    alt="img.png"
+                  />
+                </div>
+              </React.Fragment>
+            );
+          })}
+        </div>
+        <div className="hidden md:flex items-center justify-center gap-0.5 space-x-2 pt-10">
+          {Array.from({ length: images.length }).map((_, index) => (
+            <button
+              key={index}
+              className={`w-4 h-4 rounded-2xl  ${
+                index === activeTestimonial ? " bg-[#ff5e15]" : "bg-black"
+              }`}
+              onClick={() => handleDotClick(index)}
+            ></button>
+          ))}
+        </div>
+      </div>
+
       <div className="space-y-5">
         <div className="border-[1px] border-gray-200 max-w-md text-gray-500 p-3.5 text-sm space-y-2">
           <p className="text-lg font-semibold text-slate-500">

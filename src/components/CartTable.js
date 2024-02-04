@@ -90,12 +90,12 @@ export default function CartTable() {
             );
           })}
         </table>
-        <div className="flex justify-between mx-auto w-[90vw]">
+        <div className="flex justify-between mx-auto w-[100vw] px-3">
           <div className="flex items-center justify-center mt-6">
             <Link to={"/shop"}>
               <button
                 type="submit"
-                className="bg-[#121a37] hover:bg-[#ff5e15] transition duration-300 ease-in-out  font-medium text-sm rounded-lg shadow-2xl shadow-black text-white px-10 py-2.5"
+                className="bg-[#121a37] text-[13px] md:text-base hover:bg-[#ff5e15] transition duration-300 ease-in-out  font-medium text-sm rounded-lg shadow-2xl shadow-black text-white px-5 py-2.5"
               >
                 CONTINUE SHOPPING
               </button>{" "}
@@ -106,8 +106,9 @@ export default function CartTable() {
               onClick={() => {
                 if (cart.cartItems.length > 0) {
                   setcheckout(true);
-                  const itemNames = cart.cartItems
-                    .map((item) => item.ProductName)
+                  const itemNames = cart.cartItems.map(
+                    (item) => item.ProductName
+                  );
                   console.log("itemNames:", itemNames);
                   setitems({
                     ...items,
@@ -122,7 +123,7 @@ export default function CartTable() {
                 }
               }}
               type="submit"
-              className="bg-[#121a37] hover:bg-[#ff5e15] transition duration-300 ease-in-out  font-medium text-sm rounded-lg shadow-2xl shadow-black text-white px-10 py-2.5"
+              className="bg-[#121a37] text-[13px] md:text-base hover:bg-[#ff5e15] transition duration-300 ease-in-out  font-medium text-sm rounded-lg shadow-2xl shadow-black text-white px-5 py-2.5"
             >
               CHECKOUT
             </button>{" "}

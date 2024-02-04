@@ -5,7 +5,8 @@ import { ColorRing } from "react-loader-spinner";
 import { getAuth, signInWithPhoneNumber } from "firebase/auth";
 import { RecaptchaVerifier } from "firebase/auth";
 import emailjs from "@emailjs/browser";
-export default function CheckOutForm({ item, quantity, name }) {
+import { RxCross2 } from "react-icons/rx";
+export default function CheckOutForm({ setcheckout, item, quantity, name }) {
   console.log(item, quantity, name);
 
   const formRef = useRef();
@@ -115,7 +116,17 @@ export default function CheckOutForm({ item, quantity, name }) {
 
   return (
     <>
-      <div className="p-3 mx-auto rounded-lg w-[80vw] md:max-w-3xl ">
+      <div className="p-4 mx-auto rounded-lg w-[80vw] md:max-w-3xl ">
+        <div className="flex justify-end">
+          <RxCross2
+            size={27}
+            onClick={() => {
+              setcheckout(false);
+            }}
+            color="black"
+            cursor={"pointer"}
+          />
+        </div>
         {isSubmitting && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-100 bg-opacity-75">
             <ColorRing

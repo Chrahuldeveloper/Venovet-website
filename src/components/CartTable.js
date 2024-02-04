@@ -16,9 +16,15 @@ export default function CartTable() {
 
   const [items, setitems] = useState({
     item: "",
-    vol: [],
-    name: [],
+    vol: "",
+    name: "",
   });
+
+  console.log(
+    cart.cartItems.map((item, i) => {
+      console.log(item);
+    })
+  );
 
   return (
     <>
@@ -40,10 +46,14 @@ export default function CartTable() {
                   <tr>
                     <td className="py-8 pl-4 border md:pl-9 ">{i + 1}</td>
                     <td className="py-8 pl-10 border">
-                      <img src={item.img} className="w-20" alt="img.png" />
+                      <img
+                        src={item.Image1.image}
+                        className="w-20"
+                        alt="img.png"
+                      />
                     </td>
                     <td className="py-8 pl-10 border">
-                      <h1 className="text-sm">{item.name}</h1>
+                      <h1 className="text-sm">{item.ProductName}</h1>
                     </td>
                     <td className="py-10 cursor-pointer text-[#7e7e7e] flex space-x-2 items-center justify-center">
                       <BiMinus
@@ -58,7 +68,6 @@ export default function CartTable() {
                         }}
                       />
                       <p>{quantity}</p>
-
                       <AiOutlinePlus
                         size={10}
                         color="black"
@@ -98,18 +107,15 @@ export default function CartTable() {
                 if (cart.cartItems.length > 0) {
                   setcheckout(true);
                   const itemNames = cart.cartItems
-                    .map((item) => item.name)
-                    .join(", ");
+                    .map((item) => item.ProductName)
                   console.log("itemNames:", itemNames);
                   setitems({
                     ...items,
                     item: cart.cartItems.map((item) => {
-                      return item.img;
+                      return item.Image1.image;
                     }),
                     vol: cart.cartItems.map(() => quantity),
                     name: cart.cartItems.map(() => itemNames),
-                    // vol: Array.from(quantity),
-                    // name: Array.from(itemNames),
                   });
                 } else {
                   alert("No items in the cart");
@@ -125,6 +131,7 @@ export default function CartTable() {
       </div>
       {checkout ? (
         <CheckOutModel
+          setcheckout={setcheckout}
           item={items.item}
           quantity={items.vol}
           name={items.name}

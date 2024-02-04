@@ -7,15 +7,13 @@ import { RecaptchaVerifier } from "firebase/auth";
 import emailjs from "@emailjs/browser";
 import { RxCross2 } from "react-icons/rx";
 export default function CheckOutForm({ setcheckout, item, quantity, name }) {
-  console.log(item, quantity, name);
-
   const formRef = useRef();
   const [form, setForm] = useState({
     Name: "",
     Email: "",
     Phone: "",
     quantity: quantity,
-    name: name,
+    name: name[0],
   });
   const [isSubmitting, setIsSubmiting] = useState(false);
   const [otp, setotp] = useState("");
@@ -104,7 +102,6 @@ export default function CheckOutForm({ setcheckout, item, quantity, name }) {
       await addDoc(collection(db, "ORDERSID"), {
         item,
         quantity,
-        name,
         orderid,
         form,
       });
@@ -146,6 +143,9 @@ export default function CheckOutForm({ setcheckout, item, quantity, name }) {
         </h1>
         <p className="my-4 text-sm font-semibold text-center text-slate-500">
           Please fill the form to complete the Checkout
+        </p>
+        <p className="my-2 text-sm font-semibold text-center text-slate-500">
+          Name : {name[0]}
         </p>
         <form
           ref={formRef}

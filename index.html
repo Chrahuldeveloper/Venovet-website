@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness and Wellness</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      #image-background {
+        position: fixed;
+        width: 100%;
+        min-height: 100vh;
+      }
+
+      @media (max-width: 600px) {
+        #image-background {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      @media (min-width: 601px) and (max-width: 1200px) {
+        #image-background {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .login-container {
+        background: linear-gradient(
+          to right bottom,
+          rgba(0, 0, 0, 0.8),
+          rgba(255, 255, 230, 0.5)
+        );
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        color: rgb(195, 191, 191);
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #d7d7e3;
+      }
+      input {
+        width: 100%;
+        padding: 13px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        color: white;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        background-color: #29292e;
+      }
+      input[type="submit"] {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img
+      id="image-background"
+      src="https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg?auto=compress&cs=tinysrgb&w=600"
+      alt="Fitness Man"
+    />
+    <div class="login-container">
+      <h1>Fitness and Wellness</h1>
+      <h2>Login</h2>
+      <form action="./login data storage.php" method="post">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>

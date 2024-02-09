@@ -38,7 +38,7 @@ export default function ServiceContent({ category }) {
   }, [category]);
 
   return (
-    <main >
+    <main>
       {category === "Warehouse Management (2PL & 3PL)" && (
         <WareHouseManagement data={data} />
       )}

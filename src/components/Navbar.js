@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   AiOutlineTwitter,
   AiFillLinkedin,
@@ -28,7 +28,6 @@ export default function Navbar({ Page }) {
   const [mobileservice, setmobileservice] = useState(false);
   const [nonmobilewhat, setnonmobilewhat] = useState(false);
   const [nonmobilewho, setnonmobilewho] = useState(false);
-
   const [links, setlinks] = useState(false);
 
   useEffect(() => {
@@ -49,6 +48,9 @@ export default function Navbar({ Page }) {
     fetchData();
     window.scrollTo(0, 0);
   }, []);
+
+
+  console.log(who,what)
 
   const cart = useSelector((state) => state.cart);
   const handleScroll = () => {

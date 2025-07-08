@@ -20,12 +20,6 @@ export default function CartTable() {
     name: "",
   });
 
-  console.log(
-    cart.cartItems.map((item, i) => {
-      console.log(item);
-    })
-  );
-
   return (
     <>
       <div className="my-20 overflow-x-auto">

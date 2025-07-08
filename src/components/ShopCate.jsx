@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { addTocart } from "../features/ProductSlice";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { db } from "../Firebase";
-import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 function ShopCate() {
-  const [point, setPoint] = useState(0);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

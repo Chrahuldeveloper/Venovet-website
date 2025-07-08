@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 export default function Detail({ Product }) {
   const dispatch = useDispatch();
   const scrollref = useRef(null);
-  const [activeImage, setActiveImage] = useState(0);
   const item = {
     name: Product.name,
     image1: Product.image1,
@@ -28,21 +27,6 @@ export default function Detail({ Product }) {
 
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
-  const scrollRight = () => {
-    const nextImage = activeImage + 1;
-    if (nextImage < images.length) {
-      scrollref.current.scrollLeft = nextImage * scrollref.current.clientWidth;
-      setActiveImage(nextImage);
-    }
-  };
-
-  const scrollLeft = () => {
-    const prevImage = activeImage - 1;
-    if (prevImage >= 0) {
-      scrollref.current.scrollLeft = prevImage * scrollref.current.clientWidth;
-      setActiveImage(prevImage);
-    }
-  };
 
   const handleDotClick = (index) => {
     scrollref.current.scrollLeft = index * scrollref.current.clientWidth;
@@ -51,18 +35,6 @@ export default function Detail({ Product }) {
 
   return (
     <main className="flex flex-col items-center gap-6 my-12 md:flex-row justify-evenly md:gap-0">
-      {/* <div className="border-[1px] border-gray-300 max-w-[20rem] p-1 overflow-x-scroll">
-        <div className="flex gap-5 p-2" ref={scrollref}>
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`product-${index}`}
-              className="rounded-md"
-            />
-          ))}
-        </div>
-      </div> */}
       <div>
         <div
           className="flex  justify-start p-3 overflow-x-scroll max-w-xs  gap-14 md:gap-20 scroll-smooth md:max-w-sm pl-20 md:flex-row "
